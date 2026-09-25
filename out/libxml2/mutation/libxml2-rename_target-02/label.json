@@ -1,0 +1,44 @@
+{
+  "alias": {
+    "cpp:target:testHTMLstrucmut": "cpp:target:testHTML"
+  },
+  "description": "rename build target cpp:target:testHTML -> cpp:target:testHTMLstrucmut",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "cpp:target:testHTMLstrucmut",
+        "cpp:target:libxml2"
+      ]
+    ],
+    "new_targets": [
+      "cpp:target:testHTMLstrucmut"
+    ],
+    "removed_edges": [
+      [
+        "cpp:target:testHTML",
+        "cpp:target:libxml2"
+      ]
+    ],
+    "removed_targets": [
+      "cpp:target:testHTML"
+    ],
+    "suspected_renames": [
+      [
+        "cpp:target:testHTML",
+        "cpp:target:testHTMLstrucmut"
+      ]
+    ]
+  },
+  "files_touched": [
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am"
+  ],
+  "id": "libxml2-rename_target-02",
+  "operator": "rename_target",
+  "system": "libxml2"
+}

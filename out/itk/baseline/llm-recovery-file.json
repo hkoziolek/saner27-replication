@@ -1,0 +1,28 @@
+{
+  "aggregate": null,
+  "cost_estimate": {
+    "price_in_per_1m": 5.0,
+    "price_out_per_1m": 30.0,
+    "reruns": 5,
+    "total_input_tokens": 4137915,
+    "total_output_tokens": 311280,
+    "usd_uncached": 30.03,
+    "usd_with_prompt_caching": 15.13
+  },
+  "edges": 21604,
+  "entities": 7782,
+  "granularity": "file",
+  "message": "file-granularity graph is ~827,583 input tokens (> --max-input-tokens 180,000) \u2014 a single fair LLM call is not possible (eval \u00a76.2). Choose one:\n  --granularity target     score the target-level graph instead (small, fits one call)\n  --chunk                  (not yet implemented) partition in graph-partitioned chunks\n  --allow-oversize         send anyway and let the provider truncate (records the loss)\nA graph that does not fit one context is itself evidence for the deterministic-first thesis \u2014 record it as a limitation, do not fake a number.",
+  "model_id": null,
+  "reference": "references\\itk\\reference.rsf",
+  "reruns": 5,
+  "runs": [],
+  "status": "refused-oversize",
+  "system": "itk",
+  "target_clusters": 13,
+  "token_estimate_per_call": {
+    "input": 827583,
+    "output": 62256,
+    "per_call_total": 889839
+  }
+}

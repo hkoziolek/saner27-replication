@@ -1,0 +1,10 @@
+[wca] 38 entities from graph-target.rsf
+[wca] 38 singleton clusters
+[wca] clustered to 17 clusters (target 17)
+[wca] wrote <repo>\out\nopcommerce\baseline\wca-target\clusters.rsf
+[limbo] 38 entities from graph-target.rsf
+[limbo] 38 singleton clusters
+[limbo] clustered to 17 clusters (target 17)
+[limbo] wrote <repo>\out\nopcommerce\baseline\limbo-target\clusters.rsf
+[wca-target] 17 clusters / 38 entities — MoJoFM=46.88 a2a=90.65934065934066 vs reference -> <repo>\out\nopcommerce\baseline\wca-target\fidelity.json
+[limbo-target] 17 clusters / 38 entities — MoJoFM=34.38 a2a=87.84530386740332 vs reference -> <repo>\out\nopcommerce\baseline\limbo-target\fidelity.json

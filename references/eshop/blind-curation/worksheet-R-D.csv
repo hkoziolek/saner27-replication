@@ -1,0 +1,26 @@
+# RQ9 rater worksheet (eval §10a) — assign every entity a cluster name; use the
+# project's own documented component names where they exist. Write EXCLUDE to mark an
+# entity out-of-scope (tests, samples, dead code) — record why in the notes column.
+# Blinding: do NOT consult the tool's output, any reference.rsf, or another rater.
+entity,cluster,notes
+csharp:csproj:src/Basket.API/Basket.API.csproj,BasketService,Services deployed independently from antoher
+csharp:csproj:src/Catalog.API/Catalog.API.csproj,CatalogService,
+csharp:csproj:src/ClientApp/ClientApp.csproj,ClientApp,Seperate form other frontends so that it can be deployed independently
+csharp:csproj:src/EventBus/EventBus.csproj,EventBus,
+csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj,EventBus,
+csharp:csproj:src/HybridApp/HybridApp.csproj,HybridApp,Seperate form other frontends so that it can be deployed independently
+csharp:csproj:src/Identity.API/Identity.API.csproj,IdentityService,
+csharp:csproj:src/IntegrationEventLogEF/IntegrationEventLogEF.csproj,Logging,
+csharp:csproj:src/OrderProcessor/OrderProcessor.csproj,OrderingService,All ordering related parts grouped into one cluster
+csharp:csproj:src/Ordering.API/Ordering.API.csproj,OrderingService,
+csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj,OrderingService,
+csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj,OrderingService,
+csharp:csproj:src/PaymentProcessor/PaymentProcessor.csproj,PaymentService,
+csharp:csproj:src/WebApp/WebApp.csproj,WebApp,Seperate form other frontends so that it can be deployed independently
+csharp:csproj:src/WebAppComponents/WebAppComponents.csproj,WebApp,
+csharp:csproj:src/WebhookClient/WebhookClient.csproj,WebhookService,
+csharp:csproj:src/Webhooks.API/Webhooks.API.csproj,WebhookService,
+csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj,AppHost,
+csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj,ServiceDefaults,ServiceDefaults as separate cluster because multiple services depend on it
+# wall-clock: 12:51-13:28, total 37 min
+

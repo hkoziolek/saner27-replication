@@ -1,0 +1,40 @@
+{
+  "alias": {
+    "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj": "csharp:csproj:src/HybridApp/HybridApp.csproj"
+  },
+  "description": "rename build target csharp:csproj:src/HybridApp/HybridApp.csproj -> csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj",
+        "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj"
+    ],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/HybridApp/HybridApp.csproj",
+        "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/HybridApp/HybridApp.csproj"
+    ],
+    "suspected_renames": [
+      [
+        "csharp:csproj:src/HybridApp/HybridApp.csproj",
+        "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj"
+      ]
+    ]
+  },
+  "files_touched": [
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\eShop.slnx",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\HybridApp\\HybridApp.csproj -> <repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\HybridApp\\HybridAppAnonMut.csproj"
+  ],
+  "id": "eshop-rename_target-02",
+  "operator": "rename_target",
+  "system": "eshop"
+}

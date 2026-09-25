@@ -1,0 +1,17 @@
+{
+  "edges": 210,
+  "entities": 63,
+  "fidelity_corpus": false,
+  "granularity": "target",
+  "intra_edges": 0,
+  "intra_share": 0.0,
+  "language": "cpp",
+  "largest_share": 0.0159,
+  "mq": 0.0,
+  "mq_per_unit": 0.0,
+  "schema": "adequacy/1",
+  "source": "sidecar-or-singletons",
+  "system": "terminal",
+  "unit_ratio": 1.0,
+  "units": 63
+}

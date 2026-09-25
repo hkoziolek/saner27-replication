@@ -1,0 +1,24 @@
+{
+  "clusters": 5,
+  "entities_clustered": 86,
+  "granularity": "file",
+  "graph": "graph-file.rsf",
+  "system": "libxml2",
+  "technique": "acdc",
+  "vs_pipeline_agreement": {
+    "a2a": 90.04524886877829,
+    "entities_against": 59,
+    "entities_common": 53,
+    "entities_dropped_whitespace": 0,
+    "entities_recovered": 86,
+    "mojofm": 68.0
+  },
+  "vs_reference": {
+    "a2a": 78.68338557993731,
+    "entities_against": 82,
+    "entities_common": 74,
+    "entities_dropped_whitespace": 0,
+    "entities_recovered": 86,
+    "mojofm": 20.0
+  }
+}

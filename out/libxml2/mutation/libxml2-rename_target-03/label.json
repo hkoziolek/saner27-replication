@@ -1,0 +1,44 @@
+{
+  "alias": {
+    "cpp:target:testSchemasstrucmut": "cpp:target:testSchemas"
+  },
+  "description": "rename build target cpp:target:testSchemas -> cpp:target:testSchemasstrucmut",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "cpp:target:testSchemasstrucmut",
+        "cpp:target:libxml2"
+      ]
+    ],
+    "new_targets": [
+      "cpp:target:testSchemasstrucmut"
+    ],
+    "removed_edges": [
+      [
+        "cpp:target:testSchemas",
+        "cpp:target:libxml2"
+      ]
+    ],
+    "removed_targets": [
+      "cpp:target:testSchemas"
+    ],
+    "suspected_renames": [
+      [
+        "cpp:target:testSchemas",
+        "cpp:target:testSchemasstrucmut"
+      ]
+    ]
+  },
+  "files_touched": [
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am"
+  ],
+  "id": "libxml2-rename_target-03",
+  "operator": "rename_target",
+  "system": "libxml2"
+}

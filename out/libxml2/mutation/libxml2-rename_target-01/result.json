@@ -1,0 +1,104 @@
+{
+  "advisory": false,
+  "coverage": 1.0,
+  "diff": {
+    "coverage_gap_edges": [],
+    "coverage_gap_targets": [],
+    "first_run": false,
+    "new_edges": [
+      [
+        "cpp:target:testAutomatastrucmut",
+        "cpp:target:libxml2"
+      ]
+    ],
+    "new_targets": [
+      "cpp:target:testAutomatastrucmut"
+    ],
+    "removed_edges": [
+      [
+        "cpp:target:testAutomata",
+        "cpp:target:libxml2"
+      ]
+    ],
+    "removed_targets": [
+      "cpp:target:testAutomata"
+    ],
+    "suspected_renames": [
+      {
+        "new": "cpp:target:testAutomatastrucmut",
+        "old": "cpp:target:testAutomata"
+      }
+    ],
+    "suspicious": []
+  },
+  "score": {
+    "advisory": false,
+    "alias_findings_in_scope": 0,
+    "alias_suppressed": true,
+    "attributed_violations": [],
+    "coverage": 1.0,
+    "coverage_gaps_in_scope": {
+      "coverage_gap_edges": [],
+      "coverage_gap_targets": []
+    },
+    "detected": true,
+    "fn": [],
+    "fn_count": 0,
+    "fp": [],
+    "fp_count": 0,
+    "rename_classified": true,
+    "scored": {
+      "layering_violations": [],
+      "new_edges": [
+        [
+          "cpp:target:testAutomatastrucmut",
+          "cpp:target:libxml2"
+        ]
+      ],
+      "new_targets": [
+        "cpp:target:testAutomatastrucmut"
+      ],
+      "removed_edges": [
+        [
+          "cpp:target:testAutomata",
+          "cpp:target:libxml2"
+        ]
+      ],
+      "removed_targets": [
+        "cpp:target:testAutomata"
+      ],
+      "suspected_renames": [
+        {
+          "new": "cpp:target:testAutomatastrucmut",
+          "old": "cpp:target:testAutomata"
+        }
+      ]
+    },
+    "tp": [
+      [
+        "new_edge",
+        "cpp:target:testAutomatastrucmut",
+        "cpp:target:libxml2"
+      ],
+      [
+        "new_target",
+        "cpp:target:testAutomatastrucmut"
+      ],
+      [
+        "removed_edge",
+        "cpp:target:testAutomata",
+        "cpp:target:libxml2"
+      ],
+      [
+        "removed_target",
+        "cpp:target:testAutomata"
+      ],
+      [
+        "rename",
+        "cpp:target:testAutomata",
+        "cpp:target:testAutomatastrucmut"
+      ]
+    ],
+    "tp_count": 5
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "dsl": {
+    "equal": true,
+    "files_compared": 6,
+    "mismatched": []
+  },
+  "facts": {
+    "curated-facts.json": {
+      "equal": true,
+      "hash_a": "89ffd92e324a8b6975d0c8b0fb883365a143272e6ea1802b4074051c89d722ad",
+      "hash_b": "89ffd92e324a8b6975d0c8b0fb883365a143272e6ea1802b4074051c89d722ad",
+      "present": true
+    },
+    "extracted-facts.json": {
+      "equal": true,
+      "hash_a": "9e8ad58986d235ded776d01cb522bd75d1a37aa87a8af7417d750c8d9b566063",
+      "hash_b": "9e8ad58986d235ded776d01cb522bd75d1a37aa87a8af7417d750c8d9b566063",
+      "present": true
+    }
+  },
+  "identical": true,
+  "identical_rate": 100.0,
+  "runs": 2
+}

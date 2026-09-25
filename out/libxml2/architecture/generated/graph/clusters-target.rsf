@@ -1,0 +1,14 @@
+contain container:examples cpp:target:gjobread
+contain container:testDrivers cpp:target:testAutomata
+contain container:testDrivers cpp:target:testC14N
+contain container:testDrivers cpp:target:testDocbook
+contain container:testDrivers cpp:target:testHTML
+contain container:testDrivers cpp:target:testRegexp
+contain container:testDrivers cpp:target:testSAX
+contain container:testDrivers cpp:target:testSchemas
+contain container:testDrivers cpp:target:testThreads
+contain container:testDrivers cpp:target:testURI
+contain container:testDrivers cpp:target:testXPath
+contain cpp:target:libxml2 cpp:target:libxml2
+contain cpp:target:xmlcatalog cpp:target:xmlcatalog
+contain cpp:target:xmllint cpp:target:xmllint

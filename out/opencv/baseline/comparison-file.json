@@ -1,0 +1,76 @@
+{
+  "dropped_whitespace": 0,
+  "entities": {
+    "acdc": 1087,
+    "cc": 1087,
+    "dir": 1087,
+    "floor": 997,
+    "limbo": 1087,
+    "pipeline": 997,
+    "propose": 1161,
+    "wca": 1087
+  },
+  "granularity": "file",
+  "projection": "all-common",
+  "reference_entities": 1087,
+  "results": {
+    "acdc": {
+      "a2a": 86.31,
+      "ari": 32.59,
+      "clusters": 108,
+      "mojofm": 81.74,
+      "nested": 78.7
+    },
+    "cc": {
+      "a2a": 81.37,
+      "ari": -0.23,
+      "clusters": 3,
+      "mojofm": 25.41,
+      "nested": 66.67
+    },
+    "dir": {
+      "a2a": 86.63,
+      "ari": 40.84,
+      "clusters": 86,
+      "mojofm": 92.08,
+      "nested": 100.0
+    },
+    "floor": {
+      "a2a": 100.0,
+      "ari": 100.0,
+      "clusters": 14,
+      "mojofm": 100.0,
+      "nested": 100.0
+    },
+    "limbo": {
+      "a2a": 84.65,
+      "ari": 4.9,
+      "clusters": 13,
+      "mojofm": 46.86,
+      "nested": 46.15
+    },
+    "pipeline": {
+      "a2a": 89.84,
+      "ari": 55.86,
+      "clusters": 4,
+      "mojofm": 59.63,
+      "nested": 0.0
+    },
+    "propose": {
+      "a2a": 87.0,
+      "ari": 26.88,
+      "clusters": 2,
+      "mojofm": 48.29,
+      "nested": 0.0
+    },
+    "wca": {
+      "a2a": 81.18,
+      "ari": -0.68,
+      "clusters": 8,
+      "mojofm": 25.85,
+      "nested": 87.5
+    }
+  },
+  "shared_entities": 923,
+  "system": "opencv"
+}

@@ -1,0 +1,40 @@
+{
+  "alias": {
+    "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotalAnonMut.csproj": "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj"
+  },
+  "description": "rename build target csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj -> csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotalAnonMut.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotalAnonMut.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotalAnonMut.csproj"
+    ],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj"
+    ],
+    "suspected_renames": [
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotalAnonMut.csproj"
+      ]
+    ]
+  },
+  "files_touched": [
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\NopCommerce.sln",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Nop.Plugin.Shipping.FixedByWeightByTotal.csproj -> <repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Nop.Plugin.Shipping.FixedByWeightByTotalAnonMut.csproj"
+  ],
+  "id": "nopcommerce-rename_target-04",
+  "operator": "rename_target",
+  "system": "nopcommerce"
+}

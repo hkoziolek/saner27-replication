@@ -1,0 +1,104 @@
+{
+  "advisory": false,
+  "coverage": 1.0,
+  "diff": {
+    "coverage_gap_edges": [],
+    "coverage_gap_targets": [],
+    "first_run": false,
+    "new_edges": [
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotalAnonMut.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotalAnonMut.csproj"
+    ],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj"
+    ],
+    "suspected_renames": [
+      {
+        "new": "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotalAnonMut.csproj",
+        "old": "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj"
+      }
+    ],
+    "suspicious": []
+  },
+  "score": {
+    "advisory": false,
+    "alias_findings_in_scope": 0,
+    "alias_suppressed": true,
+    "attributed_violations": [],
+    "coverage": 1.0,
+    "coverage_gaps_in_scope": {
+      "coverage_gap_edges": [],
+      "coverage_gap_targets": []
+    },
+    "detected": true,
+    "fn": [],
+    "fn_count": 0,
+    "fp": [],
+    "fp_count": 0,
+    "rename_classified": true,
+    "scored": {
+      "layering_violations": [],
+      "new_edges": [
+        [
+          "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotalAnonMut.csproj",
+          "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+        ]
+      ],
+      "new_targets": [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotalAnonMut.csproj"
+      ],
+      "removed_edges": [
+        [
+          "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj",
+          "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+        ]
+      ],
+      "removed_targets": [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj"
+      ],
+      "suspected_renames": [
+        {
+          "new": "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotalAnonMut.csproj",
+          "old": "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj"
+        }
+      ]
+    },
+    "tp": [
+      [
+        "new_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotalAnonMut.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ],
+      [
+        "new_target",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotalAnonMut.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ],
+      [
+        "removed_target",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj"
+      ],
+      [
+        "rename",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotalAnonMut.csproj"
+      ]
+    ],
+    "tp_count": 5
+  }
+}

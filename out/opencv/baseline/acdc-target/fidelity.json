@@ -1,0 +1,13 @@
+{
+  "clusters": 4,
+  "entities_clustered": 24,
+  "granularity": "target",
+  "graph": "graph-target.rsf",
+  "system": "opencv",
+  "technique": "acdc",
+  "vs_pipeline_agreement": {
+    "a2a": 84.76190476190476,
+    "mojofm": 21.05
+  },
+  "vs_reference": null
+}

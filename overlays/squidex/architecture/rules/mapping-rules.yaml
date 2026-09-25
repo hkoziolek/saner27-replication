@@ -1,0 +1,39 @@
+# Squidex curation skeleton (RQ9 onboarding / HG1).
+# No groups yet: this run establishes the no-curation floor and lets `arch export
+# --graph` emit the entity list. Fill `exclude` + `group` after inspecting the
+# extracted facts (out/squidex/architecture/generated/extracted-facts.json) — the
+# architecturally interesting judgment here is the CQRS write-model (event-sourced
+# domain) vs read-model (projections) cut, which crosses the project/folder tree.
+version: 1
+
+defaults:
+  min_relationship_weight: 3        # non-declared edges only; declared project refs never dropped (§7.4)
+  drop_external: true               # NuGet packages are technology tags / external, not containers
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false              # --no-llm baseline
+
+exclude:
+  targets:
+    - glob: "backend/tests/*"        # Squidex.*.Tests projects (not production architecture)
+    - glob: "*.Tests"               # belt-and-suspenders on the project-name convention
+
+# TODO: define containers. Example shape (ids are the csharp:csproj:<repo-rel-path>
+# ids the target-granularity graph export emits — read them off extracted-facts.json):
+#
+# group:
+#   - container: "<Name>"
+#     members: [ "csharp:csproj:backend/src/<Project>/<Project>.csproj" ]
+#   - container: "<Name>"
+#     members_glob: [ "backend/src/Squidex.Domain.*" ]
+group: []
+
+technology:
+  csproj: ".NET assembly"
+
+naming:
+  style: descriptive
+  expand_acronyms: false
+  max_name_words: 4
+
+# name_overrides / rationale / description_overrides: add as curation firms up.

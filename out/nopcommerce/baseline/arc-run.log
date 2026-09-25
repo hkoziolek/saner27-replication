@@ -1,0 +1,556 @@
+[arc] 38 entities from graph-target.rsf
+[arc] 38/38 entities had readable source text
+Mallet LDA: 19 topics, 5 topic bits, 11111 topic mask
+max tokens: 319543
+total tokens: 1054729
+<10> LL/token: -8,1632
+<20> LL/token: -7,64708
+<30> LL/token: -7,48911
+<40> LL/token: -7,41401
+
+0	1	param returns summary task letter latin virtual 
+1	1	var test model await public void validator 
+2	1	admin param nop catalog return result public 
+3	1	await product var customer task order public 
+4	1	model await public set searchmodel var nop 
+5	1	nop public services model private async core 
+6	1	param table summary nameof nop entity data 
+7	1	tax summary nop public plugins await plugin 
+8	1	param await task returns summary represents asynchronous 
+9	1	newtonsoft json system required summary string public 
+10	1	summary var task string order param email 
+11	1	configuration summary public task returns var nop 
+12	1	await summary public misc news nop quote 
+13	1	public summary string await nop jsonproperty set 
+14	1	summary public product string var record set 
+15	1	admin string settings param static var hint 
+16	1	summary public payments settings string set sets 
+17	1	summary public set sets string param bool 
+18	1	public await model misc summary forum plugins 
+
+<50> LL/token: -7,35877
+<60> LL/token: -7,32416
+<70> LL/token: -7,29757
+<80> LL/token: -7,27745
+<90> LL/token: -7,26092
+
+0	1	param returns summary task letter latin virtual 
+1	1	var await test model public void validator 
+2	1	public admin options param nop virtual return 
+3	1	await product var customer order null public 
+4	1	model await set public task searchmodel nop 
+5	1	nop public services model web core class 
+6	1	param summary table nop nameof entity data 
+7	1	tax summary public nop await plugins avalara 
+8	1	param await returns task summary asynchronous represents 
+9	1	newtonsoft json required system summary string public 
+10	1	task summary var string store order list 
+11	1	summary configuration public task nop protected var 
+12	1	await public summary misc news nop quote 
+13	1	public await string summary nop plugin jsonproperty 
+14	1	summary public product record set string request 
+15	1	admin string param settings static context nop 
+16	1	summary public payments string set settings paypalcommerce 
+17	1	summary public set sets string param bool 
+18	1	public await misc summary model forum forums 
+
+<100> LL/token: -7,24436
+<110> LL/token: -7,2333
+<120> LL/token: -7,22174
+<130> LL/token: -7,20668
+<140> LL/token: -7,19835
+
+0	1	param summary returns letter string task latin 
+1	1	var await model test public validator void 
+2	1	public param virtual options partial endregion catalog 
+3	1	product var customer await null task string 
+4	1	model await set nop searchmodel web task 
+5	1	nop public web services core class framework 
+6	1	summary param table nop nameof entity public 
+7	1	tax summary public nop await avalara plugins 
+8	1	param await task returns summary asynchronous operation 
+9	1	json newtonsoft required system summary string public 
+10	1	task summary var store order list false 
+11	1	summary configuration public task nop returns var 
+12	1	await public summary misc news nop quote 
+13	1	await string public summary nop plugin misc 
+14	1	summary public record product set request string 
+15	1	admin string param settings nop static context 
+16	1	summary public string payments set settings paypalcommerce 
+17	1	summary public set sets string param bool 
+18	1	public await summary misc model forum forums 
+
+<150> LL/token: -7,18772
+<160> LL/token: -7,17911
+<170> LL/token: -7,16868
+<180> LL/token: -7,15481
+<190> LL/token: -7,14855
+
+0	1	param returns summary letter string task latin 
+1	1	var model await test public validator void 
+2	1	public param virtual id endregion represents partial 
+3	1	product var customer await null return string 
+4	1	model await set nop searchmodel web task 
+5	1	nop public services web core class framework 
+6	1	summary param table nop nameof entity public 
+7	1	tax summary public nop await avalara plugins 
+8	1	await param summary task asynchronous operation returns 
+9	1	newtonsoft json system required summary string public 
+10	1	task var summary store list order false 
+11	1	summary configuration public task returns string var 
+12	1	await public summary misc news nop quote 
+13	1	await public summary string nop plugin misc 
+14	1	summary public set string sets product zettle 
+15	1	admin string param settings nop static configuration 
+16	1	summary public string set payments settings await 
+17	1	summary public set sets string param bool 
+18	1	public await summary misc forum model forums 
+
+<200> LL/token: -7,14188
+<210> LL/token: -7,14122
+<220> LL/token: -7,13913
+<230> LL/token: -7,13604
+<240> LL/token: -7,13006
+
+0	1	param returns summary letter string task latin 
+1	1	var model await test public validator void 
+2	1	public summary virtual param endregion partial catalog 
+3	1	product var customer return task string null 
+4	1	model await set nop admin searchmodel web 
+5	1	nop public services web core class localizationservice 
+6	1	summary param table nop nameof entity public 
+7	1	tax public summary await nop avalara plugins 
+8	1	await summary param asynchronous task operation returns 
+9	1	json newtonsoft system required summary string public 
+10	1	task store var summary order list customer 
+11	1	summary configuration public task nop returns string 
+12	1	await public summary misc news nop quote 
+13	1	await summary public string plugin nop var 
+14	1	summary public string set sets zettle product 
+15	1	admin string param settings static configuration var 
+16	1	summary public string set payments settings await 
+17	1	summary public set sets string param bool 
+18	1	public await summary misc model forum forums 
+
+[beta: 0,01831] 
+<250> LL/token: -7,12176
+<260> LL/token: -7,11835
+<270> LL/token: -7,11028
+<280> LL/token: -7,10301
+<290> LL/token: -7,10049
+
+0	0,38924	param returns letter string latin summary task 
+1	0,26455	model await var test public void validator 
+2	0,55921	public summary virtual represents endregion id partial 
+3	0,64599	var product customer public return string task 
+4	0,67915	model await set nop searchmodel admin web 
+5	0,5769	nop web core services class framework localizationservice 
+6	0,52093	summary param table nop nameof public entity 
+7	0,6987	tax summary public nop await avalara plugins 
+8	0,5627	await summary param returns represents task operation 
+9	0,42336	json newtonsoft system required summary string public 
+10	0,79906	task summary store var order list false 
+11	1,05461	summary public configuration nop task string plugins 
+12	0,41436	await public summary misc news nop quote 
+13	0,88105	await public summary string nop misc set 
+14	0,42857	summary public string set sets zettle propertyname 
+15	0,55948	admin string param settings configuration nop var 
+16	0,49109	summary public string set payments settings await 
+17	0,84237	summary public set sets string param bool 
+18	0,39171	public await summary misc forum model forums 
+
+[beta: 0,01993] 
+<300> LL/token: -7,10076
+<310> LL/token: -7,09883
+<320> LL/token: -7,09639
+<330> LL/token: -7,09093
+<340> LL/token: -7,0873
+
+0	0,14877	param returns letter latin string protected summary 
+1	0,07547	model await var test public nop void 
+2	0,31372	public represents summary virtual endregion options partial 
+3	0,43499	var product string return public customer task 
+4	0,44506	model await set nop searchmodel admin web 
+5	0,33719	nop web class core namespace localizationservice key 
+6	0,27906	summary param table nop nameof public entity 
+7	0,4452	tax summary public await nop avalara plugins 
+8	0,30295	param summary await returns represents task asynchronous 
+9	0,19406	json newtonsoft system required summary string public 
+10	0,61496	task summary store false order var list 
+11	1,02646	summary public nop configuration plugin await task 
+12	0,17957	await summary public misc news nop quote 
+13	0,67942	await public string summary misc var nop 
+14	0,1937	summary public string set sets zettle product 
+15	0,31075	admin string param configuration settings nop var 
+16	0,24796	summary public string set payments settings await 
+17	0,67864	summary public set sets string param bool 
+18	0,15918	public await summary misc forum model forums 
+
+[beta: 0,02027] 
+<350> LL/token: -7,08534
+<360> LL/token: -7,07873
+<370> LL/token: -7,07802
+<380> LL/token: -7,07486
+<390> LL/token: -7,06759
+
+0	0,06521	param returns letter latin protected small newline 
+1	0,02762	model await var test public nop void 
+2	0,19294	public represents summary protected virtual endregion partial 
+3	0,29173	var product string public customer return task 
+4	0,28953	model await set nop searchmodel admin web 
+5	0,17601	web nop localizationservice class settingservice gdprconsent customer 
+6	0,16922	summary param table nop nameof public entity 
+7	0,25906	tax summary public await nop avalara plugins 
+8	0,18205	param summary await task returns represents operation 
+9	0,10214	newtonsoft json required system summary string public 
+10	0,49454	summary task store var false list order 
+11	0,98331	summary public nop configuration await plugin string 
+12	0,07868	await summary misc public news nop quote 
+13	0,43203	await public string summary misc var param 
+14	0,0945	summary public string set sets zettle product 
+15	0,19699	admin string param configuration settings nop var 
+16	0,13753	summary public string set payments settings await 
+17	0,55249	summary public set sets string param bool 
+18	0,07142	public await summary misc forum model forums 
+
+[beta: 0,02029] 
+<400> LL/token: -7,06625
+<410> LL/token: -7,05757
+<420> LL/token: -7,05378
+<430> LL/token: -7,05425
+<440> LL/token: -7,05203
+
+0	0,03031	param letter latin returns protected small newline 
+1	0,01266	model await var test public nop void 
+2	0,12227	public summary represents protected endregion virtual partial 
+3	0,20348	var product string public return customer await 
+4	0,17282	model await set nop admin searchmodel web 
+5	0,09481	localizationservice nop settingservice discount region googleauthenticator multifactorauth 
+6	0,11357	summary param table nop nameof public entity 
+7	0,15042	tax summary public await nop avalara plugins 
+8	0,12098	param summary task await returns represents operation 
+9	0,06334	json newtonsoft system required summary string public 
+10	0,40423	summary task store returns var list false 
+11	0,92429	summary public nop configuration await plugin task 
+12	0,0477	await misc public summary news nop quote 
+13	0,21875	await string public summary misc var param 
+14	0,05304	summary public string set sets product zettle 
+15	0,13259	admin string param configuration settings nop var 
+16	0,08005	summary public string set payments settings await 
+17	0,4312	summary public set sets string param bool 
+18	0,04135	public await summary misc forum model forums 
+
+[beta: 0,02035] 
+<450> LL/token: -7,05065
+<460> LL/token: -7,04589
+<470> LL/token: -7,04218
+<480> LL/token: -7,03975
+<490> LL/token: -7,03526
+
+0	0,02232	param letter returns latin protected virtual small 
+1	0,00677	model await var test public nop void 
+2	0,08362	public summary represents virtual protected endregion catalog 
+3	0,1529	var product string public return await customer 
+4	0,12098	model await set nop admin searchmodel task 
+5	0,05566	nop settingservice googleauthenticator services multifactorauth picture customer 
+6	0,09212	summary param table nop nameof public entity 
+7	0,08775	tax summary public await nop avalara plugins 
+8	0,08061	param summary task await returns operation represents 
+9	0,03625	json newtonsoft required system summary string public 
+10	0,34623	summary task store returns customer list null 
+11	0,84065	summary public nop await configuration plugin string 
+12	0,02942	await misc public summary news nop quote 
+13	0,10369	await public string summary var misc param 
+14	0,03048	summary public string set sets product zettle 
+15	0,08842	admin string param configuration nop settings var 
+16	0,05685	summary public string payments set settings await 
+17	0,31077	summary public set sets string param bool 
+18	0,02992	public await summary misc forum model forums 
+
+[beta: 0,02043] 
+<500> LL/token: -7,03613
+<510> LL/token: -7,03452
+<520> LL/token: -7,02938
+<530> LL/token: -7,03065
+<540> LL/token: -7,02509
+
+0	0,0122	param letter latin protected small newline environment 
+1	0,00444	model await var test public nop void 
+2	0,06268	public summary represents virtual endregion partial catalog 
+3	0,12772	var product string public customer await return 
+4	0,09157	model await nop set admin searchmodel web 
+5	0,03868	nop param googleauthenticator multifactorauth string services customer 
+6	0,078	summary param table nop nameof public entity 
+7	0,05866	tax public summary await nop avalara plugins 
+8	0,05522	param task await returns summary represents operation 
+9	0,03247	json newtonsoft required system summary string public 
+10	0,31756	summary task returns store customer list bool 
+11	0,72953	summary public nop await configuration plugin task 
+12	0,02053	await misc summary public news nop quote 
+13	0,05153	await public string summary var misc nop 
+14	0,02254	summary public string set sets zettle product 
+15	0,05753	admin string param configuration nop settings var 
+16	0,05103	summary public string payments set settings await 
+17	0,23632	summary public set sets string param bool 
+18	0,02682	public await summary misc forum model forums 
+
+[beta: 0,02052] 
+<550> LL/token: -7,02222
+<560> LL/token: -7,0196
+<570> LL/token: -7,01699
+<580> LL/token: -7,01756
+<590> LL/token: -7,01772
+
+0	0,00956	letter latin param protected small newline environment 
+1	0,00474	model await var test public nop void 
+2	0,05671	public summary represents virtual endregion catalog partial 
+3	0,11254	var product string public await customer async 
+4	0,08041	model await set nop admin searchmodel web 
+5	0,03515	nop googleauthenticator string param multifactorauth services plugin 
+6	0,07195	summary param table nop nameof public entity 
+7	0,03931	tax public summary await nop avalara plugins 
+8	0,0455	param returns task summary await represents operation 
+9	0,02343	newtonsoft json required system summary string public 
+10	0,29474	summary task returns list store customer bool 
+11	0,63444	summary public nop await configuration task string 
+12	0,01744	await public summary misc news nop quote 
+13	0,03892	await public string summary var misc nop 
+14	0,01664	summary public string set sets product zettle 
+15	0,06056	admin string param configuration nop settings static 
+16	0,04116	summary public string payments set settings await 
+17	0,18559	summary public set sets string param indicating 
+18	0,021	public await summary misc forum model forums 
+
+[beta: 0,02058] 
+<600> LL/token: -7,01978
+<610> LL/token: -7,01406
+<620> LL/token: -7,01626
+<630> LL/token: -7,01331
+<640> LL/token: -7,01304
+
+0	0,00897	letter latin protected small newline environment capital 
+1	0,00568	model var await test public nop services 
+2	0,0532	public summary represents virtual endregion partial catalog 
+3	0,10287	var product string public await customer return 
+4	0,06464	model await set nop admin searchmodel web 
+5	0,03701	nop googleauthenticator param string multifactorauth services plugin 
+6	0,07031	summary param table nop nameof public entity 
+7	0,03202	tax public summary nop await avalara plugins 
+8	0,05004	param summary returns task await represents operation 
+9	0,02027	json newtonsoft system required summary string public 
+10	0,27861	summary task returns store var list true 
+11	0,5537	summary public nop await configuration task plugins 
+12	0,01834	await misc summary public news nop quote 
+13	0,02709	await public summary string var misc param 
+14	0,02263	summary public string set sets product zettle 
+15	0,05199	admin string param configuration nop settings var 
+16	0,03739	summary public string payments set settings await 
+17	0,14585	summary public set sets string param indicating 
+18	0,02078	public await summary misc forum model forums 
+
+[beta: 0,02048] 
+<650> LL/token: -7,00929
+<660> LL/token: -7,01398
+<670> LL/token: -7,0119
+<680> LL/token: -7,0072
+<690> LL/token: -7,00305
+
+0	0,00819	letter latin protected small newline environment capital 
+1	0,006	model await var test public nop services 
+2	0,05261	public summary represents virtual endregion catalog partial 
+3	0,09389	var product string public customer return task 
+4	0,05698	model await set nop admin searchmodel web 
+5	0,03831	nop googleauthenticator param plugin multifactorauth string misc 
+6	0,06573	summary param table nop nameof public entity 
+7	0,03086	tax public summary nop await avalara plugins 
+8	0,04064	param summary returns task await represents operation 
+9	0,01513	json newtonsoft system required summary string public 
+10	0,27148	summary returns task list bool store var 
+11	0,49173	summary public nop await configuration string task 
+12	0,01733	await public misc summary news nop quote 
+13	0,02127	await public string summary var misc nop 
+14	0,02061	summary public string set sets zettle product 
+15	0,04307	admin string param configuration nop settings static 
+16	0,03596	summary public string payments set settings await 
+17	0,12451	summary public set sets string param indicating 
+18	0,02019	public await summary misc model forum forums 
+
+[beta: 0,02054] 
+<700> LL/token: -7,00423
+<710> LL/token: -7,00255
+<720> LL/token: -7,00313
+<730> LL/token: -7,0043
+<740> LL/token: -7,00257
+
+0	0,00751	letter latin protected small newline environment capital 
+1	0,00695	model await test var public nop services 
+2	0,04712	public summary represents virtual endregion catalog partial 
+3	0,09187	var product string public await customer return 
+4	0,05185	model await nop set admin searchmodel web 
+5	0,03882	nop googleauthenticator string multifactorauth plugin param misc 
+6	0,059	summary param table nop nameof public entity 
+7	0,03086	tax public summary await nop avalara plugins 
+8	0,03345	param summary returns task await represents operation 
+9	0,01261	json newtonsoft required system summary string public 
+10	0,26212	summary returns task null list bool store 
+11	0,44501	summary public nop await configuration string task 
+12	0,01584	await summary misc public news nop quote 
+13	0,01867	await public string summary var misc nop 
+14	0,02051	summary public string set sets zettle product 
+15	0,03951	admin string param configuration nop settings var 
+16	0,03242	summary public string payments set settings await 
+17	0,11556	summary public set sets string param indicating 
+18	0,01937	public await summary misc forum model forums 
+
+[beta: 0,02057] 
+<750> LL/token: -6,99841
+<760> LL/token: -7,00074
+<770> LL/token: -7,00031
+<780> LL/token: -6,99953
+<790> LL/token: -6,99853
+
+0	0,00768	letter latin protected small newline capital environment 
+1	0,00407	model await var test public nop services 
+2	0,04369	public summary represents endregion catalog partial virtual 
+3	0,09176	var product string public await task customer 
+4	0,05329	model await set nop admin searchmodel web 
+5	0,0334	nop public plugin param googleauthenticator string multifactorauth 
+6	0,05575	summary param table nop nameof public entity 
+7	0,0294	tax public summary await nop avalara plugins 
+8	0,03364	param summary returns task await represents operation 
+9	0,01316	json newtonsoft required system summary string public 
+10	0,2599	summary returns task list null var bool 
+11	0,40069	summary public nop await configuration plugins task 
+12	0,01105	await public summary misc news nop quote 
+13	0,01428	await public string summary var misc nop 
+14	0,01759	summary public string set sets zettle product 
+15	0,03527	admin string param nop configuration settings static 
+16	0,0332	summary public string payments set settings await 
+17	0,10374	summary public set sets string param indicating 
+18	0,01913	public await summary misc forum model forums 
+
+[beta: 0,0205] 
+<800> LL/token: -6,99784
+<810> LL/token: -6,99895
+<820> LL/token: -6,9961
+<830> LL/token: -6,99532
+<840> LL/token: -6,99745
+
+0	0,00824	letter latin protected small newline environment capital 
+1	0,00386	model var await test public nop services 
+2	0,0406	public summary represents endregion catalog partial virtual 
+3	0,09193	var product string task public await customer 
+4	0,04796	model await set nop admin searchmodel web 
+5	0,03491	nop public string googleauthenticator param plugin multifactorauth 
+6	0,05145	param summary table nop nameof public entity 
+7	0,02668	tax public nop summary await avalara plugins 
+8	0,03551	param summary returns task await represents operation 
+9	0,01342	json newtonsoft required system summary string public 
+10	0,26151	summary returns task bool list null var 
+11	0,36911	summary public nop configuration await plugins plugin 
+12	0,01052	await public summary misc news nop quote 
+13	0,01365	await public string summary var misc nop 
+14	0,01555	summary public string set sets zettle jsonproperty 
+15	0,03338	admin string param nop configuration settings static 
+16	0,03476	summary public string payments set settings await 
+17	0,09326	summary public set sets string param indicating 
+18	0,0169	public await summary misc forum model forums 
+
+[beta: 0,02054] 
+<850> LL/token: -6,99313
+<860> LL/token: -6,99394
+<870> LL/token: -6,99701
+<880> LL/token: -6,99687
+<890> LL/token: -6,99461
+
+0	0,00746	letter latin protected small newline capital region 
+1	0,00479	model await var test public nop services 
+2	0,041	public summary represents endregion catalog partial virtual 
+3	0,08742	var product string public task await customer 
+4	0,05315	model await set nop admin searchmodel web 
+5	0,03532	nop string plugin public param googleauthenticator multifactorauth 
+6	0,05375	summary param table nop nameof public entity 
+7	0,02444	tax public summary await nop avalara plugins 
+8	0,03496	param summary returns task await represents asynchronous 
+9	0,01482	newtonsoft json required system summary string public 
+10	0,2628	summary returns task list bool null customer 
+11	0,33641	summary public nop configuration await plugins string 
+12	0,01053	await summary public misc news nop quote 
+13	0,01248	await string public summary var misc nop 
+14	0,01357	summary public string set sets await zettle 
+15	0,02782	admin string param nop configuration settings var 
+16	0,02826	summary public string payments set settings await 
+17	0,09222	summary public set sets string param indicating 
+18	0,01772	public await summary misc forum model forums 
+
+[beta: 0,02053] 
+<900> LL/token: -6,99548
+<910> LL/token: -6,99116
+<920> LL/token: -6,99399
+<930> LL/token: -6,99295
+<940> LL/token: -6,99394
+
+0	0,00901	letter latin protected small newline capital region 
+1	0,00401	model await var test public nop void 
+2	0,04291	public summary represents endregion catalog partial search 
+3	0,08571	var product string await public task customer 
+4	0,05307	model await set nop admin searchmodel web 
+5	0,03419	nop plugin public string param googleauthenticator multifactorauth 
+6	0,05449	param summary table nop nameof public entity 
+7	0,027	tax public summary await nop avalara plugins 
+8	0,0303	param summary returns task await represents operation 
+9	0,01381	json newtonsoft required system summary string public 
+10	0,26419	summary returns task list bool var customer 
+11	0,31122	summary public nop configuration await string task 
+12	0,01136	await public misc summary news nop quote 
+13	0,01127	await public string summary var misc nop 
+14	0,01161	summary public string set sets zettle await 
+15	0,02979	admin string param nop configuration settings static 
+16	0,02778	summary public string set payments settings await 
+17	0,08224	summary public set sets string param indicating 
+18	0,01738	public await summary misc forum model forums 
+
+[beta: 0,02048] 
+<950> LL/token: -6,9963
+<960> LL/token: -6,99726
+<970> LL/token: -6,9984
+<980> LL/token: -6,99795
+<990> LL/token: -6,99771
+
+0	0,00747	letter latin protected small newline store environment 
+1	0,00354	model var await test public nop void 
+2	0,03849	public summary represents catalog partial endregion virtual 
+3	0,08109	var product string await public task customer 
+4	0,05514	model await set nop admin searchmodel web 
+5	0,0325	nop public string summary plugin param googleauthenticator 
+6	0,05384	summary param table nop nameof public entity 
+7	0,02745	tax public nop await summary avalara plugins 
+8	0,02974	param summary returns task represents await asynchronous 
+9	0,01342	json newtonsoft required system summary string public 
+10	0,26374	summary returns task bool list null customer 
+11	0,29371	public summary nop await configuration string plugin 
+12	0,01165	await public misc summary news nop quote 
+13	0,01166	await public string summary var misc nop 
+14	0,01144	summary public string set sets product zettle 
+15	0,03348	admin string param nop configuration settings static 
+16	0,02331	summary public string payments set settings await 
+17	0,07915	summary public set sets string param indicating 
+18	0,0178	public await summary misc model forum forums 
+
+[beta: 0,02042] 
+<1000> LL/token: -6,99458
+
+Total time: 2 minutes 4 seconds
+[arc] LDA done: 19 topics, 1000 iterations
+[arc] DocTopics parsed 38 items, numTopics=19
+    src='/nopcommerce-0/csharp:csproj:src/Plugins/Nop/Plugin/Search/Lucene/Nop/Plugin/Search/Lucene/csproj' cSourced=false
+    src='/nopcommerce-0/csharp:csproj:src/Plugins/Nop/Plugin/Misc/CloudflareImages/Nop/Plugin/Misc/CloudflareImages/csproj' cSourced=false
+    src='/nopcommerce-0/csharp:csproj:src/Plugins/Nop/Plugin/Misc/Brevo/Nop/Plugin/Misc/Brevo/csproj' cSourced=false
+    src='/nopcommerce-0/csharp:csproj:src/Presentation/Nop/Web/Nop/Web/csproj' cSourced=false
+    src='/nopcommerce-0/csharp:csproj:src/Plugins/Nop/Plugin/Widgets/FacebookPixel/Nop/Plugin/Widgets/FacebookPixel/csproj' cSourced=false
+[arc] 0/38 DocTopicItems are C-sourced
+No DocTopics file found, generating new one.
+[arc] architecture initialized: 38 singleton clusters (entities matched to a topic vector)
+[arc] clustered to 17 clusters (target 17)
+[arc] wrote <repo>\out\nopcommerce\baseline\arc-target\clusters.rsf
+[arc-target] 17 clusters / 38 entities — MoJoFM=56.25 a2a=90.05524861878453 vs reference -> <repo>\out\nopcommerce\baseline\arc-target\fidelity.json

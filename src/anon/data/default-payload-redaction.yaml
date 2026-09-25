@@ -1,0 +1,78 @@
+# Anon default LLM-egress redaction policy (T1.2, plan §8.3 / ADR-0001).
+#
+# This file SHIPS WITH the package (registered as setuptools package-data) and is the
+# FAIL-CLOSED default that protects any LLM-mode run when the architect has NOT supplied
+# a hand-curated `rules/payload-redaction.yaml`. Because it is non-inert (it carries
+# secret_patterns), the common "no local policy yet" path proceeds *safely* rather than
+# refusing — only a deliberately-emptied effective policy triggers the fail-closed refusal
+# (see enrich_llm.egress_gate / --i-accept-unredacted-egress).
+#
+# Design rule (over-scrub guard): every pattern below matches a secret *SHAPE*, never a
+# legitimate architectural NAME. Names like `OrderService`, `Catalog.API`, `NativeMath`,
+# `EventBusRabbitMQ` must survive scrubbing unchanged; planted keys / connection strings /
+# emails / tokens must not. The test suite (tests/test_egress.py) pins this guarantee.
+#
+# Patterns are Python `re` regexes applied with re.sub(..., "[REDACTED]"). An invalid
+# regex is skipped (graceful degradation), never fatal.
+
+# Hard cap on any free-text snippet that may leave the trust boundary (ADR-0001 whitelist).
+max_snippet_chars: 280
+
+secret_patterns:
+  # --- PEM / private-key blocks (whole block) ----------------------------------
+  - "-----BEGIN(?:[A-Z ]+)?PRIVATE KEY-----[\\s\\S]*?-----END(?:[A-Z ]+)?PRIVATE KEY-----"
+
+  # --- JWTs (three base64url segments separated by dots; eyJ... header) --------
+  - "eyJ[A-Za-z0-9_-]{10,}\\.[A-Za-z0-9_-]{10,}\\.[A-Za-z0-9_-]{10,}"
+
+  # --- AWS access key id (AKIA/ASIA + 16 uppercase alphanumerics) --------------
+  - "\\b(?:AKIA|ASIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA)[0-9A-Z]{16}\\b"
+
+  # --- AWS secret access key (assigned form: aws_secret...=<40 base64 chars>) ---
+  - "(?i)aws_secret_access_key\\s*[:=]\\s*[A-Za-z0-9/+=]{40}"
+
+  # --- Bearer / Authorization tokens -------------------------------------------
+  - "(?i)\\bbearer\\s+[A-Za-z0-9._~+/-]{16,}={0,2}"
+  - "(?i)\\bauthorization\\s*[:=]\\s*[A-Za-z0-9._~+/-]{16,}={0,2}"
+
+  # --- Assigned-secret shapes (key/secret/token/password/api[_-]?key = <value>)
+  # Only fires on an explicit assignment of a >=8-char value, so a bare word like
+  # "password" in prose is untouched but `password=hunter2longvalue` is scrubbed.
+  - "(?i)\\b(?:api[_-]?key|apikey|secret|client[_-]?secret|access[_-]?token|auth[_-]?token|password|passwd|pwd)\\b\\s*[:=]\\s*[\"']?[^\\s\"';,]{8,}"
+
+  # --- Generic long high-entropy API-key-ish tokens with a vendor-ish prefix ----
+  # e.g. sk-..., ghp_..., xoxb-..., AIza... — a letter-prefix then a long run.
+  - "\\b(?:sk|pk|rk|ghp|gho|ghu|ghs|ghr|xox[baprs])[-_][A-Za-z0-9]{16,}\\b"
+  - "\\bAIza[0-9A-Za-z_-]{20,}\\b"
+
+  # --- Connection strings (ADO.NET / ODBC style key=value;...;Password=...) -----
+  # Fires when a connection-string keyword carries a credential or a host endpoint.
+  - "(?i)\\b(?:Server|Data Source|Initial Catalog|User ID|Uid|Password|Pwd|AccountKey|SharedAccessKey)\\s*=\\s*[^;\\s][^;]*;[^\\n]*"
+  - "(?i)\\b(?:mongodb(?:\\+srv)?|postgres(?:ql)?|mysql|amqp|redis|amqps)://[^\\s\"']+"
+
+  # --- Email addresses ----------------------------------------------------------
+  - "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}\\b"
+
+  # --- Private / link-local IPv4 ranges (RFC1918 + 169.254/16 + 127/8) ---------
+  - "\\b(?:10\\.(?:25[0-5]|2[0-4][0-9]|1?[0-9]?[0-9])(?:\\.(?:25[0-5]|2[0-4][0-9]|1?[0-9]?[0-9])){2})\\b"
+  - "\\b(?:192\\.168(?:\\.(?:25[0-5]|2[0-4][0-9]|1?[0-9]?[0-9])){2})\\b"
+  - "\\b(?:172\\.(?:1[6-9]|2[0-9]|3[0-1])(?:\\.(?:25[0-5]|2[0-4][0-9]|1?[0-9]?[0-9])){2})\\b"
+  - "\\b(?:169\\.254(?:\\.(?:25[0-5]|2[0-4][0-9]|1?[0-9]?[0-9])){2})\\b"
+  - "\\b(?:127\\.(?:25[0-5]|2[0-4][0-9]|1?[0-9]?[0-9])(?:\\.(?:25[0-5]|2[0-4][0-9]|1?[0-9]?[0-9])){2})\\b"
+
+  # --- Standalone GUID / UUID (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx) ------------
+  - "\\b[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\b"
+
+  # --- Long undelimited hex blobs (>=32 hex chars: hashes, hex-encoded keys) ----
+  # 32+ keeps short hex (color codes, 8-char ids) intact while catching key material.
+  - "\\b[0-9a-fA-F]{32,}\\b"
+
+# Codename / customer-name deny-list. SHIPS EMPTY — the architect extends this in their
+# own rules/payload-redaction.yaml (which fully overrides this default file) with literal
+# project codenames, customer names, or any term that must never leave the boundary.
+# Each entry is matched as a literal substring (case-sensitive) and replaced with
+# [REDACTED]. Example:
+#   deny_list:
+#     - "Project Nightingale"
+#     - "AcmeCorp"
+deny_list: []

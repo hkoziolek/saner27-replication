@@ -1,0 +1,59 @@
+{
+  "granularity": "target",
+  "language": "cs",
+  "reference_clusters": 9,
+  "rungs": {
+    "det_curation": {
+      "a2a": 100.0,
+      "clusters": 9,
+      "mojofm": 100.0
+    },
+    "dir_leaf": {
+      "a2a": 80.77,
+      "clusters": 19,
+      "mojofm": 33.33
+    },
+    "dir_top": {
+      "a2a": 80.77,
+      "clusters": 19,
+      "mojofm": 33.33
+    },
+    "edge_cc": {
+      "a2a": 75.86,
+      "clusters": 2,
+      "mojofm": 6.67
+    },
+    "hand_curation": {
+      "a2a": 88.89,
+      "clusters": 14,
+      "mojofm": 66.67
+    },
+    "name": {
+      "a2a": 85.15,
+      "clusters": 16,
+      "mojofm": 46.67
+    },
+    "name_segment": {
+      "a2a": 85.15,
+      "clusters": 16,
+      "mojofm": 46.67
+    },
+    "none": {
+      "a2a": 80.77,
+      "clusters": 19,
+      "mojofm": 33.33
+    },
+    "propose_all": {
+      "a2a": 73.26,
+      "clusters": 1,
+      "mojofm": 0.0
+    },
+    "sdk_role": {
+      "a2a": 86.81,
+      "clusters": 6,
+      "mojofm": 40.0
+    }
+  },
+  "shared_entities": 19,
+  "system": "eshop"
+}

@@ -1,0 +1,165 @@
+{
+  "aggregate": {
+    "a2a": {
+      "max": 82.37,
+      "mean": 81.82,
+      "min": 81.15,
+      "n": 5,
+      "stdev": 0.46
+    },
+    "ari": {
+      "max": 2.95,
+      "mean": 2.31,
+      "min": 1.83,
+      "n": 5,
+      "stdev": 0.37
+    },
+    "mojofm": {
+      "max": 32.11,
+      "mean": 30.21,
+      "min": 28.42,
+      "n": 5,
+      "stdev": 1.27
+    }
+  },
+  "cost_estimate": {
+    "price_in_per_1m": 5.0,
+    "price_out_per_1m": 30.0,
+    "reruns": 5,
+    "total_input_tokens": 501930,
+    "total_output_tokens": 9040,
+    "usd_uncached": 2.78,
+    "usd_with_prompt_caching": 0.97
+  },
+  "edges": 1963,
+  "entities": 226,
+  "granularity": "target",
+  "model_id": "gpt-5.6-sol",
+  "reference": "references\\orchardcore\\reference.rsf",
+  "reruns": 5,
+  "runs": [
+    {
+      "clusters": 54,
+      "entities_clustered": 226,
+      "run": 1,
+      "vs_pipeline_agreement": {
+        "a2a": 78.40646651270208,
+        "entities_against": 207,
+        "entities_common": 201,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 226,
+        "mojofm": 31.02
+      },
+      "vs_reference": {
+        "a2a": 81.87995469988675,
+        "ari": 2.24,
+        "entities_against": 207,
+        "entities_common": 201,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 226,
+        "mojofm": 30.0,
+        "nested": 8.7
+      }
+    },
+    {
+      "clusters": 47,
+      "entities_clustered": 226,
+      "run": 2,
+      "vs_pipeline_agreement": {
+        "a2a": 79.35034802784222,
+        "entities_against": 207,
+        "entities_common": 201,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 226,
+        "mojofm": 34.22
+      },
+      "vs_reference": {
+        "a2a": 82.36632536973833,
+        "ari": 2.95,
+        "entities_against": 207,
+        "entities_common": 201,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 226,
+        "mojofm": 32.11,
+        "nested": 2.38
+      }
+    },
+    {
+      "clusters": 54,
+      "entities_clustered": 226,
+      "run": 3,
+      "vs_pipeline_agreement": {
+        "a2a": 78.31603229527104,
+        "entities_against": 207,
+        "entities_common": 201,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 226,
+        "mojofm": 31.55
+      },
+      "vs_reference": {
+        "a2a": 81.44796380090497,
+        "ari": 2.15,
+        "entities_against": 207,
+        "entities_common": 201,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 226,
+        "mojofm": 28.42,
+        "nested": 4.26
+      }
+    },
+    {
+      "clusters": 45,
+      "entities_clustered": 226,
+      "run": 4,
+      "vs_pipeline_agreement": {
+        "a2a": 79.44250871080139,
+        "entities_against": 207,
+        "entities_common": 201,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 226,
+        "mojofm": 33.69
+      },
+      "vs_reference": {
+        "a2a": 82.23234624145786,
+        "ari": 2.36,
+        "entities_against": 207,
+        "entities_common": 201,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 226,
+        "mojofm": 31.05,
+        "nested": 4.88
+      }
+    },
+    {
+      "clusters": 56,
+      "entities_clustered": 226,
+      "run": 5,
+      "vs_pipeline_agreement": {
+        "a2a": 78.02071346375143,
+        "entities_against": 207,
+        "entities_common": 201,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 226,
+        "mojofm": 31.55
+      },
+      "vs_reference": {
+        "a2a": 81.15124153498871,
+        "ari": 1.83,
+        "entities_against": 207,
+        "entities_common": 201,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 226,
+        "mojofm": 29.47,
+        "nested": 8.16
+      }
+    }
+  ],
+  "status": "ran",
+  "system": "orchardcore",
+  "target_clusters": 34,
+  "token_estimate_per_call": {
+    "input": 100386,
+    "output": 1808,
+    "per_call_total": 102194
+  }
+}

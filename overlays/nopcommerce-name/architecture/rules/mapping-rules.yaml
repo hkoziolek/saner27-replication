@@ -1,0 +1,80 @@
+# Curation rules for nopCommerce — the NAME-CONVENTION decomposition (eval §7-A2 follow-up,
+# plans/notes/2026-06-14-a2-curation-ablation.md).
+#
+# ⚠️ CIRCULARITY (read references/nopcommerce/provenance.json): the nopCommerce reference is itself a
+# mechanical transcription of the project NAME convention — the N-tier layer projects (Nop.Core->Core,
+# Nop.Data->Data, Nop.Services->Services, Nop.Web.Framework->WebFramework, Nop.Web->Web) and the
+# `Nop.Plugin.<Type>.<Name>` plugin namespace (-> Plugins_<Type>). This overlay reconstructs that same
+# convention with `members_glob`, so its fidelity is a RECONSTRUCTION of the reference's own rule, NOT
+# an independent agreement. It demonstrates the convention is curatable with the EXISTING engine (no
+# new extractor, no LLM) — the same point the `name_segment` ablation rung (96.9) already makes. The
+# honest non-circular nopCommerce number remains the name-derived `overlays/nopcommerce` at 71.9.
+#
+# LOCAL-ONLY note: the nopCommerce subject + reference are kept off the redistributable package per
+# license (eval §5.4). This overlay is glob rules only (no proprietary code) but lives beside the
+# other nopcommerce assets; its score is reported in the findings note, not committed as an artifact.
+#
+# Run: arch run --repo fixtures/nopcommerce --no-llm \
+#        --arch-dir out/nopcommerce-name/architecture \
+#        --rules-dir overlays/nopcommerce-name/architecture/rules
+version: 1
+
+defaults:
+  min_relationship_weight: 3
+  drop_external: true
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false
+
+exclude:
+  targets:
+    - glob: "src/Tests/*"
+    - glob: "*Tests*"
+    - glob: "src/Build/*"
+
+group:
+  # --- N-tier layers (WebFramework BEFORE Web: `Nop.Web.Framework` contains `Nop.Web`) ----------
+  - container: "Core"
+    members_glob: ["*Nop.Core*"]
+  - container: "Data"
+    members_glob: ["*Nop.Data*"]
+  - container: "Services"
+    members_glob: ["*Nop.Services*"]
+  - container: "Web Framework"
+    members_glob: ["*Nop.Web.Framework*"]
+  - container: "Web"
+    members_glob: ["*Nop.Web*"]
+
+  # --- plugins, one container per `Nop.Plugin.<Type>` family (the documented plugin taxonomy) ----
+  - container: "Payment Plugins"
+    members_glob: ["*Nop.Plugin.Payments.*"]
+  - container: "Shipping Plugins"
+    members_glob: ["*Nop.Plugin.Shipping.*"]
+  - container: "Tax Plugins"
+    members_glob: ["*Nop.Plugin.Tax.*"]
+  - container: "Widget Plugins"
+    members_glob: ["*Nop.Plugin.Widgets.*"]
+  - container: "External Auth Plugins"
+    members_glob: ["*Nop.Plugin.ExternalAuth.*"]
+  - container: "Multi-Factor Auth Plugins"
+    members_glob: ["*Nop.Plugin.MultiFactorAuth.*"]
+  - container: "Pickup Plugins"
+    members_glob: ["*Nop.Plugin.Pickup.*"]
+  - container: "Search Plugins"
+    members_glob: ["*Nop.Plugin.Search.*"]
+  - container: "SMS Plugins"
+    members_glob: ["*Nop.Plugin.Sms.*"]
+  - container: "Exchange Rate Plugins"
+    members_glob: ["*Nop.Plugin.ExchangeRate.*"]
+  - container: "Discount Rules Plugins"
+    members_glob: ["*Nop.Plugin.DiscountRules.*"]
+  - container: "Misc Plugins"
+    members_glob: ["*Nop.Plugin.Misc.*"]
+
+technology:
+  csproj: ".NET assembly"
+
+naming:
+  style: descriptive
+  expand_acronyms: false
+  max_name_words: 4

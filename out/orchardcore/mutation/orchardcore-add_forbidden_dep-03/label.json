@@ -1,0 +1,28 @@
+{
+  "alias": {},
+  "description": "inject forbidden dependency csharp:csproj:src/OrchardCore/OrchardCore.AdminMenu.Abstractions/OrchardCore.AdminMenu.Abstractions.csproj -> csharp:csproj:src/OrchardCore/OrchardCore.Shortcodes.Abstractions/OrchardCore.Shortcodes.Abstractions.csproj",
+  "expected": {
+    "layering_violations": [
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.AdminMenu.Abstractions/OrchardCore.AdminMenu.Abstractions.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Shortcodes.Abstractions/OrchardCore.Shortcodes.Abstractions.csproj"
+      ]
+    ],
+    "new_edges": [
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.AdminMenu.Abstractions/OrchardCore.AdminMenu.Abstractions.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Shortcodes.Abstractions/OrchardCore.Shortcodes.Abstractions.csproj"
+      ]
+    ],
+    "new_targets": [],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore\\OrchardCore.AdminMenu.Abstractions\\OrchardCore.AdminMenu.Abstractions.csproj"
+  ],
+  "id": "orchardcore-add_forbidden_dep-03",
+  "operator": "add_forbidden_dep",
+  "system": "orchardcore"
+}

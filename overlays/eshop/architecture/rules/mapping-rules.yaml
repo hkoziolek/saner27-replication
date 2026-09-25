@@ -1,0 +1,105 @@
+# Curation rules for the dotnet/eShop fixture (plan §7.4). Reviewed + committed.
+#
+# eShop is a .NET microservices reference app (Aspire). We group its 19 `src/` projects
+# into architecturally meaningful C4 containers and exclude the 5 test projects.
+#
+# Run mode: `arch run --no-llm`, L0 build graph only. eShop's global.json pins the .NET 10
+# SDK (not installed here) and the repo ships eShop.slnx (no .sln), so the Roslyn L2 layer
+# degrades out (plan §18.4) and structure comes from the deterministic .csproj/.slnx graph.
+version: 1
+
+defaults:
+  min_relationship_weight: 3        # non-declared edges only; declared project refs never dropped (§7.4)
+  drop_external: true               # NuGet packages are technology tags / external, not containers
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false              # --no-llm baseline
+
+exclude:
+  targets:
+    - glob: "tests/*"               # drop the 5 test projects by path
+    - glob: "*.UnitTests"
+    - glob: "*.FunctionalTests"
+
+group:
+  # --- backend services (the microservices) ---
+  - container: "Catalog API"
+    members: [ "csharp:csproj:src/Catalog.API/Catalog.API.csproj" ]
+  - container: "Basket API"
+    members: [ "csharp:csproj:src/Basket.API/Basket.API.csproj" ]
+  # Ordering Service needs no drill-down flag any more (D§2.3): eShop's curated target
+  # count auto-selects MODEL Y, so its three member projects render as containers grouped
+  # under the "Ordering Service" theme — and under X they'd materialize as components.
+  - container: "Ordering Service"
+    members:
+      - "csharp:csproj:src/Ordering.API/Ordering.API.csproj"
+      - "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+      - "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj"
+  - container: "Identity API"
+    members: [ "csharp:csproj:src/Identity.API/Identity.API.csproj" ]
+  - container: "Webhooks API"
+    members: [ "csharp:csproj:src/Webhooks.API/Webhooks.API.csproj" ]
+  - container: "Order Processor"
+    members: [ "csharp:csproj:src/OrderProcessor/OrderProcessor.csproj" ]
+  - container: "Payment Processor"
+    members: [ "csharp:csproj:src/PaymentProcessor/PaymentProcessor.csproj" ]
+
+  # --- client-facing apps ---
+  - container: "Web App (Blazor Storefront)"
+    members:
+      - "csharp:csproj:src/WebApp/WebApp.csproj"
+      - "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+  - container: "Webhook Client"
+    members: [ "csharp:csproj:src/WebhookClient/WebhookClient.csproj" ]
+  - container: "Mobile App (.NET MAUI)"
+    members:
+      - "csharp:csproj:src/ClientApp/ClientApp.csproj"
+      - "csharp:csproj:src/HybridApp/HybridApp.csproj"
+
+  # --- shared building blocks ---
+  - container: "Event Bus"
+    members:
+      - "csharp:csproj:src/EventBus/EventBus.csproj"
+      - "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+  - container: "Integration Event Log"
+    members: [ "csharp:csproj:src/IntegrationEventLogEF/IntegrationEventLogEF.csproj" ]
+  - container: "Service Defaults"
+    members: [ "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj" ]
+
+  # --- orchestration ---
+  - container: "App Host (Aspire Orchestration)"
+    members: [ "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj" ]
+
+# Name the gRPC contract seam (auto-named "basket" from basket.proto, kept as an external
+# boundary §16#14) so it reads as a proper boundary rather than a bare lowercase "basket".
+name_overrides:
+  "contract:proto:basket": "Basket gRPC Contract"
+  "csharp:csproj:src/Basket.API/Basket.API.csproj": "Basket API"
+
+technology:
+  csproj: ".NET assembly"
+
+naming:
+  style: descriptive
+  expand_acronyms: false
+  max_name_words: 4
+
+rationale:
+  "Ordering Service":
+    reason: "API + Domain + Infrastructure are the DDD layers of one deployable service; grouped as one container with a Component drill-down (§9.1)"
+    decided_by: "architect"
+    date: "2026-06-04"
+    confidence: "high"
+  "Event Bus":
+    reason: "The EventBus abstraction plus its RabbitMQ implementation are one messaging building block"
+    decided_by: "architect"
+    date: "2026-06-04"
+    confidence: "medium"
+  "Mobile App (.NET MAUI)":
+    reason: "ClientApp (MAUI) and HybridApp (Blazor Hybrid host) together are the mobile client"
+    decided_by: "architect"
+    date: "2026-06-04"
+    confidence: "medium"
+
+description_overrides:
+  "csharp:csproj:src/Basket.API/Basket.API.csproj": "A .NET assembly for the Basket API component that is used by the App Host (Aspire Orchestration) and depends on the Basket gRPC Contract, Event Bus, and Service Defaults."

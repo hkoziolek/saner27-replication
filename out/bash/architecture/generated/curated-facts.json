@@ -1,0 +1,2631 @@
+{
+  "provenance": {
+    "boundary_promoted": 0,
+    "commit": "495aee441b75276e38c75694ccb455bb6463fdb9",
+    "coverage": {
+      "cpp:target:basename": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:bash": {
+        "L0": true,
+        "L1": false,
+        "L2": "25 files",
+        "L3": true
+      },
+      "cpp:target:bashversion": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:bperl5": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:cat": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:cut": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:dirname": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:finfo": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:getconf": {
+        "L0": true,
+        "L1": false,
+        "L2": "1 files",
+        "L3": true
+      },
+      "cpp:target:head": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:hello": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:libbuiltins": {
+        "L0": true,
+        "L1": false,
+        "L2": "1 files",
+        "L3": true
+      },
+      "cpp:target:libglob": {
+        "L0": true,
+        "L1": false,
+        "L2": "3 files",
+        "L3": true
+      },
+      "cpp:target:libgnuintl": {
+        "L0": true,
+        "L1": false,
+        "L2": "6 files",
+        "L3": true
+      },
+      "cpp:target:libhistory": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:libintl": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:libreadline": {
+        "L0": true,
+        "L1": false,
+        "L2": "12 files",
+        "L3": true
+      },
+      "cpp:target:libsh": {
+        "L0": true,
+        "L1": false,
+        "L2": "1 files",
+        "L3": true
+      },
+      "cpp:target:libtermcap": {
+        "L0": true,
+        "L1": false,
+        "L2": "1 files",
+        "L3": true
+      },
+      "cpp:target:libtilde": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:ln": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:logname": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:malloc": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:man2html": {
+        "L0": true,
+        "L1": false,
+        "L2": "1 files",
+        "L3": true
+      },
+      "cpp:target:mkdir": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:mksignames": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:mksyntax": {
+        "L0": true,
+        "L1": false,
+        "L2": "1 files",
+        "L3": false
+      },
+      "cpp:target:mypid": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:necho": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:parser-built": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:pathchk": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:print": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:printenv": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:push": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:realpath": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:recho": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:rmdir": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:sleep": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:strftime": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:stubmalloc": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:sync": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:tee": {
+        "L0": true,
+        "L1": false,
+        "L2": "1 files",
+        "L3": true
+      },
+      "cpp:target:truefalse": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:tty": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:uname": {
+        "L0": true,
+        "L1": false,
+        "L2": "1 files",
+        "L3": true
+      },
+      "cpp:target:unlink": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:whoami": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:xcase": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:zecho": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      }
+    },
+    "edges_dropped": 52,
+    "extractors": [
+      {
+        "name": "autotools-make",
+        "version": "0.1.0"
+      },
+      {
+        "name": "csharp-build-graph",
+        "version": "0.3.0"
+      },
+      {
+        "name": "doxygen-xml",
+        "version": "0.1.0"
+      }
+    ],
+    "generated_at": "2026-07-16T16:47:52.435146+00:00",
+    "kinds_renamed": 0,
+    "repo": "bash"
+  },
+  "relationships": [
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 10,
+          "detail": "#include \"builtins.h\" (+9 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:basename->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:basename",
+      "target": "cpp:target:bash",
+      "weight": 10
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 4,
+          "detail": "#include \"builtins/common.h\" (+3 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:basename->cpp:target:libbuiltins",
+      "is_declared_dependency": false,
+      "source": "cpp:target:basename",
+      "target": "cpp:target:libbuiltins",
+      "weight": 4
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 3,
+          "detail": "#include \"patchlevel.h\" (+2 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:bash->cpp:target:bashversion",
+      "is_declared_dependency": false,
+      "source": "cpp:target:bash",
+      "target": "cpp:target:bashversion",
+      "weight": 3
+    },
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "count": 17,
+          "detail": "#include \"builtins/common.h\" (+16 more)",
+          "type": "include"
+        },
+        {
+          "detail": "Makefile: bash links libbuiltins",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link + include corroborate",
+      "id": "rel:cpp:target:bash->cpp:target:libbuiltins",
+      "is_declared_dependency": true,
+      "source": "cpp:target:bash",
+      "target": "cpp:target:libbuiltins",
+      "weight": 15
+    },
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "count": 7,
+          "detail": "#include \"lib/glob/strmatch.h\" (+6 more)",
+          "type": "include"
+        },
+        {
+          "detail": "Makefile: bash links libglob",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link + include corroborate",
+      "id": "rel:cpp:target:bash->cpp:target:libglob",
+      "is_declared_dependency": true,
+      "source": "cpp:target:bash",
+      "target": "cpp:target:libglob",
+      "weight": 12
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "Makefile: bash links libhistory",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:bash->cpp:target:libhistory",
+      "is_declared_dependency": true,
+      "source": "cpp:target:bash",
+      "target": "cpp:target:libhistory",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "Makefile: bash links libintl",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:bash->cpp:target:libintl",
+      "is_declared_dependency": true,
+      "source": "cpp:target:bash",
+      "target": "cpp:target:libintl",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "Makefile: bash links libreadline",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:bash->cpp:target:libreadline",
+      "is_declared_dependency": true,
+      "source": "cpp:target:bash",
+      "target": "cpp:target:libreadline",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "Makefile: bash links libsh",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:bash->cpp:target:libsh",
+      "is_declared_dependency": true,
+      "source": "cpp:target:bash",
+      "target": "cpp:target:libsh",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "Makefile: bash links libtermcap",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:bash->cpp:target:libtermcap",
+      "is_declared_dependency": true,
+      "source": "cpp:target:bash",
+      "target": "cpp:target:libtermcap",
+      "weight": 5
+    },
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "count": 6,
+          "detail": "#include \"lib/tilde/tilde.h\" (+5 more)",
+          "type": "include"
+        },
+        {
+          "detail": "Makefile: bash links libtilde",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link + include corroborate",
+      "id": "rel:cpp:target:bash->cpp:target:libtilde",
+      "is_declared_dependency": true,
+      "source": "cpp:target:bash",
+      "target": "cpp:target:libtilde",
+      "weight": 11
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 10,
+          "detail": "#include \"include/chartypes.h\" (+9 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:bash->cpp:target:mksyntax",
+      "is_declared_dependency": false,
+      "source": "cpp:target:bash",
+      "target": "cpp:target:mksyntax",
+      "weight": 10
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 3,
+          "detail": "#include \"bashansi.h\" (+2 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:cut->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:cut",
+      "target": "cpp:target:bash",
+      "weight": 3
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 4,
+          "detail": "#include \"include/posixtime.h\" (+3 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:finfo->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:finfo",
+      "target": "cpp:target:bash",
+      "weight": 4
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 5,
+          "detail": "#include \"include/typemax.h\" (+4 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:getconf->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:getconf",
+      "target": "cpp:target:bash",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 5,
+          "detail": "#include \"bashtypes.h\" (+4 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:head->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:head",
+      "target": "cpp:target:bash",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 49,
+          "detail": "#include \"bashansi.h\" (+48 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:libbuiltins->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:libbuiltins",
+      "target": "cpp:target:bash",
+      "weight": 10
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 17,
+          "detail": "#include \"bashtypes.h\" (+16 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:libglob->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:libglob",
+      "target": "cpp:target:bash",
+      "weight": 10
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 104,
+          "detail": "#include \"include/stdc.h\" (+103 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:libsh->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:libsh",
+      "target": "cpp:target:bash",
+      "weight": 10
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 14,
+          "detail": "#include \"include/chartypes.h\" (+13 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:libsh->cpp:target:mksyntax",
+      "is_declared_dependency": false,
+      "source": "cpp:target:libsh",
+      "target": "cpp:target:mksyntax",
+      "weight": 10
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 3,
+          "detail": "#include \"bashtypes.h\" (+2 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:ln->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:ln",
+      "target": "cpp:target:bash",
+      "weight": 3
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 8,
+          "detail": "#include \"bashtypes.h\" (+7 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:malloc->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:malloc",
+      "target": "cpp:target:bash",
+      "weight": 8
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 4,
+          "detail": "#include \"bashtypes.h\" (+3 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:mkdir->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:mkdir",
+      "target": "cpp:target:bash",
+      "weight": 4
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 3,
+          "detail": "#include \"bashansi.h\" (+2 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:mksyntax->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:mksyntax",
+      "target": "cpp:target:bash",
+      "weight": 3
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 5,
+          "detail": "#include \"bashansi.h\" (+4 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:pathchk->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:pathchk",
+      "target": "cpp:target:bash",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 5,
+          "detail": "#include \"bashtypes.h\" (+4 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:print->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:print",
+      "target": "cpp:target:bash",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 3,
+          "detail": "#include \"builtins.h\" (+2 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:printenv->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:printenv",
+      "target": "cpp:target:bash",
+      "weight": 3
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 3,
+          "detail": "#include \"builtins.h\" (+2 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:push->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:push",
+      "target": "cpp:target:bash",
+      "weight": 3
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 4,
+          "detail": "#include \"bashansi.h\" (+3 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:realpath->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:realpath",
+      "target": "cpp:target:bash",
+      "weight": 4
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 3,
+          "detail": "#include \"bashtypes.h\" (+2 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:sleep->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:sleep",
+      "target": "cpp:target:bash",
+      "weight": 3
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 4,
+          "detail": "#include \"bashtypes.h\" (+3 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:strftime->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:strftime",
+      "target": "cpp:target:bash",
+      "weight": 4
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 5,
+          "detail": "#include \"bashtypes.h\" (+4 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:tee->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:tee",
+      "target": "cpp:target:bash",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 3,
+          "detail": "#include \"bashtypes.h\" (+2 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:truefalse->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:truefalse",
+      "target": "cpp:target:bash",
+      "weight": 3
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 3,
+          "detail": "#include \"bashtypes.h\" (+2 more)",
+          "type": "include"
+        }
+      ],
+      "evidence_strength": "include only",
+      "id": "rel:cpp:target:uname->cpp:target:bash",
+      "is_declared_dependency": false,
+      "source": "cpp:target:uname",
+      "target": "cpp:target:bash",
+      "weight": 3
+    }
+  ],
+  "schema_version": "1.3",
+  "targets": [
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:basename",
+      "language": "cpp",
+      "metrics": {
+        "blank": 787,
+        "by_language": [
+          {
+            "blank": 763,
+            "code": 4511,
+            "comment": 720,
+            "files": 30,
+            "language": "C"
+          },
+          {
+            "blank": 24,
+            "code": 180,
+            "comment": 10,
+            "files": 1,
+            "language": "C/C++ Header"
+          }
+        ],
+        "code": 4691,
+        "comment": 730,
+        "engine": "metrics/1",
+        "files": 1,
+        "todo_count": 0
+      },
+      "name": "basename",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "components": [
+        {
+          "code": [
+            {
+              "id": "cpp:target:bash/component:include/code:objcache",
+              "level": "code",
+              "name": "objcache"
+            },
+            {
+              "id": "cpp:target:bash/component:include/code:tms",
+              "level": "code",
+              "name": "tms"
+            }
+          ],
+          "id": "cpp:target:bash/component:include",
+          "key": "include",
+          "level": "component",
+          "name": "include",
+          "source": "subdir"
+        },
+        {
+          "code": [
+            {
+              "id": "cpp:target:bash/component:uwp/code:uwp_head",
+              "level": "code",
+              "name": "uwp_head"
+            }
+          ],
+          "id": "cpp:target:bash/component:uwp",
+          "key": "uwp",
+          "level": "component",
+          "name": "uwp",
+          "source": "namespace"
+        }
+      ],
+      "container_id": "container:shellCore",
+      "container_name": "Shell Core",
+      "external": false,
+      "grouped_by": {
+        "container": "Shell Core",
+        "pattern": "bash",
+        "rule_index": 0,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:bash",
+      "language": "cpp",
+      "metrics": {
+        "files": 115
+      },
+      "name": "bash",
+      "namespaces": [
+        "uwp"
+      ],
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:supportBuildTools",
+      "container_name": "Support & Build Tools",
+      "external": false,
+      "grouped_by": {
+        "container": "Support & Build Tools",
+        "pattern": "bashversion",
+        "rule_index": 1,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:bashversion",
+      "language": "cpp",
+      "metrics": {
+        "files": 3
+      },
+      "name": "bashversion",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:bperl5",
+      "language": "cpp",
+      "metrics": {
+        "blank": 16,
+        "by_language": [
+          {
+            "blank": 16,
+            "code": 51,
+            "comment": 3,
+            "files": 2,
+            "language": "C"
+          }
+        ],
+        "code": 51,
+        "comment": 3,
+        "engine": "metrics/1",
+        "files": 2,
+        "todo_count": 0
+      },
+      "name": "bperl5",
+      "path": "examples/loadables/perl",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:cat",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "cat",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:cut",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "cut",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:dirname",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "dirname",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:finfo",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "finfo",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "components": [
+        {
+          "code": [
+            {
+              "id": "cpp:target:getconf/component:examples/code:conf_variable",
+              "level": "code",
+              "name": "conf_variable"
+            }
+          ],
+          "id": "cpp:target:getconf/component:examples",
+          "key": "examples",
+          "level": "component",
+          "name": "examples",
+          "source": "subdir"
+        }
+      ],
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:getconf",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "getconf",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:head",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "head",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:hello",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "hello",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "components": [
+        {
+          "code": [
+            {
+              "id": "cpp:target:libbuiltins/component:builtins/code:ARRAY",
+              "level": "code",
+              "name": "ARRAY"
+            },
+            {
+              "id": "cpp:target:libbuiltins/component:builtins/code:BUILTIN_DESC",
+              "level": "code",
+              "name": "BUILTIN_DESC"
+            },
+            {
+              "id": "cpp:target:libbuiltins/component:builtins/code:DEF_FILE",
+              "level": "code",
+              "name": "DEF_FILE"
+            },
+            {
+              "id": "cpp:target:libbuiltins/component:builtins/code:HANDLER_ENTRY",
+              "level": "code",
+              "name": "HANDLER_ENTRY"
+            }
+          ],
+          "id": "cpp:target:libbuiltins/component:builtins",
+          "key": "builtins",
+          "level": "component",
+          "name": "builtins",
+          "source": "subdir"
+        }
+      ],
+      "container_id": "cpp:target:libbuiltins",
+      "container_name": "libbuiltins",
+      "external": false,
+      "grouped_by": {
+        "signal": "singleton"
+      },
+      "id": "cpp:target:libbuiltins",
+      "language": "cpp",
+      "metrics": {
+        "blank": 722,
+        "by_language": [
+          {
+            "blank": 644,
+            "code": 2712,
+            "comment": 546,
+            "files": 7,
+            "language": "C"
+          },
+          {
+            "blank": 70,
+            "code": 129,
+            "comment": 79,
+            "files": 3,
+            "language": "C/C++ Header"
+          },
+          {
+            "blank": 8,
+            "code": 25,
+            "comment": 12,
+            "files": 1,
+            "language": "Shell"
+          }
+        ],
+        "code": 2866,
+        "comment": 637,
+        "engine": "metrics/1",
+        "files": 55,
+        "todo_count": 0
+      },
+      "name": "libbuiltins",
+      "path": "builtins",
+      "tags": [
+        "build:autotools",
+        "needs-curation"
+      ],
+      "technology": "C static library",
+      "type": "static_lib"
+    },
+    {
+      "components": [
+        {
+          "code": [
+            {
+              "id": "cpp:target:libglob/component:lib/code:DIR",
+              "level": "code",
+              "name": "DIR"
+            },
+            {
+              "id": "cpp:target:libglob/component:lib/code:_COLLSYM",
+              "level": "code",
+              "name": "_COLLSYM"
+            },
+            {
+              "id": "cpp:target:libglob/component:lib/code:direct",
+              "level": "code",
+              "name": "direct"
+            },
+            {
+              "id": "cpp:target:libglob/component:lib/code:globval",
+              "level": "code",
+              "name": "globval"
+            }
+          ],
+          "id": "cpp:target:libglob/component:lib",
+          "key": "lib",
+          "level": "component",
+          "name": "lib",
+          "source": "subdir"
+        }
+      ],
+      "container_id": "cpp:target:libglob",
+      "container_name": "libglob",
+      "external": false,
+      "grouped_by": {
+        "signal": "singleton"
+      },
+      "id": "cpp:target:libglob",
+      "language": "cpp",
+      "metrics": {
+        "blank": 484,
+        "by_language": [
+          {
+            "blank": 439,
+            "code": 2236,
+            "comment": 424,
+            "files": 7,
+            "language": "C"
+          },
+          {
+            "blank": 44,
+            "code": 187,
+            "comment": 63,
+            "files": 4,
+            "language": "C/C++ Header"
+          },
+          {
+            "blank": 1,
+            "code": 4,
+            "comment": 0,
+            "files": 1,
+            "language": "Makefile"
+          }
+        ],
+        "code": 2427,
+        "comment": 487,
+        "engine": "metrics/1",
+        "files": 11,
+        "todo_count": 0
+      },
+      "name": "libglob",
+      "path": "lib/glob",
+      "tags": [
+        "build:autotools",
+        "needs-curation"
+      ],
+      "technology": "C static library",
+      "type": "static_lib"
+    },
+    {
+      "components": [
+        {
+          "code": [
+            {
+              "id": "cpp:target:libgnuintl/component:lib/code:alias_map",
+              "level": "code",
+              "name": "alias_map"
+            },
+            {
+              "id": "cpp:target:libgnuintl/component:lib/code:binding",
+              "level": "code",
+              "name": "binding"
+            },
+            {
+              "id": "cpp:target:libgnuintl/component:lib/code:expression",
+              "level": "code",
+              "name": "expression"
+            },
+            {
+              "id": "cpp:target:libgnuintl/component:lib/code:known_translation_t",
+              "level": "code",
+              "name": "known_translation_t"
+            },
+            {
+              "id": "cpp:target:libgnuintl/component:lib/code:loaded_domain",
+              "level": "code",
+              "name": "loaded_domain"
+            },
+            {
+              "id": "cpp:target:libgnuintl/component:lib/code:loaded_l10nfile",
+              "level": "code",
+              "name": "loaded_l10nfile"
+            },
+            {
+              "id": "cpp:target:libgnuintl/component:lib/code:mo_file_header",
+              "level": "code",
+              "name": "mo_file_header"
+            },
+            {
+              "id": "cpp:target:libgnuintl/component:lib/code:parse_args",
+              "level": "code",
+              "name": "parse_args"
+            },
+            {
+              "id": "cpp:target:libgnuintl/component:lib/code:string_desc",
+              "level": "code",
+              "name": "string_desc"
+            },
+            {
+              "id": "cpp:target:libgnuintl/component:lib/code:sysdep_segment",
+              "level": "code",
+              "name": "sysdep_segment"
+            },
+            {
+              "id": "cpp:target:libgnuintl/component:lib/code:sysdep_string",
+              "level": "code",
+              "name": "sysdep_string"
+            },
+            {
+              "id": "cpp:target:libgnuintl/component:lib/code:sysdep_string_desc",
+              "level": "code",
+              "name": "sysdep_string_desc"
+            }
+          ],
+          "id": "cpp:target:libgnuintl/component:lib",
+          "key": "lib",
+          "level": "component",
+          "name": "lib",
+          "source": "subdir"
+        },
+        {
+          "code": [
+            {
+              "id": "cpp:target:libgnuintl/component:sysdep_string/code:segment_pair",
+              "level": "code",
+              "name": "segment_pair"
+            }
+          ],
+          "id": "cpp:target:libgnuintl/component:sysdep_string",
+          "key": "sysdep_string",
+          "level": "component",
+          "name": "sysdep_string",
+          "source": "namespace"
+        }
+      ],
+      "container_id": "container:internationalization",
+      "container_name": "Internationalization",
+      "external": false,
+      "grouped_by": {
+        "container": "Internationalization",
+        "pattern": "libgnuintl",
+        "rule_index": 3,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:libgnuintl",
+      "language": "cpp",
+      "metrics": {
+        "blank": 1314,
+        "by_language": [
+          {
+            "blank": 1144,
+            "code": 6100,
+            "comment": 1340,
+            "files": 23,
+            "language": "C"
+          },
+          {
+            "blank": 170,
+            "code": 508,
+            "comment": 322,
+            "files": 9,
+            "language": "C/C++ Header"
+          }
+        ],
+        "code": 6608,
+        "comment": 1662,
+        "engine": "metrics/1",
+        "files": 33,
+        "todo_count": 6
+      },
+      "name": "libgnuintl",
+      "namespaces": [
+        "sysdep_string"
+      ],
+      "path": "lib/intl",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C static library",
+      "type": "static_lib"
+    },
+    {
+      "container_id": "cpp:target:libhistory",
+      "container_name": "libhistory",
+      "external": false,
+      "grouped_by": {
+        "signal": "singleton"
+      },
+      "id": "cpp:target:libhistory",
+      "language": "cpp",
+      "metrics": {
+        "blank": 4750,
+        "by_language": [
+          {
+            "blank": 4019,
+            "code": 19925,
+            "comment": 4049,
+            "files": 42,
+            "language": "C"
+          },
+          {
+            "blank": 684,
+            "code": 1583,
+            "comment": 954,
+            "files": 22,
+            "language": "C/C++ Header"
+          },
+          {
+            "blank": 47,
+            "code": 106,
+            "comment": 36,
+            "files": 2,
+            "language": "Makefile"
+          }
+        ],
+        "code": 21614,
+        "comment": 5039,
+        "engine": "metrics/1",
+        "todo_count": 3
+      },
+      "name": "libhistory",
+      "path": "lib/readline",
+      "tags": [
+        "build:autotools",
+        "needs-curation"
+      ],
+      "technology": "C static library",
+      "type": "static_lib"
+    },
+    {
+      "container_id": "container:internationalization",
+      "container_name": "Internationalization",
+      "external": false,
+      "grouped_by": {
+        "container": "Internationalization",
+        "pattern": "libintl",
+        "rule_index": 3,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:libintl",
+      "language": "cpp",
+      "name": "libintl",
+      "path": "lib/intl",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C static library",
+      "type": "static_lib"
+    },
+    {
+      "components": [
+        {
+          "code": [
+            {
+              "id": "cpp:target:libreadline/component:lib/code:COMMAND",
+              "level": "code",
+              "name": "COMMAND"
+            },
+            {
+              "id": "cpp:target:libreadline/component:lib/code:__rl_callback_generic_arg",
+              "level": "code",
+              "name": "__rl_callback_generic_arg"
+            },
+            {
+              "id": "cpp:target:libreadline/component:lib/code:__rl_keyseq_context",
+              "level": "code",
+              "name": "__rl_keyseq_context"
+            },
+            {
+              "id": "cpp:target:libreadline/component:lib/code:__rl_search_context",
+              "level": "code",
+              "name": "__rl_search_context"
+            },
+            {
+              "id": "cpp:target:libreadline/component:lib/code:__rl_vimotion_context",
+              "level": "code",
+              "name": "__rl_vimotion_context"
+            },
+            {
+              "id": "cpp:target:libreadline/component:lib/code:_funmap",
+              "level": "code",
+              "name": "_funmap"
+            },
+            {
+              "id": "cpp:target:libreadline/component:lib/code:_hist_entry",
+              "level": "code",
+              "name": "_hist_entry"
+            },
+            {
+              "id": "cpp:target:libreadline/component:lib/code:_hist_state",
+              "level": "code",
+              "name": "_hist_state"
+            },
+            {
+              "id": "cpp:target:libreadline/component:lib/code:_keymap_entry",
+              "level": "code",
+              "name": "_keymap_entry"
+            },
+            {
+              "id": "cpp:target:libreadline/component:lib/code:_rl_tty_chars",
+              "level": "code",
+              "name": "_rl_tty_chars"
+            },
+            {
+              "id": "cpp:target:libreadline/component:lib/code:_tc_string",
+              "level": "code",
+              "name": "_tc_string"
+            },
+            {
+              "id": "cpp:target:libreadline/component:lib/code:assoc_list",
+              "level": "code",
+              "name": "assoc_list"
+            },
+            {
+              "id": "cpp:target:libreadline/component:lib/code:bsdtty",
+              "level": "code",
+              "name": "bsdtty"
+            },
+            {
+              "id": "cpp:target:libreadline/component:lib/code:line_state",
+              "level": "code",
+              "name": "line_state"
+            },
+            {
+              "id": "cpp:target:libreadline/component:lib/code:readline_state",
+              "level": "code",
+              "name": "readline_state"
+            },
+            {
+              "id": "cpp:target:libreadline/component:lib/code:saved_macro",
+              "level": "code",
+              "name": "saved_macro"
+            },
+            {
+              "id": "cpp:target:libreadline/component:lib/code:sighandler_cxt",
+              "level": "code",
+              "name": "sighandler_cxt"
+            },
+            {
+              "id": "cpp:target:libreadline/component:lib/code:undo_list",
+              "level": "code",
+              "name": "undo_list"
+            }
+          ],
+          "id": "cpp:target:libreadline/component:lib",
+          "key": "lib",
+          "level": "component",
+          "name": "lib",
+          "source": "subdir"
+        }
+      ],
+      "container_id": "cpp:target:libreadline",
+      "container_name": "libreadline",
+      "external": false,
+      "grouped_by": {
+        "signal": "singleton"
+      },
+      "id": "cpp:target:libreadline",
+      "language": "cpp",
+      "metrics": {
+        "files": 64
+      },
+      "name": "libreadline",
+      "path": "lib/readline",
+      "tags": [
+        "build:autotools",
+        "needs-curation"
+      ],
+      "technology": "C static library",
+      "type": "static_lib"
+    },
+    {
+      "components": [
+        {
+          "code": [
+            {
+              "id": "cpp:target:libsh/component:lib/code:DATA",
+              "level": "code",
+              "name": "DATA"
+            }
+          ],
+          "id": "cpp:target:libsh/component:lib",
+          "key": "lib",
+          "level": "component",
+          "name": "lib",
+          "source": "subdir"
+        }
+      ],
+      "container_id": "cpp:target:libsh",
+      "container_name": "libsh",
+      "external": false,
+      "grouped_by": {
+        "signal": "singleton"
+      },
+      "id": "cpp:target:libsh",
+      "language": "cpp",
+      "metrics": {
+        "blank": 2056,
+        "by_language": [
+          {
+            "blank": 2056,
+            "code": 8643,
+            "comment": 2183,
+            "files": 71,
+            "language": "C"
+          }
+        ],
+        "code": 8643,
+        "comment": 2183,
+        "engine": "metrics/1",
+        "files": 71,
+        "todo_count": 0
+      },
+      "name": "libsh",
+      "path": "lib/sh",
+      "tags": [
+        "build:autotools",
+        "needs-curation"
+      ],
+      "technology": "C static library",
+      "type": "static_lib"
+    },
+    {
+      "components": [
+        {
+          "code": [
+            {
+              "id": "cpp:target:libtermcap/component:lib/code:buffer",
+              "level": "code",
+              "name": "buffer"
+            }
+          ],
+          "id": "cpp:target:libtermcap/component:lib",
+          "key": "lib",
+          "level": "component",
+          "name": "lib",
+          "source": "subdir"
+        }
+      ],
+      "container_id": "cpp:target:libtermcap",
+      "container_name": "libtermcap",
+      "external": false,
+      "grouped_by": {
+        "signal": "singleton"
+      },
+      "id": "cpp:target:libtermcap",
+      "language": "cpp",
+      "metrics": {
+        "blank": 216,
+        "by_language": [
+          {
+            "blank": 186,
+            "code": 839,
+            "comment": 164,
+            "files": 3,
+            "language": "C"
+          },
+          {
+            "blank": 30,
+            "code": 37,
+            "comment": 26,
+            "files": 2,
+            "language": "C/C++ Header"
+          }
+        ],
+        "code": 876,
+        "comment": 190,
+        "engine": "metrics/1",
+        "files": 5,
+        "todo_count": 0
+      },
+      "name": "libtermcap",
+      "path": "lib/termcap",
+      "tags": [
+        "build:autotools",
+        "needs-curation"
+      ],
+      "technology": "C static library",
+      "type": "static_lib"
+    },
+    {
+      "container_id": "cpp:target:libtilde",
+      "container_name": "libtilde",
+      "external": false,
+      "grouped_by": {
+        "signal": "singleton"
+      },
+      "id": "cpp:target:libtilde",
+      "language": "cpp",
+      "metrics": {
+        "blank": 114,
+        "by_language": [
+          {
+            "blank": 95,
+            "code": 379,
+            "comment": 98,
+            "files": 2,
+            "language": "C"
+          },
+          {
+            "blank": 19,
+            "code": 24,
+            "comment": 37,
+            "files": 1,
+            "language": "C/C++ Header"
+          }
+        ],
+        "code": 403,
+        "comment": 135,
+        "engine": "metrics/1",
+        "files": 3,
+        "todo_count": 0
+      },
+      "name": "libtilde",
+      "path": "lib/tilde",
+      "tags": [
+        "build:autotools",
+        "needs-curation"
+      ],
+      "technology": "C static library",
+      "type": "static_lib"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:ln",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "ln",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:logname",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "logname",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:memoryAllocator",
+      "container_name": "Memory Allocator",
+      "external": false,
+      "grouped_by": {
+        "container": "Memory Allocator",
+        "pattern": "malloc",
+        "rule_index": 2,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:malloc",
+      "language": "cpp",
+      "metrics": {
+        "blank": 528,
+        "by_language": [
+          {
+            "blank": 438,
+            "code": 1807,
+            "comment": 430,
+            "files": 8,
+            "language": "C"
+          },
+          {
+            "blank": 90,
+            "code": 292,
+            "comment": 172,
+            "files": 6,
+            "language": "C/C++ Header"
+          }
+        ],
+        "code": 2099,
+        "comment": 602,
+        "engine": "metrics/1",
+        "files": 5,
+        "todo_count": 0
+      },
+      "name": "malloc",
+      "path": "lib/malloc",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "components": [
+        {
+          "code": [
+            {
+              "id": "cpp:target:man2html/component:support/code:INTDEF",
+              "level": "code",
+              "name": "INTDEF"
+            },
+            {
+              "id": "cpp:target:man2html/component:support/code:STRDEF",
+              "level": "code",
+              "name": "STRDEF"
+            },
+            {
+              "id": "cpp:target:man2html/component:support/code:TABLEITEM",
+              "level": "code",
+              "name": "TABLEITEM"
+            },
+            {
+              "id": "cpp:target:man2html/component:support/code:TABLEROW",
+              "level": "code",
+              "name": "TABLEROW"
+            }
+          ],
+          "id": "cpp:target:man2html/component:support",
+          "key": "support",
+          "level": "component",
+          "name": "support",
+          "source": "subdir"
+        }
+      ],
+      "container_id": "container:supportBuildTools",
+      "container_name": "Support & Build Tools",
+      "external": false,
+      "grouped_by": {
+        "container": "Support & Build Tools",
+        "pattern": "man2html",
+        "rule_index": 1,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:man2html",
+      "language": "cpp",
+      "metrics": {
+        "blank": 528,
+        "by_language": [
+          {
+            "blank": 374,
+            "code": 4253,
+            "comment": 382,
+            "files": 8,
+            "language": "C"
+          },
+          {
+            "blank": 154,
+            "code": 560,
+            "comment": 196,
+            "files": 6,
+            "language": "Shell"
+          }
+        ],
+        "code": 4813,
+        "comment": 578,
+        "engine": "metrics/1",
+        "files": 1,
+        "todo_count": 0
+      },
+      "name": "man2html",
+      "path": "support",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:mkdir",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "mkdir",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:supportBuildTools",
+      "container_name": "Support & Build Tools",
+      "external": false,
+      "grouped_by": {
+        "container": "Support & Build Tools",
+        "pattern": "mksignames",
+        "rule_index": 1,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:mksignames",
+      "language": "cpp",
+      "metrics": {
+        "files": 2
+      },
+      "name": "mksignames",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:supportBuildTools",
+      "container_name": "Support & Build Tools",
+      "external": false,
+      "grouped_by": {
+        "container": "Support & Build Tools",
+        "pattern": "mksyntax",
+        "rule_index": 1,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:mksyntax",
+      "language": "cpp",
+      "metrics": {
+        "files": 2
+      },
+      "name": "mksyntax",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:mypid",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "mypid",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:necho",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "necho",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:shellCore",
+      "container_name": "Shell Core",
+      "external": false,
+      "grouped_by": {
+        "container": "Shell Core",
+        "pattern": "parser-built",
+        "rule_index": 0,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:parser-built",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "parser-built",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:pathchk",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "pathchk",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:print",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "print",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:supportBuildTools",
+      "container_name": "Support & Build Tools",
+      "external": false,
+      "grouped_by": {
+        "container": "Support & Build Tools",
+        "pattern": "printenv",
+        "rule_index": 1,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:printenv",
+      "language": "cpp",
+      "metrics": {
+        "files": 2
+      },
+      "name": "printenv",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:push",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "push",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:realpath",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "realpath",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:supportBuildTools",
+      "container_name": "Support & Build Tools",
+      "external": false,
+      "grouped_by": {
+        "container": "Support & Build Tools",
+        "pattern": "recho",
+        "rule_index": 1,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:recho",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "recho",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:rmdir",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "rmdir",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:sleep",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "sleep",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:strftime",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "strftime",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:memoryAllocator",
+      "container_name": "Memory Allocator",
+      "external": false,
+      "grouped_by": {
+        "container": "Memory Allocator",
+        "pattern": "stubmalloc",
+        "rule_index": 2,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:stubmalloc",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "stubmalloc",
+      "path": "lib/malloc",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:sync",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "sync",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "components": [
+        {
+          "code": [
+            {
+              "id": "cpp:target:tee/component:examples/code:flist",
+              "level": "code",
+              "name": "flist"
+            }
+          ],
+          "id": "cpp:target:tee/component:examples",
+          "key": "examples",
+          "level": "component",
+          "name": "examples",
+          "source": "subdir"
+        }
+      ],
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:tee",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "tee",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:truefalse",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "truefalse",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:tty",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "tty",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "components": [
+        {
+          "code": [
+            {
+              "id": "cpp:target:uname/component:examples/code:utsname",
+              "level": "code",
+              "name": "utsname"
+            }
+          ],
+          "id": "cpp:target:uname/component:examples",
+          "key": "examples",
+          "level": "component",
+          "name": "examples",
+          "source": "subdir"
+        }
+      ],
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:uname",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "uname",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:unlink",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "unlink",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:exampleLoadables",
+      "container_name": "Example Loadables",
+      "external": false,
+      "grouped_by": {
+        "container": "Example Loadables",
+        "pattern": "examples/*",
+        "rule_index": 4,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:whoami",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "whoami",
+      "path": "examples/loadables",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:supportBuildTools",
+      "container_name": "Support & Build Tools",
+      "external": false,
+      "grouped_by": {
+        "container": "Support & Build Tools",
+        "pattern": "xcase",
+        "rule_index": 1,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:xcase",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "xcase",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    },
+    {
+      "container_id": "container:supportBuildTools",
+      "container_name": "Support & Build Tools",
+      "external": false,
+      "grouped_by": {
+        "container": "Support & Build Tools",
+        "pattern": "zecho",
+        "rule_index": 1,
+        "signal": "members_glob"
+      },
+      "id": "cpp:target:zecho",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "zecho",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "technology": "C executable",
+      "type": "executable"
+    }
+  ]
+}

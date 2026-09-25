@@ -1,0 +1,16 @@
+{
+  "axis": "A7",
+  "edge_delta": 0,
+  "edges_hash_after": "4153c7a92a4fb7cf",
+  "edges_hash_before": "4153c7a92a4fb7cf",
+  "invariant_holds": true,
+  "n_edges": 1685,
+  "n_targets": 207,
+  "names_changed": 207,
+  "partition_hash_after": "039ab6822034cfd0",
+  "partition_hash_before": "039ab6822034cfd0",
+  "partition_moved": 0,
+  "structural_delta": 0,
+  "system": "orchardcore",
+  "targets_delta": 0
+}

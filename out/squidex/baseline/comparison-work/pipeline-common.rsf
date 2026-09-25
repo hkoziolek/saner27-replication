@@ -1,0 +1,13 @@
+contain container:core csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Model/Squidex.Domain.Apps.Core.Model.csproj
+contain container:core csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Operations/Squidex.Domain.Apps.Core.Operations.csproj
+contain container:database csharp:csproj:backend/src/Squidex.Data.MongoDb/Squidex.Data.MongoDb.csproj
+contain container:events csharp:csproj:backend/src/Squidex.Domain.Apps.Events/Squidex.Domain.Apps.Events.csproj
+contain container:extensions csharp:csproj:backend/extensions/Squidex.Extensions/Squidex.Extensions.csproj
+contain container:infrastructure csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj
+contain container:infrastructure csharp:csproj:backend/src/Squidex.Domain.Apps.Entities/Squidex.Domain.Apps.Entities.csproj
+contain container:infrastructure csharp:csproj:backend/src/Squidex.Infrastructure/Squidex.Infrastructure.csproj
+contain container:migrations csharp:csproj:backend/src/Migrations/Migrations.csproj
+contain container:shared csharp:csproj:backend/src/Squidex.Shared/Squidex.Shared.csproj
+contain container:users csharp:csproj:backend/src/Squidex.Domain.Users/Squidex.Domain.Users.csproj
+contain container:web csharp:csproj:backend/src/Squidex.Web/Squidex.Web.csproj
+contain csharp:csproj:backend/src/Squidex/Squidex.csproj csharp:csproj:backend/src/Squidex/Squidex.csproj

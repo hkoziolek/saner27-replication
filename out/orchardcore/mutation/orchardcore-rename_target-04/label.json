@@ -1,0 +1,165 @@
+{
+  "alias": {
+    "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj": "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj"
+  },
+  "description": "rename build target csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj -> csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Contents/OrchardCore.Contents.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.DataLocalization/OrchardCore.DataLocalization.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Deployment/OrchardCore.Deployment.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Lucene/OrchardCore.Lucene.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Placements/OrchardCore.Placements.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Queries/OrchardCore.Queries.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Templates/OrchardCore.Templates.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Tenants/OrchardCore.Tenants.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Users/OrchardCore.Users.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Workflows/OrchardCore.Workflows.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.DisplayManagement/OrchardCore.DisplayManagement.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Abstractions/OrchardCore.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Infrastructure.Abstractions/OrchardCore.Infrastructure.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Core/OrchardCore.Localization.Core.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore/OrchardCore.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj"
+    ],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Contents/OrchardCore.Contents.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.DataLocalization/OrchardCore.DataLocalization.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Deployment/OrchardCore.Deployment.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Lucene/OrchardCore.Lucene.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Placements/OrchardCore.Placements.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Queries/OrchardCore.Queries.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Templates/OrchardCore.Templates.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Tenants/OrchardCore.Tenants.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Users/OrchardCore.Users.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Workflows/OrchardCore.Workflows.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.DisplayManagement/OrchardCore.DisplayManagement.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Abstractions/OrchardCore.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Infrastructure.Abstractions/OrchardCore.Infrastructure.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Core/OrchardCore.Localization.Core.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore/OrchardCore.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj"
+    ],
+    "suspected_renames": [
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.Abstractions.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Localization.Abstractions/OrchardCore.Localization.AbstractionsAnonMut.csproj"
+      ]
+    ]
+  },
+  "files_touched": [
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore\\OrchardCore\\OrchardCore.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore\\OrchardCore.DisplayManagement\\OrchardCore.DisplayManagement.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore\\OrchardCore.Localization.Core\\OrchardCore.Localization.Core.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Contents\\OrchardCore.Contents.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.DataLocalization\\OrchardCore.DataLocalization.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Deployment\\OrchardCore.Deployment.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Lucene\\OrchardCore.Lucene.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Placements\\OrchardCore.Placements.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Queries\\OrchardCore.Queries.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Templates\\OrchardCore.Templates.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Tenants\\OrchardCore.Tenants.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Users\\OrchardCore.Users.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Workflows\\OrchardCore.Workflows.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\OrchardCore.slnx",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore\\OrchardCore.Localization.Abstractions\\OrchardCore.Localization.Abstractions.csproj -> <repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore\\OrchardCore.Localization.Abstractions\\OrchardCore.Localization.AbstractionsAnonMut.csproj"
+  ],
+  "id": "orchardcore-rename_target-04",
+  "operator": "rename_target",
+  "system": "orchardcore"
+}

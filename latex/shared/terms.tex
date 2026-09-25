@@ -1,0 +1,18 @@
+%% The shared terminology paragraph (was the boxed Table I until 2026-09-13; folded into prose
+%% for the page budget, response plan section 13 status). The legend the table captions used to
+%% carry lives here once; captions reference \S\ref{sec:design} (the enclosing section: IV in the
+%% paper, 1 in the TR, which labels its scope section sec:design too) instead of restating it.
+%% SHARED between main.tex and tr.tex: it must not reference a label that exists in only one of
+%% the two documents. Hand-owned: definitions, not data.
+\paragraph{Terminology.}
+Three \emph{rows} recur in every table: the \emph{floor} (autonomous: every scored entity in its
+owning build target, no curation), the \emph{propose} draft (autonomous: the tool's heuristic rule
+draft accepted verbatim), and the \emph{curated} model (the committed hand rules applied). A
+\emph{detection} number scores autonomous recovery, an \emph{expression} number what a human
+expressed under evidence constraints; the two are never compared inferentially, and only detection
+numbers support a recovery claim. Curation provenance (Cur.): \emph{sighted} = reference in view,
+so the score is an oracle-assisted upper bound, never evidence against an autonomous technique;
+\emph{assisted} = LLM-assisted from names and directories, the reference mapping not consulted;
+\emph{blind} = reference-blind curator (RQ7); \emph{none} = curated model identical to the floor.
+Reference grades (Ref) and the \emph{all-common} projection are defined in
+\S\ref{sec:corpus} and \S\ref{sec:baselines}.

@@ -1,0 +1,115 @@
+{
+  "advisory": false,
+  "coverage": 1.0,
+  "diff": {
+    "coverage_gap_edges": [],
+    "coverage_gap_targets": [],
+    "first_run": false,
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Indexing.Abstractions/OrchardCore.Indexing.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Media.Abstractions/OrchardCore.Media.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Module.Targets/OrchardCore.Module.Targets.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.ResourceManagement/OrchardCore.ResourceManagement.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Core.Targets/OrchardCore.Application.Cms.Core.Targets.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj"
+    ],
+    "suspected_renames": [],
+    "suspicious": []
+  },
+  "score": {
+    "advisory": false,
+    "attributed_violations": [],
+    "coverage": 1.0,
+    "coverage_gaps_in_scope": {
+      "coverage_gap_edges": [],
+      "coverage_gap_targets": []
+    },
+    "detected": true,
+    "fn": [],
+    "fn_count": 0,
+    "fp": [],
+    "fp_count": 0,
+    "scored": {
+      "layering_violations": [],
+      "new_edges": [],
+      "new_targets": [],
+      "removed_edges": [
+        [
+          "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj",
+          "csharp:csproj:src/OrchardCore/OrchardCore.Indexing.Abstractions/OrchardCore.Indexing.Abstractions.csproj"
+        ],
+        [
+          "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj",
+          "csharp:csproj:src/OrchardCore/OrchardCore.Media.Abstractions/OrchardCore.Media.Abstractions.csproj"
+        ],
+        [
+          "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj",
+          "csharp:csproj:src/OrchardCore/OrchardCore.Module.Targets/OrchardCore.Module.Targets.csproj"
+        ],
+        [
+          "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj",
+          "csharp:csproj:src/OrchardCore/OrchardCore.ResourceManagement/OrchardCore.ResourceManagement.csproj"
+        ],
+        [
+          "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Core.Targets/OrchardCore.Application.Cms.Core.Targets.csproj",
+          "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj"
+        ]
+      ],
+      "removed_targets": [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj"
+      ],
+      "suspected_renames": []
+    },
+    "tp": [
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Indexing.Abstractions/OrchardCore.Indexing.Abstractions.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Media.Abstractions/OrchardCore.Media.Abstractions.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Module.Targets/OrchardCore.Module.Targets.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.ResourceManagement/OrchardCore.ResourceManagement.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Core.Targets/OrchardCore.Application.Cms.Core.Targets.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj"
+      ],
+      [
+        "removed_target",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj"
+      ]
+    ],
+    "tp_count": 6
+  }
+}

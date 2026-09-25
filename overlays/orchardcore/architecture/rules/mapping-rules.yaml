@@ -1,0 +1,215 @@
+# Curation rules for the OrchardCMS/OrchardCore fixture (plan §7.4). Reviewed + committed.
+#
+# OrchardCore is a large modular monolith — 233 .csproj across src/OrchardCore (framework +
+# abstractions), src/OrchardCore.Modules (~92 feature modules), themes, templates, and two web
+# hosts. Hand-listing 233 members is infeasible, so this overlay uses GLOB-based grouping
+# (`members_glob:`, §7.4): match targets by id / path / name and let the first matching group
+# (in rule order) win. This is the role fixture for the §19.3 "component granularity" question.
+#
+# Run mode: `arch run --no-llm`, deterministic. OrchardCore ships OrchardCore.slnx (no .sln) and
+# pins .NET 10 (global.json). The L0 build graph (project refs) is SDK-independent and always
+# populates; the Roslyn L2 namespace tier (the per-project component drill-down) populates only
+# when `dotnet restore` + the .NET 10 SDK succeed (plan §4.2/§18.4).
+version: 1
+
+defaults:
+  min_relationship_weight: 3
+  drop_external: true               # NuGet packages are technology tags, not containers
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false
+
+exclude:
+  targets:
+    - glob: "test/*"                # the test/benchmark tree (not production architecture)
+    - glob: "*Tests*"
+    - glob: "*Benchmark*"
+    - glob: "*OrchardCore.Docs*"    # documentation project, not a runtime element
+
+group:
+  # --- the component-granularity PROBE: one real framework project drilled to its namespaces
+  #     via the D§5 deep path (`expand:` promotes the target to its own container, nesting
+  #     the §6.3 namespace tier; the `components:` block below tames it to the §1.1#1
+  #     budget). This is the §19.3 granularity check. At N=233 OrchardCore renders as
+  #     MODEL X (D§2.3): every multi-target container drills into its member projects by
+  #     default — the expand probes buy NAMESPACE depth on top of that.
+  - container: "Content Management (probe)"
+    expand:
+      - "csharp:csproj:src/OrchardCore/OrchardCore.ContentManagement/OrchardCore.ContentManagement.csproj"
+    members:
+      - "csharp:csproj:src/OrchardCore/OrchardCore.ContentManagement/OrchardCore.ContentManagement.csproj"
+  # a 2nd single-project drill-down (the Autoroute permalink engine) — shows that the
+  # namespace tier renders cleanly for more than one container.
+  - container: "Autoroute (probe)"
+    expand:
+      - "csharp:csproj:src/OrchardCore/OrchardCore.Autoroute.Core/OrchardCore.Autoroute.Core.csproj"
+    members:
+      - "csharp:csproj:src/OrchardCore/OrchardCore.Autoroute.Core/OrchardCore.Autoroute.Core.csproj"
+  # a CODE-level drill-down (D§5/D§6.1): the `namespace:` filter renders the CLASSES of one
+  # namespace as elements (the C4 code altitude) instead of the namespace tier — the
+  # successor of the deprecated `code_view`. DisplayManagement.Extensions has 5 classes —
+  # inside the ≤20 budget.
+  - container: "Display Extensions (code probe)"
+    expand:
+      - target: "csharp:csproj:src/OrchardCore/OrchardCore.DisplayManagement/OrchardCore.DisplayManagement.csproj"
+        namespace: "OrchardCore.DisplayManagement.Extensions"
+    members:
+      - "csharp:csproj:src/OrchardCore/OrchardCore.DisplayManagement/OrchardCore.DisplayManagement.csproj"
+
+  # --- framework: abstractions FIRST (more specific), then the rest of src/OrchardCore.
+  - container: "Framework Abstractions"
+    members_glob:
+      - "src/OrchardCore/*Abstractions*"
+  - container: "OrchardCore Framework"
+    members_glob:
+      - "src/OrchardCore/*"
+
+  # --- the modular-monolith module layer, split into a few functional families.
+  #     Scoped to the modules path so a broad name like *Content* can't pull in framework code.
+  # NOTE (eval §5.3): these module families are an architect's NATURAL grouping by module
+  # name/purpose at a deliberately COARSER granularity (~10 families) than OrchardCore's own
+  # 28 manifest `Category` values, which are the GT-doc reference (references/orchardcore).
+  # They are derived from module NAMES, NOT by reading the Manifest.cs Category field — so the
+  # RQ1/RQ2 fidelity score measures agreement between two independent decompositions, not a
+  # copy of the reference into the curation (which would be circular). Glob order = match order.
+  - container: "Admin & Navigation Modules"
+    members_glob:
+      - "src/OrchardCore.Modules/*Admin*"
+      - "src/OrchardCore.Modules/*Navigation*"
+      - "src/OrchardCore.Modules/*Menu*"
+      - "src/OrchardCore.Modules/*HomeRoute*"
+      - "src/OrchardCore.Modules/*Alias*"
+      - "src/OrchardCore.Modules/*Autoroute*"
+      - "src/OrchardCore.Modules/*UrlRewriting*"
+      - "src/OrchardCore.Modules/*Features*"
+      - "src/OrchardCore.Modules/*Placements*"
+  - container: "Security & Identity Modules"
+    members_glob:
+      - "src/OrchardCore.Modules/*Users*"
+      - "src/OrchardCore.Modules/*Roles*"
+      - "src/OrchardCore.Modules/*Security*"
+      - "src/OrchardCore.Modules/*OpenId*"
+      - "src/OrchardCore.Modules/*Authentication*"
+      - "src/OrchardCore.Modules/*Authorization*"
+      - "src/OrchardCore.Modules/*Facebook*"
+      - "src/OrchardCore.Modules/*Google*"
+      - "src/OrchardCore.Modules/*GitHub*"
+      - "src/OrchardCore.Modules/*Twitter*"
+      - "src/OrchardCore.Modules/*ReCaptcha*"
+      - "src/OrchardCore.Modules/*Https*"
+      - "src/OrchardCore.Modules/*Cors*"
+  - container: "Search & Data Modules"
+    members_glob:
+      - "src/OrchardCore.Modules/*Search*"
+      - "src/OrchardCore.Modules/*Lucene*"
+      - "src/OrchardCore.Modules/*Elasticsearch*"
+      - "src/OrchardCore.Modules/*Indexing*"
+      - "src/OrchardCore.Modules/*Sql*"
+      - "src/OrchardCore.Modules/*Data*"
+      - "src/OrchardCore.Modules/*YesSql*"
+      - "src/OrchardCore.Modules/*Queries*"
+      - "src/OrchardCore.Modules/*AzureAI*"
+      - "src/OrchardCore.Modules/*Sitemaps*"
+      - "src/OrchardCore.Modules/*Seo*"
+      - "src/OrchardCore.Modules/*Apis*"
+  - container: "Content & Media Modules"
+    members_glob:
+      - "src/OrchardCore.Modules/*Content*"
+      - "src/OrchardCore.Modules/*Media*"
+      - "src/OrchardCore.Modules/*Html*"
+      - "src/OrchardCore.Modules/*Markdown*"
+      - "src/OrchardCore.Modules/*Liquid*"
+      - "src/OrchardCore.Modules/*Templates*"
+      - "src/OrchardCore.Modules/*Widgets*"
+      - "src/OrchardCore.Modules/*Flows*"
+      - "src/OrchardCore.Modules/*Forms*"
+      - "src/OrchardCore.Modules/*Lists*"
+      - "src/OrchardCore.Modules/*Taxonomies*"
+      - "src/OrchardCore.Modules/*Title*"
+      - "src/OrchardCore.Modules/*Layers*"
+      - "src/OrchardCore.Modules/*Shortcodes*"
+      - "src/OrchardCore.Modules/*Spatial*"
+      - "src/OrchardCore.Modules/*Feeds*"
+  - container: "Communication Modules"
+    members_glob:
+      - "src/OrchardCore.Modules/*Email*"
+      - "src/OrchardCore.Modules/*Sms*"
+      - "src/OrchardCore.Modules/*Notifications*"
+  - container: "Workflows & Automation Modules"
+    members_glob:
+      - "src/OrchardCore.Modules/*Workflows*"
+      - "src/OrchardCore.Modules/*Rules*"
+      - "src/OrchardCore.Modules/*Scripting*"
+      - "src/OrchardCore.Modules/*BackgroundTasks*"
+  - container: "Deployment & Tenancy Modules"
+    members_glob:
+      - "src/OrchardCore.Modules/*Deployment*"
+      - "src/OrchardCore.Modules/*Recipes*"
+      - "src/OrchardCore.Modules/*Setup*"
+      - "src/OrchardCore.Modules/*Tenants*"
+      - "src/OrchardCore.Modules/*ArchiveLater*"
+      - "src/OrchardCore.Modules/*PublishLater*"
+      - "src/OrchardCore.Modules/*AuditTrail*"
+  - container: "Infrastructure & Performance Modules"
+    members_glob:
+      - "src/OrchardCore.Modules/*Cache*"
+      - "src/OrchardCore.Modules/*Redis*"
+      - "src/OrchardCore.Modules/*Compression*"
+      - "src/OrchardCore.Modules/*ReverseProxy*"
+      - "src/OrchardCore.Modules/*HealthChecks*"
+      - "src/OrchardCore.Modules/*Diagnostics*"
+      - "src/OrchardCore.Modules/*Profiler*"
+      - "src/OrchardCore.Modules/*Resources*"
+      - "src/OrchardCore.Modules/*Localization*"
+      - "src/OrchardCore.Modules/*Settings*"
+      - "src/OrchardCore.Modules/*XmlRpc*"
+  - container: "Other Modules"
+    members_glob:
+      - "src/OrchardCore.Modules/*"   # catch-all — MUST stay after the family globs above
+
+  # --- presentation + hosting ---
+  - container: "Themes"
+    members_glob:
+      - "src/OrchardCore.Themes/*"
+  - container: "Project Templates"
+    members_glob:
+      - "src/Templates/*"
+  - container: "Web Hosts"
+    members_glob:
+      - "*OrchardCore.Cms.Web/*"     # match the id (path has no further subdir to glob on)
+      - "*OrchardCore.Mvc.Web/*"
+
+# Component-tier curation for the probe container (§7.4 / §16#10b): drop framework/runtime
+# namespaces and aggregate to depth 3 so the Component view stays inside the ≤20 budget.
+components:
+  exclude_namespaces:
+    - "System*"
+    - "Microsoft*"
+    - "Newtonsoft*"
+    - "YesSql*"
+  aggregate_depth: 3
+
+technology:
+  csproj: ".NET assembly"
+
+naming:
+  style: descriptive
+  expand_acronyms: false
+  max_name_words: 4
+
+rationale:
+  "OrchardCore Framework":
+    reason: "The src/OrchardCore core libraries (sans abstractions) form one framework container at the Container altitude; module families are the architecturally interesting decomposition"
+    decided_by: "architect"
+    date: "2026-06-04"
+    confidence: "medium"
+  "Content Management (probe)":
+    reason: "A single real framework project opted into a Component drill-down to inspect the §6.3 namespace-tier granularity on a large modular monolith (§19.3)"
+    decided_by: "architect"
+    date: "2026-06-04"
+    confidence: "high"
+  "Other Modules":
+    reason: "Catch-all for feature modules not in a named family; glob-ordered last so families win first"
+    decided_by: "architect"
+    date: "2026-06-04"
+    confidence: "low"

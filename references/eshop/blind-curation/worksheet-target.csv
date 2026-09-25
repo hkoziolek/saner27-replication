@@ -1,0 +1,24 @@
+# RQ9 rater worksheet (eval §10a) — assign every entity a cluster name; use the
+# project's own documented component names where they exist. Write EXCLUDE to mark an
+# entity out-of-scope (tests, samples, dead code) — record why in the notes column.
+# Blinding: do NOT consult the tool's output, any reference.rsf, or another rater.
+entity,cluster,notes
+csharp:csproj:src/Basket.API/Basket.API.csproj,,
+csharp:csproj:src/Catalog.API/Catalog.API.csproj,,
+csharp:csproj:src/ClientApp/ClientApp.csproj,,
+csharp:csproj:src/EventBus/EventBus.csproj,,
+csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj,,
+csharp:csproj:src/HybridApp/HybridApp.csproj,,
+csharp:csproj:src/Identity.API/Identity.API.csproj,,
+csharp:csproj:src/IntegrationEventLogEF/IntegrationEventLogEF.csproj,,
+csharp:csproj:src/OrderProcessor/OrderProcessor.csproj,,
+csharp:csproj:src/Ordering.API/Ordering.API.csproj,,
+csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj,,
+csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj,,
+csharp:csproj:src/PaymentProcessor/PaymentProcessor.csproj,,
+csharp:csproj:src/WebApp/WebApp.csproj,,
+csharp:csproj:src/WebAppComponents/WebAppComponents.csproj,,
+csharp:csproj:src/WebhookClient/WebhookClient.csproj,,
+csharp:csproj:src/Webhooks.API/Webhooks.API.csproj,,
+csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj,,
+csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj,,

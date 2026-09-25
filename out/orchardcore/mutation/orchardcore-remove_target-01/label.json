@@ -1,0 +1,39 @@
+{
+  "alias": {},
+  "description": "remove build target csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Logging.NLog/OrchardCore.Logging.NLog.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj"
+    ],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\test\\OrchardCore.Tests\\OrchardCore.Tests.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\test\\OrchardCore.Tests.Functional\\OrchardCore.Tests.Functional.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\OrchardCore.slnx",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Cms.Web\\appsettings.Development.json",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Cms.Web\\appsettings.json",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Cms.Web\\Localization\\.placeholder",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Cms.Web\\NLog.config",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Cms.Web\\OrchardCore.Cms.Web.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Cms.Web\\Program.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Cms.Web\\Properties\\debugSettings.json",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Cms.Web\\Properties\\launchSettings.json"
+  ],
+  "id": "orchardcore-remove_target-01",
+  "operator": "remove_target",
+  "system": "orchardcore"
+}

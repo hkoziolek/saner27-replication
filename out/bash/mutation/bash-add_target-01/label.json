@@ -1,0 +1,21 @@
+{
+  "alias": {},
+  "description": "add new build target cpp:target:libstrucmut1",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [
+      "cpp:target:libstrucmut1"
+    ],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\bash\\mutation\\_work\\bash\\repo\\lib\\strucmut1\\strucmut1.c",
+    "<repo>\\out\\bash\\mutation\\_work\\bash\\repo\\lib\\strucmut1\\Makefile.in"
+  ],
+  "id": "bash-add_target-01",
+  "operator": "add_target",
+  "system": "bash"
+}

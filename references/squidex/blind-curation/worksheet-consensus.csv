@@ -1,0 +1,26 @@
+# RQ9 Squidex reconciliation — CONSENSUS worksheet (runbook §5 step 7).
+# Filled live by R-A + R-B + facilitator. The pre-consensus worksheets are FROZEN
+# (kappa + the ceiling row come from those) — never edit them.
+# notes column pre-seeded with each rater's own label; replace with the rationale.
+# cluster pre-filled ONLY where the raters already agree (exact label); every blank
+# is a disagreement to settle. EXCLUDE is a valid consensus (entity out of scope).
+entity,cluster,notes
+csharp:csproj:backend/extensions/Squidex.Extensions/Squidex.Extensions.csproj,Extensions,R-A=Extensions | R-B=Extensions
+csharp:csproj:backend/i18n/translator/Squidex.Translator/Squidex.Translator.csproj,Translator,R-A=Translator | R-B=Translator
+csharp:csproj:backend/src/Migrations/Migrations.csproj,Data,R-A=Data | R-B=Data
+csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj,Data,R-A=Data | R-B=Data
+csharp:csproj:backend/src/Squidex.Data.MongoDb/Squidex.Data.MongoDb.csproj,Data,R-A=Data | R-B=Data
+csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Model/Squidex.Domain.Apps.Core.Model.csproj,Core,R-A=Domain | R-B=Core
+csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Operations/Squidex.Domain.Apps.Core.Operations.csproj,Core,R-A=Domain | R-B=Core
+csharp:csproj:backend/src/Squidex.Domain.Apps.Entities/Squidex.Domain.Apps.Entities.csproj,Entities,R-A=Domain | R-B=Entities
+csharp:csproj:backend/src/Squidex.Domain.Apps.Events/Squidex.Domain.Apps.Events.csproj,Events,R-A=Domain | R-B=Events
+csharp:csproj:backend/src/Squidex.Domain.Users/Squidex.Domain.Users.csproj,Users,R-A=Domain | R-B=Users
+csharp:csproj:backend/src/Squidex.Infrastructure/Squidex.Infrastructure.csproj,Infrastructure,R-A=Infrastructure | R-B=Infrastructure
+csharp:csproj:backend/src/Squidex.Shared/Squidex.Shared.csproj,Shared,R-A=Domain | R-B=Shared
+csharp:csproj:backend/src/Squidex.Web/Squidex.Web.csproj,Web,R-A=API | R-B=Web
+csharp:csproj:backend/src/Squidex/Squidex.csproj,Application,R-A=Domain | R-B=Application
+csharp:csproj:backend/tools/GenerateLanguages/GenerateLanguages.csproj,EXCLUDE,R-A=EXCLUDE | R-B=EXCLUDE
+csharp:csproj:frontend/generator/Generator/Generator.csproj,Generator,R-A=Generator | R-B=EXCLUDE
+csharp:csproj:tools/TestSuite/TestSuite.ApiTests/TestSuite.ApiTests.csproj,EXCLUDE,R-A=EXCLUDE | R-B=EXCLUDE
+csharp:csproj:tools/TestSuite/TestSuite.LoadTests/TestSuite.LoadTests.csproj,EXCLUDE,R-A=EXCLUDE | R-B=EXCLUDE
+csharp:csproj:tools/TestSuite/TestSuite.Shared/TestSuite.Shared.csproj,EXCLUDE,R-A=EXCLUDE | R-B=EXCLUDE

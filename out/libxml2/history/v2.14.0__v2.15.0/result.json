@@ -1,0 +1,114 @@
+{
+  "advisory": false,
+  "counts": {
+    "coverage_gap_edges": 0,
+    "coverage_gap_targets": 0,
+    "drift_total": 0,
+    "layering_violations": 0,
+    "new_edges": 0,
+    "new_targets": 0,
+    "removed_edges": 0,
+    "removed_targets": 0,
+    "suspected_renames": 0
+  },
+  "coverage": 1.0,
+  "diff": {
+    "coverage_gap_edges": [],
+    "coverage_gap_targets": [],
+    "first_run": false,
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": [],
+    "suspicious": []
+  },
+  "findings": {
+    "coverage_gap_edges": [],
+    "coverage_gap_targets": [],
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "gating": false,
+  "git": {
+    "a": "v2.14.0",
+    "a_date": "2025-03-27T15:17:22+01:00",
+    "b": "v2.15.0",
+    "b_date": "2025-09-15T13:34:13+02:00",
+    "build_files_touched": [
+      "CMakeLists.txt",
+      "Makefile.am",
+      "configure.ac",
+      "doc/Makefile.am",
+      "doc/devhelp/Makefile.am",
+      "doc/devhelp/meson.build",
+      "doc/meson.build",
+      "fuzz/Makefile.am",
+      "include/Makefile.am",
+      "include/libxml/meson.build",
+      "include/private/Makefile.am",
+      "meson.build",
+      "python/Makefile.am",
+      "python/meson.build",
+      "python/tests/Makefile.am",
+      "xstc/Makefile.am"
+    ],
+    "commits_build_files": 51,
+    "commits_total": 368,
+    "history_note": "full clone",
+    "shallow_clone": false
+  },
+  "l0_scoped": true,
+  "layering": {
+    "rules_present": false,
+    "violations_a": 0,
+    "violations_b": 0
+  },
+  "needs_curation": {
+    "a": 20,
+    "b": 20,
+    "b_ids": [
+      "cpp:target:io1",
+      "cpp:target:io2",
+      "cpp:target:libxml2",
+      "cpp:target:parse1",
+      "cpp:target:parse2",
+      "cpp:target:parse3",
+      "cpp:target:parse4",
+      "cpp:target:reader1",
+      "cpp:target:reader2",
+      "cpp:target:reader3",
+      "cpp:target:reader4",
+      "cpp:target:runsuite",
+      "cpp:target:runtest",
+      "cpp:target:runxmlconf",
+      "cpp:target:tree1",
+      "cpp:target:tree2",
+      "cpp:target:xmlcatalog",
+      "cpp:target:xmllint",
+      "cpp:target:xpath1",
+      "cpp:target:xpath2"
+    ],
+    "new_in_b": []
+  },
+  "out_of_scope": {
+    "new_edges_non_l0_or_external": 0,
+    "removed_edges_non_l0_or_external": 0
+  },
+  "pair": {
+    "a": "v2.14.0",
+    "b": "v2.15.0"
+  },
+  "schema": "rq6-history-pair/1",
+  "system": "libxml2",
+  "targets": {
+    "a_first_party": 31,
+    "b_first_party": 31
+  },
+  "warnings": [],
+  "worksheet_rows": 0
+}

@@ -1,0 +1,96 @@
+{
+  "budget": {
+    "cold_budget_s": 1800,
+    "cold_within": true,
+    "warm_budget_s": 180,
+    "warm_within": true
+  },
+  "cold": {
+    "cache": {},
+    "peak_rss_mb": 1018.5,
+    "rc": 0,
+    "stages": {
+      "curate": 0.109,
+      "drift": 0.046,
+      "enrich": 0.047,
+      "extract": 321.578,
+      "generate": 0.047,
+      "normalize": 98.563,
+      "validate-curated": 0.25,
+      "validate-extracted": 1.015
+    },
+    "substeps": {
+      "extract": {
+        "autotools-graph": 1.344,
+        "clang-scan-deps": 2.265,
+        "cmake-graph": 1.109,
+        "contracts": 12.657,
+        "csharp-build-graph": 9.313,
+        "csharp-interop": 26.375,
+        "csproj-sdk-role": 4.953,
+        "deployment": 12.922,
+        "doxygen-xml": 3.563,
+        "msbuild-cpp": 1.437,
+        "orchardcore-manifest": 5.203,
+        "plugin-namespace": 8.516,
+        "roslyn-csharp": 218.0,
+        "runtime": 13.906
+      }
+    },
+    "timed_out": false,
+    "wall_s": 434.4
+  },
+  "env": {},
+  "host": {
+    "cpus": 22,
+    "ram_gb": 31
+  },
+  "language": "cs",
+  "profile": "full",
+  "schema": "rq7-perf/1",
+  "size": {
+    "edges_file": 41313,
+    "edges_target": 142,
+    "files": 3596,
+    "kloc": 513.4,
+    "targets": 37
+  },
+  "speedup": 4.01,
+  "success": true,
+  "system": "nopcommerce",
+  "warm": {
+    "cache": {},
+    "peak_rss_mb": 95.5,
+    "rc": 0,
+    "stages": {
+      "curate": 0.157,
+      "drift": 0.016,
+      "enrich": 0.047,
+      "extract": 88.125,
+      "generate": 0.078,
+      "normalize": 5.719,
+      "validate-curated": 0.265,
+      "validate-extracted": 1.109
+    },
+    "substeps": {
+      "extract": {
+        "autotools-graph": 1.281,
+        "clang-scan-deps": 1.891,
+        "cmake-graph": 1.062,
+        "contracts": 12.531,
+        "csharp-build-graph": 1.61,
+        "csharp-interop": 22.0,
+        "csproj-sdk-role": 7.313,
+        "deployment": 3.047,
+        "doxygen-xml": 2.171,
+        "msbuild-cpp": 1.438,
+        "orchardcore-manifest": 7.765,
+        "plugin-namespace": 7.469,
+        "roslyn-csharp": 7.969,
+        "runtime": 10.578
+      }
+    },
+    "timed_out": false,
+    "wall_s": 108.2
+  }
+}

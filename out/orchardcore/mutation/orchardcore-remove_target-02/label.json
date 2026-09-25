@@ -1,0 +1,47 @@
+{
+  "alias": {},
+  "description": "remove build target csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Indexing.Abstractions/OrchardCore.Indexing.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Media.Abstractions/OrchardCore.Media.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Module.Targets/OrchardCore.Module.Targets.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.ResourceManagement/OrchardCore.ResourceManagement.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Core.Targets/OrchardCore.Application.Cms.Core.Targets.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.OpenXML/OrchardCore.Media.Indexing.OpenXML.csproj"
+    ],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore\\OrchardCore.Application.Cms.Core.Targets\\OrchardCore.Application.Cms.Core.Targets.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\OrchardCore.slnx",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Media.Indexing.OpenXML\\Manifest.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Media.Indexing.OpenXML\\OrchardCore.Media.Indexing.OpenXML.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Media.Indexing.OpenXML\\Services\\PresentationDocumentMediaFileTextProvider.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Media.Indexing.OpenXML\\Services\\WordDocumentMediaFileTextProvider.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Media.Indexing.OpenXML\\Startup.cs"
+  ],
+  "id": "orchardcore-remove_target-02",
+  "operator": "remove_target",
+  "system": "orchardcore"
+}

@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://arch-pipeline/schema/scenario-candidate-1.json",
+  "title": "Scenario candidate — a proposed dynamic (behavioral) view",
+  "description": "One advisory scenario candidate (`generated/scenario-candidates/<source>/<slug>.json`, dynamic-view plan §2/§3.2). Four static sources (test / runtime / graph-walk / llm) each emit this SAME envelope: a `proposal` (the only promotable material — ordered steps over the container vocabulary, with STABLE container ids in from/to) plus the `validated_view` (the verbatim `build_dynamic_view` output, a `dynamic-view/2` artifact, what the GUI <SequenceStrip> renders). Nothing auto-promotes: a human promotes the good ones into the hand-owned rules/scenarios.yaml (plan §0.1#2). The validator's green check evidences edge EXISTENCE only, never call ORDER — `ordering_provenance` is the reader's trust signal (plan §1a#4).",
+  "$comment": "ADVISORY schema (NOT the determinism-hashed fact-model core): no `arch validate` wiring and no schema/CHANGELOG core entry — validated INLINE by the producer (stages/scenario_candidates.py) and tests via validate_facts.find_schema('scenario-candidate.schema.json') + jsonschema.validate, exactly the enrich_llm.py pattern for llm-output / llm-narrative. `validated_view` is left as a permissive object here and validated separately against schema/dynamic-view.schema.json by scenarios.validate_dynamic_view (jsonschema has no cross-file $ref resolver wired in this codebase). derived_from_hash = content_hash(facts_emitted) (emission-normalized provenance, plan §0.4#4), NEVER the serve If-Hash freshness comparator. A/B/graph-walk candidates are byte-identical across runs; the llm source is excluded from the determinism gate (off by default, never in CI).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "source", "confidence", "ordering_provenance",
+               "salience", "salience_reasons", "derived_from_hash", "proposal",
+               "validated_view", "note"],
+  "properties": {
+    "schema": {
+      "const": "scenario-candidate/1",
+      "description": "The advisory schema id."
+    },
+    "source": {
+      "type": "string",
+      "enum": ["test", "runtime", "graph-walk", "llm"],
+      "description": "Which of the four static sources produced this candidate (plan §2). The candidate key is source-prefixed (test- / runtime- / walk- / llm-)."
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low"],
+      "description": "Source-level confidence in edge existence. Runtime (B) is high for edge existence (declared Aspire wiring); graph-walk (C) is low (synthesized ordering); test (A) is low; llm (F) is medium. NOTE the note field states any edge-vs-ordering confidence split (plan §5)."
+    },
+    "ordering_provenance": {
+      "type": "string",
+      "enum": ["observed-in-test", "declared-in-aspire", "synthesized", "hand-authored", "llm-proposed"],
+      "description": "How the step ORDERING was arrived at (plan §1a#4 / §0.4#5). Survives promotion into scenarios.yaml. The validator never validates order, so this is the reader's trust signal."
+    },
+    "salience": {
+      "type": "number",
+      "description": "Deterministic, engine-computed ranking score (plan §1a#3): entry-point bonus + sum of per-step weight + distinct-container count. The inbox / picker sorts by (source, -salience, slug)."
+    },
+    "salience_reasons": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "description": "Human-readable reasons that contributed to salience (e.g. 'entry-point (sdk-role:service-web)', 'crosses 3 containers')."
+    },
+    "derived_from_hash": {
+      "type": "string",
+      "description": "content_hash(facts_emitted) — honest provenance of exactly the emission-normalized facts the candidate was validated against (plan §0.4#4). NOT the serve If-Hash freshness comparator."
+    },
+    "proposal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["key", "name", "scope", "steps"],
+      "description": "The ONLY promotable material: ordered steps over the container vocabulary. Promotion lifts {key, name, scope, steps[from, to, order, description]} into rules/scenarios.yaml.",
+      "properties": {
+        "key": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Source-prefixed scenario key (e.g. 'runtime-webapp')."
+        },
+        "name": { "type": "string", "minLength": 1, "description": "Human-readable scenario title." },
+        "scope": { "type": "string", "minLength": 1, "description": "The literal 'system' or a container name/id the view drills into." },
+        "steps": {
+          "type": "array",
+          "description": "Ordered proposal steps. from/to are STABLE build-target ids / container_ids (display names live in from_name/to_name only, plan §0.4#6).",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["from", "to"],
+            "properties": {
+              "from": { "type": "string", "minLength": 1, "description": "Stable source container_id / build-target id." },
+              "to": { "type": "string", "minLength": 1, "description": "Stable target container_id / build-target id." },
+              "from_name": { "type": "string", "description": "Source container display name (label only — never promoted as the endpoint)." },
+              "to_name": { "type": "string", "description": "Target container display name (label only)." },
+              "order": {
+                "type": "integer",
+                "minimum": 1,
+                "description": "Non-unique parallel-band index (plan §2/§3.1#5): concurrent / fan-out steps share an order."
+              },
+              "description": { "type": "string", "description": "The step message (label policy §1a#2 — never a bare 'Uses')." }
+            }
+          }
+        }
+      }
+    },
+    "validated_view": {
+      "type": "object",
+      "description": "The verbatim build_dynamic_view(proposal, facts_emitted) output — a dynamic-view/2 artifact. Validated separately against schema/dynamic-view.schema.json (this schema keeps it a permissive object; see $comment)."
+    },
+    "note": {
+      "type": "string",
+      "description": "Source-level note (e.g. the runtime edge-vs-ordering confidence split, plan §5; the graph-walk 'synthesized, not observed' caveat, plan §6)."
+    },
+    "notes": {
+      "type": "object",
+      "description": "Optional structured side-notes the GUI renders to explain boundaries.",
+      "properties": {
+        "out_of_model": {
+          "type": "array",
+          "description": "Runtime container→infra hops that are NOT C4-container steps (plan §0.3): the chain 'appears to stop' at an infra resource — recorded, never silently dropped.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "source": { "type": "string" },
+              "target": { "type": "string" },
+              "kind": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

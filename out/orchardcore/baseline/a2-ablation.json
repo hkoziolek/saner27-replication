@@ -1,0 +1,59 @@
+{
+  "granularity": "target",
+  "language": "cs",
+  "reference_clusters": 34,
+  "rungs": {
+    "det_curation": {
+      "a2a": 100.0,
+      "clusters": 33,
+      "mojofm": 100.0
+    },
+    "dir_leaf": {
+      "a2a": 67.63,
+      "clusters": 201,
+      "mojofm": 11.58
+    },
+    "dir_top": {
+      "a2a": 82.78,
+      "clusters": 5,
+      "mojofm": 38.42
+    },
+    "edge_cc": {
+      "a2a": 79.0,
+      "clusters": 1,
+      "mojofm": 24.21
+    },
+    "hand_curation": {
+      "a2a": 91.68,
+      "clusters": 16,
+      "mojofm": 72.11
+    },
+    "name": {
+      "a2a": 79.98,
+      "clusters": 7,
+      "mojofm": 24.74
+    },
+    "name_segment": {
+      "a2a": 75.32,
+      "clusters": 107,
+      "mojofm": 21.58
+    },
+    "none": {
+      "a2a": 67.63,
+      "clusters": 201,
+      "mojofm": 11.58
+    },
+    "propose_all": {
+      "a2a": 91.13,
+      "clusters": 20,
+      "mojofm": 69.47
+    },
+    "sdk_role": {
+      "a2a": 81.9,
+      "clusters": 3,
+      "mojofm": 35.79
+    }
+  },
+  "shared_entities": 201,
+  "system": "orchardcore"
+}

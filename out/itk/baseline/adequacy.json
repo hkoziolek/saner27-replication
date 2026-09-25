@@ -1,0 +1,17 @@
+{
+  "edges": 11522,
+  "entities": 5344,
+  "fidelity_corpus": true,
+  "granularity": "file",
+  "intra_edges": 8781,
+  "intra_share": 0.7621,
+  "language": "cpp",
+  "largest_share": 0.137,
+  "mq": 47.785,
+  "mq_per_unit": 0.6126,
+  "schema": "adequacy/1",
+  "source": "a2-rungs/none.rsf",
+  "system": "itk",
+  "unit_ratio": 0.0146,
+  "units": 78
+}

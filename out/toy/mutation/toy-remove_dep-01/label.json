@@ -1,0 +1,23 @@
+{
+  "alias": {},
+  "description": "remove declared dependency csharp:csproj:src/Domain/Toy.Domain.csproj -> csharp:csproj:src/Common/Toy.Common.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Domain/Toy.Domain.csproj",
+        "csharp:csproj:src/Common/Toy.Common.csproj"
+      ]
+    ],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "[anonymized]-home/<scratch>\\mutwork\\toy\\repo\\src\\Domain\\Toy.Domain.csproj"
+  ],
+  "id": "toy-remove_dep-01",
+  "operator": "remove_dep",
+  "system": "toy"
+}

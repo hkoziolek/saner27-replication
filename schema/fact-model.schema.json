@@ -1,0 +1,352 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://arch-pipeline/schema/fact-model-1.0.json",
+  "title": "Architecture Fact Model",
+  "description": "Neutral, generator-independent fact model (the contract between extraction and generation). Draft v1.1 (P7 extension) for the C#/.NET pilot (§16 decision #19). Tiers 1-2 of the §6.0 taxonomy: extracted facts + curated architecture elements, plus the optional POST-V1 deployment facet (§4.4). Validated in CI by validate_facts.py after normalize_facts.py (§10). See plans/2026-06-03-fact-extraction-structurizr-pipeline.md §6.",
+  "$comment": "VERSIONING (§6.5): schema_version is semver. MINOR = additive-only; this schema keeps the root, target, relationship, component, and code objects OPEN (no additionalProperties:false) so additive MINOR fields still validate, while constraining only the closed enum-valued fields (target type, level, language, evidence.type, confidence, visibility). MAJOR = breaking, ships a new schema file + migrate_facts.py. As of 1.1 (P7) the deployment facet IS defined here as an OPTIONAL top-level `deployment` object (deploy:/infra:/env: node ids; packages/calls/runtime_config edges) and the `deploy`/`runtime_config` evidence kinds + the `native` language are added — all additive, so 1.0 artifacts still validate. Any change to this file requires a schema/CHANGELOG.md entry (CI-enforced, §6.5d).",
+
+  "type": "object",
+  "required": ["schema_version", "provenance", "targets", "relationships"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^1\\.[0-9]+$",
+      "description": "Semver of the fact model. This schema validates the 1.x line; a 2.x MAJOR bump ships a separate schema file."
+    },
+    "provenance": { "$ref": "#/$defs/provenance" },
+    "targets": {
+      "type": "array",
+      "description": "Tier-1/2 elements: build targets (containers) with optional child component/code tiers.",
+      "items": { "$ref": "#/$defs/target" }
+    },
+    "relationships": {
+      "type": "array",
+      "description": "Language-agnostic edges. source/target reference target (or child) ids and MAY mix languages (§6.3). May be empty.",
+      "items": { "$ref": "#/$defs/relationship" }
+    },
+    "deployment": {
+      "$ref": "#/$defs/deployment",
+      "description": "OPTIONAL POST-V1 deployment/runtime facet (§4.4, 1.1). Kept strictly distinct from build-time targets/relationships; absent on a build-only run."
+    }
+  },
+
+  "$defs": {
+    "confidence": {
+      "type": "string",
+      "enum": ["low", "medium", "high"],
+      "description": "Extraction/enrichment confidence (§6.3). Orthogonal to relationship weight."
+    },
+
+    "visibility": {
+      "type": "string",
+      "enum": ["public", "private", "interface"],
+      "description": "Link/project_ref visibility (§5/§6.2). Drives the §7.4 down_weight_private knob."
+    },
+
+    "provenance": {
+      "type": "object",
+      "description": "Run provenance. generated_at/commit are excluded from the §18.4 idempotency and drift comparison.",
+      "required": ["repo", "commit", "generated_at", "extractors"],
+      "properties": {
+        "repo": { "type": "string", "description": "e.g. MyOrg/ControlApp" },
+        "commit": { "type": "string", "description": "Source commit the facts were extracted from." },
+        "generated_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Injected by the runner, not the extractor script (§4.3). Excluded from idempotency/drift comparison."
+        },
+        "extractors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "version"],
+            "properties": {
+              "name": { "type": "string" },
+              "version": { "type": "string" }
+            }
+          }
+        },
+        "coverage": {
+          "type": "object",
+          "description": "Per-target, per-layer extraction coverage (§11 degradation-aware governance; feeds run-report trust dashboard §10.2). Keys are target ids.",
+          "additionalProperties": { "$ref": "#/$defs/coverageEntry" }
+        }
+      }
+    },
+
+    "coverageEntry": {
+      "type": "object",
+      "description": "Per-layer coverage for one target. A layer is true/false, or a string like '18/18 files' for partial counts.",
+      "properties": {
+        "L0": { "$ref": "#/$defs/coverageLayer" },
+        "L1": { "$ref": "#/$defs/coverageLayer" },
+        "L2": { "$ref": "#/$defs/coverageLayer" },
+        "L3": { "$ref": "#/$defs/coverageLayer" }
+      }
+    },
+
+    "coverageLayer": {
+      "oneOf": [
+        { "type": "boolean" },
+        { "type": "string" }
+      ]
+    },
+
+    "target": {
+      "type": "object",
+      "description": "A build target (C4 container altitude). Object stays OPEN for additive MINOR fields (§6.5a).",
+      "required": ["id", "name", "type", "language"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[^:]+:.+$",
+          "description": "STABLE, canonical, content-independent id (§6.3). C# = csharp:csproj:<path-relative-to-repo-root>; C++ = cpp:target:<cmake-target-identity>. Never display-name-derived."
+        },
+        "name": { "type": "string", "description": "Raw build/display name." },
+        "type": {
+          "type": "string",
+          "enum": ["executable", "static_lib", "shared_lib", "interface_lib", "object_lib", "csproj", "package", "contract", "unknown"],
+          "description": "Build target type. C# projects are 'csproj'; third-party/NuGet shown as boundary is 'package'. 'contract' (1.2) is a shared cross-component interface definition (.proto/IDL/WSDL) modeled as a first-class boundary element (§16#14)."
+        },
+        "language": {
+          "type": "string",
+          "enum": ["cpp", "csharp", "native", "idl"],
+          "description": "Extensible via MINOR bump as new extractors land. `native` (1.1) marks an unresolved native library reached via P/Invoke/COM/C++-CLI interop (§16#15). `idl` (1.2) marks a language-neutral shared contract definition (.proto/IDL/WSDL, type 'contract', §16#14)."
+        },
+        "path": { "type": "string", "description": "Path relative to repo root (e.g. the .csproj folder)." },
+        "namespaces": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "depends_on": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Convenience list of dependency target ids. The authoritative edge list is relationships[]."
+        },
+        "metrics": { "$ref": "#/$defs/metrics" },
+        "package_refs": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "DIRECT package references (NuGet etc.) stamped on the consuming project (1.3). Survives curation's drop_external (which removes the package targets/edges) so the datasheet technology fingerprint stays available (datasheet-enrichment plan §6.1)."
+        },
+        "responsibilities": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Optional seed; the LLM enrichment step (§8) may refine."
+        },
+        "external": {
+          "type": "boolean",
+          "description": "Third-party / system-boundary marker (§6.3). May be filtered or promoted to an external system."
+        },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "e.g. build:msbuild, needs-curation, llm-enrich-failed, partial:codegen, external."
+        },
+        "components": {
+          "type": "array",
+          "description": "Optional child component tier (§6.0). Rendered only by opt-in drill-down views (§9.1).",
+          "items": { "$ref": "#/$defs/component" }
+        },
+        "conflicts": {
+          "type": "array",
+          "description": "Residual genuine scalar conflicts recorded by normalize_facts.py (§6.4c), surfaced in the curation/drift report; never silently dropped.",
+          "items": { "type": "object" }
+        }
+      }
+    },
+
+    "component": {
+      "type": "object",
+      "description": "A component within a target. <key> derives from exactly one heuristic per language (C# = namespace), recorded in `source` (§6.3).",
+      "required": ["id", "name", "level"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[^:]+:.+/component:.+$",
+          "description": "Parent target id + '/component:<key>' (parent-qualified for global uniqueness, §6.3)."
+        },
+        "name": { "type": "string" },
+        "level": { "type": "string", "enum": ["component"] },
+        "source": {
+          "type": "string",
+          "description": "Provenance of the heuristic that produced <key> (e.g. 'namespace' for C#, 'subdir' fallback for C++)."
+        },
+        "key": { "type": "string", "description": "The raw key (e.g. fully-qualified namespace) before normalization." },
+        "code": {
+          "type": "array",
+          "description": "Optional code/class tier (opt-in per component to bound cost, §6.3).",
+          "items": { "$ref": "#/$defs/codeElement" }
+        }
+      }
+    },
+
+    "codeElement": {
+      "type": "object",
+      "required": ["id", "name", "level"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[^:]+:.+/code:.+$",
+          "description": "Parent component id + '/code:<key>' (§6.3)."
+        },
+        "name": { "type": "string" },
+        "level": { "type": "string", "enum": ["code"] }
+      }
+    },
+
+    "metrics": {
+      "type": "object",
+      "description": "Optional per-target metrics; drive the §9.3 diagnostic views. 1.3 adds the deterministic metrics/1 source counts (datasheet-enrichment plan §3): blank/comment/code line totals, todo_count, the per-language by_language rows, and the versioned `engine` tag so a counting-heuristic change is a reviewable bump, never silent churn.",
+      "properties": {
+        "loc": { "type": "integer", "minimum": 0 },
+        "files": { "type": "integer", "minimum": 0 },
+        "fan_in": { "type": "integer", "minimum": 0 },
+        "fan_out": { "type": "integer", "minimum": 0 },
+        "engine": { "type": "string", "description": "Counting-heuristic version, e.g. 'metrics/1' (1.3)." },
+        "blank": { "type": "integer", "minimum": 0 },
+        "comment": { "type": "integer", "minimum": 0 },
+        "code": { "type": "integer", "minimum": 0 },
+        "todo_count": { "type": "integer", "minimum": 0, "description": "TODO/FIXME/HACK markers in comments (1.3)." },
+        "by_language": {
+          "type": "array",
+          "description": "Per-language rows, sorted by language name (1.3).",
+          "items": {
+            "type": "object",
+            "required": ["language", "files"],
+            "properties": {
+              "language": { "type": "string" },
+              "files": { "type": "integer", "minimum": 0 },
+              "blank": { "type": "integer", "minimum": 0 },
+              "comment": { "type": "integer", "minimum": 0 },
+              "code": { "type": "integer", "minimum": 0 }
+            }
+          }
+        }
+      }
+    },
+
+    "relationship": {
+      "type": "object",
+      "description": "A merged edge (§6.4). Identity is (source, target); `kind` is curated later and stays out of identity. Object stays OPEN for additive MINOR fields.",
+      "required": ["id", "source", "target", "evidence"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^rel:.+->.+$",
+          "description": "rel:<source>-><target> (§6.4a). kind is NOT baked in."
+        },
+        "source": { "type": "string", "pattern": "^[^:]+:.+$" },
+        "target": { "type": "string", "pattern": "^[^:]+:.+$" },
+        "kind": {
+          "type": "string",
+          "description": "Curated semantic kind (e.g. 'uses', 'Publishes and consumes messages'). Optional in the pre-curation extracted model; set by curation (§7.4)."
+        },
+        "weight": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Aggregated edge INTENSITY from the §6.5 weight function (NOT a raw count, NOT identity). Drives the §7.4 significance threshold for non-declared edges only."
+        },
+        "is_declared_dependency": {
+          "type": "boolean",
+          "description": "True iff any evidence is link/project_ref. Declared deps are NEVER weight-dropped (§7.4)."
+        },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "evidence_strength": {
+          "type": "string",
+          "description": "Optional human-readable rationale, e.g. 'link + include + symbol_use corroborate'."
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "description": "No relationship without evidence (§5, enforced in Stage 4 & 6).",
+          "items": { "$ref": "#/$defs/evidence" }
+        }
+      }
+    },
+
+    "evidence": {
+      "type": "object",
+      "description": "One concrete corroborating artifact for a relationship (§5). Object open; only `type` is a closed enum (§6.5a).",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["link", "project_ref", "include", "symbol_use", "package_ref", "interop", "runtime", "deploy", "runtime_config"],
+          "$comment": "Evidence kinds. interop is produced by the C#-side P/Invoke + C++/CLI + COM scan (§16#15). runtime (1.2) is produced by the runtime-topology extractor (§5: .NET Aspire AppHost / DI / hosted services) and appears on deployment.edges, never on a build relationship (it must not feed the §6.5 build-edge weight). deploy/runtime_config (§4.4) likewise only appear on deployment.edges.",
+          "description": "Evidence kind."
+        },
+        "detail": {
+          "type": "string",
+          "description": "The literal artifact, e.g. '<ProjectReference Include=...>', '#include <...>', a fully-qualified symbol."
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Aggregated occurrence count (e.g. number of includes); summed on merge (§6.4b)."
+        },
+        "visibility": { "$ref": "#/$defs/visibility" }
+      }
+    },
+
+    "deployment": {
+      "type": "object",
+      "description": "POST-V1 deployment/runtime topology (§4.4, schema 1.1). nodes = deployable images / external infrastructure / environments; edges = packaging (image->build target), runtime calls, and runtime_config references. Strictly distinct from build-time targets/relationships; runtime edges never contribute to the §6.5 build-edge weight.",
+      "properties": {
+        "nodes": { "type": "array", "items": { "$ref": "#/$defs/deploymentNode" } },
+        "edges": { "type": "array", "items": { "$ref": "#/$defs/deploymentEdge" } }
+      }
+    },
+
+    "deploymentNode": {
+      "type": "object",
+      "description": "A deployable image, an external infrastructure component, or an environment (§4.4 / §6.3). Object stays OPEN for additive MINOR fields.",
+      "required": ["id", "name", "kind"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^(deploy|infra|env):.+$",
+          "description": "Content-independent, language-agnostic id (§6.3): deploy:image:<name> | infra:<kind>:<name> (e.g. infra:database:orders-db) | env:<name> (env:dev). Disjoint from cpp:/csharp:."
+        },
+        "name": { "type": "string" },
+        "kind": {
+          "type": "string",
+          "enum": ["image", "infra", "env"],
+          "description": "image = deployable container image; infra = external runtime infrastructure (db/queue/ingress/...); env = an environment that scopes a deployment view."
+        },
+        "subkind": { "type": "string", "description": "For infra: database|queue|ingress|cache|storage|... For image: the base image. Free-form." },
+        "technology": { "type": "string", "description": "e.g. the base image (mcr.microsoft.com/dotnet/aspnet:9.0) or infra technology (PostgreSQL, RabbitMQ)." },
+        "env": { "type": "string", "description": "The env:<name> this node is scoped to (for per-environment deployment views, §4.4). Absent = all envs." },
+        "replicas": { "type": "integer", "minimum": 0, "description": "Declared replica count (k8s Deployment / compose deploy.replicas), if known." },
+        "ports": { "type": "array", "items": { "type": "string" }, "description": "Published / EXPOSEd ports." },
+        "external": { "type": "boolean", "description": "True for infra outside the system boundary." },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "e.g. deploy:image, infra:database, partial:unrendered (Helm/ARG indirection, §4.4)."
+        }
+      }
+    },
+
+    "deploymentEdge": {
+      "type": "object",
+      "description": "A deployment/runtime edge (§4.4). `packages` links a deploy:image to the build target it ships (binding the runtime node to the build graph); `calls`/`reads`/`publishes` are inter-service runtime edges; runtime_config references config (key, never value, §8.3). Carries deploy/runtime_config evidence.",
+      "required": ["source", "target", "kind", "evidence"],
+      "properties": {
+        "id": { "type": "string", "description": "rel:<source>-><target> form (optional; recomputed on merge)." },
+        "source": { "type": "string", "description": "A deployment node id, or — for `packages` — a deploy:image id whose target is a build target id." },
+        "target": { "type": "string", "description": "A deployment node id or, for `packages`, the cpp:/csharp: build target the image ships." },
+        "kind": { "type": "string", "description": "packages | calls | reads | publishes | runtime_config | ..." },
+        "env": { "type": "string", "description": "The env:<name> this edge is scoped to, if any." },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "description": "No edge without evidence (§5). Deployment edges carry deploy/runtime_config evidence.",
+          "items": { "$ref": "#/$defs/evidence" }
+        }
+      }
+    }
+  }
+}

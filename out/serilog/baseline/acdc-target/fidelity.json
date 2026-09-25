@@ -1,0 +1,13 @@
+{
+  "clusters": 1,
+  "entities_clustered": 6,
+  "granularity": "target",
+  "graph": "graph-target.rsf",
+  "system": "serilog",
+  "technique": "acdc",
+  "vs_pipeline_agreement": {
+    "a2a": 37.5,
+    "mojofm": NaN
+  },
+  "vs_reference": null
+}

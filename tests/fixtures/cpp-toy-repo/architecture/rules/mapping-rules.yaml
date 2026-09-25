@@ -1,0 +1,34 @@
+# Curation rules for the cpp-toy fixture (plan §7.4). Mirrors the C# toy-repo rules so the
+# C++ vertical exercises the same grouping / exclusion / component-view / naming machinery.
+
+exclude:
+  targets:
+    - glob: "order_tests"      # drop the test executable (curation's job, not the extractor's, §7.4)
+
+group:
+  # Renders as MODEL Y (drill-down D§2.3: N=4): each target is a container under its theme
+  # group and the Doxygen namespace tier nests natively — no drill-down opt-in flag needed.
+  - container: "Order Processing"
+    members:
+      - cpp:target:order_processor
+  - container: "Messaging"
+    members:
+      - cpp:target:messaging
+  - container: "Pricing"
+    members:
+      - cpp:target:pricing
+  - container: "Common"
+    members:
+      - cpp:target:common
+
+name_overrides:
+  cpp:target:order_processor: "Order Processor"
+
+technology:
+  executable: "C++ executable"
+  static_lib: "C++ static library"
+  interface_lib: "C++ header-only library"
+
+relationship_kinds:
+  - kind: "Publishes order events"
+    when_evidence_contains: "Publisher"

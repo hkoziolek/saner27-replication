@@ -1,0 +1,13 @@
+contain grp:backend csharp:csproj:backend/extensions/Squidex.Extensions/Squidex.Extensions.csproj
+contain grp:data csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj
+contain grp:data csharp:csproj:backend/src/Squidex.Data.MongoDb/Squidex.Data.MongoDb.csproj
+contain grp:domain csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Model/Squidex.Domain.Apps.Core.Model.csproj
+contain grp:domain csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Operations/Squidex.Domain.Apps.Core.Operations.csproj
+contain grp:domain csharp:csproj:backend/src/Squidex.Domain.Apps.Entities/Squidex.Domain.Apps.Entities.csproj
+contain grp:domain csharp:csproj:backend/src/Squidex.Domain.Apps.Events/Squidex.Domain.Apps.Events.csproj
+contain grp:infrastructure csharp:csproj:backend/src/Squidex.Infrastructure/Squidex.Infrastructure.csproj
+contain grp:shared csharp:csproj:backend/src/Squidex.Domain.Users/Squidex.Domain.Users.csproj
+contain grp:shared csharp:csproj:backend/src/Squidex.Shared/Squidex.Shared.csproj
+contain grp:shared csharp:csproj:backend/src/Squidex.Web/Squidex.Web.csproj
+contain grp:src csharp:csproj:backend/src/Migrations/Migrations.csproj
+contain grp:src csharp:csproj:backend/src/Squidex/Squidex.csproj

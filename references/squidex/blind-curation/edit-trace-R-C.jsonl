@@ -1,0 +1,99 @@
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "data", "op": "create_group"}], "ts": "2026-08-12T10:13:21+00:00"}
+{"added": 3, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T10:13:21+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/src/Squidex.Data.MongoDb/Squidex.Data.MongoDb.csproj", "op": "move_member", "to": "data"}], "ts": "2026-08-12T10:14:16+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T10:14:16+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/src/Squidex.Data.MongoDb/Squidex.Data.MongoDb.csproj", "op": "move_member", "to": "data"}], "ts": "2026-08-12T10:14:27+00:00"}
+{"added": 0, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T10:14:27+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj", "op": "move_member", "to": "data"}], "ts": "2026-08-12T10:16:07+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T10:16:07+00:00"}
+{"added": 0, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 2, "ts": "2026-08-12T10:16:59+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "EXCLUDE", "op": "create_group"}], "ts": "2026-08-12T10:18:48+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T10:18:48+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/tests/Squidex.Data.Tests/Squidex.Data.Tests.csproj", "op": "move_member", "to": "EXCLUDE"}], "ts": "2026-08-12T10:19:00+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T10:19:00+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/tests/Squidex.Data.Tests.CodeGenerator/Squidex.Data.Tests.CodeGenerator.csproj", "op": "move_member", "to": "EXCLUDE"}], "ts": "2026-08-12T10:19:06+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T10:19:06+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/tests/Squidex.Domain.Apps.Core.Tests/Squidex.Domain.Apps.Core.Tests.csproj", "op": "move_member", "to": "EXCLUDE"}], "ts": "2026-08-12T10:19:13+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T10:19:13+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/tests/Squidex.Domain.Apps.Entities.Tests/Squidex.Domain.Apps.Entities.Tests.csproj", "op": "move_member", "to": "EXCLUDE"}], "ts": "2026-08-12T10:19:18+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T10:19:18+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/tests/Squidex.Domain.Users.Tests/Squidex.Domain.Users.Tests.csproj", "op": "move_member", "to": "EXCLUDE"}], "ts": "2026-08-12T10:19:24+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T10:19:24+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/tests/Squidex.Infrastructure.Tests/Squidex.Infrastructure.Tests.csproj", "op": "move_member", "to": "EXCLUDE"}], "ts": "2026-08-12T10:19:27+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T10:19:27+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/tests/Squidex.Web.Tests/Squidex.Web.Tests.csproj", "op": "move_member", "to": "EXCLUDE"}], "ts": "2026-08-12T10:19:30+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T10:19:30+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:tools/TestSuite/TestSuite.ApiTests/TestSuite.ApiTests.csproj", "op": "move_member", "to": "EXCLUDE"}], "ts": "2026-08-12T10:19:37+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T10:19:37+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:tools/TestSuite/TestSuite.LoadTests/TestSuite.LoadTests.csproj", "op": "move_member", "to": "EXCLUDE"}], "ts": "2026-08-12T10:19:40+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T10:19:40+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:tools/TestSuite/TestSuite.Shared/TestSuite.Shared.csproj", "op": "move_member", "to": "EXCLUDE"}], "ts": "2026-08-12T10:19:43+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T10:19:43+00:00"}
+{"added": 45, "event": "reviewed_write", "file": "layout-overrides.yaml", "removed": 0, "ts": "2026-08-12T11:31:28+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "generator", "op": "create_group"}], "ts": "2026-08-12T11:52:25+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T11:52:25+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:frontend/generator/Generator/Generator.csproj", "op": "move_member", "to": "generator"}], "ts": "2026-08-12T11:52:28+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T11:52:28+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/tools/GenerateLanguages/GenerateLanguages.csproj", "op": "move_member", "to": "generator"}], "ts": "2026-08-12T11:52:32+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T11:52:32+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "translator", "op": "create_group"}], "ts": "2026-08-12T11:52:58+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T11:52:58+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/i18n/translator/Squidex.Translator/Squidex.Translator.csproj", "op": "move_member", "to": "translator"}], "ts": "2026-08-12T11:53:02+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T11:53:02+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "entities", "op": "create_group"}], "ts": "2026-08-12T11:54:53+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T11:54:53+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/src/Squidex.Domain.Apps.Entities/Squidex.Domain.Apps.Entities.csproj", "op": "move_member", "to": "entities"}], "ts": "2026-08-12T11:54:57+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T11:54:57+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj", "op": "move_member", "to": "entities"}], "ts": "2026-08-12T11:55:10+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 1, "ts": "2026-08-12T11:55:10+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "events", "op": "create_group"}], "ts": "2026-08-12T11:56:19+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T11:56:19+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/src/Squidex.Domain.Apps.Events/Squidex.Domain.Apps.Events.csproj", "op": "move_member", "to": "events"}], "ts": "2026-08-12T11:56:23+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T11:56:23+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "infrastructure", "op": "create_group"}], "ts": "2026-08-12T11:59:06+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T11:59:06+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/src/Squidex.Infrastructure/Squidex.Infrastructure.csproj", "op": "move_member", "to": "infrastructure"}], "ts": "2026-08-12T11:59:12+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T11:59:12+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/src/Squidex/Squidex.csproj", "op": "move_member", "to": "infrastructure"}], "ts": "2026-08-12T11:59:19+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T11:59:19+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 1, "ts": "2026-08-12T12:06:17+00:00"}
+{"added": 0, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 1, "ts": "2026-08-12T12:06:31+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "migrations", "op": "create_group"}], "ts": "2026-08-12T12:18:29+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T12:18:29+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/src/Migrations/Migrations.csproj", "op": "move_member", "to": "migrations"}], "ts": "2026-08-12T12:18:33+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T12:18:33+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "core", "op": "create_group"}], "ts": "2026-08-12T12:23:44+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T12:23:44+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Model/Squidex.Domain.Apps.Core.Model.csproj", "op": "move_member", "to": "core"}], "ts": "2026-08-12T12:23:47+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T12:23:47+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Operations/Squidex.Domain.Apps.Core.Operations.csproj", "op": "move_member", "to": "core"}], "ts": "2026-08-12T12:23:51+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T12:23:51+00:00"}
+{"added": 3, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 3, "ts": "2026-08-12T12:24:47+00:00"}
+{"added": 3, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 3, "ts": "2026-08-12T12:25:19+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "extensions", "op": "create_group"}], "ts": "2026-08-12T12:27:08+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T12:27:08+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/extensions/Squidex.Extensions/Squidex.Extensions.csproj", "op": "move_member", "to": "extensions"}], "ts": "2026-08-12T12:27:12+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T12:27:12+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 4, "ts": "2026-08-12T12:55:48+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "users", "op": "create_group"}], "ts": "2026-08-12T12:57:13+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T12:57:13+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/src/Squidex.Domain.Users/Squidex.Domain.Users.csproj", "op": "move_member", "to": "users"}], "ts": "2026-08-12T12:57:17+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T12:57:17+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "shared", "op": "create_group"}], "ts": "2026-08-12T12:58:13+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T12:58:13+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/src/Squidex.Shared/Squidex.Shared.csproj", "op": "move_member", "to": "shared"}], "ts": "2026-08-12T12:58:16+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T12:58:16+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "web", "op": "create_group"}], "ts": "2026-08-12T12:59:01+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T12:59:01+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/src/Squidex.Web/Squidex.Web.csproj", "op": "move_member", "to": "web"}], "ts": "2026-08-12T12:59:04+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-12T12:59:04+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/extensions/Squidex.Extensions/Squidex.Extensions.csproj", "op": "move_member", "to": "extensions"}], "ts": "2026-08-13T08:41:49+00:00"}
+{"added": 0, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-13T08:41:49+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/extensions/Squidex.Extensions/Squidex.Extensions.csproj", "op": "move_member", "to": "extensions"}], "ts": "2026-08-13T08:42:00+00:00"}
+{"added": 0, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-13T08:42:00+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/extensions/Squidex.Extensions/Squidex.Extensions.csproj", "op": "move_member", "to": "extensions"}], "ts": "2026-08-13T08:42:47+00:00"}
+{"added": 0, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-08-13T08:42:47+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/extensions/Squidex.Extensions/Squidex.Extensions.csproj", "op": "move_member", "to": "events"}], "ts": "2026-08-13T08:42:57+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 2, "ts": "2026-08-13T08:42:57+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:backend/extensions/Squidex.Extensions/Squidex.Extensions.csproj", "op": "move_member", "to": "extensions"}], "ts": "2026-08-13T08:43:21+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 1, "ts": "2026-08-13T08:43:21+00:00"}

@@ -1,0 +1,84 @@
+{
+  "dropped_whitespace": 0,
+  "entities": {
+    "acdc": 86,
+    "arc": 86,
+    "cc": 86,
+    "dir": 86,
+    "floor": 58,
+    "limbo": 86,
+    "pipeline": 59,
+    "propose": 91,
+    "wca": 86
+  },
+  "granularity": "file",
+  "projection": "all-common",
+  "reference_entities": 82,
+  "results": {
+    "acdc": {
+      "a2a": 76.63,
+      "ari": 0.75,
+      "clusters": 4,
+      "mojofm": 20.0,
+      "nested": 75.0
+    },
+    "arc": {
+      "a2a": 83.42,
+      "ari": -2.09,
+      "clusters": 13,
+      "mojofm": 20.0,
+      "nested": 69.23
+    },
+    "cc": {
+      "a2a": 78.02,
+      "ari": 7.98,
+      "clusters": 2,
+      "mojofm": 25.71,
+      "nested": 50.0
+    },
+    "dir": {
+      "a2a": 73.48,
+      "ari": 0.0,
+      "clusters": 1,
+      "mojofm": 5.71,
+      "nested": 0.0
+    },
+    "floor": {
+      "a2a": 75.96,
+      "ari": 1.56,
+      "clusters": 3,
+      "mojofm": 11.43,
+      "nested": 66.67
+    },
+    "limbo": {
+      "a2a": 82.01,
+      "ari": 10.01,
+      "clusters": 9,
+      "mojofm": 28.57,
+      "nested": 22.22
+    },
+    "pipeline": {
+      "a2a": 75.96,
+      "ari": 1.56,
+      "clusters": 3,
+      "mojofm": 11.43,
+      "nested": 66.67
+    },
+    "propose": {
+      "a2a": 73.48,
+      "ari": 0.0,
+      "clusters": 1,
+      "mojofm": 5.71,
+      "nested": 0.0
+    },
+    "wca": {
+      "a2a": 84.21,
+      "ari": 16.8,
+      "clusters": 10,
+      "mojofm": 31.43,
+      "nested": 50.0
+    }
+  },
+  "shared_entities": 41,
+  "system": "libxml2"
+}

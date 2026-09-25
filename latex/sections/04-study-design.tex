@@ -1,0 +1,169 @@
+\section{Study Design}
+\label{sec:design}
+
+%% Revised 2026-08-30 against the GPT-5.6-Sol review (plans/2026-08-30-saner-review-response-plan.md)
+%% and tightened for the page budget. Numbers are macros only.
+%% 2026-09-13 shortening pass (response plan §13): the terminology paragraph is the shared
+%% latex/shared/terms.tex (also used by the TR; captions cite it as \S\ref{sec:design}); M5/M7
+%% send the full inferential machinery, the metric definitions and the entity-ownership
+%% tie-breaks to the TR; caveats stated here are not restated in §V/§VI.
+%% 2026-09-13 readability pass: long sentences split, §IV.D split into two paragraphs; no content change.
+
+The study is built so the two-regime thesis of \S\ref{sec:intro} can fail.
+\emph{Recoverability} (RQ1--RQ3) asks how much of a system's module structure is recoverable from
+build and dependency evidence alone, and where that breaks down. \emph{Expression and governance}
+(RQ4--RQ7) asks whether, where recovery fails, a human-in-the-loop pipeline keeps the expressed
+architecture stable, checkable, and affordable in a way autonomous SAR does not.
+\textbf{RQ1:} how much does build evidence alone recover, can that be diagnosed without a
+reference, and where is human input needed? The autonomous rows are the \emph{no-curation floor}
+and the \emph{auto-propose draft} (defined below). \textbf{RQ2:} given the same dependency input,
+do the autonomous rows match classical SAR and a controlled LLM baseline, and how far does
+curation move the score? \textbf{RQ3:} which design choices contribute, at the operating
+configuration and at the extremes? \textbf{RQ4:} are outputs identical across reruns, and does
+the decomposition survive code change? \textbf{RQ5:} does drift detection report seeded and real
+change at an acceptable false-finding cost, and fail honestly when evidence goes missing?
+\textbf{RQ6:} how do runtime and memory scale against the pipeline's own budget? \textbf{RQ7:}
+where recovery fails, how close does a reference-blind curator get to the reference, at what
+effort, and how does that compare with the agreement between two reference authors? The plan's
+RQ identifiers are mapped in the artifact.
+
+\input{shared/terms}
+Curation sets the very partition the metrics score, so a curated score compares assisted with
+unassisted recovery and says nothing about autonomous recovery. Every detection claim rests on
+the two autonomous rows; the non-circular curated numbers come from the reference-blind
+curations (RQ7; Squidex's only curated model). Three of the four C\#\ curations
+were authored with the reference in view, and P-1's with the diagram its reference was
+reconciled from (Table~\ref{tab:corpus}).
+
+\subsection{Subject corpus and references}
+\label{sec:corpus}
+
+\textbf{Tier-A} (Nine systems: five C/C++, four C\#) carries
+a reference architecture and drives RQ1--RQ3 and RQ7 (Table~\ref{tab:corpus}); \textbf{Tier-B}
+(\rqSevenSystems{} systems, containing Tier-A) needs none and drives RQ4--RQ6. The anonymized
+industrial system, \textbf{P-1} in the tables, sits outside both tiers: its metrics corroborate
+the open-source results but are not replicable. Tier-B spans three orders of magnitude in KLOC and
+four build idioms (CMake, .NET SDK, MSBuild-C++, automake or hand-written \texttt{Makefile.in}),
+which co-vary with language here (\S\ref{sec:threats}). Every system is pinned to a commit;
+nopCommerce's source (license) and libxml2's reference (third-party) stay out of our package,
+their measurements in. \textbf{GT-pub} adopts a published mapping verbatim. \textbf{GT-doc} is transcribed from the project's own documentation by two
+people independently, then reconciled. For \textbf{GT-exp}, two architects map entities to
+components blind to the pipeline output; we report their agreement (\S\ref{sec:metrics}), resolve
+by discussion, and flag $\kappa<0.6$ as lower-confidence. abseil is the exception: a single
+rater applied its documented one-library-per-directory layout, so no agreement is reported. No
+system's curator authors its reference. Table~\ref{tab:corpus} records each curation's provenance (attested; overlay and
+reference commit dates in the artifact).
+
+\subsection{Baselines, their inputs, and fairness controls}
+\label{sec:baselines}
+
+We compare against \rqTwoBaselineCount{} classical SAR and na\"ive baselines plus a controlled
+LLM-recovery baseline. The semantic and agentic lines of \S\ref{sec:background} are discussed, not
+run: SARIF's only release is a closed Linux binary without C\#\ support, FCA is an unlicensed
+MATLAB script, and the four most recent comparative evaluations themselves take this classical
+set as their baselines~\cite{zhang2023sarif,zhao2026semarc,ding2026ssar,zhang2026semref}. The
+classical set is ACDC~\cite{acdc}, ARC~\cite{arc}, WCA~\cite{wca}, and LIMBO~\cite{limbo}
+(\S\ref{sec:background}), all run through the
+\textsc{Arcade} workbench~\cite{arcade}, which also supplies the MoJoFM and a2a implementations
+(c2c is not reported). Two na\"ive lower
+bounds, directory-tree clustering and connected components, complete the set. The
+\textbf{LLM-recovery baseline} stands for the LLM-centric line~\cite{archagent}: a reasoning-tier
+model (\texttt{gpt-5.6-sol}, pinned) receives the exported graph, one line of repository
+metadata (the system's name and language), and the same $k$ as ARC under one prompt asking for a JSON entity-to-cluster map, at
+default sampling and a 180\,k-token input budget; five reruns on \rqTwoLlmSystemsRan{} systems at
+most \$\rqTwoLlmCostMaxUsd{} per system, mean and spread reported, prompt and replies in the
+artifact (\trInputs{}).
+
+\paragraph{What each technique receives.} One dependency graph per system, exported once as RSF at
+the scored granularity, feeds every technique: at project granularity (C\#) every relationship
+kind between first-party projects as one unweighted edge set; at file granularity (C++) the
+\texttt{\#include} graph, declared link edges never projected onto files. ACDC and
+\texttt{cc} see the edges only; \texttt{dir} sees entity paths; WCA and LIMBO also receive $k$,
+the reference cluster count, as their stopping point; ARC receives $k$ and each entity's source
+text; the LLM receives the graph, the metadata line, and $k$. $k$ is an oracle hint no pipeline
+row gets. The pipeline's autonomous rows instead know each entity's \emph{owning build target},
+the signal under test, which no baseline receives in any form. A file belongs to the target whose
+source list names it, else to the target owning the longest directory prefix; files no target
+claims stay unclustered and count against the floor (\trInputs{}). RQ2 therefore compares the
+whole pipeline with clustering the same edges, not two algorithms on identical information. No
+baseline receives convention tags, documentation, or mapping rules; the curated row does, hence
+its expression label.
+
+\paragraph{Fairness controls, fixed before scoring.} One granularity per comparison (file for
+C++, project for C\#), the pipeline's per-entity cluster induced via
+\texttt{entity}$\to$\texttt{target}$\to$\texttt{container}; the same reference and metric
+implementation for every technique; default parameters; and an \emph{all-common} entity
+projection on which every number in Tables~\ref{tab:rq1} and~\ref{tab:rq2} is scored, floor and
+propose included. ARC abstains on low-text files; it is scored on its own covered subset and kept
+outside every paired test. A technique that does not complete is reported as missing. \emph{Lead}
+is defined, not asserted: a row leads a system when it strictly exceeds every all-common classical
+baseline (ACDC, WCA, LIMBO, \texttt{dir}, \texttt{cc}) on that metric; wins-or-ties and wins
+against all displayed methods are reported beside it. The \emph{recovery bands} are post hoc:
+recovered at MoJoFM $\ge\rqTwoRecoveredMin{}$, the score the reference-free diagnostic of
+\S\ref{sec:metrics} is checked against, failed below \rqTwoFailedBelow{}, partial between.
+
+\subsection{Ablations and blind curation}
+\label{sec:ablation}
+
+Eight axes toggle independently from the full configuration, paired per system on Tier-A: A1 caps
+the evidence ladder at L0, L1, or L2; A2 walks the curation rungs (floor, single heuristics, the
+auto-propose draft, hand rules); A3 sweeps the weight threshold; A4 toggles visibility
+down-weighting; A5 switches off the never-drop-declared rule at the operating threshold and above;
+A6 reads the RQ2 LLM-recovery runs as the LLM-does-structure arm; A7 toggles LLM naming; A8 measures stability under code
+change. A frozen \texttt{mapping-rules.yaml} per system holds curation constant.
+
+The blind-curation experiment (RQ7) yields the curation-vs-reference numbers that are not
+circular. Its protocol, roles, and stopping rule were written into the plan before any session
+and are unchanged since (dated commit history and signed attestations in the artifact; no external
+registry). It ran on two C\#\ systems with four researchers in disjoint roles: eShop, whose
+documented reference two raters re-derived independently as the leakage check against the sighted
+curation, and Squidex, whose reference the raters built. Reference authors R$_1$ and R$_2$ work
+from code and project docs. A curator C, who is neither, authors the mapping rules blind to the
+reference, to R's mappings, and to any score, using the repository, docs, \cli~\texttt{propose}
+draft, build facts, and GUI. C stops when the model is review-complete by their own judgment;
+the harness logs the edit trace and wall-clock. Each system yields detection rows (the floor, the
+best all-common technique), the expression row (the blind curator against the reference), and the
+R$_1$-vs-R$_2$ agreement, an \emph{inter-rater baseline} that bounds nothing about a third
+partition.
+
+\subsection{Metrics and analysis}
+\label{sec:metrics}
+
+We lead with a2a~\cite{le2015a2a} and report MoJoFM~\cite{mojofm} second. MoJoFM rewards matching
+the reference's cluster count, and a2a charges for the sprawl that produces, which is why the
+na\"ive \texttt{dir} baseline beats the pipeline on MoJoFM on directory-aligned C++ but loses on
+a2a. At a reviewer's request we add, post hoc and descriptively, the adjusted Rand index (ARI,
+$\times$100), chance-corrected and charging over-splitting in full~\cite{zhang2023sarif}, and the
+\emph{nested share}, the fraction of a partition's clusters lying inside one reference cluster,
+which tells over-splitting from misgrouping. The inferential tests stay on MoJoFM and a2a.
+\emph{Container-edge F1} scores the lifted container edges against the reference's own edge set
+after a greedy label alignment; it is curation-constrained, not curation-proof, because the
+grouping fixes which edges become intra-container. Inter-rater agreement is reported label-free
+(ARI, normalized mutual information, and Cohen's $\kappa$ after Hungarian label matching), because
+a raw label-match $\kappa$ measures wording. The raw $\kappa$ stays beside them because the plan's
+flag rule (raw $\kappa<0.6$ marks a low-confidence reference) is applied as written.
+
+To diagnose ``the build graph carries the architecture'' \emph{without} a reference we compute,
+from the extracted facts alone, the floor's \emph{unit ratio} (build units per scored entity;
+1.0 = every entity its own unit), its \emph{largest-unit share}, and its TurboMQ over the exported
+graph. The rule over them was selected on the same systems it separates, so beside Spearman's
+$\rho$ with a bootstrap interval we report the threshold interval over which it keeps its
+agreement and a leave-one-system-out re-selection (\trDiagnostic{}). Governance is measured by
+byte-identical regeneration and survivor-partition agreement at 20\,\% turnover (RQ4). Drift
+detection (RQ5; \trDrift{}) is measured by precision and recall against seeded build-file
+mutations run through the whole pipeline, per mutation and per finding; by the suppression rate
+under induced evidence degradation; by the outcome of every seeded finding when a change and
+evidence loss coincide; and by the findings between consecutive real releases under rules held
+constant across each pair, each labelled by two raters. Performance (RQ6) is per-stage
+wall-clock and peak RSS.
+
+Scripts and thresholds were committed before results were unblinded. Across techniques (RQ2) the
+inferential tests admit autonomous rows only: a Friedman omnibus on MoJoFM and a2a over the
+all-common techniques with the floor (and, separately, the propose draft) in place of the curated
+row, then Nemenyi and Holm-corrected pairwise Wilcoxon signed-rank tests of that row against each
+technique (\trStats{}). The curated row enters no inferential test; its omnibus is descriptive. Paired on/off comparisons (RQ3) use Wilcoxon
+signed-rank with the matched-pairs rank-biserial $r$. Cliff's~$\delta$ is reserved for the one
+between-group contrast (C++ vs.\ C\#\ floor); detection rates get Wilson intervals, the stopping
+rules exact McNemar, and the diagnostic Spearman's $\rho$. With $N\le 5$ paired systems the
+two-sided exact signed-rank $p$ cannot fall below $0.0625$, and at $N=6$ not below $0.0312$,
+however large the effect, so effect sizes and per-system deltas carry the argument. Every statistic is a generated macro.

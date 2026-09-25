@@ -1,0 +1,39 @@
+{
+  "granularity": "file",
+  "language": "cpp",
+  "reference_clusters": 18,
+  "rungs": {
+    "dir_leaf": {
+      "a2a": 74.33,
+      "clusters": 2,
+      "mojofm": 8.33
+    },
+    "dir_top": {
+      "a2a": 74.33,
+      "clusters": 2,
+      "mojofm": 8.33
+    },
+    "edge_cc": {
+      "a2a": 78.72,
+      "clusters": 3,
+      "mojofm": 27.78
+    },
+    "hand_curation": {
+      "a2a": 75.53,
+      "clusters": 3,
+      "mojofm": 11.11
+    },
+    "none": {
+      "a2a": 75.53,
+      "clusters": 3,
+      "mojofm": 11.11
+    },
+    "propose_all": {
+      "a2a": 73.12,
+      "clusters": 1,
+      "mojofm": 5.56
+    }
+  },
+  "shared_entities": 42,
+  "system": "libxml2"
+}

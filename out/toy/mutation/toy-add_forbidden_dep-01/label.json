@@ -1,0 +1,28 @@
+{
+  "alias": {},
+  "description": "inject forbidden dependency csharp:csproj:src/Common/Toy.Common.csproj -> csharp:csproj:src/Web/Toy.Web.csproj",
+  "expected": {
+    "layering_violations": [
+      [
+        "csharp:csproj:src/Common/Toy.Common.csproj",
+        "csharp:csproj:src/Web/Toy.Web.csproj"
+      ]
+    ],
+    "new_edges": [
+      [
+        "csharp:csproj:src/Common/Toy.Common.csproj",
+        "csharp:csproj:src/Web/Toy.Web.csproj"
+      ]
+    ],
+    "new_targets": [],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "[anonymized]-home/<scratch>\\mutwork\\toy\\repo\\src\\Common\\Toy.Common.csproj"
+  ],
+  "id": "toy-add_forbidden_dep-01",
+  "operator": "add_forbidden_dep",
+  "system": "toy"
+}

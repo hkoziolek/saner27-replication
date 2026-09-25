@@ -1,0 +1,187 @@
+# Curation rules for the dotnet/Orleans fixture (plan §7.4). Reviewed + committed.
+#
+# Orleans is the §19.3 FRAMEWORK-SCALE fixture: Orleans.slnx pulls in 667 targets
+# (~300 external NuGet packages + ~360 project nodes). The uncurated graph is the
+# "all-singletons" pathological case the plan warns about (§19.1) — 362 containers at
+# 37% L0 coverage. This overlay collapses it to ~13 architecturally meaningful C4
+# containers grouped by Orleans's actual EXTENSION POINTS (core / runtime / client /
+# server + the clustering / persistence / streaming / reminders / transactions provider
+# families), which is the architecture story worth telling about a distributed-actor
+# framework.
+#
+# Two scale artifacts had to be curated away (both pure noise, not architecture):
+#   1. PHANTOM nested ProjectReference copies — the slnx resolves cross-tree relative
+#      <ProjectReference>s into duplicate nodes like
+#      `src/Orleans.Core/src/Orleans.Runtime/Orleans.Runtime.csproj` and a handful of
+#      absolute `C:/src/...` ones. They are the same logical assemblies seen from another
+#      consumer's directory, so they are excluded (`src/*/src/*`, `C:/*`). fnmatchcase '*'
+#      spans '/', so `src/*/src/*` matches any nested-under-src copy while leaving the real
+#      `src/<Family>/<Project>/<Project>.csproj` provider projects untouched (§7.4).
+#   2. The whole non-production tree: test/, samples/, playground/, benchmarks, and the
+#      test-support libraries (TestingHost / *TestKit* / Testing.Reminders).
+#
+# Run mode: `arch run --no-llm`, deterministic. Orleans ships Orleans.slnx (no .sln) and
+# pins .NET 10 (global.json); the L0 project-reference graph is SDK-independent, while the
+# Roslyn L2 namespace tier (the Runtime component drill-down) populates only when
+# `dotnet restore` + the .NET 10 SDK succeed (plan §4.2/§18.4).
+version: 1
+
+defaults:
+  min_relationship_weight: 3        # non-declared edges only; declared project refs never dropped (§7.4)
+  drop_external: true               # the ~300 NuGet packages are technology tags, not containers
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false              # --no-llm baseline
+
+exclude:
+  targets:
+    - glob: "test/*"                # the entire test + benchmark tree
+    - glob: "samples/*"             # sample apps
+    - glob: "C:/*"                  # phantom absolute-path duplicate nodes
+    - glob: "src/*/src/*"           # phantom nested ProjectReference copies under src/
+    - glob: "*Tests*"               # belt-and-suspenders for any stray test project
+    - glob: "*TestKit*"             # transaction/serialization test-kit helpers
+    - glob: "*TestingHost*"         # in-proc test silo host (testing infra, not runtime)
+    - glob: "*Testing.Reminders*"   # reminders test harness
+    - glob: "*Benchmark*"           # micro-benchmark projects
+
+group:
+  # --- demo/playground apps. NOT excluded (unlike test/samples) because the §4.4 deployment
+  #     extractor derives runtime deployment edges from their Aspire AppHosts (e.g.
+  #     ActivationRebalancing.Cluster, ActivationSheddingToy -> deploy:image:* via
+  #     AddHostedService<>()); excluding them would leave those deployment edges dangling and
+  #     fail referential integrity. Captured FIRST, into one box, so the demos don't leak into
+  #     the role families below (several carry role keywords like DurableJobs/Dashboard).
+  - container: "Samples & Demos (Aspire)"
+    members_glob:
+      - "playground/*"
+
+  # --- the SCALE component-granularity probe: the runtime core drilled to its namespaces
+  #     via the D§5 deep path (`expand:` promotes the target out of its theme, nesting the
+  #     §6.3 namespace tier); the `components:` block tames it to the §1.1#1 budget.
+  #     NB: a target's `path` is the project DIRECTORY (e.g. `src/Orleans.Runtime`), so a
+  #     glob needs an exact dir match here, not `src/Orleans.Runtime/*` (which would require a
+  #     further path segment and never matches a top-level src/ project).
+  - container: "Runtime"
+    expand:
+      - "src/Orleans.Runtime"
+    members_glob:
+      - "src/Orleans.Runtime"
+
+  # --- the foundational core + its abstractions (more specific names; no role keyword) ---
+  - container: "Core"
+    members_glob:
+      - "src/Orleans.Core"
+      - "src/Orleans.Core.Abstractions"
+
+  # --- serialization stack (built-in + the pluggable codecs) ---
+  - container: "Serialization"
+    members_glob:
+      - "*Orleans.Serialization*"
+      - "src/Serializers/*"
+
+  # --- build-time code generation + the meta SDK ---
+  - container: "Code Generation & SDK"
+    members_glob:
+      - "*Orleans.CodeGenerator*"
+      - "*Orleans.Analyzers*"
+      - "*Orleans.Sdk*"
+
+  # --- the two ends of the wire ---
+  - container: "Client"
+    members_glob:
+      - "src/Orleans.Client"
+  - container: "Silo Server"
+    members_glob:
+      - "src/Orleans.Server"
+
+  # --- the provider EXTENSION POINTS, grouped by architectural ROLE across every vendor
+  #     (Consul/ZooKeeper/AdoNet/Azure/AWS/Redis/Cassandra). Role keywords are mutually
+  #     exclusive across project names, so a single `*Role*` glob gathers the whole family.
+  - container: "Clustering & Grain Directory Providers"
+    members_glob:
+      - "*Clustering*"
+      - "*GrainDirectory*"
+  - container: "Persistence & State Providers"
+    members_glob:
+      - "*Persistence*"
+      - "*Journaling*"
+  - container: "Streaming Providers"
+    members_glob:
+      - "*Streaming*"
+      - "*BroadcastChannel*"
+  - container: "Reminders"
+    members_glob:
+      - "*Reminders*"
+  - container: "Transactions"
+    members_glob:
+      - "*Transactions*"
+  - container: "Event Sourcing & Durable Jobs"
+    members_glob:
+      - "*EventSourcing*"
+      - "*DurableJobs*"
+
+  # --- hosting glue + ops surfaces ---
+  - container: "Hosting & Extensions"
+    members_glob:
+      - "*Hosting.Kubernetes*"
+      - "*Connections.Security*"
+      - "*Dashboard*"
+
+  # --- catch-all: any remaining production lib under src/ (keeps the model free of
+  #     singleton noise). MUST stay last so the role families win first.
+  - container: "Other Framework Libraries"
+    members_glob:
+      - "src/*"
+
+# Component-tier curation for the Runtime probe (§7.4 / §16#10b): drop framework/runtime
+# namespaces and aggregate to depth 3 so the Component view stays inside the ≤20 budget.
+components:
+  exclude_namespaces:
+    - "System*"
+    - "Microsoft*"
+    - "Newtonsoft*"
+    - "Google*"
+  # depth 2: Orleans.Runtime carries ~30 namespaces; depth-3 aggregation still leaves ~24
+  # (over the ≤20 component budget), so collapse one level further to ~7 clean components.
+  aggregate_depth: 2
+
+technology:
+  csproj: ".NET assembly"
+
+naming:
+  style: descriptive
+  expand_acronyms: false
+  max_name_words: 5
+
+rationale:
+  "Samples & Demos (Aspire)":
+    reason: "Playground/demo apps kept (not excluded) so the §4.4 deployment extractor's runtime edges from their Aspire AppHosts resolve; collapsed into one box as they are not part of the framework architecture"
+    decided_by: "architect"
+    date: "2026-06-07"
+    confidence: "medium"
+  "Runtime":
+    reason: "Orleans.Runtime is the silo runtime — the largest, most central assembly; opted into a Component drill-down to inspect the §6.3 namespace-tier granularity on a framework-scale repo (§19.3)"
+    decided_by: "architect"
+    date: "2026-06-07"
+    confidence: "high"
+  "Clustering & Grain Directory Providers":
+    reason: "Membership/clustering and grain-directory implementations across all backing stores (Consul, ZooKeeper, ADO.NET, Azure, AWS DynamoDB, Redis, Cassandra) are one architectural extension point; grouped by role rather than by vendor so the Container view reads as Orleans's pluggable-provider model"
+    decided_by: "architect"
+    date: "2026-06-07"
+    confidence: "high"
+  "Persistence & State Providers":
+    reason: "Grain persistence + journaling backends (Memory/ADO.NET/Azure/AWS/Redis) form one role-based container; the Memory provider and Journaling sit here too"
+    decided_by: "architect"
+    date: "2026-06-07"
+    confidence: "high"
+  "Streaming Providers":
+    reason: "Streaming abstractions plus every transport (Azure EventHubs/Queues, AWS SQS, ADO.NET, Redis, NATS) and the broadcast-channel pub/sub primitive"
+    decided_by: "architect"
+    date: "2026-06-07"
+    confidence: "medium"
+  "Other Framework Libraries":
+    reason: "Catch-all for production src/ libraries not in a named role family; glob-ordered last so families win first"
+    decided_by: "architect"
+    date: "2026-06-07"
+    confidence: "low"

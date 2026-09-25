@@ -1,0 +1,75 @@
+# eShop curation — YOUR working rules (RQ9 blind curation, curator R-A).
+# You start from nothing on purpose: group the build targets (projects) into containers
+# by your own architectural judgment. The `arch propose` draft shown in the GUI is a
+# starting suggestion you may accept, reject, or modify. Exclude non-production targets
+# (the tests/* projects) yourself. The file updates as you edit in the GUI curation tree.
+#
+# Stop when the model is review-complete by your judgment (runbook §6 step 4). There is
+# no score to chase, and you must not look at any reference or fidelity number (§4).
+version: 1
+
+defaults:
+  min_relationship_weight: 3
+  drop_external: true
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false
+
+exclude:
+  targets:
+    - glob: "tests/*"               # drop the 5 test projects by path
+    - glob: "*.UnitTests"
+    - glob: "*.FunctionalTests"
+
+group: []
+
+group:
+  - container: Order Service
+    parent: Backend
+    members:
+      - 'csharp:csproj:src/Ordering.API/Ordering.API.csproj'
+      - 'csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj'
+      - 'csharp:csproj:src/OrderProcessor/OrderProcessor.csproj'
+      - 'csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj'
+  - container: Redis
+    members:
+  - container: Catalog Service
+    parent: Backend
+    members:
+      - 'csharp:csproj:src/Catalog.API/Catalog.API.csproj'
+  - container: Identity Service
+    parent: Backend
+    members:
+      - 'csharp:csproj:src/Identity.API/Identity.API.csproj'
+  - container: Basket Service
+    parent: Backend
+    members:
+      - 'csharp:csproj:src/Basket.API/Basket.API.csproj'
+      - 'contract:proto:basket'
+  - container: Payment Service
+    parent: Backend
+    members:
+      - 'csharp:csproj:src/PaymentProcessor/PaymentProcessor.csproj'
+  - container: Web App
+    members:
+      - 'csharp:csproj:src/WebApp/WebApp.csproj'
+      - 'csharp:csproj:src/WebAppComponents/WebAppComponents.csproj'
+  - container: Admin Services
+    parent: Backend
+    members:
+      - 'csharp:csproj:src/Webhooks.API/Webhooks.API.csproj'
+      - 'csharp:csproj:src/WebhookClient/WebhookClient.csproj'
+  - container: RabbitMQ
+    members:
+      - 'csharp:csproj:src/EventBus/EventBus.csproj'
+      - 'csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj'
+      - 'csharp:csproj:src/IntegrationEventLogEF/IntegrationEventLogEF.csproj'
+  - container: Core
+    parent: Backend
+    members:
+      - 'csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj'
+      - 'csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj'
+  - container: Client Apps
+    members:
+      - 'csharp:csproj:src/ClientApp/ClientApp.csproj'
+      - 'csharp:csproj:src/HybridApp/HybridApp.csproj'

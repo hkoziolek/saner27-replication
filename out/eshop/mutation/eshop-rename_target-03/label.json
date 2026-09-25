@@ -1,0 +1,52 @@
+{
+  "alias": {
+    "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj": "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+  },
+  "description": "rename build target csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj -> csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+        "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+        "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+    ],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+        "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+      ],
+      [
+        "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+        "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+    ],
+    "suspected_renames": [
+      [
+        "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj",
+        "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+      ]
+    ]
+  },
+  "files_touched": [
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.API\\Ordering.API.csproj",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\tests\\Ordering.FunctionalTests\\Ordering.FunctionalTests.csproj",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\tests\\Ordering.UnitTests\\Ordering.UnitTests.csproj",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\eShop.slnx",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\Ordering.Domain.csproj -> <repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\Ordering.DomainAnonMut.csproj"
+  ],
+  "id": "eshop-rename_target-03",
+  "operator": "rename_target",
+  "system": "eshop"
+}

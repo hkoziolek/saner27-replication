@@ -1,0 +1,70 @@
+{
+  "entities": 7782,
+  "fractions": [
+    "0.05",
+    "0.10",
+    "0.20"
+  ],
+  "granularity": "file",
+  "language": "cpp",
+  "mode": "perturb",
+  "system": "itk",
+  "techniques": {
+    "acdc": {
+      "0.05": {
+        "churn_mojofm": 93.45,
+        "survivors_scored": 7318
+      },
+      "0.10": {
+        "churn_mojofm": 88.28,
+        "survivors_scored": 6852
+      },
+      "0.20": {
+        "churn_mojofm": 77.05,
+        "survivors_scored": 5682
+      }
+    },
+    "cc": {
+      "0.05": {
+        "churn_mojofm": 98.83,
+        "survivors_scored": 7392
+      },
+      "0.10": {
+        "churn_mojofm": 92.26,
+        "survivors_scored": 7003
+      },
+      "0.20": {
+        "churn_mojofm": 79.54,
+        "survivors_scored": 6225
+      }
+    },
+    "dir": {
+      "0.05": {
+        "churn_mojofm": 100.0,
+        "survivors_scored": 7392
+      },
+      "0.10": {
+        "churn_mojofm": 100.0,
+        "survivors_scored": 7003
+      },
+      "0.20": {
+        "churn_mojofm": 100.0,
+        "survivors_scored": 6225
+      }
+    },
+    "anon": {
+      "0.05": {
+        "churn_mojofm": 100.0,
+        "survivors_scored": 4703
+      },
+      "0.10": {
+        "churn_mojofm": 100.0,
+        "survivors_scored": 4456
+      },
+      "0.20": {
+        "churn_mojofm": 100.0,
+        "survivors_scored": 3960
+      }
+    }
+  }
+}

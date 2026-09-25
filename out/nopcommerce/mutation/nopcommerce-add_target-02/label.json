@@ -1,0 +1,20 @@
+{
+  "alias": {},
+  "description": "add new build target csharp:csproj:src/AnonMutant2/AnonMutant2.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [
+      "csharp:csproj:src/AnonMutant2/AnonMutant2.csproj"
+    ],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\AnonMutant2\\AnonMutant2.csproj"
+  ],
+  "id": "nopcommerce-add_target-02",
+  "operator": "add_target",
+  "system": "nopcommerce"
+}

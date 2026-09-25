@@ -1,0 +1,23 @@
+{
+  "alias": {},
+  "description": "remove declared dependency csharp:csproj:src/Basket.API/Basket.API.csproj -> csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Basket.API/Basket.API.csproj",
+        "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+      ]
+    ],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\Basket.API.csproj"
+  ],
+  "id": "eshop-remove_dep-01",
+  "operator": "remove_dep",
+  "system": "eshop"
+}

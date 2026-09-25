@@ -1,0 +1,98 @@
+{
+  "alias": {},
+  "description": "merge build target csharp:csproj:src/OrchardCore.Modules/OrchardCore.Admin/OrchardCore.Admin.csproj into csharp:csproj:src/OrchardCore/OrchardCore.Module.Targets/OrchardCore.Module.Targets.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheAdmin/TheAdmin.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Module.Targets/OrchardCore.Module.Targets.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Core.Targets/OrchardCore.Application.Cms.Core.Targets.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Module.Targets/OrchardCore.Module.Targets.csproj"
+      ]
+    ],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Admin/OrchardCore.Admin.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Admin.Abstractions/OrchardCore.Admin.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Admin/OrchardCore.Admin.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Data.Abstractions/OrchardCore.Data.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Admin/OrchardCore.Admin.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.DisplayManagement/OrchardCore.DisplayManagement.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Admin/OrchardCore.Admin.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Module.Targets/OrchardCore.Module.Targets.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Admin/OrchardCore.Admin.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Navigation.Core/OrchardCore.Navigation.Core.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Admin/OrchardCore.Admin.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.ResourceManagement/OrchardCore.ResourceManagement.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Admin/OrchardCore.Admin.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Settings.Core/OrchardCore.Settings.Core.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheAdmin/TheAdmin.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Admin/OrchardCore.Admin.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Core.Targets/OrchardCore.Application.Cms.Core.Targets.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Admin/OrchardCore.Admin.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Admin/OrchardCore.Admin.csproj"
+    ],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore\\OrchardCore.Application.Cms.Core.Targets\\OrchardCore.Application.Cms.Core.Targets.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheAdmin\\TheAdmin.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\OrchardCore.slnx",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\AdminAreaControllerRouteMapper.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\AdminFilter.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\AdminMenu.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\AdminMenuFilter.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\AdminPageRouteModelConvention.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\AdminPageRouteModelProvider.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\AdminThemeSelector.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\AdminThemeService.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\AdminZoneFilter.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\Controllers\\AdminController.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\Drivers\\AdminSiteSettingsDisplayDriver.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\Drivers\\VisitSiteNavbarDisplayDriver.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\Manifest.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\OrchardCore.Admin.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\Permissions.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\PermissionsAdminSettings.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\Properties\\AssemblyInfo.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\Startup.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\ViewModels\\AdminSettingsViewModel.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\Views\\_ViewImports.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\Views\\Admin\\Index.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\Views\\AdminBranding.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\Views\\AdminDashboard.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\Views\\AdminSettings.Edit.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\Views\\Navbar.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\Views\\Navbar.DetailAdmin.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\Views\\NavigationItemText-admin.Id.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\Views\\VisitSiteNavbarItem.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\wwwroot\\favicon.ico",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.Admin\\wwwroot\\logo.png"
+  ],
+  "id": "orchardcore-merge_targets-01",
+  "operator": "merge_targets",
+  "system": "orchardcore"
+}

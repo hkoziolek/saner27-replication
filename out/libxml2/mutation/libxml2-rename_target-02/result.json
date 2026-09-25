@@ -1,0 +1,104 @@
+{
+  "advisory": false,
+  "coverage": 1.0,
+  "diff": {
+    "coverage_gap_edges": [],
+    "coverage_gap_targets": [],
+    "first_run": false,
+    "new_edges": [
+      [
+        "cpp:target:testHTMLstrucmut",
+        "cpp:target:libxml2"
+      ]
+    ],
+    "new_targets": [
+      "cpp:target:testHTMLstrucmut"
+    ],
+    "removed_edges": [
+      [
+        "cpp:target:testHTML",
+        "cpp:target:libxml2"
+      ]
+    ],
+    "removed_targets": [
+      "cpp:target:testHTML"
+    ],
+    "suspected_renames": [
+      {
+        "new": "cpp:target:testHTMLstrucmut",
+        "old": "cpp:target:testHTML"
+      }
+    ],
+    "suspicious": []
+  },
+  "score": {
+    "advisory": false,
+    "alias_findings_in_scope": 0,
+    "alias_suppressed": true,
+    "attributed_violations": [],
+    "coverage": 1.0,
+    "coverage_gaps_in_scope": {
+      "coverage_gap_edges": [],
+      "coverage_gap_targets": []
+    },
+    "detected": true,
+    "fn": [],
+    "fn_count": 0,
+    "fp": [],
+    "fp_count": 0,
+    "rename_classified": true,
+    "scored": {
+      "layering_violations": [],
+      "new_edges": [
+        [
+          "cpp:target:testHTMLstrucmut",
+          "cpp:target:libxml2"
+        ]
+      ],
+      "new_targets": [
+        "cpp:target:testHTMLstrucmut"
+      ],
+      "removed_edges": [
+        [
+          "cpp:target:testHTML",
+          "cpp:target:libxml2"
+        ]
+      ],
+      "removed_targets": [
+        "cpp:target:testHTML"
+      ],
+      "suspected_renames": [
+        {
+          "new": "cpp:target:testHTMLstrucmut",
+          "old": "cpp:target:testHTML"
+        }
+      ]
+    },
+    "tp": [
+      [
+        "new_edge",
+        "cpp:target:testHTMLstrucmut",
+        "cpp:target:libxml2"
+      ],
+      [
+        "new_target",
+        "cpp:target:testHTMLstrucmut"
+      ],
+      [
+        "removed_edge",
+        "cpp:target:testHTML",
+        "cpp:target:libxml2"
+      ],
+      [
+        "removed_target",
+        "cpp:target:testHTML"
+      ],
+      [
+        "rename",
+        "cpp:target:testHTML",
+        "cpp:target:testHTMLstrucmut"
+      ]
+    ],
+    "tp_count": 5
+  }
+}

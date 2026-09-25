@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://arch-pipeline/schema/llm-narrative-1.2.json",
+  "title": "LLM Element Narrative",
+  "description": "Schema for one narrative record from the datasheet-enrichment plan §4, for an EXISTING element of the model — a software system, a C4 container, or a component (build-target member). A capped abstract plus 1-5 cited key points. The model EXPLAINS the element's functionality and purpose in the context of the system: it may make clearly-hedged inferences from names and structure, but it may NOT assert a specific relationship, element, or number that is not in the curated facts. Every key point MUST cite resolvable element/edge ids — the citation validator (enrich_llm._validate_narrative) enforces resolution against the curated facts after this schema passes.",
+  "$comment": "CLOSED like llm-output.schema.json: any extra field (especially 'relationships') is a contract violation triggering the §8.3 bounded-retry / deterministic-degrade policy. The caps (700-char abstract, 5 key points) are HARD schema limits, not style advice — the anti-essay gate (plan §9 threat a). Folded into the §8.3 cache key via sha256(llm-narrative.schema.json). v1.1 generalized container_id→element_id (+element_kind) so the one pass serves system/container/component narratives. v1.2 (informative-llm-narratives 2026-06-15) added optional `method` (deterministic|agentic) + `size_band` (leaf|standard|hub), both engine-stamped and advisory — ADDITIVE, no consumer break.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["element_id", "abstract_md", "key_points", "naming_confidence"],
+  "properties": {
+    "element_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Must match an existing model element id (a software-system id, a curated container id, or a build-target/component id). Referential integrity enforced post-validation."
+    },
+    "element_kind": {
+      "type": "string",
+      "enum": ["system", "container", "component"],
+      "description": "Which altitude this narrative is for. Advisory; the validator's valid-id set is chosen by the caller per kind."
+    },
+    "abstract_md": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 700,
+      "description": "One orientation paragraph in restricted markdown (bold/code/links only; sanitized at render). The cap is the anti-essay gate."
+    },
+    "key_points": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["text", "cites"],
+        "properties": {
+          "text": { "type": "string", "minLength": 1, "maxLength": 280 },
+          "cites": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string", "minLength": 1 },
+            "description": "Element ids, container ids, `rel:` ids, or `source->target` edge keys from the supplied facts. minItems 1: an uncited claim is invalid by construction (no-uncited-claims, moat #2)."
+          }
+        }
+      }
+    },
+    "naming_confidence": {
+      "type": "string",
+      "enum": ["low", "medium", "high"],
+      "description": "Self-reported confidence; advisory only, surfaced beside the deterministic staleness flag."
+    },
+    "method": {
+      "type": "string",
+      "enum": ["deterministic", "agentic"],
+      "description": "How the narrative input was assembled (informative-llm-narratives §3): 'deterministic' = the default single-shot payload (D signatures + C anchors + ADR + graph under a flat band budget); 'agentic' = the opt-in deep tier that let the model pull context via the read-only oracle (non-deterministic, uncached, never CI). Stamped by the engine, not the model; advisory for the GUI provenance chip."
+    },
+    "size_band": {
+      "type": "string",
+      "enum": ["leaf", "standard", "hub"],
+      "description": "The deterministic length band (informative-llm-narratives §4) computed from the element's metrics (member count, LOC, public surface, fan-in/out). Sets the input budget AND the output ceiling (abstract char cap + max key points). Stamped by the engine; advisory for the GUI char meter."
+    }
+  }
+}

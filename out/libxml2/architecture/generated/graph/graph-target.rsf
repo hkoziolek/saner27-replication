@@ -1,0 +1,12 @@
+depend cpp:target:testAutomata cpp:target:libxml2
+depend cpp:target:testC14N cpp:target:libxml2
+depend cpp:target:testDocbook cpp:target:libxml2
+depend cpp:target:testHTML cpp:target:libxml2
+depend cpp:target:testRegexp cpp:target:libxml2
+depend cpp:target:testSAX cpp:target:libxml2
+depend cpp:target:testSchemas cpp:target:libxml2
+depend cpp:target:testThreads cpp:target:libxml2
+depend cpp:target:testURI cpp:target:libxml2
+depend cpp:target:testXPath cpp:target:libxml2
+depend cpp:target:xmlcatalog cpp:target:libxml2
+depend cpp:target:xmllint cpp:target:libxml2

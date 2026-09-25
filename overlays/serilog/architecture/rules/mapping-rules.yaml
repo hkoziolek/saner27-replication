@@ -1,0 +1,55 @@
+# Curation rules for the serilog/serilog fixture (plan §7.4). Reviewed + committed.
+#
+# Serilog is a single-library C# project: one first-party project (src/Serilog) plus
+# test projects. Its architectural interest is INTERNAL — the namespaces within the
+# library — so this fixture is the v1 demonstration of a populated, readable Component
+# drill-down (plan §14 P3 / §9.1), backed by the Roslyn L2 namespace tier (§4.2).
+#
+# Run mode: `arch run --no-llm`, with L2 enabled (a matching .NET SDK installed +
+# `dotnet restore Serilog.sln`). Without L2 the single container still renders; the
+# Component view needs the namespace tier (plan §18.4).
+version: 1
+
+defaults:
+  min_relationship_weight: 3        # non-declared edges only; declared refs never dropped (§7.4)
+  drop_external: true               # NuGet packages are technology tags / external, not containers
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false              # --no-llm baseline
+
+exclude:
+  targets:
+    - glob: "test/*"                # drop the 5 test projects by path
+
+# Component-tier curation (§7.4 / §16#10b). The Roslyn helper emits one component per
+# FULL namespace (§4.2); raw, Serilog core has 29 (incl. polyfill/annotation shims it
+# declares for old TFMs), over the <=20 Component-view budget (§1.1#1). Drop the
+# non-architectural namespaces and collapse to 2 segments (Serilog.Core.Sinks.Batching
+# -> Serilog.Core, etc.) -> 14 readable components.
+components:
+  exclude_namespaces:
+    - "System*"                     # nullable/polyfill shims for netstandard2.0/net46x
+    - "JetBrains*"                  # ReSharper annotations (vendored)
+  aggregate_depth: 2
+
+group:
+  # Serilog renders as MODEL Y (D§2.3 auto-select: N=1): the single library target IS the
+  # container and its namespace tier nests natively — no opt-in flag needed any more.
+  - container: "Serilog"
+    members:
+      - "csharp:csproj:src/Serilog/Serilog.csproj"
+
+technology:
+  csproj: ".NET assembly"
+
+naming:
+  style: descriptive
+  expand_acronyms: false
+  max_name_words: 4
+
+rationale:
+  "Serilog":
+    reason: "The single first-party library; its internal namespaces are the architecturally interesting structure, surfaced as a Component drill-down (§9.1)"
+    decided_by: "architect"
+    date: "2026-06-04"
+    confidence: "high"

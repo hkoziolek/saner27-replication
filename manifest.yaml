@@ -1,0 +1,114 @@
+# Test-fixture manifest (plan §19.4). `arch fetch` shallow-clones each repo at its
+# pinned commit into a GITIGNORED fixtures/<id>/ (never committed); the clone stays
+# pristine, overlays/<id>/architecture/ supplies config, outputs go to out/<id>/.
+#
+# Pilot is C#/.NET first (§16#19): serilog (smoke) -> eShop/OrchardCore (curation).
+# C++ fixtures are listed for the post-v1 path. SHAs are TODO-pinned by task #5 —
+# reproducibility requires a real commit, not a moving branch.
+version: 1
+
+repos:
+  # --- C# / .NET (pilot, §19.2) ---
+  - id: serilog
+    url: https://github.com/serilog/serilog
+    commit: 2ef63645cf0d0edd4b187510b238754249c4348f   # serilog/serilog main HEAD, pinned 2026-06-04
+    lang: csharp
+    build: msbuild
+    license: Apache-2.0
+    configure: "dotnet restore Serilog.sln"
+    role: smoke                     # §19.3 end-to-end smoke + naming; L2 component-view demo
+
+  - id: eshop
+    url: https://github.com/dotnet/eShop
+    commit: 9b4f9434f46fdc5c1a6e9e936af2868340cdbc48   # dotnet/eShop main HEAD, pinned 2026-06-04
+    lang: csharp
+    build: msbuild
+    license: MIT
+    configure: "dotnet restore eShop.slnx"   # eShop migrated .sln -> .slnx; needs .NET 10 SDK (global.json)
+    role: microservices             # §19.3 System Context + multiple containers
+
+  - id: orchardcore
+    url: https://github.com/OrchardCMS/OrchardCore
+    commit: ab2848766312a3d89dd9d35008c9e4751fcb7086   # OrchardCMS/OrchardCore main HEAD, pinned 2026-06-04
+    lang: csharp
+    build: msbuild
+    license: MIT
+    configure: "dotnet restore OrchardCore.sln"
+    role: modular-monolith          # §19.3 component granularity
+
+  - id: orleans
+    url: https://github.com/dotnet/orleans
+    commit: e29301a8aa5ca9713f65a8ffa27e77bd2f2cece7   # dotnet/orleans main HEAD, pinned 2026-06-07
+    lang: csharp
+    build: msbuild
+    license: MIT
+    configure: "dotnet restore Orleans.slnx"   # orleans ships Orleans.slnx (no .sln); pins .NET 10 (global.json)
+    role: scale                     # §19.3 Roslyn memory & perf
+
+  - id: nopcommerce
+    url: https://github.com/nopSolutions/nopCommerce
+    commit: e7db8b45bedf8f57a8ef52a933162c93bd7cd413   # nopSolutions/nopCommerce develop HEAD, pinned 2026-06-07
+    lang: csharp
+    build: msbuild
+    # §19.6 OUTLIER: ships under the non-standard, restrictive "nopCommerce Public License".
+    # Clones stay gitignored; only DERIVED structure (paths, target names, DSL) is snapshotted —
+    # never verbatim source/doc text (--no-llm sends nothing). Confine to local runs.
+    license: "nopCommerce Public License"
+    configure: "dotnet restore src/NopCommerce.sln"   # solution lives under src/; pins .NET 10 (global.json)
+    role: layered-monolith          # §19.3 layering rules & drift (Core/Data/Services/Web)
+
+  # --- C / C++ (post-v1, §19.1) ---
+  - id: fmt
+    url: https://github.com/fmtlib/fmt
+    commit: e69e5f977d458f2650bb346dadf2ad30c5320281   # fmtlib/fmt, pinned 2026-06-07
+    lang: cpp
+    build: cmake
+    license: MIT
+    configure: "cmake -S . -B build -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+    role: smoke
+
+  - id: abseil
+    url: https://github.com/abseil/abseil-cpp
+    commit: 4447c7562e3bc702ade25105912dce503f0c4010   # abseil/abseil-cpp, pinned 2026-06-07
+    lang: cpp
+    build: cmake
+    license: Apache-2.0
+    configure: "cmake -S . -B build -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+    role: target-graph-grouping
+
+  - id: opencv
+    url: https://github.com/opencv/opencv
+    commit: dad8af6b17f8e60d7b95a1203a1b4d22f56574cf   # opencv/opencv, pinned 2026-06-07
+    lang: cpp
+    build: cmake
+    license: Apache-2.0
+    # §19.1 clean modularity + ~1M-LOC scale: modules map ~1:1 to containers/components.
+    # Configure-only L0/L1 is enough (cold configure a few min); no full build needed.
+    configure: "cmake -S . -B build -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+    role: modular-scale             # §19.3 clean modular -> Component views + 500-KLOC+ scale
+
+  - id: clickhouse
+    url: https://github.com/ClickHouse/ClickHouse
+    commit: da698ac3be4f71b67bdc3eb3c4e2c393700f76f3   # ClickHouse/ClickHouse master HEAD, pinned 2026-06-07
+    lang: cpp
+    build: cmake
+    license: Apache-2.0
+    # 500-KLOC+ stress (§19.1). Has submodules; configure-only L0/L1 is enough for the
+    # scale run. Needs a provisioned C++ toolchain (clang/cmake/ninja) + network for clone.
+    # NOTE (2026-06-07): NOT fetched on this box. ClickHouse hard-requires clang at configure
+    # (this box has only gcc/MinGW — clang absent) and its contrib/ submodules; with no clang
+    # the CMake File-API configure fails and the model degrades to zero targets (the §16/§19
+    # "blocked here by clang toolchain" caveat). Run on a clang-provisioned agent to populate.
+    configure: "git submodule update --init --recursive && cmake -S . -B build -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+    role: scale                     # §19.3 graph explosion / curation thresholds at scale
+
+  - id: terminal
+    url: https://github.com/microsoft/terminal
+    commit: 47e255f0579142a2bec6c308bf4382b3062407ff   # microsoft/terminal main HEAD, pinned 2026-06-07
+    lang: cpp
+    build: msbuild
+    license: MIT
+    # The MSBuild/VS C++ path (§4.1/§16#1). L0 from .vcxproj is pure-parse (any OS); L1
+    # needs an MSVC binlog on a Windows agent. Box here has MinGW, not MSVC -> L0-only.
+    configure: "msbuild /t:Restore OpenConsole.sln"
+    role: msbuild-cpp               # §19.3 Visual Studio front-end

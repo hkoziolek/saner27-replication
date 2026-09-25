@@ -1,0 +1,23 @@
+{
+  "alias": {},
+  "description": "remove declared dependency csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Core.Targets/OrchardCore.Application.Cms.Core.Targets.csproj -> csharp:csproj:src/OrchardCore.Modules/OrchardCore.Cors/OrchardCore.Cors.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Core.Targets/OrchardCore.Application.Cms.Core.Targets.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Cors/OrchardCore.Cors.csproj"
+      ]
+    ],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore\\OrchardCore.Application.Cms.Core.Targets\\OrchardCore.Application.Cms.Core.Targets.csproj"
+  ],
+  "id": "orchardcore-remove_dep-04",
+  "operator": "remove_dep",
+  "system": "orchardcore"
+}

@@ -1,0 +1,1030 @@
+{
+  "baseline_l0_edges": 8,
+  "baseline_targets": 49,
+  "idiom": "autotools_hand",
+  "instances_requested": 4,
+  "l0_scoped": true,
+  "language": "cpp",
+  "modes": {
+    "lose_l0": {
+      "by_operator": {
+        "add_target": {
+          "advisory": 4,
+          "advisory_runs": 4,
+          "drift": 0,
+          "findings": 4,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 0,
+          "findings": 8,
+          "fp": 0,
+          "gap": 8,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        }
+      },
+      "silent_findings": [],
+      "totals": {
+        "advisory": 4,
+        "advisory_runs": 8,
+        "drift": 0,
+        "findings": 12,
+        "fp": 0,
+        "gap": 8,
+        "mutations_silent": 0,
+        "n": 8,
+        "silent": 0
+      }
+    },
+    "starve_l0_10": {
+      "by_operator": {
+        "add_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 4,
+          "findings": 4,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 8,
+          "findings": 8,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        }
+      },
+      "silent_findings": [],
+      "totals": {
+        "advisory": 0,
+        "advisory_runs": 8,
+        "drift": 12,
+        "findings": 12,
+        "fp": 0,
+        "gap": 0,
+        "mutations_silent": 0,
+        "n": 8,
+        "silent": 0
+      }
+    },
+    "starve_l0_30": {
+      "by_operator": {
+        "add_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 4,
+          "findings": 4,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 8,
+          "findings": 8,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        }
+      },
+      "silent_findings": [],
+      "totals": {
+        "advisory": 0,
+        "advisory_runs": 8,
+        "drift": 12,
+        "findings": 12,
+        "fp": 0,
+        "gap": 0,
+        "mutations_silent": 0,
+        "n": 8,
+        "silent": 0
+      }
+    },
+    "starve_mutated": {
+      "by_operator": {
+        "add_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 4,
+          "findings": 4,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 4,
+          "findings": 8,
+          "fp": 0,
+          "gap": 4,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        }
+      },
+      "silent_findings": [],
+      "totals": {
+        "advisory": 0,
+        "advisory_runs": 8,
+        "drift": 8,
+        "findings": 12,
+        "fp": 0,
+        "gap": 4,
+        "mutations_silent": 0,
+        "n": 8,
+        "silent": 0
+      }
+    }
+  },
+  "mutations": [
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 1,
+          "advisory_run": true,
+          "coverage_l0": 0.0,
+          "drift": 0,
+          "edges_dropped": 8,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut1"
+              ],
+              "advisory"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 50
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9,
+          "drift": 1,
+          "edges_dropped": 1,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut1"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 5
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7,
+          "drift": 1,
+          "edges_dropped": 2,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut1"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 15
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.98,
+          "drift": 1,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut1"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libstrucmut1"
+          ],
+          "targets_starved": 1,
+          "touched_absent": []
+        }
+      },
+      "name": "bash-add_target-01",
+      "operator": "add_target"
+    },
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 1,
+          "advisory_run": true,
+          "coverage_l0": 0.0,
+          "drift": 0,
+          "edges_dropped": 8,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut2"
+              ],
+              "advisory"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 50
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9,
+          "drift": 1,
+          "edges_dropped": 1,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut2"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 5
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7,
+          "drift": 1,
+          "edges_dropped": 2,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut2"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 15
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.98,
+          "drift": 1,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut2"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libstrucmut2"
+          ],
+          "targets_starved": 1,
+          "touched_absent": []
+        }
+      },
+      "name": "bash-add_target-02",
+      "operator": "add_target"
+    },
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 1,
+          "advisory_run": true,
+          "coverage_l0": 0.0,
+          "drift": 0,
+          "edges_dropped": 8,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut3"
+              ],
+              "advisory"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 50
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9,
+          "drift": 1,
+          "edges_dropped": 1,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut3"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 5
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7,
+          "drift": 1,
+          "edges_dropped": 2,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut3"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 15
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.98,
+          "drift": 1,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut3"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libstrucmut3"
+          ],
+          "targets_starved": 1,
+          "touched_absent": []
+        }
+      },
+      "name": "bash-add_target-03",
+      "operator": "add_target"
+    },
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 1,
+          "advisory_run": true,
+          "coverage_l0": 0.0,
+          "drift": 0,
+          "edges_dropped": 8,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut4"
+              ],
+              "advisory"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 50
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9,
+          "drift": 1,
+          "edges_dropped": 1,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut4"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 5
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7,
+          "drift": 1,
+          "edges_dropped": 2,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut4"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 15
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.98,
+          "drift": 1,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut4"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libstrucmut4"
+          ],
+          "targets_starved": 1,
+          "touched_absent": []
+        }
+      },
+      "name": "bash-add_target-04",
+      "operator": "add_target"
+    },
+    {
+      "expected_findings": 2,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.0,
+          "drift": 0,
+          "edges_dropped": 7,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:bash",
+                "cpp:target:libglob"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:libglob"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 48
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8958,
+          "drift": 2,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:bash",
+                "cpp:target:libglob"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:libglob"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 5
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7083,
+          "drift": 2,
+          "edges_dropped": 2,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:bash",
+                "cpp:target:libglob"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:libglob"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 14
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9792,
+          "drift": 1,
+          "edges_dropped": 7,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:bash",
+                "cpp:target:libglob"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:libglob"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:bash"
+          ],
+          "targets_starved": 1,
+          "touched_absent": [
+            "cpp:target:libglob"
+          ]
+        }
+      },
+      "name": "bash-remove_target-01",
+      "operator": "remove_target"
+    },
+    {
+      "expected_findings": 2,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.0,
+          "drift": 0,
+          "edges_dropped": 7,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:bash",
+                "cpp:target:libreadline"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:libreadline"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 48
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8958,
+          "drift": 2,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:bash",
+                "cpp:target:libreadline"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:libreadline"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 5
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7083,
+          "drift": 2,
+          "edges_dropped": 1,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:bash",
+                "cpp:target:libreadline"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:libreadline"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 14
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9792,
+          "drift": 1,
+          "edges_dropped": 7,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:bash",
+                "cpp:target:libreadline"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:libreadline"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:bash"
+          ],
+          "targets_starved": 1,
+          "touched_absent": [
+            "cpp:target:libreadline"
+          ]
+        }
+      },
+      "name": "bash-remove_target-02",
+      "operator": "remove_target"
+    },
+    {
+      "expected_findings": 2,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.0,
+          "drift": 0,
+          "edges_dropped": 7,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:bash",
+                "cpp:target:libsh"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:libsh"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 48
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8958,
+          "drift": 2,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:bash",
+                "cpp:target:libsh"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:libsh"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 5
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7083,
+          "drift": 2,
+          "edges_dropped": 1,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:bash",
+                "cpp:target:libsh"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:libsh"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 14
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9792,
+          "drift": 1,
+          "edges_dropped": 7,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:bash",
+                "cpp:target:libsh"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:libsh"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:bash"
+          ],
+          "targets_starved": 1,
+          "touched_absent": [
+            "cpp:target:libsh"
+          ]
+        }
+      },
+      "name": "bash-remove_target-03",
+      "operator": "remove_target"
+    },
+    {
+      "expected_findings": 2,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.0,
+          "drift": 0,
+          "edges_dropped": 7,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:bash",
+                "cpp:target:libtilde"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:libtilde"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 48
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8958,
+          "drift": 2,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:bash",
+                "cpp:target:libtilde"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:libtilde"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 5
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7083,
+          "drift": 2,
+          "edges_dropped": 1,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:bash",
+                "cpp:target:libtilde"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:libtilde"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 14
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9792,
+          "drift": 1,
+          "edges_dropped": 7,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:bash",
+                "cpp:target:libtilde"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:libtilde"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:bash"
+          ],
+          "targets_starved": 1,
+          "touched_absent": [
+            "cpp:target:libtilde"
+          ]
+        }
+      },
+      "name": "bash-remove_target-04",
+      "operator": "remove_target"
+    }
+  ],
+  "schema": "rq6-combined/1",
+  "system": "bash"
+}

@@ -1,0 +1,15 @@
+contain Application csharp:csproj:backend/src/Squidex/Squidex.csproj
+contain Core csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Model/Squidex.Domain.Apps.Core.Model.csproj
+contain Core csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Operations/Squidex.Domain.Apps.Core.Operations.csproj
+contain Data csharp:csproj:backend/src/Migrations/Migrations.csproj
+contain Data csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj
+contain Data csharp:csproj:backend/src/Squidex.Data.MongoDb/Squidex.Data.MongoDb.csproj
+contain Entities csharp:csproj:backend/src/Squidex.Domain.Apps.Entities/Squidex.Domain.Apps.Entities.csproj
+contain Events csharp:csproj:backend/src/Squidex.Domain.Apps.Events/Squidex.Domain.Apps.Events.csproj
+contain Extensions csharp:csproj:backend/extensions/Squidex.Extensions/Squidex.Extensions.csproj
+contain Generator csharp:csproj:frontend/generator/Generator/Generator.csproj
+contain Infrastructure csharp:csproj:backend/src/Squidex.Infrastructure/Squidex.Infrastructure.csproj
+contain Shared csharp:csproj:backend/src/Squidex.Shared/Squidex.Shared.csproj
+contain Translator csharp:csproj:backend/i18n/translator/Squidex.Translator/Squidex.Translator.csproj
+contain Users csharp:csproj:backend/src/Squidex.Domain.Users/Squidex.Domain.Users.csproj
+contain Web csharp:csproj:backend/src/Squidex.Web/Squidex.Web.csproj

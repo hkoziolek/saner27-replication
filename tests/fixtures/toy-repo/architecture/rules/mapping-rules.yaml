@@ -1,0 +1,46 @@
+# Curation rules for the toy fixture (plan §7.4). Reviewed + committed.
+# Demonstrates grouping, exclusion, thresholds and name pins on a tiny C# solution.
+version: 1
+defaults:
+  min_relationship_weight: 3        # non-declared edges only; declared deps never dropped
+  drop_external: true               # Serilog / Newtonsoft.Json / xunit are not containers
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false              # toy runs --no-llm
+
+exclude:
+  targets:
+    - glob: "*.Tests"               # drop the test project (Toy.Web.Tests)
+    - glob: "tests/*"
+
+group:
+  # The toy renders as MODEL Y (drill-down D§2.3 auto-select: N=4 targets): every project
+  # is a container grouped under its curated theme, and the L2 namespace tier (when the
+  # Roslyn helper runs) nests natively — no drill-down opt-in flag needed any more.
+  - container: "Web Frontend"
+    members: [ "csharp:csproj:src/Web/Toy.Web.csproj" ]
+  - container: "Core Library"
+    members:
+      - "csharp:csproj:src/Domain/Toy.Domain.csproj"
+      - "csharp:csproj:src/Common/Toy.Common.csproj"
+  - container: "Messaging"
+    members: [ "csharp:csproj:src/Messaging/Toy.Messaging.csproj" ]
+
+technology:
+  csproj: ".NET assembly"
+
+relationship_kinds:
+  - when_evidence_contains: "Publisher"
+    kind: "Publishes and consumes messages"
+
+naming:
+  style: descriptive
+  expand_acronyms: false
+  max_name_words: 3
+
+rationale:
+  "Core Library":
+    reason: "Domain model and shared utilities form the reusable core"
+    decided_by: "architect"
+    date: "2026-06-04"
+    confidence: "high"

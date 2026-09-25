@@ -1,0 +1,68 @@
+{
+  "alias": {
+    "csharp:csproj:src/Libraries/Nop.Core/Nop.CoreAnonMut.csproj": "csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj"
+  },
+  "description": "rename build target csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj -> csharp:csproj:src/Libraries/Nop.Core/Nop.CoreAnonMut.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "csharp:csproj:src/Libraries/Nop.Data/Nop.Data.csproj",
+        "csharp:csproj:src/Libraries/Nop.Core/Nop.CoreAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/Libraries/Nop.Services/Nop.Services.csproj",
+        "csharp:csproj:src/Libraries/Nop.Core/Nop.CoreAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj",
+        "csharp:csproj:src/Libraries/Nop.Core/Nop.CoreAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj",
+        "csharp:csproj:src/Libraries/Nop.Core/Nop.CoreAnonMut.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:src/Libraries/Nop.Core/Nop.CoreAnonMut.csproj"
+    ],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Libraries/Nop.Data/Nop.Data.csproj",
+        "csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj"
+      ],
+      [
+        "csharp:csproj:src/Libraries/Nop.Services/Nop.Services.csproj",
+        "csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj"
+      ],
+      [
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj",
+        "csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj"
+      ],
+      [
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj",
+        "csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj"
+    ],
+    "suspected_renames": [
+      [
+        "csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj",
+        "csharp:csproj:src/Libraries/Nop.Core/Nop.CoreAnonMut.csproj"
+      ]
+    ]
+  },
+  "files_touched": [
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Libraries\\Nop.Data\\Nop.Data.csproj",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Libraries\\Nop.Services\\Nop.Services.csproj",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Presentation\\Nop.Web\\Nop.Web.csproj",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\NopCommerce.sln",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Libraries\\Nop.Core\\Nop.Core.csproj -> <repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Libraries\\Nop.Core\\Nop.CoreAnonMut.csproj"
+  ],
+  "id": "nopcommerce-rename_target-01",
+  "operator": "rename_target",
+  "system": "nopcommerce"
+}

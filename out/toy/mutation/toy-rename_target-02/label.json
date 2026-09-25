@@ -1,0 +1,49 @@
+{
+  "alias": {
+    "csharp:csproj:src/Messaging/Toy.MessagingAnonMut.csproj": "csharp:csproj:src/Messaging/Toy.Messaging.csproj"
+  },
+  "description": "rename build target csharp:csproj:src/Messaging/Toy.Messaging.csproj -> csharp:csproj:src/Messaging/Toy.MessagingAnonMut.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "csharp:csproj:src/Messaging/Toy.MessagingAnonMut.csproj",
+        "csharp:csproj:src/Common/Toy.Common.csproj"
+      ],
+      [
+        "csharp:csproj:src/Web/Toy.Web.csproj",
+        "csharp:csproj:src/Messaging/Toy.MessagingAnonMut.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:src/Messaging/Toy.MessagingAnonMut.csproj"
+    ],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+        "csharp:csproj:src/Common/Toy.Common.csproj"
+      ],
+      [
+        "csharp:csproj:src/Web/Toy.Web.csproj",
+        "csharp:csproj:src/Messaging/Toy.Messaging.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/Messaging/Toy.Messaging.csproj"
+    ],
+    "suspected_renames": [
+      [
+        "csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+        "csharp:csproj:src/Messaging/Toy.MessagingAnonMut.csproj"
+      ]
+    ]
+  },
+  "files_touched": [
+    "[anonymized]-home/<scratch>\\mutwork\\toy\\repo\\src\\Web\\Toy.Web.csproj",
+    "[anonymized]-home/<scratch>\\mutwork\\toy\\repo\\Toy.sln",
+    "[anonymized]-home/<scratch>\\mutwork\\toy\\repo\\src\\Messaging\\Toy.Messaging.csproj -> [anonymized]-home/<scratch>\\mutwork\\toy\\repo\\src\\Messaging\\Toy.MessagingAnonMut.csproj"
+  ],
+  "id": "toy-rename_target-02",
+  "operator": "rename_target",
+  "system": "toy"
+}

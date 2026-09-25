@@ -1,0 +1,58 @@
+# Architecture fitness functions for nopCommerce (plan §11.2). Forbidden container -> container
+# dependencies; `drift_report.py` flags any that the curated graph violates.
+#
+# nopCommerce is the §19.3 STRICT-LAYERING fixture. The canonical (downward-only) dependency
+# direction of this classic layered monolith is:
+#
+#     Web Application -> Web Framework -> Services -> Data Access -> Core
+#
+# (Core depends on nothing.) Every rule below forbids an UPWARD or BACKWARD edge that would
+# break that layering. The plugin families sit on the side: a plugin should extend the system
+# through Services / Core, never couple back to the host MVC application.
+#
+# `from`/`to` match a container name (the names defined in mapping-rules.yaml), a container id,
+# or a raw target id. Each rule is reported VIOLATION (a matching edge exists), OK (none, and
+# coverage adequate), or UNVERIFIED (degraded) when require_layers coverage is missing
+# (absence != compliance). No violation is seeded here — any VIOLATION is a real code finding.
+forbidden:
+  # --- Core is the foundation: it must depend on NOTHING above it. -------------------
+  - from: "Core"
+    to: "Data Access"
+  - from: "Core"
+    to: "Services"
+  - from: "Core"
+    to: "Web Framework"
+  - from: "Core"
+    to: "Web Application"
+
+  # --- Data Access sits just above Core: no reaching up into Services / presentation. -
+  - from: "Data Access"
+    to: "Services"
+  - from: "Data Access"
+    to: "Web Framework"
+  - from: "Data Access"
+    to: "Web Application"
+
+  # --- Services is below presentation: no reaching up into the web tiers. ------------
+  - from: "Services"
+    to: "Web Framework"
+  - from: "Services"
+    to: "Web Application"
+
+  # --- Web Framework is presentation infrastructure: it must not depend on the app. --
+  - from: "Web Framework"
+    to: "Web Application"
+
+  # --- Plugins extend through Services/Core, NOT by coupling to the host MVC app. ----
+  #     EXPECTED REAL VIOLATION (not seeded, plan §19.3): 17 plugins in the
+  #     Payment / Shipping & Tax / Widget / Misc families declare a ProjectReference on
+  #     Nop.Web (shared view components / controllers), so these checks fire on the
+  #     curated graph. This is a genuine layering smell surfaced by the fitness function.
+  - from: "Payment Plugins"
+    to: "Web Application"
+  - from: "Shipping & Tax Plugins"
+    to: "Web Application"
+  - from: "Widget Plugins"
+    to: "Web Application"
+  - from: "Misc & Other Plugins"
+    to: "Web Application"

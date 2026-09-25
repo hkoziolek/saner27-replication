@@ -1,0 +1,22 @@
+{
+  "clusters": 380,
+  "entities_clustered": 7782,
+  "granularity": "file",
+  "graph": "graph-file.rsf",
+  "system": "itk",
+  "technique": "dir",
+  "vs_pipeline_agreement": {
+    "a2a": 79.95904914103076,
+    "entities_against": 5344,
+    "entities_common": 4950,
+    "entities_recovered": 7782,
+    "mojofm": 95.79
+  },
+  "vs_reference": {
+    "a2a": 78.95923035522067,
+    "entities_against": 7657,
+    "entities_common": 7335,
+    "entities_recovered": 7782,
+    "mojofm": 93.3
+  }
+}

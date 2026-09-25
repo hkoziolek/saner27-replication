@@ -1,0 +1,22 @@
+{
+  "clusters": 17,
+  "entities_clustered": 38,
+  "granularity": "target",
+  "graph": "graph-target.rsf",
+  "system": "nopcommerce",
+  "technique": "wca",
+  "vs_pipeline_agreement": {
+    "a2a": 84.48275862068965,
+    "entities_against": 37,
+    "entities_common": 37,
+    "entities_recovered": 38,
+    "mojofm": 46.88
+  },
+  "vs_reference": {
+    "a2a": 90.65934065934066,
+    "entities_against": 37,
+    "entities_common": 37,
+    "entities_recovered": 38,
+    "mojofm": 46.88
+  }
+}

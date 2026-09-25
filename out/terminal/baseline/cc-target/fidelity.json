@@ -1,0 +1,13 @@
+{
+  "clusters": 2,
+  "entities_clustered": 63,
+  "granularity": "target",
+  "graph": "graph-target.rsf",
+  "system": "terminal",
+  "technique": "cc",
+  "vs_pipeline_agreement": {
+    "a2a": 56.888888888888886,
+    "mojofm": 0.0
+  },
+  "vs_reference": null
+}

@@ -1,0 +1,81 @@
+{
+  "language": "cpp",
+  "modes": {
+    "disable_l2": {
+      "advisory": false,
+      "coverage_l0": 1.0,
+      "erosion_visible": true,
+      "findings_off": 75,
+      "fp_suppression_rate": 1.0,
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 75,
+        "mode": "disable_l2",
+        "targets_starved": 0
+      },
+      "suppressed_on": 75,
+      "would_be_false_findings": 75
+    },
+    "lose_l0": {
+      "advisory": true,
+      "coverage_l0": 0.0,
+      "erosion_visible": true,
+      "findings_off": 292,
+      "fp_suppression_rate": 1.0,
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 213,
+        "mode": "lose_l0",
+        "targets_starved": 207
+      },
+      "suppressed_on": 292,
+      "would_be_false_findings": 292
+    },
+    "starve_l0_10": {
+      "advisory": true,
+      "coverage_l0": 0.8987,
+      "erosion_visible": true,
+      "findings_off": 6,
+      "fp_suppression_rate": 1.0,
+      "gating": false,
+      "layering": {
+        "intact_rule_status": "VIOLATION",
+        "intact_still_violation": true,
+        "starved_honest": true,
+        "starved_rule_status": "UNVERIFIED (degraded)"
+      },
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 6,
+        "mode": "starve_l0_10",
+        "targets_starved": 8
+      },
+      "suppressed_on": 6,
+      "would_be_false_findings": 6
+    },
+    "starve_l0_30": {
+      "advisory": true,
+      "coverage_l0": 0.6962,
+      "erosion_visible": true,
+      "findings_off": 22,
+      "fp_suppression_rate": 1.0,
+      "gating": false,
+      "layering": {
+        "intact_rule_status": "VIOLATION",
+        "intact_still_violation": true,
+        "starved_honest": true,
+        "starved_rule_status": "UNVERIFIED (degraded)"
+      },
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 22,
+        "mode": "starve_l0_30",
+        "targets_starved": 24
+      },
+      "suppressed_on": 22,
+      "would_be_false_findings": 22
+    }
+  },
+  "schema": "rq6-degradation/1",
+  "system": "itk"
+}

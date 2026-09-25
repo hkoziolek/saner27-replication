@@ -1,0 +1,25 @@
+# Architecture fitness functions for Orleans (plan §11.2). Forbidden container -> container
+# dependencies; `drift_report.py` flags any that the curated graph violates.
+#
+# nopCommerce is the dedicated layering fixture (§19.3); these few rules just show the same
+# governance generalizes to a FRAMEWORK at scale. They encode Orleans's foundational
+# dependency direction — the abstractions/serialization/core layers must not reach UP into
+# the runtime, the silo server, or the client. All are expected OK (green) on a clean tree:
+# absence of an upward edge is the invariant being asserted, not a seeded violation.
+#
+# `from`/`to` match a container name, container id, or raw target id. Each rule is reported
+# VIOLATION (a matching edge exists), OK (none, coverage adequate), or UNVERIFIED (degraded).
+forbidden:
+  # Serialization is foundational — Core consumes it, never the reverse.
+  - from: "Serialization"
+    to: "Core"
+  - from: "Serialization"
+    to: "Runtime"
+
+  # Core is below the runtime/host layers — it must not depend up the stack.
+  - from: "Core"
+    to: "Runtime"
+  - from: "Core"
+    to: "Silo Server"
+  - from: "Core"
+    to: "Client"

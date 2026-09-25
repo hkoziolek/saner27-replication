@@ -1,0 +1,42 @@
+{
+  "alias": {},
+  "description": "remove build target csharp:csproj:src/WebAppComponents/WebAppComponents.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/HybridApp/HybridApp.csproj",
+        "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+      ],
+      [
+        "csharp:csproj:src/WebApp/WebApp.csproj",
+        "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+    ],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\HybridApp\\HybridApp.csproj",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\WebApp\\WebApp.csproj",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\eShop.slnx",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\WebAppComponents\\_Imports.razor",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\WebAppComponents\\Catalog\\CatalogItem.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\WebAppComponents\\Catalog\\CatalogListItem.razor",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\WebAppComponents\\Catalog\\CatalogListItem.razor.css",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\WebAppComponents\\Catalog\\CatalogSearch.razor",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\WebAppComponents\\Catalog\\CatalogSearch.razor.css",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\WebAppComponents\\Item\\ItemHelper.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\WebAppComponents\\Services\\CatalogService.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\WebAppComponents\\Services\\ICatalogService.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\WebAppComponents\\Services\\IProductImageUrlProvider.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\WebAppComponents\\WebAppComponents.csproj"
+  ],
+  "id": "eshop-remove_target-04",
+  "operator": "remove_target",
+  "system": "eshop"
+}

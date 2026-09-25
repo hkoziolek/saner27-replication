@@ -1,0 +1,37 @@
+{
+  "format": "tier-p-anon/1",
+  "systems": [
+    {
+      "artifacts_present": [
+        "a2-ablation",
+        "comparison",
+        "determinism",
+        "fidelity:acdc",
+        "fidelity:arc",
+        "fidelity:cc",
+        "fidelity:dir",
+        "fidelity:limbo",
+        "fidelity:wca",
+        "run-report"
+      ],
+      "code": "P-1",
+      "diagram_delta_counts": {
+        "added": 10,
+        "reassigned": 0,
+        "retired": 0
+      },
+      "granularity": "file",
+      "kappa": null,
+      "kloc_bucket": "100-250",
+      "language": "cpp",
+      "ref_clusters": 28,
+      "ref_entities_bucket": "50-100",
+      "ref_grade": "GT-diag",
+      "sign_off": {
+        "approved_by_role": "Architect",
+        "approved_date": "2026-07-28"
+      },
+      "targets_bucket": "500-1000"
+    }
+  ]
+}

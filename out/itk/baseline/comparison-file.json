@@ -1,0 +1,60 @@
+{
+  "dropped_whitespace": 0,
+  "entities": {
+    "acdc": 7782,
+    "cc": 7782,
+    "dir": 7782,
+    "floor": 5344,
+    "pipeline": 5344,
+    "propose": 8176
+  },
+  "granularity": "file",
+  "projection": "all-common",
+  "reference_entities": 7657,
+  "results": {
+    "acdc": {
+      "a2a": 73.19,
+      "ari": 2.86,
+      "clusters": 1034,
+      "mojofm": 70.26,
+      "nested": 87.91
+    },
+    "cc": {
+      "a2a": 85.45,
+      "ari": -6.63,
+      "clusters": 46,
+      "mojofm": 48.41,
+      "nested": 97.83
+    },
+    "dir": {
+      "a2a": 80.38,
+      "ari": 11.05,
+      "clusters": 212,
+      "mojofm": 93.88,
+      "nested": 98.58
+    },
+    "floor": {
+      "a2a": 84.21,
+      "ari": 22.61,
+      "clusters": 78,
+      "mojofm": 96.86,
+      "nested": 96.15
+    },
+    "pipeline": {
+      "a2a": 99.6,
+      "ari": 99.32,
+      "clusters": 8,
+      "mojofm": 98.42,
+      "nested": 87.5
+    },
+    "propose": {
+      "a2a": 97.82,
+      "ari": 84.6,
+      "clusters": 8,
+      "mojofm": 98.26,
+      "nested": 75.0
+    }
+  },
+  "shared_entities": 4504,
+  "system": "itk"
+}

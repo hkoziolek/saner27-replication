@@ -1,0 +1,28 @@
+{
+  "alias": {},
+  "description": "inject forbidden dependency csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj -> csharp:csproj:src/OrchardCore.Modules/OrchardCore.Admin/OrchardCore.Admin.csproj",
+  "expected": {
+    "layering_violations": [
+      [
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Admin/OrchardCore.Admin.csproj"
+      ]
+    ],
+    "new_edges": [
+      [
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Admin/OrchardCore.Admin.csproj"
+      ]
+    ],
+    "new_targets": [],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Cms.Web\\OrchardCore.Cms.Web.csproj"
+  ],
+  "id": "orchardcore-add_forbidden_dep-01",
+  "operator": "add_forbidden_dep",
+  "system": "orchardcore"
+}

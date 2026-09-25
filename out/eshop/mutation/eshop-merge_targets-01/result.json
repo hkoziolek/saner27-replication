@@ -1,0 +1,109 @@
+{
+  "advisory": false,
+  "coverage": 1.0,
+  "diff": {
+    "coverage_gap_edges": [
+      [
+        "csharp:csproj:src/Basket.API/Basket.API.csproj",
+        "contract:proto:basket"
+      ]
+    ],
+    "coverage_gap_targets": [],
+    "first_run": false,
+    "new_edges": [
+      [
+        "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+        "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+      ]
+    ],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Basket.API/Basket.API.csproj",
+        "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+      ],
+      [
+        "csharp:csproj:src/Basket.API/Basket.API.csproj",
+        "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+      ],
+      [
+        "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+        "csharp:csproj:src/Basket.API/Basket.API.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/Basket.API/Basket.API.csproj"
+    ],
+    "suspected_renames": [],
+    "suspicious": []
+  },
+  "score": {
+    "advisory": false,
+    "attributed_violations": [],
+    "coverage": 1.0,
+    "coverage_gaps_in_scope": {
+      "coverage_gap_edges": [],
+      "coverage_gap_targets": []
+    },
+    "detected": true,
+    "fn": [],
+    "fn_count": 0,
+    "fp": [],
+    "fp_count": 0,
+    "scored": {
+      "layering_violations": [],
+      "new_edges": [
+        [
+          "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+          "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+        ]
+      ],
+      "new_targets": [],
+      "removed_edges": [
+        [
+          "csharp:csproj:src/Basket.API/Basket.API.csproj",
+          "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+        ],
+        [
+          "csharp:csproj:src/Basket.API/Basket.API.csproj",
+          "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+        ],
+        [
+          "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+          "csharp:csproj:src/Basket.API/Basket.API.csproj"
+        ]
+      ],
+      "removed_targets": [
+        "csharp:csproj:src/Basket.API/Basket.API.csproj"
+      ],
+      "suspected_renames": []
+    },
+    "tp": [
+      [
+        "new_edge",
+        "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+        "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Basket.API/Basket.API.csproj",
+        "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Basket.API/Basket.API.csproj",
+        "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+        "csharp:csproj:src/Basket.API/Basket.API.csproj"
+      ],
+      [
+        "removed_target",
+        "csharp:csproj:src/Basket.API/Basket.API.csproj"
+      ]
+    ],
+    "tp_count": 5
+  }
+}

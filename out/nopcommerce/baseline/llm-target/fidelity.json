@@ -1,0 +1,27 @@
+{
+  "clusters": 17,
+  "entities_clustered": 38,
+  "granularity": "target",
+  "graph": "graph-target.rsf",
+  "reruns": 5,
+  "system": "nopcommerce",
+  "technique": "llm",
+  "vs_pipeline_agreement": {
+    "a2a": 83.23699421965318,
+    "entities_against": 37,
+    "entities_common": 37,
+    "entities_dropped_whitespace": 0,
+    "entities_recovered": 38,
+    "mojofm": 59.38
+  },
+  "vs_reference": {
+    "a2a": 90.05524861878453,
+    "ari": 23.84,
+    "entities_against": 37,
+    "entities_common": 37,
+    "entities_dropped_whitespace": 0,
+    "entities_recovered": 38,
+    "mojofm": 59.38,
+    "nested": 62.5
+  }
+}

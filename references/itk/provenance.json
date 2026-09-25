@@ -1,0 +1,15 @@
+{
+  "system": "itk",
+  "grade": "GT-pub",
+  "subject_version": "ITK 4.5.2",
+  "subject_repo": "https://github.com/InsightSoftwareConsortium/ITK",
+  "subject_tag": "v4.5.2",
+  "source": "Lutellier et al., \"Comparing Software Architecture Recovery Techniques Using Accurate Dependencies\", ICSE 2015 (extended: TSE 2018, doi:10.1109/TSE.2017.2671865). Ground truth extracted by ITK developers after the 2013 modularization refactoring.",
+  "dataset_url": "http://asset.uwaterloo.ca/ArchRecovery/gt/itk_gt.rsf",
+  "retrieved_via": "Wayback Machine snapshot 2019-05-21 (https://web.archive.org/web/20190521095552id_/http://asset.uwaterloo.ca/ArchRecovery/gt/itk_gt.rsf); original host no longer resolves (checked 2026-06-12)",
+  "retrieved_at": "2026-06-12",
+  "format": "RSF `contain <cluster> <repo-relative-file-path>` tuples, verbatim from the published dataset (no edits)",
+  "clusters": 13,
+  "entities": 7657,
+  "notes": "Paper's Table reports 7,310 files / 11 clusters for ITK 4.5.2; the published RSF as archived contains 7,657 entities in 13 clusters (the paper likely excludes small/auxiliary groups from its summary table). We score against the published file verbatim. Entities are repo-relative paths matching `arch export --graph --granularity file` naming."
+}

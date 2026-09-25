@@ -1,0 +1,26 @@
+{
+  "faithful_matches_posthoc": true,
+  "layers": {
+    "+L2": {
+      "faithful_edges": 72,
+      "match": true,
+      "posthoc_edges": 72
+    },
+    "+L3": {
+      "faithful_edges": 72,
+      "match": true,
+      "posthoc_edges": 72
+    },
+    "L0": {
+      "faithful_edges": 70,
+      "match": true,
+      "posthoc_edges": 70
+    },
+    "L0+L1": {
+      "faithful_edges": 70,
+      "match": true,
+      "posthoc_edges": 70
+    }
+  },
+  "system": "orchardcore"
+}

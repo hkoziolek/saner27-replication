@@ -1,0 +1,18 @@
+# Architecture fitness functions for eShop (plan §11.2). Forbidden container -> container
+# dependencies; `drift_report.py` flags any that the curated graph violates.
+#
+# `from`/`to` match a container name, container id, or raw target id. Each rule is reported
+# VIOLATION (a matching edge exists), OK (none, and coverage adequate), or
+# UNVERIFIED (degraded) when require_layers coverage is missing (absence != compliance).
+forbidden:
+  # SEEDED VIOLATION (demo, plan §14 P6): the Blazor storefront reaches the message bus
+  # directly. A frontend should publish/consume through an API, not couple to messaging
+  # infrastructure — and the curated graph has `Web App (Blazor Storefront) -> Event Bus`,
+  # so this fitness check fires.
+  - from: "Web App (Blazor Storefront)"
+    to: "Event Bus"
+
+  # PASSING check: a shared building block must not depend back on the storefront. No such
+  # edge exists, so this stays OK (shows a green fitness function alongside the violation).
+  - from: "Event Bus"
+    to: "Web App (Blazor Storefront)"

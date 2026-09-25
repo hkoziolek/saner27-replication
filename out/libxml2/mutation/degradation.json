@@ -1,0 +1,81 @@
+{
+  "language": "cpp",
+  "modes": {
+    "disable_l2": {
+      "advisory": false,
+      "coverage_l0": 1.0,
+      "erosion_visible": true,
+      "findings_off": 0,
+      "fp_suppression_rate": null,
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 0,
+        "mode": "disable_l2",
+        "targets_starved": 0
+      },
+      "suppressed_on": 0,
+      "would_be_false_findings": 0
+    },
+    "lose_l0": {
+      "advisory": true,
+      "coverage_l0": 0.0,
+      "erosion_visible": true,
+      "findings_off": 26,
+      "fp_suppression_rate": 1.0,
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 12,
+        "mode": "lose_l0",
+        "targets_starved": 14
+      },
+      "suppressed_on": 26,
+      "would_be_false_findings": 26
+    },
+    "starve_l0_10": {
+      "advisory": true,
+      "coverage_l0": 0.9286,
+      "erosion_visible": true,
+      "findings_off": 0,
+      "fp_suppression_rate": null,
+      "gating": false,
+      "layering": {
+        "intact_rule_status": null,
+        "intact_still_violation": null,
+        "starved_honest": null,
+        "starved_rule_status": null
+      },
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 0,
+        "mode": "starve_l0_10",
+        "targets_starved": 1
+      },
+      "suppressed_on": 0,
+      "would_be_false_findings": 0
+    },
+    "starve_l0_30": {
+      "advisory": true,
+      "coverage_l0": 0.7143,
+      "erosion_visible": true,
+      "findings_off": 0,
+      "fp_suppression_rate": null,
+      "gating": false,
+      "layering": {
+        "intact_rule_status": null,
+        "intact_still_violation": null,
+        "starved_honest": null,
+        "starved_rule_status": null
+      },
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 0,
+        "mode": "starve_l0_30",
+        "targets_starved": 4
+      },
+      "suppressed_on": 0,
+      "would_be_false_findings": 0
+    }
+  },
+  "schema": "rq6-degradation/1",
+  "system": "libxml2"
+}

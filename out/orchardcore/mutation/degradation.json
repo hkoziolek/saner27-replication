@@ -1,0 +1,81 @@
+{
+  "language": "cs",
+  "modes": {
+    "disable_l2": {
+      "advisory": false,
+      "coverage_l0": 1.0,
+      "erosion_visible": true,
+      "findings_off": 514,
+      "fp_suppression_rate": 1.0,
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 514,
+        "mode": "disable_l2",
+        "targets_starved": 0
+      },
+      "suppressed_on": 514,
+      "would_be_false_findings": 514
+    },
+    "lose_l0": {
+      "advisory": true,
+      "coverage_l0": 0.0,
+      "erosion_visible": true,
+      "findings_off": 1892,
+      "fp_suppression_rate": 1.0,
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 1685,
+        "mode": "lose_l0",
+        "targets_starved": 233
+      },
+      "suppressed_on": 1892,
+      "would_be_false_findings": 1892
+    },
+    "starve_l0_10": {
+      "advisory": true,
+      "coverage_l0": 0.8986,
+      "erosion_visible": true,
+      "findings_off": 65,
+      "fp_suppression_rate": 1.0,
+      "gating": false,
+      "layering": {
+        "intact_rule_status": "VIOLATION",
+        "intact_still_violation": true,
+        "starved_honest": true,
+        "starved_rule_status": "UNVERIFIED (degraded)"
+      },
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 65,
+        "mode": "starve_l0_10",
+        "targets_starved": 21
+      },
+      "suppressed_on": 65,
+      "would_be_false_findings": 65
+    },
+    "starve_l0_30": {
+      "advisory": true,
+      "coverage_l0": 0.7005,
+      "erosion_visible": true,
+      "findings_off": 240,
+      "fp_suppression_rate": 1.0,
+      "gating": false,
+      "layering": {
+        "intact_rule_status": "VIOLATION",
+        "intact_still_violation": true,
+        "starved_honest": true,
+        "starved_rule_status": "UNVERIFIED (degraded)"
+      },
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 240,
+        "mode": "starve_l0_30",
+        "targets_starved": 62
+      },
+      "suppressed_on": 240,
+      "would_be_false_findings": 240
+    }
+  },
+  "schema": "rq6-degradation/1",
+  "system": "orchardcore"
+}

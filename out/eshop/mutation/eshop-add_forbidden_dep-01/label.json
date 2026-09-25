@@ -1,0 +1,28 @@
+{
+  "alias": {},
+  "description": "inject forbidden dependency csharp:csproj:src/Basket.API/Basket.API.csproj -> csharp:csproj:src/Catalog.API/Catalog.API.csproj",
+  "expected": {
+    "layering_violations": [
+      [
+        "csharp:csproj:src/Basket.API/Basket.API.csproj",
+        "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+      ]
+    ],
+    "new_edges": [
+      [
+        "csharp:csproj:src/Basket.API/Basket.API.csproj",
+        "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+      ]
+    ],
+    "new_targets": [],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\Basket.API.csproj"
+  ],
+  "id": "eshop-add_forbidden_dep-01",
+  "operator": "add_forbidden_dep",
+  "system": "eshop"
+}

@@ -1,0 +1,130 @@
+{
+  "advisory": false,
+  "coverage": 1.0,
+  "diff": {
+    "coverage_gap_edges": [],
+    "coverage_gap_targets": [],
+    "first_run": false,
+    "new_edges": [
+      [
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.WebAnonMut.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.WebAnonMut.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Logging.NLog/OrchardCore.Logging.NLog.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.WebAnonMut.csproj"
+    ],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Logging.NLog/OrchardCore.Logging.NLog.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj"
+    ],
+    "suspected_renames": [
+      {
+        "new": "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.WebAnonMut.csproj",
+        "old": "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj"
+      }
+    ],
+    "suspicious": []
+  },
+  "score": {
+    "advisory": false,
+    "alias_findings_in_scope": 0,
+    "alias_suppressed": true,
+    "attributed_violations": [],
+    "coverage": 1.0,
+    "coverage_gaps_in_scope": {
+      "coverage_gap_edges": [],
+      "coverage_gap_targets": []
+    },
+    "detected": true,
+    "fn": [],
+    "fn_count": 0,
+    "fp": [],
+    "fp_count": 0,
+    "rename_classified": true,
+    "scored": {
+      "layering_violations": [],
+      "new_edges": [
+        [
+          "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.WebAnonMut.csproj",
+          "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj"
+        ],
+        [
+          "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.WebAnonMut.csproj",
+          "csharp:csproj:src/OrchardCore/OrchardCore.Logging.NLog/OrchardCore.Logging.NLog.csproj"
+        ]
+      ],
+      "new_targets": [
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.WebAnonMut.csproj"
+      ],
+      "removed_edges": [
+        [
+          "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj",
+          "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj"
+        ],
+        [
+          "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj",
+          "csharp:csproj:src/OrchardCore/OrchardCore.Logging.NLog/OrchardCore.Logging.NLog.csproj"
+        ]
+      ],
+      "removed_targets": [
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj"
+      ],
+      "suspected_renames": [
+        {
+          "new": "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.WebAnonMut.csproj",
+          "old": "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj"
+        }
+      ]
+    },
+    "tp": [
+      [
+        "new_edge",
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.WebAnonMut.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj"
+      ],
+      [
+        "new_edge",
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.WebAnonMut.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Logging.NLog/OrchardCore.Logging.NLog.csproj"
+      ],
+      [
+        "new_target",
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.WebAnonMut.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Logging.NLog/OrchardCore.Logging.NLog.csproj"
+      ],
+      [
+        "removed_target",
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj"
+      ],
+      [
+        "rename",
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj",
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.WebAnonMut.csproj"
+      ]
+    ],
+    "tp_count": 7
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "alias": {
+    "csharp:csproj:src/Common/Toy.CommonAnonMut.csproj": "csharp:csproj:src/Common/Toy.Common.csproj"
+  },
+  "description": "rename build target csharp:csproj:src/Common/Toy.Common.csproj -> csharp:csproj:src/Common/Toy.CommonAnonMut.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "csharp:csproj:src/Domain/Toy.Domain.csproj",
+        "csharp:csproj:src/Common/Toy.CommonAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+        "csharp:csproj:src/Common/Toy.CommonAnonMut.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:src/Common/Toy.CommonAnonMut.csproj"
+    ],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Domain/Toy.Domain.csproj",
+        "csharp:csproj:src/Common/Toy.Common.csproj"
+      ],
+      [
+        "csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+        "csharp:csproj:src/Common/Toy.Common.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/Common/Toy.Common.csproj"
+    ],
+    "suspected_renames": [
+      [
+        "csharp:csproj:src/Common/Toy.Common.csproj",
+        "csharp:csproj:src/Common/Toy.CommonAnonMut.csproj"
+      ]
+    ]
+  },
+  "files_touched": [
+    "[anonymized]-home/<scratch>\\mutwork\\toy\\repo\\src\\Domain\\Toy.Domain.csproj",
+    "[anonymized]-home/<scratch>\\mutwork\\toy\\repo\\src\\Messaging\\Toy.Messaging.csproj",
+    "[anonymized]-home/<scratch>\\mutwork\\toy\\repo\\Toy.sln",
+    "[anonymized]-home/<scratch>\\mutwork\\toy\\repo\\src\\Common\\Toy.Common.csproj -> [anonymized]-home/<scratch>\\mutwork\\toy\\repo\\src\\Common\\Toy.CommonAnonMut.csproj"
+  ],
+  "id": "toy-rename_target-01",
+  "operator": "rename_target",
+  "system": "toy"
+}

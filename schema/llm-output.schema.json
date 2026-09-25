@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://arch-pipeline/schema/llm-output-1.0.json",
+  "title": "LLM Enrichment Output",
+  "description": "Schema for one enrichment record from the §8 LLM step. The model proposes language (name/description/responsibilities) for an EXISTING element id; it may NOT add relationships (plan §8.1/§8.3). Validated, then referential-integrity-checked (every element_id must already exist). See plans/2026-06-03-fact-extraction-structurizr-pipeline.md §8.2.",
+  "$comment": "This object is CLOSED (additionalProperties:false): the LLM contract is fully enumerated, and any extra field is a contract violation that must trigger the §8.3 bounded-retry / degrade policy rather than pass silently. Folded into the §8.3 cache key via sha256(llm-output.schema.json).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["element_id", "element_name", "naming_confidence"],
+  "properties": {
+    "element_id": {
+      "type": "string",
+      "pattern": "^[^:]+:.+$",
+      "description": "Must match an existing fact-model element id (§6.3). Referential integrity enforced post-validation."
+    },
+    "element_name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Proposed C4 display name. Loses to a §7.4 name_overrides pin in the deterministic reconciler (§8.3)."
+    },
+    "description": {
+      "type": "string",
+      "description": "Short description; may be empty on degrade (§8.3 terminal policy)."
+    },
+    "responsibilities": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "naming_confidence": {
+      "type": "string",
+      "enum": ["low", "medium", "high"],
+      "description": "ENRICHMENT confidence (§8.2), distinct from extraction confidence (§6.3). Advisory; cross-checked against deterministic evidence-strength (§8.3)."
+    },
+    "evidence": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "The extracted facts the name/description were grounded in (file paths, namespaces, top dependencies). Citations, not new structure."
+    }
+  }
+}

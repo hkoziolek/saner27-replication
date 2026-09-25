@@ -1,0 +1,16 @@
+{
+  "clusters": 11,
+  "entities_clustered": 65,
+  "granularity": "file",
+  "graph": "graph-file.rsf",
+  "system": "fmt",
+  "technique": "dir",
+  "vs_pipeline_agreement": {
+    "a2a": 89.96282527881041,
+    "entities_against": 66,
+    "entities_common": 64,
+    "entities_recovered": 65,
+    "mojofm": 85.48
+  },
+  "vs_reference": null
+}

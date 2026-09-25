@@ -1,0 +1,22 @@
+{
+  "clusters": 31,
+  "entities_clustered": 810,
+  "granularity": "file",
+  "graph": "graph-file.rsf",
+  "system": "abseil",
+  "technique": "acdc",
+  "vs_pipeline_agreement": {
+    "a2a": 83.36041598960026,
+    "entities_against": 760,
+    "entities_common": 759,
+    "entities_recovered": 810,
+    "mojofm": 42.15
+  },
+  "vs_reference": {
+    "a2a": 83.24209245742092,
+    "entities_against": 809,
+    "entities_common": 809,
+    "entities_recovered": 810,
+    "mojofm": 39.8
+  }
+}

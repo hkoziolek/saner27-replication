@@ -1,0 +1,252 @@
+\section{Results}
+\label{sec:results}
+
+%% Revised 2026-08-30 against the GPT-5.6-Sol review and tightened for the page budget. Every
+%% detection headline names an autonomous row; curated C# scores are upper bounds; "lead" is the
+%% defined strict rule; post-hoc pairs reported; A5 read at the operating point; RQ6 gains the
+%% combined and real-history arms; RQ9's R1-vs-R2 row is inter-rater agreement. Macros only.
+%% 2026-09-13 shortening pass (response plan §13): every result stays; the diagnostic's
+%% sensitivity intervals (M4), the full inferential detail (M5), the SARIF/FCA numbers (M10),
+%% the per-operator, combined-loss and per-pair history drift tables (M1, M2), the
+%% rater-agreement forensics and the effort table (M3, M8) moved to the TR, each replaced by its
+%% compact form. The caveats the terms box / §IV / §VII carry are not restated here.
+%% 2026-09-13 readability pass: the RQ2 and RQ7 paragraphs split into three each, long sentences
+%% split; every macro, number, and citation unchanged.
+
+\subsection{RQ1: Recoverability, diagnosed without the reference}
+\label{sec:rq1}
+\input{tables/rq1_fidelity}
+%% Tables II/III anchored here (2026-09-13): same float-deferral reason as Fig. 1.
+\input{tables/rq2_baselines}
+\input{tables/rq2_clusters}
+
+\begin{figure}[t]
+  \centering
+  \resizebox{0.9\columnwidth}{!}{\input{figures/two_regime.pgf}}
+  \caption{The two-regime finding in one view: the autonomous floor's MoJoFM against the build
+  graph's unit ratio, which alone needs no reference. Dashed: the post-hoc rule's ratio
+  threshold (\rqAdequacyRatioMax{}) and the recovery threshold (\rqTwoRecoveredMin{}). Filled
+  markers satisfy the rule; libxml2 fails it through the largest-unit-share clause, not the
+  ratio.}
+  \label{fig:regimes}
+\end{figure}
+
+Table~\ref{tab:rq1} reads as a diagnosis carried by its autonomous columns. On four of the five
+C/C++ systems the no-curation floor already sits within a few MoJoFM points of the curated model
+(C++ median \rqOneFloorCppMoJo{}). On the four C\#\ systems it does not (median
+\rqOneFloorCsMoJo{}): at project granularity the floor \emph{is} the all-singletons partition,
+identical to \texttt{dir}, and the curated number is the curator's grouping. The auto-propose
+draft is not a reliable autonomous comparator: it recovers abseil exactly
+(\rqOneProposeAbseilMoJo{}) but collapses OpenCV into two containers (\rqOneProposeOpencvMoJo{})
+and eShop into one (\rqOneProposeEshopMoJo{}). libxml2 marks the boundary from within C++: one
+library target gives the build graph nothing to report. a2a tells the other half: the floor's
+fine targets sprawl against a 13-cluster reference (ITK floor a2a \rqOneFloorItkAtoA{}), which
+curation repairs. ARI (Table~\ref{tab:rq2k}) charges that sprawl in full: the floor scores
+\rqOneFloorItkAri{} on ITK and \rqOneFloorAbseilAri{} on abseil although \rqOneFloorItkNested{}\,\%
+and \rqOneFloorAbseilNested{}\,\% of its clusters lie inside one reference cluster, a refinement
+rather than a misgrouping; the propose draft's merging restores \rqOneProposeItkAri{} and
+\rqOneProposeAbseilAri{}. On bash and OpenCV, whose target counts sit near the reference's, the
+floor's ARI (\rqOneFloorBashAri{}, \rqOneFloorOpencvAri{}) agrees with MoJoFM. ``Recovers''
+therefore means at the granularity of the build targets.
+
+The regime can be read off the build graph without the reference. The floor's \emph{unit ratio}
+counts the build units that own at least one scored entity over the scored entities (hence below
+Table~\ref{tab:rq1}'s \#Tgt). Across the \rqAdequacyN{} scored systems it correlates with the
+floor's MoJoFM at Spearman $\rho=\rqAdequacyRhoRatioMoJo{}$ (bootstrap 95\,\% interval
+$[\rqAdequacyRhoCiLo{}, \rqAdequacyRhoCiHi{}]$; $\rqAdequacyRhoRatioAtoA{}$ with a2a) and its
+TurboMQ at $\rho=\rqAdequacyRhoMqMoJo{}$. The post-hoc rule ``unit ratio
+$\le\rqAdequacyRatioMax{}$ and largest-unit share $\le\rqAdequacyLargestMax{}$'' declares
+\rqAdequacyAdequateCount{} systems build-modular (ITK, abseil, OpenCV, bash) and
+\rqAdequacyInadequateCount{} not (every C\#\ system at ratio 1.0; libxml2's one library holds
+\rqAdequacyLibxmlLargestShare{} of the files), and agrees with a floor MoJoFM of at least
+\rqTwoRecoveredMin{} on \rqAdequacyRuleAgreement{} systems (Fig.~\ref{fig:regimes}). The
+separation is not knife-edge: the ratio threshold can sit anywhere in
+$[\rqAdequacyRatioIntervalLo{}, \rqAdequacyRatioIntervalHi{})$ without changing a call, but
+re-selecting both thresholds leave-one-system-out predicts \rqAdequacyLooCorrect{} and misses
+\rqAdequacyLooWrong{}, the one system the largest-unit clause exists for (intervals, the
+ratio-only variant, Tier-B calls: \trDiagnostic{}). The rule is deliberately simple and a hypothesis for the extension corpus
+(\S\ref{sec:threats}). It calls none of the \rqAdequacyTierBSystems{} unreferenced Tier-B
+systems build-modular; fmt (\rqAdequacyFmtUnits{} CMake targets over \rqAdequacyFmtEntities{}
+files) is the project-coarse C++ case the scored corpus lacks.
+
+\subsection{RQ2: Comparison with classical SAR and an LLM baseline}
+\label{sec:rq2}
+
+Table~\ref{tab:rq2} gives every technique the same graph and reference on both metrics. Against
+the five all-common classical baselines the floor leads strictly on \rqTwoFloorMoJoWins{} systems
+by MoJoFM (\rqTwoFloorMoJoWinsOrTies{} with ties; on C\#\ floor and \texttt{dir} coincide) and on
+\rqTwoFloorAtoAWins{} by a2a; the propose draft on \rqTwoProposeMoJoWins{} and
+\rqTwoProposeAtoAWins{}. On C\#\ the classical techniques collapse into one or two blobs through
+the shared building-block projects, and on libxml2 everything sits at the floor. The curated
+model leads strictly on \rqTwoPipelineMoJoWins{} systems by MoJoFM and \rqTwoPipelineAtoAWins{} by
+a2a against the classical set, and on \rqTwoPipelineMoJoWinsAll{} and \rqTwoPipelineAtoAWinsAll{}
+against every displayed baseline including ARC and the LLM. On C\#\ that margin is curation,
+sighted on three systems (Table~\ref{tab:corpus}).
+
+Under the post-hoc ARI of Table~\ref{tab:rq2k} the picture sharpens rather than changes. No
+classical technique exceeds \rqTwoSarAriMax{} (\rqTwoSarAriMaxWhere{}) on any system, and the
+C\#\ classical cells sit at chance. The curated model leads on \rqTwoPipelineAriWins{} systems,
+the propose draft on \rqTwoProposeAriWins{}, and the floor on \rqTwoFloorAriWins{}, its
+over-splitting of the two finest build graphs now visible. On the autonomous rows no difference
+reaches significance, which at $n=\rqTwoFriedmanFloorN{}$ speaks to power, not to equivalence.
+The Friedman omnibus does not reject equality with the floor
+(MoJoFM $p=\rqTwoFriedmanFloorP$, a2a $p=\rqTwoFriedmanFloorAtoAP$, $n=\rqTwoFriedmanFloorN$) or
+with the propose draft ($p=\rqTwoFriedmanProposeP$ and \rqTwoFriedmanProposeAtoAP{}) in place of
+the curated row, and no Holm-corrected pairwise Wilcoxon or Nemenyi comparison separates either
+row from any technique (\trStats{}). The curated row's omnibus ($p=\rqTwoFriedmanP$; differs from
+\rqTwoPosthocDiffers{} after correction) is descriptive only.
+
+By the post-hoc bands no classical technique reaches the recovery threshold on any of the four
+C\#\ systems: \rqTwoCsClassicalFailed{} of \rqTwoCsClassicalCells{} technique--system cells fail,
+and the \rqTwoCsClassicalPartial{} partial ones (\rqTwoCsClassicalPartialList{}) stay far below
+\rqTwoRecoveredMin{}. The LLM is the strongest autonomous comparator: it recovers
+\rqTwoLlmCsRecovered{} (\rqOneLlmEshopMoJo{}), is partial on \rqTwoLlmCsPartial{}, fails on
+\rqTwoLlmCsFailed{}, varies across reruns on Squidex (Table~\ref{tab:rq2}), and was not run on
+ITK, whose file graph exceeds the input budget fourfold (no call was made). ARC did not
+reproduce either~\cite{link2019value}. SARIF~\cite{zhang2023sarif} and FCA~\cite{teymourian2022fca}
+published scores against the very references used here for bash, ITK, and libxml2
+(\trPublished{}). Our floor sits above both on bash and ITK, and SARIF's own ACDC run sits below
+our ACDC row, so our inputs do not handicap the baselines. On libxml2 SARIF's text-and-folder
+fusion beats every structural partition we score.
+
+\subsection{RQ3: Ablation}
+\label{sec:rq3}
+
+Ablations are paired per system (Table~\ref{tab:rq1}). \emph{Curation (A2):} on the all-common
+set curation adds \rqThreeCurationLiftCpp{} MoJoFM points on C++ and \rqThreeCurationLiftCs{} on
+C\#\ (paired $r=\rqThreeCurationRankBiserialCs{}$, $p=\rqThreeCurationWilcoxonP{}$; the two
+language groups' floors differ with Cliff's $\delta=\rqThreeFloorCliffsCppVsCs{}$).
+\emph{Evidence layers (A1):} L0 alone yields
+most container edges and the symbol layer the remainder (per layer: \trAblation{}).
+\emph{Declared dependencies never dropped (A5):} at the default threshold of 3 the rule saves
+\rqThreeAfiveOperatingEdgesSaved{} edges on \rqThreeAfiveOperatingSystemsChecked{} systems,
+because every declared dependency clears the bar on its base weight. At 8, where a curator might
+silence noisy include edges, a scalar filter cuts declared edges it cannot tell from noise,
+removing \rqThreeAfiveEshopEdgesSaved{} of eShop's container edges (edge counts move on
+\rqThreeAfiveWilcoxonN{} systems, paired $r=\rqThreeAfiveRankBiserial{}$,
+$p=\rqThreeAfiveWilcoxonP{}$; reference recall falls by \rqThreeAfiveRefRecallDropList{} on the
+\rqThreeAfiveRefRecallSystems{} systems where it is scored, too few to test). Thresholding (A3)
+barely moves the edge set at the operating point and visibility down-weighting (A4) is inert.
+\emph{Names, never structure (A6, A7):} read as the LLM-does-structure arm, the RQ2 LLM runs
+recover a competitive partition on small systems and beat the curated model on
+\rqThreeSixLlmGtPipelineList{}. But the deterministic pipeline matches or beats them on
+\rqThreeSixPipelineGeLlm{} of the systems they completed (median LLM MoJoFM
+\rqThreeSixLlmMedianMoJo{}), and ITK did not fit one prompt. An adversarial provider that renames every
+element perturbs \rqThreeSevenMaxStructuralDelta{} relationships on
+\rqThreeSevenSystemsChecked{} systems, confirming the invariant of \S\ref{sec:enrich}.
+
+\subsection{RQ4: Reproducibility and stability}
+\label{sec:rq5}
+
+Byte-identical regeneration is a tested invariant (\S\ref{sec:generate}), the contrast with ARC and
+the LLM baseline. What we measure is survivor-partition agreement under code change (A8). After
+20\,\% entity turnover the per-entity rules keep every surviving entity in its cluster
+(\rqFivePipelineChurn{} on all eight systems), as does \texttt{dir} (\rqFiveDirChurnMedian{}),
+whereas ACDC, a global optimiser, reshuffles survivors on every system (median
+\rqFiveAcdcChurnMedian{}, down to \rqFiveAcdcChurnWorst{} on abseil). Rules bind identities rather
+than graph optima, so the contrast is one of semantics, not of correctness: a frozen ACDC
+partition would keep its survivors too, but assigns nothing to new entities and carries no
+evidence. A8 does not say the model is still \emph{right} later: new targets surface as
+\texttt{needs-curation} singletons for the human, which \S\ref{sec:rq6} counts on real history.
+
+\subsection{RQ5: Drift detection and governance}
+\label{sec:rq6}
+
+\paragraph{Seeded mutations and degradation (correctness).} We injected \rqSixMutationCount{}
+labelled changes (\rqSixOperatorCount{} operators: add and remove a dependency; add, remove,
+rename, and merge a target) into the \emph{build files} of checkout copies of
+\rqSixMutationSystems{} systems across three build idioms. We ran the whole pipeline on each and
+scored the report against the label, one finding per vanished or new target, edge, rename, or
+violation. The report covered \rqSixMutationsDetected{} mutations fully, with precision
+\rqSixPrecision{}, recall \rqSixRecall{}, \rqSixFpPerPr{} false findings per simulated pull
+request, renames classified as renames (accuracy \rqSixRenameAccuracy{}), and a one-line alias
+pin silencing the drift in \rqSixAliasSurvival{} pinned reruns (per operator: \trDrift{}).
+Inducing evidence degradation on the \rqSixDegradationSystems{} systems scored before Squidex
+joined (semantic toolchain lost; 10\,\% and 30\,\% of targets starved of L0 evidence; build-graph
+extractor lost) produces \rqSixWouldBeFalse{} would-be-false ``disappeared'' findings, of which
+the stopping rules reclassify all of them as labelled coverage gaps (suppression rate
+\rqSixSuppressionRate{}), where a
+coverage-naive differ reports every one as change (exact McNemar $p\rqSixMcNemarP$).
+
+\paragraph{Change and evidence loss at once.} Neither arm tests that degradation never hides
+erosion, so we replayed the \rqSixCombMutations{} mutations on \rqSixCombSystems{} systems
+with each degradation mode induced on the mutated run, plus an adversarial mode that starves
+exactly the targets the mutation touches, and classified, per mode, each of the
+\rqSixCombFindings{} expected findings as named drift, coverage gap, advisory-only, or silent (\trDrift{}). Under
+targeted starvation \rqSixCombStarveMutatedDrift{} are drift, \rqSixCombStarveMutatedGap{} gaps,
+and \rqSixCombStarveMutatedAdvisory{} advisory only. The experiment also found a hole: with the
+build-graph extractor lost entirely, an added or renamed target was reported nowhere and the run
+was not even advisory (\rqSixCombPrefixSilentTotal{} silent findings in that mode), because an empty
+first-party target set counted as fully covered. After changing that convention (nothing covered,
+advisory), \rqSixCombSilentTotal{} silent findings remain, the \rqSixCombLoseLZeroAdvisory{}
+former ones are advisory, and no mode produced a false finding. The claim survives in a weaker
+form: erosion is never hidden, but under heavy evidence loss it is often visible only as a warning
+that evidence dropped.
+
+\paragraph{Real history.} We then ran the detector over \rqSixHistPairs{} consecutive release pairs
+of \rqSixHistSystems{} systems (libxml2, nopCommerce, Squidex), fixed in advance rather than
+selected by changelog, with the committed rules held constant across each pair (per pair:
+\trDrift{}). The \rqSixHistCommits{} commits, \rqSixHistBuildCommits{} of them touching build
+files, yielded \rqSixHistFindings{} findings and \rqSixHistCoverageGaps{} coverage gaps;
+\rqSixHistPairsZero{} pairs with build-file churn produced none. Of the \rqSixHistNewTargets{} first-party targets the releases added, the rules left
+\rqSixHistNewUnmapped{} unmapped, as expected: the Squidex and nopCommerce overlays post-date both
+releases, and libxml2's predate them. Two raters labelled each finding independently: both
+called \rqSixHistArchitectural{} architectural, \rqSixHistNonArchitectural{} non-architectural and
+\rqSixHistNoise{} extraction noise, with raw agreement \rqSixHistLabelsAgree{} and pooled
+Cohen's $\kappa$ of \rqSixHistLabelsKappa{}.
+
+\subsection{RQ6: Performance and scalability}
+\label{sec:rq7}
+
+Across \rqSevenSystems{} systems spanning \rqSevenMinKloc{}--\rqSevenMaxKloc{}\,KLOC, the cold
+end-to-end run (CMake configure, Doxygen, and Roslyn included) stays within the 30-minute budget
+on \rqSevenColdBudget{} systems and the warm rerun within the 3-minute budget on
+\rqSevenWarmBudget{} (median speedup \rqSevenMedianSpeedup$\times$; log--log slope
+\rqSevenScalingSlope{} against KLOC; peak RSS \rqSevenMaxPeakRssGb{}\,GB; per system:
+\trPerf{}). The exception is ITK: its cold run takes \rqSevenItkColdMin{} minutes,
+\rqSevenItkDoxygenSharePct{}\,\% of it in Doxygen's XML pass, against \rqSevenItkWarmMin{} warm.
+At this size the L2 layer misses the per-commit budget; an L0-only run would take about
+\rqSevenItkLZeroImpliedMin{} minutes (an estimate, not a measurement).
+
+\subsection{RQ7: Curation value under blinding}
+\label{sec:rq9}
+\input{tables/rq9_curation}
+
+On both systems the reference-blind curator lands above every classical technique on a2a and
+above ACDC, WCA, and LIMBO on MoJoFM (Table~\ref{tab:rq9}): \rqNineEshopCuratorMoJo{} MoJoFM on eShop and \rqNineSquidexCuratorMoJo{} on
+Squidex (a2a \rqNineEshopCuratorAtoA{} and \rqNineSquidexCuratorAtoA{}; container-edge F1
+\rqNineEshopCuratorEdgeFone{} and \rqNineSquidexCuratorEdgeFone{}), \rqNineEshopOverBestSarMoJo{}
+and \rqNineSquidexOverBestSarMoJo{} points above the best of ACDC, WCA, and LIMBO. The
+informative comparison is against the reference, which on eShop
+both raters, who never saw it, re-derive at \rqNineEshopRaterRefMoJoMin{} MoJoFM or better
+(aligned $\kappa\ge$\rqNineEshopRaterRefKappaAlignedMin{}): it is not one author's opinion, and
+the curator is at least as close to it as its re-derivers.
+
+The plan's raw-$\kappa$ flag fired on both systems (\rqNineEshopKappa{}, \rqNineSquidexKappa{}),
+but raw $\kappa$ scores exact label match. Label-free, eShop's raters agree (aligned $\kappa$
+\rqNineEshopKappaAligned{}) and Squidex's disagree (\rqNineSquidexKappaAligned{}). On both systems
+not one rater cluster cuts across a reference boundary: the partitions nest, and every
+disagreement is about altitude, where the projects' documentation is silent (\trCuration{}).
+eShop's sighted curation scored \rqNineEshopNonBlindMoJo{}; the blind curator scores
+\rqNineEshopLeakageDelta{} points \emph{higher}, so reference access is not what carried the
+sighted score, though curator differences remain a confound. The raters' consensus sits at a
+coarser altitude (\rqNineEshopCuratorVsConsensusMoJo{} against it) and is a sensitivity row, not
+a second reference. On Squidex the raters settled on fine granularity
+(\rqNineSquidexConsensusClusters{} clusters over 15 projects), so the singleton floor is strong
+(\rqNineSquidexFloorMoJo{}) and ACDC, WCA, and LIMBO fall below it. On the all-common projection
+(13 of 15 reference projects; two have no first-party dependency and are unseen by the edge-only
+techniques) the curator ties the floor on MoJoFM and lifts a2a from \rqNineSquidexFloorAtoA{} to
+\rqNineSquidexCuratorAtoA{}; on the full reference it scores
+\rqNineSquidexCuratorFullRefMoJo{}/\rqNineSquidexCuratorFullRefAtoA{}.
+
+Effort was \rqNineEshopMinutes{} minutes and \rqNineEshopOps{} editor operations for eShop,
+\rqNineSquidexMinutes{} and \rqNineSquidexOps{} for Squidex, whose curator worked in two
+sittings around a GUI defect in that packet and inspected projects several times eShop's
+size. A second, equally blind eShop curator (\rqNineEshopSecondCuratorCode{}), the one
+measurement of curator variance, took \rqNineEshopSecondCuratorMinutes{} minutes over two
+sittings and scored \rqNineEshopSecondCuratorMoJo{} MoJoFM (a2a
+\rqNineEshopSecondCuratorAtoA{}): above every classical technique but
+\rqNineEshopCuratorMoJoSpread{} points below the first curator, the two agreeing at aligned
+$\kappa$ \rqNineEshopCuratorPairKappaAligned{} (\trCuration{}). No curator kept a group from the
+\cli~\texttt{propose} draft (\rqNineEshopProposeDerivedPct\% and
+\rqNineSquidexProposeDerivedPct\%), the same null the propose row of Table~\ref{tab:rq1} shows.

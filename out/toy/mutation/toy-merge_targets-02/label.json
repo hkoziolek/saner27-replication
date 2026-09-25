@@ -1,0 +1,36 @@
+{
+  "alias": {},
+  "description": "merge build target csharp:csproj:src/Domain/Toy.Domain.csproj into csharp:csproj:src/Common/Toy.Common.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "csharp:csproj:src/Web/Toy.Web.csproj",
+        "csharp:csproj:src/Common/Toy.Common.csproj"
+      ]
+    ],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Domain/Toy.Domain.csproj",
+        "csharp:csproj:src/Common/Toy.Common.csproj"
+      ],
+      [
+        "csharp:csproj:src/Web/Toy.Web.csproj",
+        "csharp:csproj:src/Domain/Toy.Domain.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/Domain/Toy.Domain.csproj"
+    ],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "[anonymized]-home/<scratch>\\mutwork\\toy\\repo\\src\\Web\\Toy.Web.csproj",
+    "[anonymized]-home/<scratch>\\mutwork\\toy\\repo\\Toy.sln",
+    "[anonymized]-home/<scratch>\\mutwork\\toy\\repo\\src\\Domain\\Toy.Domain.csproj"
+  ],
+  "id": "toy-merge_targets-02",
+  "operator": "merge_targets",
+  "system": "toy"
+}

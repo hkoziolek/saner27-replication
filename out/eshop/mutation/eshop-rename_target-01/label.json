@@ -1,0 +1,58 @@
+{
+  "alias": {
+    "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj": "csharp:csproj:src/Basket.API/Basket.API.csproj"
+  },
+  "description": "rename build target csharp:csproj:src/Basket.API/Basket.API.csproj -> csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj",
+        "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+      ],
+      [
+        "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj",
+        "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+      ],
+      [
+        "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+        "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj"
+    ],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Basket.API/Basket.API.csproj",
+        "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+      ],
+      [
+        "csharp:csproj:src/Basket.API/Basket.API.csproj",
+        "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+      ],
+      [
+        "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+        "csharp:csproj:src/Basket.API/Basket.API.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/Basket.API/Basket.API.csproj"
+    ],
+    "suspected_renames": [
+      [
+        "csharp:csproj:src/Basket.API/Basket.API.csproj",
+        "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj"
+      ]
+    ]
+  },
+  "files_touched": [
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\eShop.AppHost\\eShop.AppHost.csproj",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\tests\\Basket.UnitTests\\Basket.UnitTests.csproj",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\eShop.slnx",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\Basket.API.csproj -> <repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\Basket.APIAnonMut.csproj"
+  ],
+  "id": "eshop-rename_target-01",
+  "operator": "rename_target",
+  "system": "eshop"
+}

@@ -1,0 +1,23 @@
+{
+  "alias": {},
+  "description": "remove declared dependency csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj -> csharp:csproj:src/Basket.API/Basket.API.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+        "csharp:csproj:src/Basket.API/Basket.API.csproj"
+      ]
+    ],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\eShop.AppHost\\eShop.AppHost.csproj"
+  ],
+  "id": "eshop-remove_dep-04",
+  "operator": "remove_dep",
+  "system": "eshop"
+}

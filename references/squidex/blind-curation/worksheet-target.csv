@@ -1,0 +1,24 @@
+# RQ9 rater worksheet (eval §10a) — assign every entity a cluster name; use the
+# project's own documented component names where they exist. Write EXCLUDE to mark an
+# entity out-of-scope (tests, samples, dead code) — record why in the notes column.
+# Blinding: do NOT consult the tool's output, any reference.rsf, or another rater.
+entity,cluster,notes
+csharp:csproj:backend/extensions/Squidex.Extensions/Squidex.Extensions.csproj,,
+csharp:csproj:backend/i18n/translator/Squidex.Translator/Squidex.Translator.csproj,,
+csharp:csproj:backend/src/Migrations/Migrations.csproj,,
+csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj,,
+csharp:csproj:backend/src/Squidex.Data.MongoDb/Squidex.Data.MongoDb.csproj,,
+csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Model/Squidex.Domain.Apps.Core.Model.csproj,,
+csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Operations/Squidex.Domain.Apps.Core.Operations.csproj,,
+csharp:csproj:backend/src/Squidex.Domain.Apps.Entities/Squidex.Domain.Apps.Entities.csproj,,
+csharp:csproj:backend/src/Squidex.Domain.Apps.Events/Squidex.Domain.Apps.Events.csproj,,
+csharp:csproj:backend/src/Squidex.Domain.Users/Squidex.Domain.Users.csproj,,
+csharp:csproj:backend/src/Squidex.Infrastructure/Squidex.Infrastructure.csproj,,
+csharp:csproj:backend/src/Squidex.Shared/Squidex.Shared.csproj,,
+csharp:csproj:backend/src/Squidex.Web/Squidex.Web.csproj,,
+csharp:csproj:backend/src/Squidex/Squidex.csproj,,
+csharp:csproj:backend/tools/GenerateLanguages/GenerateLanguages.csproj,,
+csharp:csproj:frontend/generator/Generator/Generator.csproj,,
+csharp:csproj:tools/TestSuite/TestSuite.ApiTests/TestSuite.ApiTests.csproj,,
+csharp:csproj:tools/TestSuite/TestSuite.LoadTests/TestSuite.LoadTests.csproj,,
+csharp:csproj:tools/TestSuite/TestSuite.Shared/TestSuite.Shared.csproj,,

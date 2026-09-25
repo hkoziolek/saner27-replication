@@ -1,0 +1,20 @@
+{
+  "alias": {},
+  "description": "add new build target csharp:csproj:src/AnonMutant4/AnonMutant4.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [
+      "csharp:csproj:src/AnonMutant4/AnonMutant4.csproj"
+    ],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\AnonMutant4\\AnonMutant4.csproj"
+  ],
+  "id": "orchardcore-add_target-04",
+  "operator": "add_target",
+  "system": "orchardcore"
+}

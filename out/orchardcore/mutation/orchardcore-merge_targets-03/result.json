@@ -1,0 +1,221 @@
+{
+  "advisory": false,
+  "coverage": 1.0,
+  "diff": {
+    "coverage_gap_edges": [],
+    "coverage_gap_targets": [],
+    "first_run": false,
+    "new_edges": [
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Module.Targets/OrchardCore.Module.Targets.csproj"
+      ]
+    ],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Flows/OrchardCore.Flows.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Menu/OrchardCore.Menu.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Notifications/OrchardCore.Notifications.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Themes/OrchardCore.Themes.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Users/OrchardCore.Users.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Admin.Abstractions/OrchardCore.Admin.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.ContentManagement/OrchardCore.ContentManagement.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.DisplayManagement/OrchardCore.DisplayManagement.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.ResourceManagement/OrchardCore.ResourceManagement.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Theme.Targets/OrchardCore.Theme.Targets.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Users.Abstractions/OrchardCore.Users.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj",
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj"
+    ],
+    "suspected_renames": [],
+    "suspicious": []
+  },
+  "score": {
+    "advisory": false,
+    "attributed_violations": [],
+    "coverage": 1.0,
+    "coverage_gaps_in_scope": {
+      "coverage_gap_edges": [],
+      "coverage_gap_targets": []
+    },
+    "detected": true,
+    "fn": [],
+    "fn_count": 0,
+    "fp": [],
+    "fp_count": 0,
+    "scored": {
+      "layering_violations": [],
+      "new_edges": [
+        [
+          "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj",
+          "csharp:csproj:src/OrchardCore/OrchardCore.Module.Targets/OrchardCore.Module.Targets.csproj"
+        ]
+      ],
+      "new_targets": [],
+      "removed_edges": [
+        [
+          "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+          "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Flows/OrchardCore.Flows.csproj"
+        ],
+        [
+          "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+          "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Menu/OrchardCore.Menu.csproj"
+        ],
+        [
+          "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+          "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Notifications/OrchardCore.Notifications.csproj"
+        ],
+        [
+          "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+          "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Themes/OrchardCore.Themes.csproj"
+        ],
+        [
+          "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+          "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Users/OrchardCore.Users.csproj"
+        ],
+        [
+          "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+          "csharp:csproj:src/OrchardCore/OrchardCore.Admin.Abstractions/OrchardCore.Admin.Abstractions.csproj"
+        ],
+        [
+          "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+          "csharp:csproj:src/OrchardCore/OrchardCore.ContentManagement/OrchardCore.ContentManagement.csproj"
+        ],
+        [
+          "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+          "csharp:csproj:src/OrchardCore/OrchardCore.DisplayManagement/OrchardCore.DisplayManagement.csproj"
+        ],
+        [
+          "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+          "csharp:csproj:src/OrchardCore/OrchardCore.ResourceManagement/OrchardCore.ResourceManagement.csproj"
+        ],
+        [
+          "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+          "csharp:csproj:src/OrchardCore/OrchardCore.Theme.Targets/OrchardCore.Theme.Targets.csproj"
+        ],
+        [
+          "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+          "csharp:csproj:src/OrchardCore/OrchardCore.Users.Abstractions/OrchardCore.Users.Abstractions.csproj"
+        ],
+        [
+          "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj",
+          "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj"
+        ]
+      ],
+      "removed_targets": [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj"
+      ],
+      "suspected_renames": []
+    },
+    "tp": [
+      [
+        "new_edge",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Module.Targets/OrchardCore.Module.Targets.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Flows/OrchardCore.Flows.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Menu/OrchardCore.Menu.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Notifications/OrchardCore.Notifications.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Themes/OrchardCore.Themes.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Users/OrchardCore.Users.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Admin.Abstractions/OrchardCore.Admin.Abstractions.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.ContentManagement/OrchardCore.ContentManagement.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.DisplayManagement/OrchardCore.DisplayManagement.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.ResourceManagement/OrchardCore.ResourceManagement.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Theme.Targets/OrchardCore.Theme.Targets.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Users.Abstractions/OrchardCore.Users.Abstractions.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj",
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj"
+      ],
+      [
+        "removed_target",
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj"
+      ]
+    ],
+    "tp_count": 14
+  }
+}

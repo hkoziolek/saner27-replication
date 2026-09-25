@@ -1,0 +1,37 @@
+{
+  "agreement": {
+    "a2a": 93.94,
+    "ari": 0.747,
+    "chance_agreement": 0.008,
+    "kappa": 0.151,
+    "kappa_aligned": 0.824,
+    "labels_a": 10,
+    "labels_b": 13,
+    "labels_shared": 3,
+    "mojofm_ab": 81.25,
+    "mojofm_ba": 80.0,
+    "mojofm_mean": 80.62,
+    "n_common": 19,
+    "nmi": 0.943,
+    "pair_agreement": 0.971,
+    "raw_agreement": 0.158,
+    "raw_agreement_aligned": 0.842
+  },
+  "clusters": {
+    "a": 10,
+    "b": 13
+  },
+  "entities": {
+    "a": 19,
+    "b": 19,
+    "only_a": 0,
+    "only_b": 0
+  },
+  "flag": "kappa < 0.6 — lower-confidence reference (eval §5.3/§10a.6); reconcile harder or report the disagreement itself",
+  "flag_interpretation": "VOCABULARY-INDUCED: the raters share 3 label(s), so the raw κ measures wording, not structure. Aligning the two label vocabularies optimally gives κ=0.824 (>= 0.6), ARI=0.747, pair agreement=0.971 — the raters agree substantively. The flag rule is applied as written in the plan and explained, not lifted.",
+  "kind": "rq9-ceiling (eval §10a.4 human-ceiling row)",
+  "raters": {
+    "a": "R-A",
+    "b": "R-B"
+  }
+}

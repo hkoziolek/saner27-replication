@@ -1,0 +1,26 @@
+{
+  "faithful_matches_posthoc": true,
+  "layers": {
+    "+L2": {
+      "faithful_edges": 30,
+      "match": true,
+      "posthoc_edges": 30
+    },
+    "+L3": {
+      "faithful_edges": 30,
+      "match": true,
+      "posthoc_edges": 30
+    },
+    "L0": {
+      "faithful_edges": 16,
+      "match": true,
+      "posthoc_edges": 16
+    },
+    "L0+L1": {
+      "faithful_edges": 16,
+      "match": true,
+      "posthoc_edges": 16
+    }
+  },
+  "system": "nopcommerce"
+}

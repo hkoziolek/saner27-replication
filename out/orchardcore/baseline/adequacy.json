@@ -1,0 +1,17 @@
+{
+  "edges": 1963,
+  "entities": 226,
+  "fidelity_corpus": true,
+  "granularity": "target",
+  "intra_edges": 0,
+  "intra_share": 0.0,
+  "language": "cs",
+  "largest_share": 0.0044,
+  "mq": 0.0,
+  "mq_per_unit": 0.0,
+  "schema": "adequacy/1",
+  "source": "a2-rungs/none.rsf",
+  "system": "orchardcore",
+  "unit_ratio": 1.0,
+  "units": 226
+}

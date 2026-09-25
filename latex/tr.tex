@@ -1,0 +1,434 @@
+%% Companion technical report to the SANER 2027 submission (response plan section 13, 2026-09-13).
+%%
+%% WHAT THIS IS. The paper is self-contained on every claim; this report carries the procedures,
+%% sensitivity analyses, and per-system tables the paper cites as "TR section N" (the \trX macros
+%% in main.tex -- keep the SECTION ORDER here in sync with them). It is built from the SAME
+%% generated/macros.tex and tables/*.tex as the paper, so no number is retyped, and it reproduces
+%% every paper table so its captions' cross-references resolve.
+%%
+%% ANONYMITY. Shipped anonymized inside the reviewer mirror package (the CFP forbids a public
+%% non-anonymized version during the review window); the named version with the real tool name
+%% follows the 2026-12-01 notification under this distinct title. Same \ifanonymous switch as the
+%% paper. BUILD: `make tr` (latexmk) in this directory.
+
+\documentclass[10pt,conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+\graphicspath{{figures/}}
+
+\newif\ifanonymous
+\anonymoustrue
+
+\ifanonymous
+  \newcommand{\tool}{\textsc{Anon}}
+  \newcommand{\cli}{\texttt{arch}}
+\else
+  \newcommand{\tool}{\textsc{Anon}}
+  \newcommand{\cli}{\texttt{arch}}
+\fi
+\newcommand{\TR}{this report}
+\newcommand{\paper}{the paper}
+
+\input{generated/macros}
+
+\begin{document}
+
+\ifanonymous
+  \title{Build-Graph-First Architecture Recovery on Nine Open-Source Systems and One Industrial
+  System: Procedures, Sensitivity Analyses, and Per-System Tables}
+\else
+  \title{Anon on Nine Open-Source Systems and One Industrial System: Procedures, Sensitivity
+  Analyses, and Per-System Tables (Technical Report)}
+\fi
+
+\ifanonymous
+  \author{\IEEEauthorblockN{Anonymous Author(s)}
+  \IEEEauthorblockA{Affiliation withheld for double-anonymous review}}
+\else
+  \author{\IEEEauthorblockN{[anonymized] \textit{et al.}}
+  \IEEEauthorblockA{(affiliations TBD)}}
+\fi
+
+\maketitle
+
+\begin{abstract}
+This technical report accompanies an empirical evaluation of a build-graph-first, deterministic
+architecture-recovery pipeline for C/C++ and C\#\ systems. The paper is self-contained; this
+report holds what its page budget could not: the per-build-idiom extraction rules, what every
+baseline technique receives, the full inferential results, the sensitivity analysis of the
+reference-free build-graph diagnostic, published scores on shared references, ablation and drift
+detail per operator and evidence-loss mode, the per-system performance table, and the
+rater-agreement and curation-effort detail of the blind-curation study. Every number here is a
+generated macro or table from the same analysis pipeline as the paper; nothing is retyped.
+\end{abstract}
+
+\section{Scope and how to read this report}
+\label{sec:scope}\label{sec:design}\label{sec:corpus}\label{sec:baselines}   % the shared terms paragraph and the table captions cite these; in the TR all point here
+
+Section numbers below are the ones the paper cites (``TR \S$n$''). The terminology is the
+paper's, restated below; the fidelity tables of the paper are reproduced in
+\S\ref{sec:papertables} so that cross-references resolve. Nothing in this report is needed to
+follow a claim in the paper; everything here is needed to reproduce or scrutinise one.
+
+\input{shared/terms}
+
+\section{Evidence extraction per build idiom}
+\label{sec:tr-extract}
+
+\begin{figure}[t]
+  \centering
+  \resizebox{\columnwidth}{!}{\input{figures-hand/model-example}}
+  \caption{One generated model with its evidence: the container view generated for GNU bash 4.2,
+  transcribed from the emitted DSL. Twelve containers and all seventeen container-level
+  relationships; line weight shows evidence strength (thick: declared link corroborated by
+  includes; solid: declared only; dotted: includes without a declaration), dashed boxes are
+  targets no rule claimed. Every arrow cites evidence; callouts 1--3 quote three verbatim,
+  including a Makefile link no source file exercises (2).}
+  \label{fig:model}
+\end{figure}
+
+The pipeline distinguishes evaluated from static extraction, and the difference bounds what a
+consistently extracted graph can miss. Figure~\ref{fig:model} shows what the extracted evidence
+becomes after curation and generation: every arrow of the generated bash model is traceable to
+the build-file line or include that produced it.
+
+\paragraph{CMake (evaluated).} The project is configured once with the Ninja generator and
+default options unless a preset or flags are given; the per-system flags are in the artifact. The
+pipeline then reads CMake's File API codemodel of that configured tree: targets of every type
+(executables, static, shared, object, and interface libraries; utility targets typed unknown), the
+link dependencies as CMake evaluated them for that configuration, generator expressions and
+conditions included, and the \texttt{PUBLIC}/\texttt{PRIVATE} visibility of each edge from CMake's
+own graphviz output, against which the codemodel edges are cross-checked. Alias targets collapse
+onto their real target, imported and external targets are excluded, and a target whose generated
+sources are absent is tagged partial.
+
+\paragraph{.NET (static L0, evaluated L2).} The L0 layer is a static parse of \texttt{.sln} and
+\texttt{.csproj} files that takes every \texttt{<ProjectReference>} regardless of MSBuild
+conditions and follows no import; the Roslyn layer then loads the solution through
+\texttt{MSBuildWorkspace}, an evaluated view, and contributes symbol references and the per-document
+owning project. A project that fails to restore contributes no symbol edges: the graph is then
+honestly partial and the coverage record says so.
+
+\paragraph{MSBuild C++ and automake (static).} \texttt{.vcxproj} files and automake or
+hand-written \texttt{Makefile.in} are parsed statically: imports, property expansion, and
+conditionals are not evaluated, so a conditional reference is over-approximated and one reachable
+only through an import is missed. The automake model also supplies target ownership for Doxygen
+attribution when CMake is absent.
+
+\paragraph{Layers and coverage.} Declared dependencies form evidence layer L0; package references
+form L1; L2 adds the \texttt{\#include} graph (Doxygen XML or \texttt{clang-scan-deps}) and Roslyn
+symbol references; L3 is reserved for fine-grained evidence (a P/Invoke interop extractor and a
+deployment-descriptor extractor exist but are not evaluated). Every extractor writes an independent
+JSON fragment and degrades gracefully: without its toolchain it records a coverage warning and an
+empty fragment. Per-layer coverage travels with the facts; its L0 denominator is the first-party
+target set, full or near-full on every corpus system (per run in the artifact). The extracted
+graph is not validated against an independent evaluated source (paper, \S{}VII); a spot check
+against \texttt{cmake --graphviz} is future work.
+
+\section{Baseline inputs, entity ownership, and the LLM runner}
+\label{sec:tr-inputs}
+
+One dependency graph per system, exported once as RSF at the scored granularity, feeds every
+technique (paper, \S{}IV-B). This section records the assignment rules the paper summarises.
+
+\paragraph{Owning build target.} The pipeline's autonomous rows know each entity's owning build
+target, which no baseline receives in any form. A file belongs to the CMake target whose source
+list names it, else to the target owning the longest directory prefix (Makefile ownership
+analogously); a file two targets list goes to the later one in the codemodel; files no target
+claims stay unclustered and count against the floor. For ITK the unclustered files are mostly
+headers outside any source list. Per-system counts of clustered and unclustered entities are in
+the artifact's graph sidecars (\texttt{generated/graph/}).
+
+\paragraph{What each technique receives.} At project granularity (C\#) the graph holds every
+relationship kind between first-party projects (project references, symbol uses, interop) as one
+unweighted edge set; at file granularity (C++) it holds the \texttt{\#include} graph, and declared
+link edges between targets are never projected onto files. ACDC and \texttt{cc} see the edges
+only; \texttt{dir} sees entity paths; WCA and LIMBO also receive $k$, the reference cluster count,
+as their stopping point; ARC receives $k$ and each entity's source text; the LLM receives the
+graph, one line of repository metadata, and $k$.
+
+\paragraph{LLM-recovery runner.} A reasoning-tier model (\texttt{gpt-5.6-sol} on Azure AI
+Foundry, pinned by identifier) receives the exported graph, the metadata line, and $k$ under one
+prompt asking for a JSON entity-to-cluster map, at default sampling (the model rejects a
+temperature override), under a 180\,k input-token budget above which the runner refuses (ITK
+exceeds it). Five reruns per system on \rqTwoLlmSystemsRan{} systems, at most
+\$\rqTwoLlmCostMaxUsd{} per system at list price, \$\rqTwoLlmCostTotalUsd{} in total; the mean is
+reported in the paper's Table~\ref{tab:rq2} with the rerun standard deviation, and the prompt,
+every reply, and the per-rerun cluster counts are in the artifact.
+
+\section{Metrics and inferential procedures}
+\label{sec:tr-stats}
+
+\paragraph{Partition metrics.} MoJoFM~\cite{mojofm} is the normalised move-and-join distance;
+a2a~\cite{le2015a2a} additionally charges for adding, removing, and moving clusters; ARI is the
+chance-corrected adjusted Rand index ($\times$100), added post hoc at a reviewer's request because
+MoJoFM's cheap joins reward over-split partitions and a2a's range is
+compressed~\cite{zhang2023sarif}. Beside ARI we print the \emph{nested share}, the fraction of a
+partition's clusters lying entirely inside one reference cluster, which tells over-splitting from
+misgrouping. c2c and the adjusted a2a of Zhang et al.\ are not reported (the latter has no released
+implementation). \emph{Container-edge F1} scores the lifted container edges against the reference's
+edge set, the dependency graph projected through the reference's own clusters after a greedy
+maximum-overlap label alignment.
+
+\paragraph{Inter-rater agreement.} Reported label-free, since independent raters name clusters
+differently and a raw label-match $\kappa$ then measures wording: ARI, normalized mutual
+information (NMI), and Cohen's $\kappa$ after optimal (Hungarian) label matching, with the raw
+$\kappa$ beside them because the plan's flag rule (raw $\kappa<0.6$ marks a low-confidence
+reference) is applied as written.
+
+\paragraph{RQ2 inferential tests (autonomous rows only).} A Friedman omnibus on MoJoFM and a2a
+over the all-common techniques (ACDC, WCA, LIMBO, \texttt{dir}, \texttt{cc}) with the floor in
+place of the curated row does not reject equality: MoJoFM $p=\rqTwoFriedmanFloorP$, a2a
+$p=\rqTwoFriedmanFloorAtoAP$, $n=\rqTwoFriedmanFloorN$ systems on which every technique completed,
+ARC excluded. Before Squidex was admitted to the corpus the same omnibus gave
+$p=\rqTwoFriedmanFloorPPreExtension$. With the propose draft in place of the curated row:
+$p=\rqTwoFriedmanProposeP$ (MoJoFM) and \rqTwoFriedmanProposeAtoAP{} (a2a). Post hoc, neither row
+differs from any technique under Holm-corrected pairwise Wilcoxon signed-rank tests or under
+Nemenyi with critical difference \rqTwoCriticalDifference{}. The curated row enters no inferential
+test; its omnibus, $p=\rqTwoFriedmanP$, differing from \rqTwoPosthocDiffers{} after correction,
+is descriptive of assisted against unassisted recovery, since three of its C\#\ members saw the
+reference.
+
+\paragraph{Other tests.} Paired on/off comparisons (RQ3) use Wilcoxon signed-rank with the
+matched-pairs rank-biserial $r$; Cliff's $\delta$ is reserved for the one between-group contrast
+(C++ vs.\ C\#\ floor); detection rates get Wilson intervals, the stopping rules exact McNemar, and
+the adequacy diagnostic Spearman's $\rho$ with a bootstrap interval over
+\rqAdequacyRhoBootReps{} resamples. With $N\le 6$ paired systems the signed-rank $p$ cannot fall
+below $0.0625$ however large the effect. Every statistic is a generated macro from the raw run
+outputs (\texttt{analysis/stats.py}).
+
+\section{The reference-free diagnostic: sensitivity}
+\label{sec:tr-diagnostic}
+
+\begin{figure}[t]
+  \centering
+  \resizebox{\columnwidth}{!}{\input{figures/two_regime.pgf}}
+  \caption{The paper's two-regime figure: the autonomous floor's MoJoFM against the build graph's
+  unit ratio. Dashed: the post-hoc rule's ratio threshold (\rqAdequacyRatioMax{}) and the recovery
+  threshold (\rqTwoRecoveredMin{}). Filled markers satisfy the rule; libxml2 fails it through the
+  largest-unit-share clause.}
+  \label{fig:regimes}
+\end{figure}
+
+The floor's \emph{unit ratio} counts the build units that own at least one scored entity over the
+scored entities (a target owning no scored file does not count, which is why the ratio lies below
+the target counts of Table~\ref{tab:rq1}); its \emph{largest-unit share} is the fraction of scored
+entities in the largest unit; TurboMQ is computed over the exported graph. Across the
+\rqAdequacyN{} scored systems the unit ratio correlates with the floor's MoJoFM at Spearman
+$\rho=\rqAdequacyRhoRatioMoJo{}$ (bootstrap 95\,\% interval
+$[\rqAdequacyRhoCiLo{}, \rqAdequacyRhoCiHi{}]$ over \rqAdequacyRhoBootReps{} resamples;
+$\rqAdequacyRhoRatioAtoA{}$ with a2a) and TurboMQ at $\rho=\rqAdequacyRhoMqMoJo{}$.
+
+The post-hoc rule ``unit ratio $\le\rqAdequacyRatioMax{}$ and largest-unit share
+$\le\rqAdequacyLargestMax{}$'' declares \rqAdequacyAdequateCount{} systems build-modular (ITK,
+abseil, OpenCV, bash: ratios up to \rqAdequacyCppRatioMax{}, largest unit up to
+\rqAdequacyCppLargestMax{}) and \rqAdequacyInadequateCount{} not (every C\#\ system at ratio 1.0;
+libxml2, whose one library holds \rqAdequacyLibxmlLargestShare{} of the files), and agrees with a
+floor MoJoFM of at least \rqTwoRecoveredMin{} on \rqAdequacyRuleAgreement{} systems
+(Fig.~\ref{fig:regimes}).
+
+\paragraph{Threshold intervals.} The ratio threshold can sit anywhere in
+$[\rqAdequacyRatioIntervalLo{}, \rqAdequacyRatioIntervalHi{})$ without changing any call. Without
+the largest-unit clause, the ratio alone separates the corpus only inside
+$[\rqAdequacyRatioIntervalLo{}, \rqAdequacyRatioOnlyIntervalHi{})$: libxml2 sits at a low ratio
+with one dominant library, which is what the second clause exists for.
+
+\paragraph{Leave-one-system-out.} Re-selecting both thresholds with each system held out predicts
+\rqAdequacyLooCorrect{} systems correctly and misses \rqAdequacyLooWrong{}, the one system the
+largest-unit clause exists for: no training fold selects that clause, so the clause is a
+one-system clause and the rule is a candidate diagnostic, not a validated predictor. The rule was
+chosen after seeing these systems, which co-vary in language, build idiom, granularity, and
+reference provenance.
+
+\paragraph{Tier-B calls.} Of the \rqAdequacyTierBSystems{} unreferenced Tier-B systems the rule
+calls none build-modular: Serilog and Terminal sit at ratio 1.0, and fmt (\rqAdequacyFmtUnits{}
+CMake targets over \rqAdequacyFmtEntities{} files, ratio \rqAdequacyFmtRatio{}) is the
+project-coarse C++ case the scored corpus lacks. These calls are predictions the extension corpus
+can test once references exist.
+
+\section{Published scores on shared references}
+\label{sec:tr-published}
+
+SARIF~\cite{zhang2023sarif} scored bash 4.2, ITK 4.5.2, and libxml2 2.4.22 against the references
+and versions used in the paper: the libxml2 reference is SARIF's own industry-labelled ground
+truth, and bash and ITK are the Lutellier et al.\ ground truths SARIF also scores against. Its
+published MoJoFM/a2a and those of FCA~\cite{teymourian2022fca}, which SARIF ran as a baseline, can
+therefore be read beside Table~\ref{tab:rq2}, descriptively only, since they score the authors'
+own entity set rather than our all-common projection:
+
+\begin{center}
+\footnotesize\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}l rr rr rr@{}}
+\toprule
+ & \multicolumn{2}{c}{bash} & \multicolumn{2}{c}{ITK} & \multicolumn{2}{c}{libxml2} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Published (own entity set) & MoJo & a2a & MoJo & a2a & MoJo & a2a \\
+\midrule
+SARIF~\cite{zhang2023sarif}, Table 4 & 70 & 87 & 68 & 86 & 49 & 89 \\
+FCA, as run in~\cite{zhang2023sarif} & 41 & 80 & 44 & 73 & 37 & 84 \\
+ACDC, as run in~\cite{zhang2023sarif} & 50 & 81 & 40 & 73 & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+On bash and ITK our autonomous floor sits above both SARIF and FCA, and SARIF's own ACDC run lies
+below our ACDC row, so our inputs do not handicap the classical baselines. On libxml2 SARIF's
+fusion of code text and folder structure beats every structural partition we score, and only the
+LLM baseline scores higher: one library target gives the build graph nothing to report there.
+SARIF's only release is a closed Linux binary for C/C++/Java via Depends, without C\#\ support and
+without a licence; FCA exists as one unlicensed MATLAB script. Neither was run.
+
+\section{Ablation detail}
+\label{sec:tr-ablation}
+
+\paragraph{Evidence layers (A1).} Capping the ladder at L0 already yields most container edges;
+the symbol layer (L2) adds the remainder and L1 (package references) none at container altitude.
+The post-hoc layer filter agrees with the engine's own evidence ceiling on all
+\rqThreeSevenSystemsChecked{} systems, i.e.\ no container edge exists whose only evidence is a
+layer that was capped away. The per-layer container-edge counts are the A1 columns of
+Table~\ref{tab:rq1}.
+
+\paragraph{Weight threshold (A3) and visibility down-weighting (A4).} Sweeping the significance
+threshold barely moves the edge set at the operating point (3), because declared edges clear it on
+their base weight and the include layer's cap of 10 keeps chatty headers from dominating; A4
+(down-weighting \texttt{PRIVATE} link edges) is inert on every system, since visibility changes
+weight but no edge crosses the threshold as a result.
+
+\paragraph{Never-drop-declared (A5).} At the default threshold the rule saves
+\rqThreeAfiveOperatingEdgesSaved{} edges on \rqThreeAfiveOperatingSystemsChecked{} systems. At
+threshold 8 a scalar filter removes \rqThreeAfiveEshopEdgesSaved{} of eShop's container edges;
+edge counts move on \rqThreeAfiveWilcoxonN{} systems (paired $r=\rqThreeAfiveRankBiserial{}$,
+$p=\rqThreeAfiveWilcoxonP{}$), and container-edge recall against the reference falls by
+\rqThreeAfiveRefRecallDropList{} on the \rqThreeAfiveRefRecallSystems{} systems where it is scored.
+
+\paragraph{LLM suggestions and naming (A6, A7).} Handed the same graph, the LLM baseline beats the
+curated model on \rqThreeSixLlmGtPipelineList{}; the deterministic pipeline matches or beats it on
+\rqThreeSixPipelineGeLlm{} of the \rqThreeSixLlmSystemsRan{} systems it completed (median LLM
+MoJoFM \rqThreeSixLlmMedianMoJo{}); its recovery varies across reruns on Squidex (Table~\ref{tab:rq2}
+gives the dispersion), and ITK's file graph exceeded the single-prompt input budget, so no call was made. An adversarial naming provider that renames every element
+perturbs \rqThreeSevenMaxStructuralDelta{} relationships on \rqThreeSevenSystemsChecked{} systems.
+
+\section{Drift arms}
+\label{sec:tr-drift}
+\input{tables/rq6_drift}
+\input{tables/rq6_combined}
+\input{tables/rq6_history}
+
+\paragraph{Seeded mutations (Table~\ref{tab:rq6}).} \rqSixMutationCount{} labelled changes over
+\rqSixOperatorCount{} operators were injected into the build files of checkout copies of
+\rqSixMutationSystems{} systems across three build idioms; the whole pipeline ran on each and the
+report was scored against the label. A true positive is one drift-report finding (a vanished or
+new target, edge, rename, or violation) that the label expects, so a removed target yields several
+findings. Precision \rqSixPrecision{}, recall \rqSixRecall{}, \rqSixFpPerPr{} false findings per
+simulated pull request, rename accuracy \rqSixRenameAccuracy{}, and a one-line alias pin silences
+the drift in \rqSixAliasSurvival{} pinned reruns. Splits and file moves between targets are not
+among the operators.
+
+\paragraph{Evidence degradation alone.} On the \rqSixDegradationSystems{} systems scored before
+Squidex joined, inducing degradation (semantic toolchain lost; 10\,\% and 30\,\% of targets starved
+of L0 evidence; build-graph extractor lost) produces \rqSixWouldBeFalse{} would-be-false
+``disappeared'' findings, of which the stopping rules reclassify \rqSixSuppressionRate{} as
+labelled coverage gaps; a coverage-naive differ reports every one as change (exact McNemar
+$p\rqSixMcNemarP$).
+
+\paragraph{Change and evidence loss at once (Table~\ref{tab:rq6b}).} The \rqSixCombMutations{}
+mutations were replayed on \rqSixCombSystems{} systems with each degradation mode induced on the
+mutated run, plus an adversarial mode that starves exactly the targets the mutation touches; each
+of the \rqSixCombFindings{} expected findings was classified as named drift, labelled coverage gap,
+visible only through the run's advisory downgrade, or silent. Under targeted starvation
+\rqSixCombStarveMutatedDrift{} are drift, \rqSixCombStarveMutatedGap{} gaps, and
+\rqSixCombStarveMutatedAdvisory{} advisory only. With the build-graph extractor lost entirely, the
+first run reported an added or renamed target nowhere and was not even advisory
+(\rqSixCombPrefixSilentTotal{} silent findings, the new targets of
+\texttt{\rqSixCombPrefixSilentOps{}} mutations), because an empty first-party target set counted as
+fully covered. The convention was changed (nothing covered, advisory) and the arm re-run:
+\rqSixCombSilentTotal{} silent findings remain, the \rqSixCombLoseLZeroAdvisory{} former ones are
+advisory, and no mode produced a false finding. The artifact keeps both runs
+(\texttt{combined-prefix.json} is the pre-fix one).
+
+\paragraph{Real history (Table~\ref{tab:rq6hist}).} \rqSixHistPairs{} consecutive release pairs of
+\rqSixHistSystems{} systems, fixed in advance rather than selected by changelog, under the
+committed rules held constant across each pair: \rqSixHistCommits{} commits,
+\rqSixHistBuildCommits{} touching build files, \rqSixHistFindings{} findings,
+\rqSixHistCoverageGaps{} coverage gaps; \rqSixHistPairsZero{} pairs with build-file churn produced
+none. Of the \rqSixHistNewTargets{} first-party targets the releases added, the rules left
+\rqSixHistNewUnmapped{} unmapped. Two raters labelled each finding independently (raw
+agreement \rqSixHistLabelsAgree{}, pooled Cohen's $\kappa$ \rqSixHistLabelsKappa{}; both called
+\rqSixHistArchitectural{} architectural, \rqSixHistNonArchitectural{} non-architectural,
+\rqSixHistNoise{} extraction noise; the one disagreement is an added code-generator project
+that one rater read as tooling rather than product architecture); the rater runbook and
+worksheets are in the artifact.
+
+\section{Performance per system}
+\label{sec:tr-perf}
+\input{tables/rq7_perf}
+
+Table~\ref{tab:rq7} gives the cold and warm end-to-end wall-clock and the peak RSS of the whole
+process tree per system, ordered by first-party KLOC, that the paper summarises: cold within the
+30-minute budget on \rqSevenColdBudget{} of \rqSevenSystems{} systems, warm within 3 minutes on
+\rqSevenWarmBudget{}, median speedup \rqSevenMedianSpeedup$\times$, log--log slope
+\rqSevenScalingSlope{} against KLOC, peak RSS \rqSevenMaxPeakRssGb{}\,GB. ITK's cold run takes
+\rqSevenItkColdMin{} minutes, \rqSevenItkDoxygenSharePct{}\,\% of it in Doxygen's XML pass,
+against \rqSevenItkWarmMin{} warm; the L0-only run governance needs would take about
+\rqSevenItkLZeroImpliedMin{} minutes (an estimate from the per-stage timings, not a measurement).
+
+\section{Blind curation: rater agreement and effort}
+\label{sec:tr-curation}
+\input{tables/rq9_curation}
+\input{tables/rq9_effort}
+
+\paragraph{Rater agreement.} The plan's raw-$\kappa$ flag fired on both systems
+(\rqNineEshopKappa{}, \rqNineSquidexKappa{}). Raw $\kappa$ scores exact label match, and the eShop
+raters shared \rqNineEshopLabelsShared{} labels, which forces $\kappa=0$ arithmetically.
+Label-free, eShop's raters agree (ARI \rqNineEshopAri{}, NMI \rqNineEshopNmi{}, aligned $\kappa$
+\rqNineEshopKappaAligned{}) and Squidex's disagree (ARI \rqNineSquidexAri{}, NMI
+\rqNineSquidexNmi{}, aligned $\kappa$ \rqNineSquidexKappaAligned{}); on both systems not one rater
+cluster cuts across a reference boundary (\rqNineEshopRaterConflicts{} and
+\rqNineSquidexRaterConflicts{} conflicts), so the partitions nest and every disagreement is about
+altitude. On eShop both raters, who never saw the committed reference, reach at least
+\rqNineEshopRaterRefMoJoMin{} MoJoFM against it (aligned
+$\kappa\ge$\rqNineEshopRaterRefKappaAlignedMin{}, NMI $\ge$\rqNineEshopRaterRefNmiMin{}). The
+committed reference is the GT-doc transcription the plan named as the scored reference before any
+curator score was computed; the raters' consensus (\rqNineSquidexConsensusClusters{} clusters on
+Squidex; a coarser altitude on eShop) is a sensitivity row, not a second reference; the eShop
+curator scores \rqNineEshopCuratorVsConsensusMoJo{} against it.
+
+\paragraph{Effort (Table~\ref{tab:rq9effort}).} Self-reported wall-clock, editor operations from
+the edit trace, rule lines, and groups per curation: \rqNineEshopMinutes{} minutes,
+\rqNineEshopOps{} operations, \rqNineEshopRuleLines{} rule lines for eShop's first curator;
+\rqNineSquidexMinutes{} minutes, \rqNineSquidexOps{} operations, \rqNineSquidexRuleLines{} lines
+for Squidex; the second eShop curator (\rqNineEshopSecondCuratorCode{})
+\rqNineEshopSecondCuratorMinutes{} minutes over two sittings, scoring
+\rqNineEshopSecondCuratorMoJo{} MoJoFM, a2a \rqNineEshopSecondCuratorAtoA{}, edge-F1
+\rqNineEshopSecondCuratorEdgeFone{}, \rqNineEshopCuratorMoJoSpread{} points below the first; the
+two curators agree at aligned $\kappa$ \rqNineEshopCuratorPairKappaAligned{} (ARI
+\rqNineEshopCuratorPairAri{}, pairwise MoJoFM \rqNineEshopCuratorPairMoJo{}). No curator kept a
+group from the \cli~\texttt{propose} draft (\rqNineEshopProposeDerivedPct\% and
+\rqNineSquidexProposeDerivedPct\%). The edit traces, attestations, and frozen rules are tracked in
+the artifact under \texttt{references/<system>/blind-curation/}.
+
+\section{Fidelity tables of the paper}
+\label{sec:papertables}
+\input{tables/rq1_fidelity}
+\input{tables/rq2_baselines}
+\input{tables/rq2_clusters}
+
+Tables~\ref{tab:rq1}, \ref{tab:rq2}, and \ref{tab:rq2k} are the paper's Tables I--IV, reproduced
+from the same generated files so that the captions above can refer to them. The per-system
+fidelity CSV (\texttt{fidelity-by-system.csv}) in the artifact carries the same numbers with the
+all-common entity counts.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

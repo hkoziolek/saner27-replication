@@ -1,0 +1,148 @@
+{
+  "advisory": false,
+  "counts": {
+    "coverage_gap_edges": 0,
+    "coverage_gap_targets": 0,
+    "drift_total": 8,
+    "layering_violations": 0,
+    "new_edges": 6,
+    "new_targets": 2,
+    "removed_edges": 0,
+    "removed_targets": 0,
+    "suspected_renames": 0
+  },
+  "coverage": 1.0,
+  "diff": {
+    "coverage_gap_edges": [],
+    "coverage_gap_targets": [],
+    "first_run": false,
+    "new_edges": [
+      [
+        "csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj",
+        "csharp:csproj:backend/src/Squidex.Domain.Apps.Entities/Squidex.Domain.Apps.Entities.csproj"
+      ],
+      [
+        "csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj",
+        "csharp:csproj:backend/src/Squidex.Domain.Users/Squidex.Domain.Users.csproj"
+      ],
+      [
+        "csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj",
+        "csharp:csproj:backend/src/Squidex.Infrastructure/Squidex.Infrastructure.csproj"
+      ],
+      [
+        "csharp:csproj:backend/src/Squidex/Squidex.csproj",
+        "csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj"
+      ],
+      [
+        "csharp:csproj:backend/tests/Squidex.Data.Tests/Squidex.Data.Tests.csproj",
+        "csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj"
+      ],
+      [
+        "csharp:csproj:backend/tests/Squidex.Data.Tests/Squidex.Data.Tests.csproj",
+        "csharp:csproj:backend/tests/Squidex.Data.Tests.CodeGenerator/Squidex.Data.Tests.CodeGenerator.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj",
+      "csharp:csproj:backend/tests/Squidex.Data.Tests.CodeGenerator/Squidex.Data.Tests.CodeGenerator.csproj"
+    ],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": [],
+    "suspicious": []
+  },
+  "findings": {
+    "coverage_gap_edges": [],
+    "coverage_gap_targets": [],
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj",
+        "csharp:csproj:backend/src/Squidex.Domain.Apps.Entities/Squidex.Domain.Apps.Entities.csproj"
+      ],
+      [
+        "csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj",
+        "csharp:csproj:backend/src/Squidex.Domain.Users/Squidex.Domain.Users.csproj"
+      ],
+      [
+        "csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj",
+        "csharp:csproj:backend/src/Squidex.Infrastructure/Squidex.Infrastructure.csproj"
+      ],
+      [
+        "csharp:csproj:backend/src/Squidex/Squidex.csproj",
+        "csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj"
+      ],
+      [
+        "csharp:csproj:backend/tests/Squidex.Data.Tests/Squidex.Data.Tests.csproj",
+        "csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj"
+      ],
+      [
+        "csharp:csproj:backend/tests/Squidex.Data.Tests/Squidex.Data.Tests.csproj",
+        "csharp:csproj:backend/tests/Squidex.Data.Tests.CodeGenerator/Squidex.Data.Tests.CodeGenerator.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj",
+      "csharp:csproj:backend/tests/Squidex.Data.Tests.CodeGenerator/Squidex.Data.Tests.CodeGenerator.csproj"
+    ],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "gating": false,
+  "git": {
+    "a": "7.17.0",
+    "a_date": "2025-01-27T20:03:42+01:00",
+    "b": "7.18.0",
+    "b_date": "2025-03-09T23:53:29+01:00",
+    "build_files_touched": [
+      "backend/Directory.Build.props",
+      "backend/Squidex.sln",
+      "backend/extensions/Squidex.Extensions/Squidex.Extensions.csproj",
+      "backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj",
+      "backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.sln",
+      "backend/src/Squidex.Data.MongoDb/Squidex.Data.MongoDb.csproj",
+      "backend/src/Squidex.Domain.Apps.Core.Operations/Squidex.Domain.Apps.Core.Operations.csproj",
+      "backend/src/Squidex.Domain.Apps.Entities/Squidex.Domain.Apps.Entities.csproj",
+      "backend/src/Squidex.Infrastructure/Squidex.Infrastructure.csproj",
+      "backend/src/Squidex/Squidex.csproj",
+      "backend/tests/Squidex.Data.Tests.CodeGenerator/Squidex.Data.Tests.CodeGenerator.csproj",
+      "backend/tests/Squidex.Data.Tests/Squidex.Data.Tests.csproj",
+      "backend/tests/Squidex.Domain.Apps.Entities.Tests/Squidex.Domain.Apps.Entities.Tests.csproj"
+    ],
+    "commits_build_files": 6,
+    "commits_total": 16,
+    "history_note": "full clone",
+    "shallow_clone": false
+  },
+  "l0_scoped": true,
+  "layering": {
+    "rules_present": false,
+    "violations_a": 0,
+    "violations_b": 0
+  },
+  "needs_curation": {
+    "a": 1,
+    "b": 1,
+    "b_ids": [
+      "csharp:csproj:backend/src/Squidex/Squidex.csproj"
+    ],
+    "new_in_b": []
+  },
+  "out_of_scope": {
+    "new_edges_non_l0_or_external": 0,
+    "removed_edges_non_l0_or_external": 0
+  },
+  "pair": {
+    "a": "7.17.0",
+    "b": "7.18.0"
+  },
+  "schema": "rq6-history-pair/1",
+  "system": "squidex",
+  "targets": {
+    "a_first_party": 23,
+    "b_first_party": 25
+  },
+  "warnings": [],
+  "worksheet_rows": 8
+}

@@ -1,0 +1,26 @@
+{
+  "alias": {},
+  "description": "remove build target cpp:target:libsh",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "cpp:target:bash",
+        "cpp:target:libsh"
+      ]
+    ],
+    "removed_targets": [
+      "cpp:target:libsh"
+    ],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\bash\\mutation\\_work\\bash\\repo\\lib\\sh\\Makefile.in",
+    "<repo>\\out\\bash\\mutation\\_work\\bash\\repo\\Makefile.in"
+  ],
+  "id": "bash-remove_target-03",
+  "operator": "remove_target",
+  "system": "bash"
+}

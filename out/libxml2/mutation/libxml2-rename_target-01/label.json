@@ -1,0 +1,44 @@
+{
+  "alias": {
+    "cpp:target:testAutomatastrucmut": "cpp:target:testAutomata"
+  },
+  "description": "rename build target cpp:target:testAutomata -> cpp:target:testAutomatastrucmut",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "cpp:target:testAutomatastrucmut",
+        "cpp:target:libxml2"
+      ]
+    ],
+    "new_targets": [
+      "cpp:target:testAutomatastrucmut"
+    ],
+    "removed_edges": [
+      [
+        "cpp:target:testAutomata",
+        "cpp:target:libxml2"
+      ]
+    ],
+    "removed_targets": [
+      "cpp:target:testAutomata"
+    ],
+    "suspected_renames": [
+      [
+        "cpp:target:testAutomata",
+        "cpp:target:testAutomatastrucmut"
+      ]
+    ]
+  },
+  "files_touched": [
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am"
+  ],
+  "id": "libxml2-rename_target-01",
+  "operator": "rename_target",
+  "system": "libxml2"
+}

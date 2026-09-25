@@ -1,0 +1,24 @@
+{
+  "clusters": 13,
+  "entities_clustered": 302,
+  "granularity": "file",
+  "graph": "graph-file.rsf",
+  "system": "bash",
+  "technique": "arc",
+  "vs_pipeline_agreement": {
+    "a2a": 82.95454545454545,
+    "entities_against": 411,
+    "entities_common": 302,
+    "entities_dropped_whitespace": 0,
+    "entities_recovered": 302,
+    "mojofm": 29.9
+  },
+  "vs_reference": {
+    "a2a": 84.03755868544602,
+    "entities_against": 364,
+    "entities_common": 260,
+    "entities_dropped_whitespace": 0,
+    "entities_recovered": 302,
+    "mojofm": 32.26
+  }
+}

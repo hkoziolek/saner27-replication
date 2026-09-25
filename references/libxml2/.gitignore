@@ -1,0 +1,14 @@
+# The libxml2 2.4.22 ground truth is converted from the SARIF FSE'23 replication
+# package (github.com/anonymous2f4a9d/SARIF_FSE23, "Labeled/libxml2-2.4.22-GT.json"),
+# an anonymous repository that carries NO LICENSE file — all-rights-reserved by default
+# (eval §5.4 / P§19.6). The converted reference is therefore LOCAL-ONLY and must NOT be
+# committed to the redistributable replication package; the retrieval URL + converter
+# in provenance.json (committed) make it reproducible in one command.
+*
+!.gitignore
+!provenance.json
+# The RQ6 real-history rater worksheets (eval §8.3) live here, TRACKED: filled labels are
+# human artifacts (the §14.2 carve-out) and are not the withheld reference — they carry
+# only build-target ids and commit hints.
+!history/
+!history/**

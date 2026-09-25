@@ -1,0 +1,173 @@
+# Curation rules for OrchardCore — the MANIFEST-CATEGORY decomposition (eval §7-A2 follow-up,
+# plans/notes/2026-06-14-a2-curation-ablation.md).
+#
+# This is a SECOND, independent curation of the same fixture, kept separate from the committed
+# name-derived overlay (overlays/orchardcore) on purpose. The name-derived overlay is the paper's
+# `combined` rung: an architect's grouping by module NAME at a deliberately coarse ~10-family
+# granularity, authored WITHOUT reading the reference, so its fidelity score is non-circular.
+#
+# This overlay instead adopts the source-declared signal the `extract_orchardcore_manifest`
+# extractor surfaces: each module's `Manifest.cs` `[assembly: Feature(Category="…")]`, emitted as
+# a `module-category:<Category>` tag (stripped of non-alphanumerics) on the csproj target. The
+# probe `baselines/probe_orchardcore_manifest.py` showed this taxonomy recovers 97.8% of the
+# reference's `mod_*` families and, as a full clustering, beats the name-derived curation
+# (MoJoFM 76.0 vs 72.1) — deterministically, with no LLM. Here a (human) curator ADOPTS that
+# taxonomy by writing one container per category, selected with the new `members_tag:` selector
+# (§7.4): a target is grouped by the FIRST rule (in order) whose `members_glob` (id/path/name) OR
+# `members_tag` (a target tag) matches. Structural path-globs come first so framework / theme /
+# template / host projects are placed by location; the feature modules then fall to their category.
+#
+# NOTE: because this curation IS derived from the reference's underlying signal (the manifest
+# Category), its fidelity number is NOT independent of the reference and must NOT be reported as a
+# blind-curation result. It is the "deterministic ceiling if a curator adopts the manifest
+# taxonomy" — report it AS SUCH, beside (not instead of) the name-derived `combined` rung.
+#
+# Run: arch run --repo fixtures/orchardcore --no-llm \
+#        --arch-dir out/orchardcore-cat/architecture \
+#        --rules-dir overlays/orchardcore-cat/architecture/rules
+version: 1
+
+defaults:
+  min_relationship_weight: 3
+  drop_external: true
+  down_weight_private: true
+  on_unmapped: annotate            # modules with no Category tag fall to the catch-all below
+  use_llm_names: false
+
+exclude:
+  targets:
+    - glob: "test/*"               # drops the test tree incl. the 5 "Test"-category test modules
+    - glob: "*Tests*"
+    - glob: "*Benchmark*"
+    - glob: "*OrchardCore.Docs*"
+
+group:
+  # --- structural placement FIRST (more specific than the module category tags) -------------
+  - container: "Framework Abstractions"
+    members_glob:
+      - "src/OrchardCore/*Abstractions*"
+  - container: "OrchardCore Framework"
+    members_glob:
+      - "src/OrchardCore/*"
+  - container: "Themes"
+    members_glob:
+      - "src/OrchardCore.Themes/*"
+  - container: "Project Templates"
+    members_glob:
+      - "src/Templates/*"          # claims the 2 template modules before any category tag
+  - container: "Web Hosts"
+    members_glob:
+      - "*OrchardCore.Cms.Web/*"
+      - "*OrchardCore.Mvc.Web/*"
+
+  # --- the modular-monolith layer: one container per OrchardCore module Feature Category,
+  #     selected by the `module-category:<Category>` tag (extract_orchardcore_manifest). This
+  #     is the manifest taxonomy adopted verbatim — the reference's `mod_*` families. ---------
+  - container: "Content Management"
+    members_tag: ["module-category:ContentManagement"]
+  - container: "Content"
+    members_tag: ["module-category:Content"]
+    members:
+  - container: "Infrastructure"
+    members_tag: ["module-category:Infrastructure"]
+  - container: "Security"
+    members_tag: ["module-category:Security"]
+  - container: "Search"
+    members_tag: ["module-category:Search"]
+  - container: "Communication"
+    members_tag: ["module-category:Communication"]
+    members:
+      - 'csharp:csproj:src/OrchardCore.Modules/OrchardCore.Email.Azure/OrchardCore.Email.Azure.csproj'
+  - container: "Notifications"
+    members_tag: ["module-category:Notifications"]
+  - container: "Navigation"
+    members_tag: ["module-category:Navigation"]
+  - container: "Internationalization"
+    members_tag: ["module-category:Internationalization"]
+  - container: "Deployment"
+    members_tag: ["module-category:Deployment"]
+  - container: "Development"
+    members_tag: ["module-category:Development"]
+  - container: "Hosting"
+    members_tag: ["module-category:Hosting"]
+  - container: "Performance"
+    members_tag: ["module-category:Performance"]
+  - container: "Theming"
+    members_tag: ["module-category:Theming"]
+  - container: "Workflows"
+    members_tag: ["module-category:Workflows"]
+  - container: "Tasks"
+    members_tag: ["module-category:Tasks"]
+  - container: "Indexing"
+    members_tag: ["module-category:Indexing"]
+  - container: "Distributed"
+    members_tag: ["module-category:Distributed"]
+  - container: "Configuration"
+    members_tag: ["module-category:Configuration"]
+  - container: "Settings"
+    members_tag: ["module-category:Settings"]
+  - container: "API Modules"
+    members_tag: ["module-category:Api"]
+  - container: "Samples"
+    members_tag: ["module-category:Samples"]
+  - container: "Meta"
+    members_tag: ["module-category:Meta"]
+  - container: "OpenID Connect"
+    members_tag: ["module-category:OpenIDConnect"]
+  - container: "Microsoft Authentication"
+    members_tag: ["module-category:MicrosoftAuthentication"]
+  - container: "Google Authentication"
+    members_tag: ["module-category:Google"]
+  - container: "GitHub Authentication"
+    members_tag: ["module-category:GitHub"]
+  - container: "X Twitter Authentication"
+    members_tag: ["module-category:XTwitter"]
+
+  # --- catch-all: any src/OrchardCore.Modules project with NO Category tag. Glob-ordered last
+  #     so every category family above wins first (mirrors the name-derived overlay). ---------
+  - container: "Other Modules"
+    members_glob:
+      - "src/OrchardCore.Modules/*"
+  - container: Templates
+    members:
+    - csharp:csproj:src/Templates/OrchardCore.ProjectTemplates/OrchardCore.ProjectTemplates.csproj
+    - csharp:csproj:src/Templates/OrchardCore.ProjectTemplates/content/OrchardCore.Templates.Cms.Web/OrchardCore.Templates.Cms.Web.csproj
+    - csharp:csproj:src/Templates/OrchardCore.ProjectTemplates/content/OrchardCore.Templates.Mvc.Module/OrchardCore.Templates.Mvc.Module.csproj
+    - csharp:csproj:src/Templates/OrchardCore.ProjectTemplates/content/OrchardCore.Templates.Mvc.Web/OrchardCore.Templates.Mvc.Web.csproj
+    - csharp:csproj:src/Templates/OrchardCore.ProjectTemplates/content/OrchardCore.Templates.Theme/OrchardCore.Templates.Theme.csproj
+  - container: Targets
+    members:
+    - csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Core.Targets/OrchardCore.Application.Cms.Core.Targets.csproj
+    - csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj
+    - csharp:csproj:src/OrchardCore/OrchardCore.Application.Mvc.Targets/OrchardCore.Application.Mvc.Targets.csproj
+    - csharp:csproj:src/OrchardCore/OrchardCore.Application.Targets/OrchardCore.Application.Targets.csproj
+    - csharp:csproj:src/OrchardCore/OrchardCore.Module.Targets/OrchardCore.Module.Targets.csproj
+    - csharp:csproj:src/OrchardCore/OrchardCore.Theme.Targets/OrchardCore.Theme.Targets.csproj
+  - container: [anonymized]1
+  - container: [anonymized]2
+
+technology:
+  csproj: ".NET assembly"
+
+naming:
+  style: descriptive
+  expand_acronyms: false
+  max_name_words: 4
+
+rationale:
+  "OrchardCore Framework":
+    reason: "The src/OrchardCore core libraries (sans abstractions) form one framework container; the module categories are the interesting decomposition"
+    decided_by: "architect"
+    date: "2026-06-14"
+    confidence: "medium"
+  "Other Modules":
+    reason: "Catch-all for feature modules that declare no Manifest.cs Feature Category; glob-ordered last so category families win first"
+    decided_by: "architect"
+    date: "2026-06-14"
+    confidence: "low"
+
+name_overrides:
+  "csharp:csproj:src/OrchardCore/OrchardCore.XmlRpc.Abstractions/OrchardCore.XmlRpc.Abstractions.csproj": "OrchardCore XmlRpc Abstractions"
+
+description_overrides:
+  "csharp:csproj:src/OrchardCore/OrchardCore.XmlRpc.Abstractions/OrchardCore.XmlRpc.Abstractions.csproj": "A .NET assembly that provides framework abstractions for the OrchardCore XmlRpc feature area."

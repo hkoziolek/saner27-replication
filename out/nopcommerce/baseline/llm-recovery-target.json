@@ -1,0 +1,165 @@
+{
+  "aggregate": {
+    "a2a": {
+      "max": 90.61,
+      "mean": 84.19,
+      "min": 59.62,
+      "n": 5,
+      "stdev": 12.29
+    },
+    "ari": {
+      "max": 26.72,
+      "mean": 23.71,
+      "min": 21.46,
+      "n": 5,
+      "stdev": 1.74
+    },
+    "mojofm": {
+      "max": 65.62,
+      "mean": 60.63,
+      "min": 56.25,
+      "n": 5,
+      "stdev": 3.18
+    }
+  },
+  "cost_estimate": {
+    "price_in_per_1m": 5.0,
+    "price_out_per_1m": 30.0,
+    "reruns": 5,
+    "total_input_tokens": 31885,
+    "total_output_tokens": 1520,
+    "usd_uncached": 0.21,
+    "usd_with_prompt_caching": 0.09
+  },
+  "edges": 142,
+  "entities": 38,
+  "granularity": "target",
+  "model_id": "gpt-5.6-sol",
+  "reference": "references\\nopcommerce\\reference.rsf",
+  "reruns": 5,
+  "runs": [
+    {
+      "clusters": 17,
+      "entities_clustered": 38,
+      "run": 1,
+      "vs_pipeline_agreement": {
+        "a2a": 83.23699421965318,
+        "entities_against": 37,
+        "entities_common": 37,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 38,
+        "mojofm": 59.38
+      },
+      "vs_reference": {
+        "a2a": 90.05524861878453,
+        "ari": 23.84,
+        "entities_against": 37,
+        "entities_common": 37,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 38,
+        "mojofm": 59.38,
+        "nested": 62.5
+      }
+    },
+    {
+      "clusters": 17,
+      "entities_clustered": 38,
+      "run": 2,
+      "vs_pipeline_agreement": {
+        "a2a": 83.8150289017341,
+        "entities_against": 37,
+        "entities_common": 37,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 38,
+        "mojofm": 65.62
+      },
+      "vs_reference": {
+        "a2a": 90.60773480662984,
+        "ari": 26.72,
+        "entities_against": 37,
+        "entities_common": 37,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 38,
+        "mojofm": 65.62,
+        "nested": 68.75
+      }
+    },
+    {
+      "clusters": 17,
+      "entities_clustered": 38,
+      "run": 3,
+      "vs_pipeline_agreement": {
+        "a2a": 52.702702702702695,
+        "entities_against": 37,
+        "entities_common": 37,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 38,
+        "mojofm": 59.38
+      },
+      "vs_reference": {
+        "a2a": 59.61538461538461,
+        "ari": 23.84,
+        "entities_against": 37,
+        "entities_common": 37,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 38,
+        "mojofm": 59.38,
+        "nested": 62.5
+      }
+    },
+    {
+      "clusters": 17,
+      "entities_clustered": 38,
+      "run": 4,
+      "vs_pipeline_agreement": {
+        "a2a": 83.23699421965318,
+        "entities_against": 37,
+        "entities_common": 37,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 38,
+        "mojofm": 56.25
+      },
+      "vs_reference": {
+        "a2a": 90.05524861878453,
+        "ari": 21.46,
+        "entities_against": 37,
+        "entities_common": 37,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 38,
+        "mojofm": 56.25,
+        "nested": 56.25
+      }
+    },
+    {
+      "clusters": 17,
+      "entities_clustered": 38,
+      "run": 5,
+      "vs_pipeline_agreement": {
+        "a2a": 84.39306358381504,
+        "entities_against": 37,
+        "entities_common": 37,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 38,
+        "mojofm": 65.62
+      },
+      "vs_reference": {
+        "a2a": 90.60773480662984,
+        "ari": 22.7,
+        "entities_against": 37,
+        "entities_common": 37,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 38,
+        "mojofm": 62.5,
+        "nested": 62.5
+      }
+    }
+  ],
+  "status": "ran",
+  "system": "nopcommerce",
+  "target_clusters": 17,
+  "token_estimate_per_call": {
+    "input": 6377,
+    "output": 304,
+    "per_call_total": 6681
+  }
+}

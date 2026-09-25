@@ -1,0 +1,62 @@
+{
+  "alias": {},
+  "description": "merge build target csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj into csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+        "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+      ]
+    ],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+        "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+      ],
+      [
+        "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+        "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+    ],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.API\\Ordering.API.csproj",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Infrastructure\\Ordering.Infrastructure.csproj",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\tests\\Ordering.FunctionalTests\\Ordering.FunctionalTests.csproj",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\tests\\Ordering.UnitTests\\Ordering.UnitTests.csproj",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\eShop.slnx",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\AggregatesModel\\BuyerAggregate\\Buyer.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\AggregatesModel\\BuyerAggregate\\CardType.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\AggregatesModel\\BuyerAggregate\\IBuyerRepository.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\AggregatesModel\\BuyerAggregate\\PaymentMethod.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\AggregatesModel\\OrderAggregate\\Address.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\AggregatesModel\\OrderAggregate\\IOrderRepository.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\AggregatesModel\\OrderAggregate\\Order.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\AggregatesModel\\OrderAggregate\\OrderItem.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\AggregatesModel\\OrderAggregate\\OrderStatus.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\Events\\BuyerPaymentMethodVerifiedDomainEvent.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\Events\\OrderCancelledDomainEvent.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\Events\\OrderShippedDomainEvent.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\Events\\OrderStartedDomainEvent.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\Events\\OrderStatusChangedToAwaitingValidationDomainEvent.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\Events\\OrderStatusChangedToPaidDomainEvent.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\Events\\OrderStatusChangedToStockConfirmedDomainEvent.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\Exceptions\\OrderingDomainException.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\GlobalUsings.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\Ordering.Domain.csproj",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\SeedWork\\Entity.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\SeedWork\\IAggregateRoot.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\SeedWork\\IRepository.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\SeedWork\\IUnitOfWork.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Ordering.Domain\\SeedWork\\ValueObject.cs"
+  ],
+  "id": "eshop-merge_targets-03",
+  "operator": "merge_targets",
+  "system": "eshop"
+}

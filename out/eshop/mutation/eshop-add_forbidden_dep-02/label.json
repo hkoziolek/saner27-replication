@@ -1,0 +1,28 @@
+{
+  "alias": {},
+  "description": "inject forbidden dependency csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj -> csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj",
+  "expected": {
+    "layering_violations": [
+      [
+        "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj",
+        "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+      ]
+    ],
+    "new_edges": [
+      [
+        "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj",
+        "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+      ]
+    ],
+    "new_targets": [],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\EventBusRabbitMQ\\EventBusRabbitMQ.csproj"
+  ],
+  "id": "eshop-add_forbidden_dep-02",
+  "operator": "add_forbidden_dep",
+  "system": "eshop"
+}

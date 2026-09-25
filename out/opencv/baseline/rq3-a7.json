@@ -1,0 +1,16 @@
+{
+  "axis": "A7",
+  "edge_delta": 0,
+  "edges_hash_after": "4a40f615267fc6cb",
+  "edges_hash_before": "4a40f615267fc6cb",
+  "invariant_holds": true,
+  "n_edges": 54,
+  "n_targets": 24,
+  "names_changed": 24,
+  "partition_hash_after": "b36013904099c3ed",
+  "partition_hash_before": "b36013904099c3ed",
+  "partition_moved": 0,
+  "structural_delta": 0,
+  "system": "opencv",
+  "targets_delta": 0
+}

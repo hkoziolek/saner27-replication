@@ -1,0 +1,165 @@
+{
+  "aggregate": {
+    "a2a": {
+      "max": 100.0,
+      "mean": 100.0,
+      "min": 100.0,
+      "n": 5,
+      "stdev": 0.0
+    },
+    "ari": {
+      "max": 100.0,
+      "mean": 100.0,
+      "min": 100.0,
+      "n": 5,
+      "stdev": 0.0
+    },
+    "mojofm": {
+      "max": 100.0,
+      "mean": 100.0,
+      "min": 100.0,
+      "n": 5,
+      "stdev": 0.0
+    }
+  },
+  "cost_estimate": {
+    "price_in_per_1m": 5.0,
+    "price_out_per_1m": 30.0,
+    "reruns": 5,
+    "total_input_tokens": 330845,
+    "total_output_tokens": 43480,
+    "usd_uncached": 2.96,
+    "usd_with_prompt_caching": 1.77
+  },
+  "edges": 2575,
+  "entities": 1087,
+  "granularity": "file",
+  "model_id": "gpt-5.6-sol",
+  "reference": "references\\opencv\\reference.rsf",
+  "reruns": 5,
+  "runs": [
+    {
+      "clusters": 14,
+      "entities_clustered": 1087,
+      "run": 1,
+      "vs_pipeline_agreement": {
+        "a2a": 89.83827493261455,
+        "entities_against": 997,
+        "entities_common": 923,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 1087,
+        "mojofm": 98.91
+      },
+      "vs_reference": {
+        "a2a": 100.0,
+        "ari": 100.0,
+        "entities_against": 1087,
+        "entities_common": 1087,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 1087,
+        "mojofm": 100.0,
+        "nested": 100.0
+      }
+    },
+    {
+      "clusters": 14,
+      "entities_clustered": 1087,
+      "run": 2,
+      "vs_pipeline_agreement": {
+        "a2a": 89.83827493261455,
+        "entities_against": 997,
+        "entities_common": 923,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 1087,
+        "mojofm": 98.91
+      },
+      "vs_reference": {
+        "a2a": 100.0,
+        "ari": 100.0,
+        "entities_against": 1087,
+        "entities_common": 1087,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 1087,
+        "mojofm": 100.0,
+        "nested": 100.0
+      }
+    },
+    {
+      "clusters": 14,
+      "entities_clustered": 1087,
+      "run": 3,
+      "vs_pipeline_agreement": {
+        "a2a": 89.83827493261455,
+        "entities_against": 997,
+        "entities_common": 923,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 1087,
+        "mojofm": 98.91
+      },
+      "vs_reference": {
+        "a2a": 100.0,
+        "ari": 100.0,
+        "entities_against": 1087,
+        "entities_common": 1087,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 1087,
+        "mojofm": 100.0,
+        "nested": 100.0
+      }
+    },
+    {
+      "clusters": 14,
+      "entities_clustered": 1087,
+      "run": 4,
+      "vs_pipeline_agreement": {
+        "a2a": 89.83827493261455,
+        "entities_against": 997,
+        "entities_common": 923,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 1087,
+        "mojofm": 98.91
+      },
+      "vs_reference": {
+        "a2a": 100.0,
+        "ari": 100.0,
+        "entities_against": 1087,
+        "entities_common": 1087,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 1087,
+        "mojofm": 100.0,
+        "nested": 100.0
+      }
+    },
+    {
+      "clusters": 14,
+      "entities_clustered": 1087,
+      "run": 5,
+      "vs_pipeline_agreement": {
+        "a2a": 89.83827493261455,
+        "entities_against": 997,
+        "entities_common": 923,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 1087,
+        "mojofm": 98.91
+      },
+      "vs_reference": {
+        "a2a": 100.0,
+        "ari": 100.0,
+        "entities_against": 1087,
+        "entities_common": 1087,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 1087,
+        "mojofm": 100.0,
+        "nested": 100.0
+      }
+    }
+  ],
+  "status": "ran",
+  "system": "opencv",
+  "target_clusters": 14,
+  "token_estimate_per_call": {
+    "input": 66169,
+    "output": 8696,
+    "per_call_total": 74865
+  }
+}

@@ -1,0 +1,18 @@
+HKCR
+{
+    CalcServer.Object = s 'CalcServer Class'
+    {
+        CLSID = s '{3f2504e0-4f89-41d3-9a0c-0305e82c3301}'
+    }
+    NoRemove CLSID
+    {
+        ForceRemove {3f2504e0-4f89-41d3-9a0c-0305e82c3301} = s 'CalcServer Class'
+        {
+            ProgID = s 'CalcServer.Object'
+            InprocServer32 = s '%MODULE%'
+            {
+                val ThreadingModel = s 'Apartment'
+            }
+        }
+    }
+}

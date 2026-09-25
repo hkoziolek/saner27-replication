@@ -1,0 +1,103 @@
+{
+  "budget": {
+    "cold_budget_s": 1800,
+    "cold_within": false,
+    "warm_budget_s": 180,
+    "warm_within": false
+  },
+  "cold": {
+    "cache": {},
+    "peak_rss_mb": 1655.1,
+    "rc": 0,
+    "stages": {
+      "curate": 0.125,
+      "drift": 0.016,
+      "enrich": 0.094,
+      "extract": 24499.922,
+      "generate": 0.109,
+      "normalize": 55.187,
+      "validate-curated": 0.468,
+      "validate-extracted": 0.485
+    },
+    "substeps": {
+      "extract": {
+        "autotools-graph": 1.61,
+        "clang-scan-deps": 373.125,
+        "cmake-graph": 826.547,
+        "contracts": 98.141,
+        "csharp-build-graph": 2.265,
+        "csharp-interop": 181.625,
+        "csproj-sdk-role": 1.25,
+        "deployment": 21.016,
+        "doxygen-xml": 22982.157,
+        "msbuild-cpp": 1.422,
+        "orchardcore-manifest": 1.234,
+        "plugin-namespace": 1.234,
+        "roslyn-csharp": 1.453,
+        "runtime": 6.843
+      }
+    },
+    "timed_out": false,
+    "wall_s": 24600.2
+  },
+  "env": {
+    "PYTHONUTF8": "1",
+    "ANON_CMAKE_ARGS": "-DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF -DCMAKE_POLICY_VERSION_MINIMUM=3.5",
+    "ANON_CMAKE_BUILD_DIR": "out/itk/cbp",
+    "ANON_DOXYGEN_EXCLUDE": "*/build/* */.cache/* */out/* */.git/*",
+    "ANON_DOXYGEN_INPUT": "Modules",
+    "ANON_DOXYGEN_TIMEOUT": "28800"
+  },
+  "host": {
+    "cpus": 22,
+    "ram_gb": 31
+  },
+  "language": "cpp",
+  "profile": "full",
+  "schema": "rq7-perf/1",
+  "size": {
+    "edges_file": 21604,
+    "edges_target": 265,
+    "files": 8191,
+    "kloc": 618.7,
+    "targets": 79
+  },
+  "speedup": 44.99,
+  "success": true,
+  "system": "itk",
+  "warm": {
+    "cache": {},
+    "peak_rss_mb": 100.7,
+    "rc": 0,
+    "stages": {
+      "curate": 0.188,
+      "drift": 0.015,
+      "enrich": 0.078,
+      "extract": 483.938,
+      "generate": 0.172,
+      "normalize": 15.578,
+      "validate-curated": 0.562,
+      "validate-extracted": 0.641
+    },
+    "substeps": {
+      "extract": {
+        "autotools-graph": 4.25,
+        "clang-scan-deps": 66.282,
+        "cmake-graph": 30.437,
+        "contracts": 68.235,
+        "csharp-build-graph": 3.641,
+        "csharp-interop": 204.593,
+        "csproj-sdk-role": 3.609,
+        "deployment": 14.546,
+        "doxygen-xml": 65.828,
+        "msbuild-cpp": 5.0,
+        "orchardcore-manifest": 3.0,
+        "plugin-namespace": 4.422,
+        "roslyn-csharp": 5.266,
+        "runtime": 4.829
+      }
+    },
+    "timed_out": false,
+    "wall_s": 546.8
+  }
+}

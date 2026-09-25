@@ -1,0 +1,44 @@
+{
+  "system": "squidex",
+  "kind": "doc-delta ledger (companion plan 2026-07-13-human-reference-oss-extension.md §5 step 2; eval §5.3 GT-diag steps 3–5)",
+  "doc": {
+    "primary": "https://docs.squidex.io/ — architecture overview (~2019)",
+    "treated_as": "documented intent at its date, mapped against the code at 9dbc5ed (2026-06-16)"
+  },
+  "entries": [],
+  "entry_schema": {
+    "what": "the component / concept",
+    "kind": "extend | assign | exclude",
+    "why": "one line",
+    "raised_by": "R-A | R-B | reconciliation",
+    "decided_on": "YYYY-MM-DD"
+  },
+  "counts": {
+    "extend": 0,
+    "assign": 0,
+    "exclude": 0
+  },
+  "finding": {
+    "recorded_on": "2026-08-30",
+    "source": "reconciliation call 2026-08-28 (R-A, R-B, facilitator), relayed by the facilitator",
+    "statement": "Both raters stated that the ~2019 architecture document contained little useful information for the task of clustering the build targets, so they did not use it much to inform their mappings; they relied mainly on reading/skimming the up-to-date source code.",
+    "interpretation": "The ledger is empty NOT because the documented intent matched the code, but because the document does not describe the system at the granularity of build targets / projects — it was bypassed as an input. The R6 'measured staleness' instrument (doc-vs-code deltas) therefore returns 'not measurable at this granularity', which is itself the staleness result to report: the project's only architecture write-up is too old and too coarse to seed a target-level reference, and the reference is a code-derived expert consensus (GT-exp) rather than a doc transcription.",
+    "doc_usage": {
+      "R-A": "consulted, largely unused",
+      "R-B": "consulted, largely unused",
+      "primary_basis": "current source code at 9dbc5ed"
+    },
+    "consequence_for_grade": "GT-exp confirmed (not GT-doc); the 'documented intent' leg of the companion-plan §5 step 2 protocol did not contribute."
+  },
+  "status": "CLOSED 2026-08-30 — no entries, by finding (see `finding`), not by omission. Nothing further was raised at reconciliation.",
+  "mixed_units": [
+    {
+      "entity": "csharp:csproj:backend/src/Squidex.Infrastructure/Squidex.Infrastructure.csproj",
+      "flagged_by": [
+        "R-B"
+      ],
+      "stage2_file_worksheet": "not issued — the reference stays at target granularity (provenance.json granularity_note)",
+      "disposition": "kept whole in cluster Infrastructure"
+    }
+  ]
+}

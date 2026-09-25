@@ -1,0 +1,165 @@
+{
+  "aggregate": {
+    "a2a": {
+      "max": 92.86,
+      "mean": 92.56,
+      "min": 92.21,
+      "n": 5,
+      "stdev": 0.22
+    },
+    "ari": {
+      "max": 60.27,
+      "mean": 57.58,
+      "min": 54.71,
+      "n": 5,
+      "stdev": 1.85
+    },
+    "mojofm": {
+      "max": 85.48,
+      "mean": 84.19,
+      "min": 81.05,
+      "n": 5,
+      "stdev": 1.62
+    }
+  },
+  "cost_estimate": {
+    "price_in_per_1m": 5.0,
+    "price_out_per_1m": 30.0,
+    "reruns": 5,
+    "total_input_tokens": 51835,
+    "total_output_tokens": 12080,
+    "usd_uncached": 0.62,
+    "usd_with_prompt_caching": 0.43
+  },
+  "edges": 967,
+  "entities": 302,
+  "granularity": "file",
+  "model_id": "gpt-5.6-sol",
+  "reference": "references\\bash\\reference.rsf",
+  "reruns": 5,
+  "runs": [
+    {
+      "clusters": 13,
+      "entities_clustered": 302,
+      "run": 1,
+      "vs_pipeline_agreement": {
+        "a2a": 93.01948051948052,
+        "entities_against": 411,
+        "entities_common": 302,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 302,
+        "mojofm": 85.91
+      },
+      "vs_reference": {
+        "a2a": 92.20657276995306,
+        "ari": 54.71,
+        "entities_against": 364,
+        "entities_common": 260,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 302,
+        "mojofm": 81.05,
+        "nested": 16.67
+      }
+    },
+    {
+      "clusters": 13,
+      "entities_clustered": 302,
+      "run": 2,
+      "vs_pipeline_agreement": {
+        "a2a": 93.42532467532467,
+        "entities_against": 411,
+        "entities_common": 302,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 302,
+        "mojofm": 89.35
+      },
+      "vs_reference": {
+        "a2a": 92.67605633802816,
+        "ari": 57.87,
+        "entities_against": 364,
+        "entities_common": 260,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 302,
+        "mojofm": 84.27,
+        "nested": 16.67
+      }
+    },
+    {
+      "clusters": 13,
+      "entities_clustered": 302,
+      "run": 3,
+      "vs_pipeline_agreement": {
+        "a2a": 92.85714285714286,
+        "entities_against": 411,
+        "entities_common": 302,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 302,
+        "mojofm": 89.35
+      },
+      "vs_reference": {
+        "a2a": 92.86384976525821,
+        "ari": 56.67,
+        "entities_against": 364,
+        "entities_common": 260,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 302,
+        "mojofm": 85.08,
+        "nested": 25.0
+      }
+    },
+    {
+      "clusters": 13,
+      "entities_clustered": 302,
+      "run": 4,
+      "vs_pipeline_agreement": {
+        "a2a": 93.10064935064935,
+        "entities_against": 411,
+        "entities_common": 302,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 302,
+        "mojofm": 88.32
+      },
+      "vs_reference": {
+        "a2a": 92.58215962441314,
+        "ari": 60.27,
+        "entities_against": 364,
+        "entities_common": 260,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 302,
+        "mojofm": 85.48,
+        "nested": 41.67
+      }
+    },
+    {
+      "clusters": 13,
+      "entities_clustered": 302,
+      "run": 5,
+      "vs_pipeline_agreement": {
+        "a2a": 93.10064935064935,
+        "entities_against": 411,
+        "entities_common": 302,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 302,
+        "mojofm": 89.0
+      },
+      "vs_reference": {
+        "a2a": 92.48826291079813,
+        "ari": 58.4,
+        "entities_against": 364,
+        "entities_common": 260,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 302,
+        "mojofm": 85.08,
+        "nested": 33.33
+      }
+    }
+  ],
+  "status": "ran",
+  "system": "bash",
+  "target_clusters": 13,
+  "token_estimate_per_call": {
+    "input": 10367,
+    "output": 2416,
+    "per_call_total": 12783
+  }
+}

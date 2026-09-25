@@ -1,0 +1,21 @@
+{
+  "candidates": [
+    {
+      "confidence": "high",
+      "dsl_steps": 0,
+      "flagged_steps": 0,
+      "has_runtime_only": true,
+      "key": "runtime-webapp",
+      "name": "Runtime: WebApp request flow",
+      "salience": 13.0,
+      "salience_reasons": [
+        "entry-point (sdk-role:service-web)",
+        "crosses 3 containers"
+      ],
+      "slug": "runtime-webapp",
+      "source": "runtime",
+      "valid_steps": 2
+    }
+  ],
+  "schema": "scenario-candidate-index/1"
+}

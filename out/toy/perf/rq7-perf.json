@@ -1,0 +1,96 @@
+{
+  "budget": {
+    "cold_budget_s": 1800,
+    "cold_within": true,
+    "warm_budget_s": 180,
+    "warm_within": true
+  },
+  "cold": {
+    "cache": {},
+    "peak_rss_mb": 258.4,
+    "rc": 0,
+    "stages": {
+      "curate": 0.031,
+      "drift": 0.0,
+      "enrich": 0.0,
+      "extract": 11.343,
+      "generate": 0.062,
+      "normalize": 0.094,
+      "validate-curated": 0.047,
+      "validate-extracted": 0.047
+    },
+    "substeps": {
+      "extract": {
+        "autotools-graph": 0.031,
+        "clang-scan-deps": 0.11,
+        "cmake-graph": 0.047,
+        "contracts": 0.312,
+        "csharp-build-graph": 0.531,
+        "csharp-interop": 0.265,
+        "csproj-sdk-role": 0.188,
+        "deployment": 0.297,
+        "doxygen-xml": 0.109,
+        "msbuild-cpp": 0.062,
+        "orchardcore-manifest": 0.14,
+        "plugin-namespace": 0.125,
+        "roslyn-csharp": 8.985,
+        "runtime": 0.141
+      }
+    },
+    "timed_out": false,
+    "wall_s": 15.0
+  },
+  "env": {},
+  "host": {
+    "cpus": 22,
+    "ram_gb": 31
+  },
+  "language": "cs",
+  "profile": "full",
+  "schema": "rq7-perf/1",
+  "size": {
+    "edges_file": null,
+    "edges_target": null,
+    "files": null,
+    "kloc": 0.1,
+    "targets": 4
+  },
+  "speedup": 3.57,
+  "success": true,
+  "system": "toy",
+  "warm": {
+    "cache": {},
+    "peak_rss_mb": 56.7,
+    "rc": 0,
+    "stages": {
+      "curate": 0.047,
+      "drift": 0.016,
+      "enrich": 0.016,
+      "extract": 1.843,
+      "generate": 0.031,
+      "normalize": 0.063,
+      "validate-curated": 0.031,
+      "validate-extracted": 0.031
+    },
+    "substeps": {
+      "extract": {
+        "autotools-graph": 0.078,
+        "clang-scan-deps": 0.094,
+        "cmake-graph": 0.078,
+        "contracts": 0.25,
+        "csharp-build-graph": 0.14,
+        "csharp-interop": 0.203,
+        "csproj-sdk-role": 0.125,
+        "deployment": 0.203,
+        "doxygen-xml": 0.094,
+        "msbuild-cpp": 0.094,
+        "orchardcore-manifest": 0.11,
+        "plugin-namespace": 0.109,
+        "roslyn-csharp": 0.125,
+        "runtime": 0.14
+      }
+    },
+    "timed_out": false,
+    "wall_s": 4.2
+  }
+}

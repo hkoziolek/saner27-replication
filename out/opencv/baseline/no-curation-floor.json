@@ -1,0 +1,9 @@
+{
+  "a2a": 100.0,
+  "floor_kind": "each file -> owning build target (no curation)",
+  "granularity": "file",
+  "mojofm": 100.0,
+  "shared_entities": 923,
+  "system": "opencv",
+  "targets": 14
+}

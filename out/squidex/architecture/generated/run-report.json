@@ -1,0 +1,50 @@
+{
+  "cache": {},
+  "notes": [],
+  "stages": {
+    "curate": 0.062,
+    "drift": 0.0,
+    "enrich": 0.031,
+    "extract": 54.078,
+    "generate": 0.047,
+    "normalize": 4.89,
+    "validate-curated": 0.156,
+    "validate-extracted": 0.266
+  },
+  "substeps": {
+    "extract": {
+      "autotools-graph": 0.0,
+      "clang-scan-deps": 0.0,
+      "cmake-graph": 0.094,
+      "contracts": 0.656,
+      "csharp-build-graph": 1.312,
+      "csharp-interop": 8.671,
+      "csproj-sdk-role": 0.14,
+      "deployment": 1.813,
+      "doxygen-xml": 0.11,
+      "msbuild-cpp": 0.109,
+      "orchardcore-manifest": 0.125,
+      "plugin-namespace": 0.125,
+      "roslyn-csharp": 39.032,
+      "runtime": 1.891
+    }
+  },
+  "trust": {
+    "abstained_targets": 19,
+    "coverage_pct": {
+      "L0": 1.0
+    },
+    "edges_dropped": 514,
+    "mean_confidence": 0.4284,
+    "over_budget_views": [
+      "Component-Squidex.Extensions (33 > 20)",
+      "Component-Squidex.Data.EntityFramework (37 > 20)",
+      "Component-Squidex.Data.MongoDb (27 > 20)",
+      "Component-Squidex.Domain.Apps.Core.Operations (21 > 20)",
+      "Component-Squidex.Domain.Apps.Entities (71 > 20)",
+      "Component-Squidex.Infrastructure (31 > 20)",
+      "Component-Squidex (74 > 20)"
+    ],
+    "unmapped_targets": 19
+  }
+}

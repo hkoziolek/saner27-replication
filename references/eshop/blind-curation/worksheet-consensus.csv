@@ -1,0 +1,25 @@
+# RQ9 eShop reconciliation — CONSENSUS worksheet (runbook §5 step 7).
+# Filled live by R-C + R-D + facilitator. The pre-consensus worksheet-R-C/R-D.csv
+# are FROZEN (kappa + the ceiling row come from those) — never edit them.
+# notes column pre-seeded with each rater's own label; replace with the rationale.
+entity,cluster,notes
+
+csharp:csproj:src/IntegrationEventLogEF/IntegrationEventLogEF.csproj,Logging,R-C=Infrastructure | R-D=Logging
+csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj,AppHost,R-C=Infrastructure | R-D=AppHost
+csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj,ServiceDefaults,R-C=Infrastructure | R-D=ServiceDefaults
+csharp:csproj:src/EventBus/EventBus.csproj,EventBus,R-C=Infrastructure | R-D=EventBus
+csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj,EventBus,R-C=Infrastructure | R-D=EventBus
+csharp:csproj:src/WebhookClient/WebhookClient.csproj,Webhooks,R-C=Data | R-D=WebhookService
+csharp:csproj:src/Webhooks.API/Webhooks.API.csproj,Webhooks,R-C=Data | R-D=WebhookService
+csharp:csproj:src/OrderProcessor/OrderProcessor.csproj,Ordering,R-C=Ordering | R-D=OrderingService
+csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj,Ordering,R-C=Ordering | R-D=OrderingService
+csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj,Ordering,R-C=Ordering | R-D=OrderingService
+csharp:csproj:src/ClientApp/ClientApp.csproj,ClientApp,R-C=View | R-D=ClientApp
+csharp:csproj:src/HybridApp/HybridApp.csproj,HybridApp,R-C=View | R-D=HybridApp
+csharp:csproj:src/WebApp/WebApp.csproj,WebApp,R-C=View | R-D=WebApp
+csharp:csproj:src/WebAppComponents/WebAppComponents.csproj,WebAppComponents,R-C=View | R-D=WebApp
+csharp:csproj:src/Ordering.API/Ordering.API.csproj,Ordering,R-C=Ordering | R-D=OrderingService
+csharp:csproj:src/Identity.API/Identity.API.csproj,Identity,R-C=Identity | R-D=IdentityService
+csharp:csproj:src/PaymentProcessor/PaymentProcessor.csproj,PaymentProcessor,R-C=Payment | R-D=PaymentService
+csharp:csproj:src/Catalog.API/Catalog.API.csproj,Catalog,R-C=Catalog | R-D=CatalogService
+csharp:csproj:src/Basket.API/Basket.API.csproj,Basket,R-C=Basket | R-D=BasketService

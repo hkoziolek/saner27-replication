@@ -1,0 +1,97 @@
+{
+  "system": "eshop",
+  "grade": "GT-doc",
+  "subject_version": "dotnet/eShop main @ 9b4f943",
+  "subject_repo": "https://github.com/dotnet/eShop",
+  "granularity": "target (project / .csproj)",
+  "source": "Microsoft's documented eShop reference-application architecture (the .NET microservices reference): bounded contexts / services + shared building blocks + client apps + Aspire orchestration host.",
+  "source_artifacts": {
+    "diagram": "img/eshop_architecture.png — Microsoft's published 'eShop reference application' diagram (the authoritative primary source; embedded by README.md). Visually confirms the service decomposition and the OrderProcessor-in-Order-Service fold; does NOT itself draw the BuildingBlocks grouping (Event Bus is a standalone element, the other three infra libs are not depicted), which is why that cluster is the one judgment no syntactic signal recovers.",
+    "readme": "README.md — 'A reference .NET application implementing an e-commerce website using a services-based architecture using .NET Aspire.'",
+    "adrs": [
+      "docs/adr/0001-catalog-basket-independent.md",
+      "docs/adr/0002-integration-event-log-private.md",
+      "docs/adr/0003-redis-basket-store.md",
+      "docs/adr/0004-admin-tooling-outside-core.md"
+    ],
+    "learn_doc": "https://learn.microsoft.com/dotnet/architecture/microservices — '.NET Microservices: Architecture for Containerized .NET Applications' (the broader reference guidance eShop is the canonical sample for).",
+    "pinned_at": "All in-repo artifacts cited at dotnet/eShop commit 9b4f943 (subject_version above)."
+  },
+  "construction": {
+    "services": "Each documented service maps to its project(s): Catalog=Catalog.API; Basket=Basket.API; Identity=Identity.API; Payment=PaymentProcessor; Webhooks=Webhooks.API+WebhookClient. Ordering is the documented DDD bounded context spanning Ordering.API + Ordering.Domain + Ordering.Infrastructure + the OrderProcessor background worker.",
+    "webapps": "WebApp + WebAppComponents (Blazor storefront) + ClientApp + HybridApp (.NET MAUI clients) -> WebApps.",
+    "building_blocks": "EventBus + EventBusRabbitMQ + IntegrationEventLogEF + eShop.ServiceDefaults -> BuildingBlocks (documented cross-cutting infrastructure).",
+    "orchestration": "eShop.AppHost (Aspire) -> Orchestration.",
+    "excluded": "The 5 tests/* projects (not production architecture)."
+  },
+  "format": "RSF `contain <cluster> <csproj-id>` tuples; entity ids are the `csharp:csproj:<repo-rel-path>` ids the target-granularity graph export emits.",
+  "clusters": 9,
+  "entities": 19,
+  "rater_agreement": "Original transcription (2026-06): single transcriber from the public eShop architecture docs. The service->project mapping is near-mechanical (the repo's project names mirror the documented services); the only judgement calls are grouping the four building blocks together and folding OrderProcessor into the Ordering context (both documented). Independent re-derivation by two blind raters done 2026-07-21 (eval §5.3 / §10a W3a) — see `independent_raters` below.",
+  "independent_raters": {
+    "protocol": "eval §10a / docs/rq9-blind-curation-runbook.md §5 (the W3a revalidation): two raters re-derived this reference independently from the pinned checkout + the project's public docs, blind to reference.rsf, to each other, and to all tool output; the pre-consensus worksheets are frozen (κ + the RQ9 ceiling row come from those); reconciliation to a consensus happened afterwards.",
+    "raters": [
+      "R-C",
+      "R-D"
+    ],
+    "rated_on": "2026-07-21",
+    "wall_clock_min": {
+      "R-C": 32,
+      "R-D": 37
+    },
+    "artifacts": "references/eshop/blind-curation/ — worksheet-R-C.csv + worksheet-R-D.csv (frozen), rater-R-C.rsf + rater-R-D.rsf, ceiling.json, worksheet-consensus.csv + consensus.rsf, attestation-*.md (name-redacted), worksheet-target.csv (the entity list the raters got).",
+    "agreement": {
+      "kappa": 0.0,
+      "labels_shared": 0,
+      "raw_agreement": 0.0,
+      "mojofm_ab": 68.75,
+      "mojofm_ba": 64.29,
+      "mojofm_mean": 66.52,
+      "a2a": 89.69,
+      "clusters": {
+        "R-C": 8,
+        "R-D": 13
+      },
+      "entities_common": 19,
+      "note": "κ is computed on normalized labels (pre-registered, eval §10a.6) and is 0.0 because the two raters shared no label string at all ('Basket' vs 'BasketService', 'View' vs 'WebApp', …) — the pre-registered κ<0.6 flag therefore fired for VOCABULARY, not structure. Partition agreement is what MoJoFM/a2a measure: R-D's 13-cluster partition is a strict refinement of R-C's 8-cluster one — zero cross-boundary conflicts; all disagreement is granularity, concentrated in the undocumented shared-infrastructure tier (EventBus, EventBusRabbitMQ, IntegrationEventLogEF, ServiceDefaults, AppHost) and the frontend split. Every documented service was grouped identically by both raters."
+    },
+    "vs_committed": {
+      "R-C": {
+        "kappa": 0.387,
+        "mojofm_mean": 93.09,
+        "a2a": 97.85,
+        "delta": "identical up to merging Orchestration (AppHost) into the BuildingBlocks cluster; reuses the documented service names"
+      },
+      "R-D": {
+        "kappa": 0.0,
+        "mojofm_mean": 74.16,
+        "a2a": 91.84,
+        "delta": "a strict refinement (WebApps → 3 clusters, BuildingBlocks → 3); every documented service intact"
+      }
+    },
+    "consensus": {
+      "file": "references/eshop/blind-curation/consensus.rsf",
+      "clusters": 14,
+      "entities": 19,
+      "relation_to_committed": "strict refinement of the committed 9-cluster reference (WebApps → WebApp / WebAppComponents / ClientApp / HybridApp; BuildingBlocks → EventBus / Logging / ServiceDefaults; Orchestration = AppHost); 0 cross-boundary conflicts; R-C's 'Data' label resolved to Webhooks.",
+      "reconciled_on": "2026-08-04"
+    },
+    "scored_reference_decision": {
+      "decision": "The committed GT-doc reference (this directory's reference.rsf, 9 clusters) REMAINS the scored reference for RQ1/RQ2/RQ9 — per the pre-registered rule (companion plan §9 Q4 / runbook §8 Phase 2: it stays unless κ reveals REAL disagreement).",
+      "rationale": "The κ flag fired on label vocabulary alone (labels_shared=0) while partition agreement with the committed reference is high (R-C: MoJoFM 93.1, a2a 97.9) and the consensus is a strict refinement with zero boundary conflicts — granularity, not real disagreement. Switching to the finer consensus after the fact would move every eShop number for a reason the pre-registration does not recognise.",
+      "reporting": [
+        "the consensus is reported as the W3a independent re-derivation result: it reproduces the committed reference up to refinement, 0 conflicts",
+        "RQ9 additionally reports the blind curator vs the consensus as a clearly-labelled SENSITIVITY row (projection=vs-consensus), never the headline",
+        "the κ=0.0 ceiling is reported as pre-registered, beside MoJoFM/a2a, with the vocabulary explanation"
+      ],
+      "decided_on": "2026-08-30",
+      "decided_before_any_curator_fidelity_was_computed": true,
+      "decided_by": "facilitator / neutral scorer"
+    }
+  },
+  "caveats": [
+    "Small system (19 projects, 9 clusters): most services are a single project, so target-granularity clustering is partly trivial. The discriminating cases are the multi-project Ordering DDD context and whether dependency-only baselines keep the microservice boundaries (they tend not to, via the shared building blocks).",
+    "The curation overlay is FINER than this reference in places (separate Event Bus / Integration Event Log / Service Defaults containers vs. the documented BuildingBlocks group; OrderProcessor as its own container vs. folded into Ordering) — an honest granularity disagreement that lowers MoJoFM, not a tool error.",
+    "C# target granularity only (no per-document Roslyn references yet)."
+  ]
+}

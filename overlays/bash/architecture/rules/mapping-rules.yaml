@@ -1,0 +1,44 @@
+# Curation rules for the GNU bash 4.2 fixture (eval plan §5.2 — GT-pub anchor #2).
+#
+# bash is the AUTOTOOLS fixture: the L0 build graph comes from the static Makefile.in
+# parse (extract_autotools) — bash + 9 static libs + the small build/support programs the
+# top-level Makefile declares. The library targets already coincide with the published
+# ground truth's lib* clusters (Lutellier et al. bash-4.2 GT), so curation here is thin:
+# name the shell core, fold the build/support helper programs into one box (the GT's
+# `support` cluster), fold the two-name intl pair, and park the example loadable builtins
+# (not part of the shipped shell; absent from the GT).
+#
+# What curation deliberately CANNOT do here: split the flat core .c files into the GT's
+# semantic general / job_control / signal_handling / error_handling clusters — that split
+# exists in no build or directory signal (the documented edge of the deterministic thesis,
+# plans/notes/2026-06-13-opencv-mod-nopcommerce-bash.md §3).
+#
+# Run: `arch run --repo fixtures/bash --arch-dir out/bash/architecture
+#       --rules-dir overlays/bash/architecture/rules --no-llm`. Deterministic; no configure.
+version: 1
+
+defaults:
+  min_relationship_weight: 3        # the corpus-wide pre-registered operating point (§7.1);
+                                    # the sparse declared L0 star survives via the
+                                    # declared-deps-never-dropped rule (A5), not a lower bar
+  drop_external: true
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false
+
+group:
+  - container: "Shell Core"
+    members_glob: ["bash", "parser-built"]      # parser-built = the yacc stamp's y.tab.h
+  - container: "Support & Build Tools"          # the GT `support` cluster
+    members_glob: ["mksignames", "mksyntax", "bashversion", "recho", "zecho",
+                   "xcase", "man2html", "printenv"]
+  - container: "Memory Allocator"               # lib/malloc builds via MALLOC_TARGET progs
+    members_glob: ["malloc", "stubmalloc"]
+  - container: "Internationalization"           # libintl.a is assembled from libgnuintl.a
+    members_glob: ["libintl", "libgnuintl"]
+  - container: "Example Loadables"              # examples/loadables — demos, not the shell
+    members_glob: ["examples/*"]
+
+technology:
+  static_lib: "C static library"
+  executable: "C executable"

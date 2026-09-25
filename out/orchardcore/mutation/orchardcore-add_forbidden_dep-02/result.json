@@ -1,0 +1,65 @@
+{
+  "advisory": false,
+  "coverage": 1.0,
+  "diff": {
+    "coverage_gap_edges": [],
+    "coverage_gap_targets": [],
+    "first_run": false,
+    "new_edges": [
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.Pdf/OrchardCore.Media.Indexing.Pdf.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Search/OrchardCore.Search.csproj"
+      ]
+    ],
+    "new_targets": [],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": [],
+    "suspicious": []
+  },
+  "score": {
+    "advisory": false,
+    "attributed_violations": [],
+    "coverage": 1.0,
+    "coverage_gaps_in_scope": {
+      "coverage_gap_edges": [],
+      "coverage_gap_targets": []
+    },
+    "detected": true,
+    "fn": [],
+    "fn_count": 0,
+    "fp": [],
+    "fp_count": 0,
+    "scored": {
+      "layering_violations": [
+        [
+          "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.Pdf/OrchardCore.Media.Indexing.Pdf.csproj",
+          "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Search/OrchardCore.Search.csproj"
+        ]
+      ],
+      "new_edges": [
+        [
+          "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.Pdf/OrchardCore.Media.Indexing.Pdf.csproj",
+          "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Search/OrchardCore.Search.csproj"
+        ]
+      ],
+      "new_targets": [],
+      "removed_edges": [],
+      "removed_targets": [],
+      "suspected_renames": []
+    },
+    "tp": [
+      [
+        "new_edge",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.Pdf/OrchardCore.Media.Indexing.Pdf.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Search/OrchardCore.Search.csproj"
+      ],
+      [
+        "violation",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Media.Indexing.Pdf/OrchardCore.Media.Indexing.Pdf.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Search/OrchardCore.Search.csproj"
+      ]
+    ],
+    "tp_count": 2
+  }
+}

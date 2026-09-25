@@ -1,0 +1,10 @@
+[wca] 1087 entities from graph-file.rsf
+[wca] 1087 singleton clusters
+[wca] clustered to 14 clusters (target 14)
+[wca] wrote <repo>\out\opencv\baseline\wca-file\clusters.rsf
+[limbo] 1087 entities from graph-file.rsf
+[limbo] 1087 singleton clusters
+[limbo] clustered to 14 clusters (target 14)
+[limbo] wrote <repo>\out\opencv\baseline\limbo-file\clusters.rsf
+[wca-file] 14 clusters / 1087 entities — MoJoFM=28.89 a2a=82.56398537477148 vs reference -> <repo>\out\opencv\baseline\wca-file\fidelity.json
+[limbo-file] 14 clusters / 1087 entities — MoJoFM=43.99 a2a=83.70658135283364 vs reference -> <repo>\out\opencv\baseline\limbo-file\fidelity.json

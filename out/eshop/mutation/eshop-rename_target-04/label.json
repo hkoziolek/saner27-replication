@@ -1,0 +1,50 @@
+{
+  "alias": {
+    "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj": "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+  },
+  "description": "rename build target csharp:csproj:src/WebAppComponents/WebAppComponents.csproj -> csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "csharp:csproj:src/HybridApp/HybridApp.csproj",
+        "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/WebApp/WebApp.csproj",
+        "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+    ],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/HybridApp/HybridApp.csproj",
+        "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+      ],
+      [
+        "csharp:csproj:src/WebApp/WebApp.csproj",
+        "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+    ],
+    "suspected_renames": [
+      [
+        "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj",
+        "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+      ]
+    ]
+  },
+  "files_touched": [
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\HybridApp\\HybridApp.csproj",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\WebApp\\WebApp.csproj",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\eShop.slnx",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\WebAppComponents\\WebAppComponents.csproj -> <repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\WebAppComponents\\WebAppComponentsAnonMut.csproj"
+  ],
+  "id": "eshop-rename_target-04",
+  "operator": "rename_target",
+  "system": "eshop"
+}

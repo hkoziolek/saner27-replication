@@ -1,0 +1,69 @@
+# Curation rules for the abseil/abseil-cpp fixture (plan §7.4). Reviewed + committed.
+#
+# Abseil is the C++ TARGET-GRAPH & CURATION STRESS fixture (§19.1): the raw extraction yields
+# ~218 fine-grained CMake targets (100 header-only INTERFACE libs + 90 static libs + 28 CTest
+# dashboard pseudo-targets). Each maps 1:1 to a container by default => an unreadable 218-box
+# view. This overlay groups them into ~15 functional families by NAME glob (the absl target
+# names are bare — `btree`, `cord`, `str_format` — and most are header-only with no source dir,
+# so name globs, not path globs, are the reliable signal here).
+#
+# Groups are first-match-wins in rule order (§7.4), so the order below matters: more specific /
+# disambiguating families come first (e.g. Random before Strings, because `random_distributions`
+# contains the substring "str"). The final catch-all folds the remaining base/meta/memory/utility
+# primitives into one "Base & Core" box.
+#
+# Run: `arch run --no-llm`. Deterministic; CMake configure-only + Doxygen L2/L3.
+version: 1
+
+defaults:
+  min_relationship_weight: 3
+  drop_external: true
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false
+
+exclude:
+  targets:
+    - glob: "Continuous*"         # CTest/CDash dashboard pseudo-targets — not architecture
+    - glob: "Experimental*"
+    - glob: "Nightly*"
+
+group:
+  - container: "Logging"
+    members_glob: ["*log*", "absl_check", "check", "die_if_null"]
+  - container: "Flags"
+    members_glob: ["flags*"]
+  - container: "Random"
+    members_glob: ["random*"]
+  - container: "CRC"
+    members_glob: ["crc*"]
+  - container: "Hashing"
+    members_glob: ["hash", "hash_*", "*hashtable*", "low_level_hash", "city",
+                   "common_policy_traits", "hash_policy_traits"]
+  - container: "Containers"
+    members_glob: ["btree", "*hash_map", "*hash_set", "inlined_vector*", "fixed_array",
+                   "compressed_tuple", "layout", "container_*", "raw_hash*", "node_slot_policy"]
+  - container: "Strings & Cord"
+    members_glob: ["str*", "cord*", "charset", "*utf8*", "string_view",
+                   "has_ostream_operator", "decode_rust_punycode"]
+  - container: "Time"
+    members_glob: ["time", "time_zone", "civil_time"]
+  - container: "Synchronization"
+    members_glob: ["synchronization", "graphcycles_internal", "kernel_timeout_internal"]
+  - container: "Debugging"
+    members_glob: ["debugging*", "stacktrace", "symbolize", "*demangle*", "examine_stack",
+                   "failure_signal_handler", "leak_check"]
+  - container: "Status"
+    members_glob: ["status*"]
+  - container: "Types"
+    members_glob: ["any", "bad_*", "optional", "variant", "span", "compare", "nullability"]
+  - container: "Functional"
+    members_glob: ["bind_front", "function_ref", "any_invocable", "overload"]
+  - container: "Numeric"
+    members_glob: ["int128", "bits", "numeric*"]
+  - container: "Base & Core"        # catch-all: remaining base / meta / memory / utility primitives
+    members_glob: ["*"]
+
+technology:
+  static_lib: "C++ static library"
+  interface_lib: "C++ header-only library"

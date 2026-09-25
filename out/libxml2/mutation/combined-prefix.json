@@ -1,0 +1,2431 @@
+{
+  "baseline_l0_edges": 12,
+  "baseline_targets": 14,
+  "idiom": "automake",
+  "instances_requested": 4,
+  "l0_scoped": true,
+  "language": "cpp",
+  "modes": {
+    "lose_l0": {
+      "by_operator": {
+        "add_target": {
+          "advisory": 0,
+          "advisory_runs": 0,
+          "drift": 0,
+          "findings": 4,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 4,
+          "n": 4,
+          "silent": 4
+        },
+        "remove_dep": {
+          "advisory": 0,
+          "advisory_runs": 0,
+          "drift": 0,
+          "findings": 4,
+          "fp": 0,
+          "gap": 4,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_target": {
+          "advisory": 0,
+          "advisory_runs": 0,
+          "drift": 0,
+          "findings": 8,
+          "fp": 0,
+          "gap": 8,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "rename_target": {
+          "advisory": 0,
+          "advisory_runs": 0,
+          "drift": 0,
+          "findings": 20,
+          "fp": 0,
+          "gap": 16,
+          "mutations_silent": 4,
+          "n": 4,
+          "silent": 4
+        }
+      },
+      "silent_findings": [
+        {
+          "finding": [
+            "new_target",
+            "cpp:target:libstrucmut1"
+          ],
+          "mutation": "libxml2-add_target-01"
+        },
+        {
+          "finding": [
+            "new_target",
+            "cpp:target:libstrucmut2"
+          ],
+          "mutation": "libxml2-add_target-02"
+        },
+        {
+          "finding": [
+            "new_target",
+            "cpp:target:libstrucmut3"
+          ],
+          "mutation": "libxml2-add_target-03"
+        },
+        {
+          "finding": [
+            "new_target",
+            "cpp:target:libstrucmut4"
+          ],
+          "mutation": "libxml2-add_target-04"
+        },
+        {
+          "finding": [
+            "new_target",
+            "cpp:target:testAutomatastrucmut"
+          ],
+          "mutation": "libxml2-rename_target-01"
+        },
+        {
+          "finding": [
+            "new_target",
+            "cpp:target:testHTMLstrucmut"
+          ],
+          "mutation": "libxml2-rename_target-02"
+        },
+        {
+          "finding": [
+            "new_target",
+            "cpp:target:testSchemasstrucmut"
+          ],
+          "mutation": "libxml2-rename_target-03"
+        },
+        {
+          "finding": [
+            "new_target",
+            "cpp:target:testXPathstrucmut"
+          ],
+          "mutation": "libxml2-rename_target-04"
+        }
+      ],
+      "totals": {
+        "advisory": 0,
+        "advisory_runs": 0,
+        "drift": 0,
+        "findings": 36,
+        "fp": 0,
+        "gap": 28,
+        "mutations_silent": 8,
+        "n": 16,
+        "silent": 8
+      }
+    },
+    "starve_l0_10": {
+      "by_operator": {
+        "add_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 4,
+          "findings": 4,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_dep": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 4,
+          "findings": 4,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 8,
+          "findings": 8,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "rename_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 20,
+          "findings": 20,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        }
+      },
+      "silent_findings": [],
+      "totals": {
+        "advisory": 0,
+        "advisory_runs": 16,
+        "drift": 36,
+        "findings": 36,
+        "fp": 0,
+        "gap": 0,
+        "mutations_silent": 0,
+        "n": 16,
+        "silent": 0
+      }
+    },
+    "starve_l0_30": {
+      "by_operator": {
+        "add_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 4,
+          "findings": 4,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_dep": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 4,
+          "findings": 4,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 8,
+          "findings": 8,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "rename_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 20,
+          "findings": 20,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        }
+      },
+      "silent_findings": [],
+      "totals": {
+        "advisory": 0,
+        "advisory_runs": 16,
+        "drift": 36,
+        "findings": 36,
+        "fp": 0,
+        "gap": 0,
+        "mutations_silent": 0,
+        "n": 16,
+        "silent": 0
+      }
+    },
+    "starve_mutated": {
+      "by_operator": {
+        "add_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 4,
+          "findings": 4,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_dep": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 0,
+          "findings": 4,
+          "fp": 0,
+          "gap": 4,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 4,
+          "findings": 8,
+          "fp": 0,
+          "gap": 4,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "rename_target": {
+          "advisory": 4,
+          "advisory_runs": 4,
+          "drift": 12,
+          "findings": 20,
+          "fp": 0,
+          "gap": 4,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        }
+      },
+      "silent_findings": [],
+      "totals": {
+        "advisory": 4,
+        "advisory_runs": 16,
+        "drift": 20,
+        "findings": 36,
+        "fp": 0,
+        "gap": 12,
+        "mutations_silent": 0,
+        "n": 16,
+        "silent": 0
+      }
+    }
+  },
+  "mutations": [
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testAutomata",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 14
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9286,
+          "drift": 1,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testAutomata",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 1
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7143,
+          "drift": 1,
+          "edges_dropped": 3,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testAutomata",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 4
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8571,
+          "drift": 0,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testAutomata",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libxml2",
+            "cpp:target:testAutomata"
+          ],
+          "targets_starved": 2,
+          "touched_absent": []
+        }
+      },
+      "name": "libxml2-remove_dep-01",
+      "operator": "remove_dep"
+    },
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testHTML",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 14
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9286,
+          "drift": 1,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testHTML",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 1
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7143,
+          "drift": 1,
+          "edges_dropped": 3,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testHTML",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 4
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8571,
+          "drift": 0,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testHTML",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libxml2",
+            "cpp:target:testHTML"
+          ],
+          "targets_starved": 2,
+          "touched_absent": []
+        }
+      },
+      "name": "libxml2-remove_dep-02",
+      "operator": "remove_dep"
+    },
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testSchemas",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 14
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9286,
+          "drift": 1,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testSchemas",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 1
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7143,
+          "drift": 1,
+          "edges_dropped": 3,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testSchemas",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 4
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8571,
+          "drift": 0,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testSchemas",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libxml2",
+            "cpp:target:testSchemas"
+          ],
+          "targets_starved": 2,
+          "touched_absent": []
+        }
+      },
+      "name": "libxml2-remove_dep-03",
+      "operator": "remove_dep"
+    },
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testXPath",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 14
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9286,
+          "drift": 1,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testXPath",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 1
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7143,
+          "drift": 1,
+          "edges_dropped": 3,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testXPath",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 4
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8571,
+          "drift": 0,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testXPath",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libxml2",
+            "cpp:target:testXPath"
+          ],
+          "targets_starved": 2,
+          "touched_absent": []
+        }
+      },
+      "name": "libxml2-remove_dep-04",
+      "operator": "remove_dep"
+    },
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 12,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut1"
+              ],
+              "silent"
+            ]
+          ],
+          "silent": 1,
+          "targets_starved": 15
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8667,
+          "drift": 1,
+          "edges_dropped": 1,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut1"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7333,
+          "drift": 1,
+          "edges_dropped": 3,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut1"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 4
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9333,
+          "drift": 1,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut1"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libstrucmut1"
+          ],
+          "targets_starved": 1,
+          "touched_absent": []
+        }
+      },
+      "name": "libxml2-add_target-01",
+      "operator": "add_target"
+    },
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 12,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut2"
+              ],
+              "silent"
+            ]
+          ],
+          "silent": 1,
+          "targets_starved": 15
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8667,
+          "drift": 1,
+          "edges_dropped": 1,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut2"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7333,
+          "drift": 1,
+          "edges_dropped": 3,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut2"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 4
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9333,
+          "drift": 1,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut2"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libstrucmut2"
+          ],
+          "targets_starved": 1,
+          "touched_absent": []
+        }
+      },
+      "name": "libxml2-add_target-02",
+      "operator": "add_target"
+    },
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 12,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut3"
+              ],
+              "silent"
+            ]
+          ],
+          "silent": 1,
+          "targets_starved": 15
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8667,
+          "drift": 1,
+          "edges_dropped": 1,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut3"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7333,
+          "drift": 1,
+          "edges_dropped": 3,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut3"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 4
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9333,
+          "drift": 1,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut3"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libstrucmut3"
+          ],
+          "targets_starved": 1,
+          "touched_absent": []
+        }
+      },
+      "name": "libxml2-add_target-03",
+      "operator": "add_target"
+    },
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 12,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut4"
+              ],
+              "silent"
+            ]
+          ],
+          "silent": 1,
+          "targets_starved": 15
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8667,
+          "drift": 1,
+          "edges_dropped": 1,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut4"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7333,
+          "drift": 1,
+          "edges_dropped": 3,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut4"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 4
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9333,
+          "drift": 1,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "cpp:target:libstrucmut4"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libstrucmut4"
+          ],
+          "targets_starved": 1,
+          "touched_absent": []
+        }
+      },
+      "name": "libxml2-add_target-04",
+      "operator": "add_target"
+    },
+    {
+      "expected_findings": 2,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testAutomata",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testAutomata"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 13
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9231,
+          "drift": 2,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testAutomata",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testAutomata"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 1
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.6923,
+          "drift": 2,
+          "edges_dropped": 3,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testAutomata",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testAutomata"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 4
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9231,
+          "drift": 1,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testAutomata",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testAutomata"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libxml2"
+          ],
+          "targets_starved": 1,
+          "touched_absent": [
+            "cpp:target:testAutomata"
+          ]
+        }
+      },
+      "name": "libxml2-remove_target-01",
+      "operator": "remove_target"
+    },
+    {
+      "expected_findings": 2,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testHTML",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testHTML"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 13
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9231,
+          "drift": 2,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testHTML",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testHTML"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 1
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.6923,
+          "drift": 2,
+          "edges_dropped": 3,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testHTML",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testHTML"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 4
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9231,
+          "drift": 1,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testHTML",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testHTML"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libxml2"
+          ],
+          "targets_starved": 1,
+          "touched_absent": [
+            "cpp:target:testHTML"
+          ]
+        }
+      },
+      "name": "libxml2-remove_target-02",
+      "operator": "remove_target"
+    },
+    {
+      "expected_findings": 2,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testSchemas",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testSchemas"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 13
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9231,
+          "drift": 2,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testSchemas",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testSchemas"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 1
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.6923,
+          "drift": 2,
+          "edges_dropped": 3,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testSchemas",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testSchemas"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 4
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9231,
+          "drift": 1,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testSchemas",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testSchemas"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libxml2"
+          ],
+          "targets_starved": 1,
+          "touched_absent": [
+            "cpp:target:testSchemas"
+          ]
+        }
+      },
+      "name": "libxml2-remove_target-03",
+      "operator": "remove_target"
+    },
+    {
+      "expected_findings": 2,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testXPath",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testXPath"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 13
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9231,
+          "drift": 2,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testXPath",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testXPath"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 1
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.6923,
+          "drift": 2,
+          "edges_dropped": 3,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testXPath",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testXPath"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 4
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9231,
+          "drift": 1,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "cpp:target:testXPath",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testXPath"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libxml2"
+          ],
+          "targets_starved": 1,
+          "touched_absent": [
+            "cpp:target:testXPath"
+          ]
+        }
+      },
+      "name": "libxml2-remove_target-04",
+      "operator": "remove_target"
+    },
+    {
+      "expected_findings": 5,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 12,
+          "fp": 0,
+          "gap": 4,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "cpp:target:testAutomatastrucmut",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "new_target",
+                "cpp:target:testAutomatastrucmut"
+              ],
+              "silent"
+            ],
+            [
+              [
+                "removed_edge",
+                "cpp:target:testAutomata",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testAutomata"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "rename",
+                "cpp:target:testAutomata",
+                "cpp:target:testAutomatastrucmut"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 1,
+          "targets_starved": 14
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9286,
+          "drift": 5,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "cpp:target:testAutomatastrucmut",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "new_target",
+                "cpp:target:testAutomatastrucmut"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "cpp:target:testAutomata",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testAutomata"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "cpp:target:testAutomata",
+                "cpp:target:testAutomatastrucmut"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 1
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7143,
+          "drift": 5,
+          "edges_dropped": 3,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "cpp:target:testAutomatastrucmut",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "new_target",
+                "cpp:target:testAutomatastrucmut"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "cpp:target:testAutomata",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testAutomata"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "cpp:target:testAutomata",
+                "cpp:target:testAutomatastrucmut"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 4
+        },
+        "starve_mutated": {
+          "advisory": 1,
+          "advisory_run": true,
+          "coverage_l0": 0.8571,
+          "drift": 3,
+          "edges_dropped": 12,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "cpp:target:testAutomatastrucmut",
+                "cpp:target:libxml2"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_target",
+                "cpp:target:testAutomatastrucmut"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "cpp:target:testAutomata",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testAutomata"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "cpp:target:testAutomata",
+                "cpp:target:testAutomatastrucmut"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libxml2",
+            "cpp:target:testAutomatastrucmut"
+          ],
+          "targets_starved": 2,
+          "touched_absent": [
+            "cpp:target:testAutomata"
+          ]
+        }
+      },
+      "name": "libxml2-rename_target-01",
+      "operator": "rename_target"
+    },
+    {
+      "expected_findings": 5,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 12,
+          "fp": 0,
+          "gap": 4,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "cpp:target:testHTMLstrucmut",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "new_target",
+                "cpp:target:testHTMLstrucmut"
+              ],
+              "silent"
+            ],
+            [
+              [
+                "removed_edge",
+                "cpp:target:testHTML",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testHTML"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "rename",
+                "cpp:target:testHTML",
+                "cpp:target:testHTMLstrucmut"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 1,
+          "targets_starved": 14
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9286,
+          "drift": 5,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "cpp:target:testHTMLstrucmut",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "new_target",
+                "cpp:target:testHTMLstrucmut"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "cpp:target:testHTML",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testHTML"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "cpp:target:testHTML",
+                "cpp:target:testHTMLstrucmut"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 1
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7143,
+          "drift": 5,
+          "edges_dropped": 3,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "cpp:target:testHTMLstrucmut",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "new_target",
+                "cpp:target:testHTMLstrucmut"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "cpp:target:testHTML",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testHTML"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "cpp:target:testHTML",
+                "cpp:target:testHTMLstrucmut"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 4
+        },
+        "starve_mutated": {
+          "advisory": 1,
+          "advisory_run": true,
+          "coverage_l0": 0.8571,
+          "drift": 3,
+          "edges_dropped": 12,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "cpp:target:testHTMLstrucmut",
+                "cpp:target:libxml2"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_target",
+                "cpp:target:testHTMLstrucmut"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "cpp:target:testHTML",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testHTML"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "cpp:target:testHTML",
+                "cpp:target:testHTMLstrucmut"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libxml2",
+            "cpp:target:testHTMLstrucmut"
+          ],
+          "targets_starved": 2,
+          "touched_absent": [
+            "cpp:target:testHTML"
+          ]
+        }
+      },
+      "name": "libxml2-rename_target-02",
+      "operator": "rename_target"
+    },
+    {
+      "expected_findings": 5,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 12,
+          "fp": 0,
+          "gap": 4,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "cpp:target:testSchemasstrucmut",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "new_target",
+                "cpp:target:testSchemasstrucmut"
+              ],
+              "silent"
+            ],
+            [
+              [
+                "removed_edge",
+                "cpp:target:testSchemas",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testSchemas"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "rename",
+                "cpp:target:testSchemas",
+                "cpp:target:testSchemasstrucmut"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 1,
+          "targets_starved": 14
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9286,
+          "drift": 5,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "cpp:target:testSchemasstrucmut",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "new_target",
+                "cpp:target:testSchemasstrucmut"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "cpp:target:testSchemas",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testSchemas"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "cpp:target:testSchemas",
+                "cpp:target:testSchemasstrucmut"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 1
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7143,
+          "drift": 5,
+          "edges_dropped": 3,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "cpp:target:testSchemasstrucmut",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "new_target",
+                "cpp:target:testSchemasstrucmut"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "cpp:target:testSchemas",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testSchemas"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "cpp:target:testSchemas",
+                "cpp:target:testSchemasstrucmut"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 4
+        },
+        "starve_mutated": {
+          "advisory": 1,
+          "advisory_run": true,
+          "coverage_l0": 0.8571,
+          "drift": 3,
+          "edges_dropped": 12,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "cpp:target:testSchemasstrucmut",
+                "cpp:target:libxml2"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_target",
+                "cpp:target:testSchemasstrucmut"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "cpp:target:testSchemas",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testSchemas"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "cpp:target:testSchemas",
+                "cpp:target:testSchemasstrucmut"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libxml2",
+            "cpp:target:testSchemasstrucmut"
+          ],
+          "targets_starved": 2,
+          "touched_absent": [
+            "cpp:target:testSchemas"
+          ]
+        }
+      },
+      "name": "libxml2-rename_target-03",
+      "operator": "rename_target"
+    },
+    {
+      "expected_findings": 5,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 12,
+          "fp": 0,
+          "gap": 4,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "cpp:target:testXPathstrucmut",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "new_target",
+                "cpp:target:testXPathstrucmut"
+              ],
+              "silent"
+            ],
+            [
+              [
+                "removed_edge",
+                "cpp:target:testXPath",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testXPath"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "rename",
+                "cpp:target:testXPath",
+                "cpp:target:testXPathstrucmut"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 1,
+          "targets_starved": 14
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9286,
+          "drift": 5,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "cpp:target:testXPathstrucmut",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "new_target",
+                "cpp:target:testXPathstrucmut"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "cpp:target:testXPath",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testXPath"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "cpp:target:testXPath",
+                "cpp:target:testXPathstrucmut"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 1
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7143,
+          "drift": 5,
+          "edges_dropped": 3,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "cpp:target:testXPathstrucmut",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "new_target",
+                "cpp:target:testXPathstrucmut"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "cpp:target:testXPath",
+                "cpp:target:libxml2"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testXPath"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "cpp:target:testXPath",
+                "cpp:target:testXPathstrucmut"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 4
+        },
+        "starve_mutated": {
+          "advisory": 1,
+          "advisory_run": true,
+          "coverage_l0": 0.8571,
+          "drift": 3,
+          "edges_dropped": 12,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "cpp:target:testXPathstrucmut",
+                "cpp:target:libxml2"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_target",
+                "cpp:target:testXPathstrucmut"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "cpp:target:testXPath",
+                "cpp:target:libxml2"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "cpp:target:testXPath"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "cpp:target:testXPath",
+                "cpp:target:testXPathstrucmut"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "cpp:target:libxml2",
+            "cpp:target:testXPathstrucmut"
+          ],
+          "targets_starved": 2,
+          "touched_absent": [
+            "cpp:target:testXPath"
+          ]
+        }
+      },
+      "name": "libxml2-rename_target-04",
+      "operator": "rename_target"
+    }
+  ],
+  "schema": "rq6-combined/1",
+  "system": "libxml2"
+}

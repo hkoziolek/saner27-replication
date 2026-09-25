@@ -1,0 +1,1242 @@
+{
+  "provenance": {
+    "coverage": {
+      "cpp:target:args-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:assert-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:chrono-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:color-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:compile-fp-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:compile-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:core-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:doc": {
+        "L0": true,
+        "L1": true,
+        "L2": "partial",
+        "L3": "partial"
+      },
+      "cpp:target:enforce-checks-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:fmt": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:fmt-header-only": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:format-impl-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:format-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:gtest": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:gtest-extra-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:os-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:ostream-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:posix-mock-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:printf-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:ranges-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:scan-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:std-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:test-main": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:unicode-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:xchar-test": {
+        "L0": true,
+        "L1": true,
+        "L2": false,
+        "L3": false
+      }
+    },
+    "extractors": [
+      {
+        "name": "cmake-graph",
+        "version": "0.2.0"
+      }
+    ],
+    "repo": "fmt"
+  },
+  "relationships": [
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(args-test PRIVATE fmt)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:args-test->cpp:target:fmt",
+      "is_declared_dependency": true,
+      "source": "cpp:target:args-test",
+      "target": "cpp:target:fmt",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(args-test PRIVATE test-main)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:args-test->cpp:target:test-main",
+      "is_declared_dependency": true,
+      "source": "cpp:target:args-test",
+      "target": "cpp:target:test-main",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(assert-test PRIVATE fmt)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:assert-test->cpp:target:fmt",
+      "is_declared_dependency": true,
+      "source": "cpp:target:assert-test",
+      "target": "cpp:target:fmt",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(assert-test PRIVATE test-main)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:assert-test->cpp:target:test-main",
+      "is_declared_dependency": true,
+      "source": "cpp:target:assert-test",
+      "target": "cpp:target:test-main",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(chrono-test PRIVATE fmt)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:chrono-test->cpp:target:fmt",
+      "is_declared_dependency": true,
+      "source": "cpp:target:chrono-test",
+      "target": "cpp:target:fmt",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(chrono-test PRIVATE test-main)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:chrono-test->cpp:target:test-main",
+      "is_declared_dependency": true,
+      "source": "cpp:target:chrono-test",
+      "target": "cpp:target:test-main",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(color-test PRIVATE fmt)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:color-test->cpp:target:fmt",
+      "is_declared_dependency": true,
+      "source": "cpp:target:color-test",
+      "target": "cpp:target:fmt",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(color-test PRIVATE test-main)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:color-test->cpp:target:test-main",
+      "is_declared_dependency": true,
+      "source": "cpp:target:color-test",
+      "target": "cpp:target:test-main",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(compile-fp-test PRIVATE fmt-header-only)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:compile-fp-test->cpp:target:fmt-header-only",
+      "is_declared_dependency": true,
+      "source": "cpp:target:compile-fp-test",
+      "target": "cpp:target:fmt-header-only",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(compile-fp-test PRIVATE gtest)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:compile-fp-test->cpp:target:gtest",
+      "is_declared_dependency": true,
+      "source": "cpp:target:compile-fp-test",
+      "target": "cpp:target:gtest",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(compile-test PRIVATE fmt)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:compile-test->cpp:target:fmt",
+      "is_declared_dependency": true,
+      "source": "cpp:target:compile-test",
+      "target": "cpp:target:fmt",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(compile-test PRIVATE test-main)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:compile-test->cpp:target:test-main",
+      "is_declared_dependency": true,
+      "source": "cpp:target:compile-test",
+      "target": "cpp:target:test-main",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(core-test PRIVATE fmt)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:core-test->cpp:target:fmt",
+      "is_declared_dependency": true,
+      "source": "cpp:target:core-test",
+      "target": "cpp:target:fmt",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(core-test PRIVATE test-main)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:core-test->cpp:target:test-main",
+      "is_declared_dependency": true,
+      "source": "cpp:target:core-test",
+      "target": "cpp:target:test-main",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(enforce-checks-test PRIVATE fmt)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:enforce-checks-test->cpp:target:fmt",
+      "is_declared_dependency": true,
+      "source": "cpp:target:enforce-checks-test",
+      "target": "cpp:target:fmt",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(enforce-checks-test PRIVATE test-main)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:enforce-checks-test->cpp:target:test-main",
+      "is_declared_dependency": true,
+      "source": "cpp:target:enforce-checks-test",
+      "target": "cpp:target:test-main",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(format-impl-test PRIVATE fmt-header-only)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:format-impl-test->cpp:target:fmt-header-only",
+      "is_declared_dependency": true,
+      "source": "cpp:target:format-impl-test",
+      "target": "cpp:target:fmt-header-only",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(format-impl-test PRIVATE gtest)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:format-impl-test->cpp:target:gtest",
+      "is_declared_dependency": true,
+      "source": "cpp:target:format-impl-test",
+      "target": "cpp:target:gtest",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(format-test PRIVATE fmt)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:format-test->cpp:target:fmt",
+      "is_declared_dependency": true,
+      "source": "cpp:target:format-test",
+      "target": "cpp:target:fmt",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(format-test PRIVATE test-main)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:format-test->cpp:target:test-main",
+      "is_declared_dependency": true,
+      "source": "cpp:target:format-test",
+      "target": "cpp:target:test-main",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(gtest-extra-test PRIVATE fmt)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:gtest-extra-test->cpp:target:fmt",
+      "is_declared_dependency": true,
+      "source": "cpp:target:gtest-extra-test",
+      "target": "cpp:target:fmt",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(gtest-extra-test PRIVATE test-main)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:gtest-extra-test->cpp:target:test-main",
+      "is_declared_dependency": true,
+      "source": "cpp:target:gtest-extra-test",
+      "target": "cpp:target:test-main",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(os-test PRIVATE fmt)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:os-test->cpp:target:fmt",
+      "is_declared_dependency": true,
+      "source": "cpp:target:os-test",
+      "target": "cpp:target:fmt",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(os-test PRIVATE test-main)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:os-test->cpp:target:test-main",
+      "is_declared_dependency": true,
+      "source": "cpp:target:os-test",
+      "target": "cpp:target:test-main",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(ostream-test PRIVATE fmt)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:ostream-test->cpp:target:fmt",
+      "is_declared_dependency": true,
+      "source": "cpp:target:ostream-test",
+      "target": "cpp:target:fmt",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(ostream-test PRIVATE test-main)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:ostream-test->cpp:target:test-main",
+      "is_declared_dependency": true,
+      "source": "cpp:target:ostream-test",
+      "target": "cpp:target:test-main",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(posix-mock-test PRIVATE gtest)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:posix-mock-test->cpp:target:gtest",
+      "is_declared_dependency": true,
+      "source": "cpp:target:posix-mock-test",
+      "target": "cpp:target:gtest",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(printf-test PRIVATE fmt)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:printf-test->cpp:target:fmt",
+      "is_declared_dependency": true,
+      "source": "cpp:target:printf-test",
+      "target": "cpp:target:fmt",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(printf-test PRIVATE test-main)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:printf-test->cpp:target:test-main",
+      "is_declared_dependency": true,
+      "source": "cpp:target:printf-test",
+      "target": "cpp:target:test-main",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(ranges-test PRIVATE fmt)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:ranges-test->cpp:target:fmt",
+      "is_declared_dependency": true,
+      "source": "cpp:target:ranges-test",
+      "target": "cpp:target:fmt",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(ranges-test PRIVATE test-main)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:ranges-test->cpp:target:test-main",
+      "is_declared_dependency": true,
+      "source": "cpp:target:ranges-test",
+      "target": "cpp:target:test-main",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(scan-test PRIVATE fmt)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:scan-test->cpp:target:fmt",
+      "is_declared_dependency": true,
+      "source": "cpp:target:scan-test",
+      "target": "cpp:target:fmt",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(scan-test PRIVATE test-main)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:scan-test->cpp:target:test-main",
+      "is_declared_dependency": true,
+      "source": "cpp:target:scan-test",
+      "target": "cpp:target:test-main",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(std-test PRIVATE fmt)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:std-test->cpp:target:fmt",
+      "is_declared_dependency": true,
+      "source": "cpp:target:std-test",
+      "target": "cpp:target:fmt",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(std-test PRIVATE test-main)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:std-test->cpp:target:test-main",
+      "is_declared_dependency": true,
+      "source": "cpp:target:std-test",
+      "target": "cpp:target:test-main",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(test-main PUBLIC fmt)",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:test-main->cpp:target:fmt",
+      "is_declared_dependency": true,
+      "source": "cpp:target:test-main",
+      "target": "cpp:target:fmt",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(test-main PUBLIC gtest)",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:test-main->cpp:target:gtest",
+      "is_declared_dependency": true,
+      "source": "cpp:target:test-main",
+      "target": "cpp:target:gtest",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(unicode-test PRIVATE fmt-header-only)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:unicode-test->cpp:target:fmt-header-only",
+      "is_declared_dependency": true,
+      "source": "cpp:target:unicode-test",
+      "target": "cpp:target:fmt-header-only",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(unicode-test PRIVATE gtest)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:unicode-test->cpp:target:gtest",
+      "is_declared_dependency": true,
+      "source": "cpp:target:unicode-test",
+      "target": "cpp:target:gtest",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(xchar-test PRIVATE fmt)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:xchar-test->cpp:target:fmt",
+      "is_declared_dependency": true,
+      "source": "cpp:target:xchar-test",
+      "target": "cpp:target:fmt",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "target_link_libraries(xchar-test PRIVATE test-main)",
+          "type": "link",
+          "visibility": "private"
+        }
+      ],
+      "evidence_strength": "link only",
+      "id": "rel:cpp:target:xchar-test->cpp:target:test-main",
+      "is_declared_dependency": true,
+      "source": "cpp:target:xchar-test",
+      "target": "cpp:target:test-main",
+      "weight": 5
+    }
+  ],
+  "schema_version": "1.3",
+  "targets": [
+    {
+      "external": false,
+      "id": "cpp:target:args-test",
+      "language": "cpp",
+      "metrics": {
+        "blank": 1742,
+        "by_language": [
+          {
+            "blank": 1437,
+            "code": 8787,
+            "comment": 489,
+            "files": 40,
+            "language": "C++"
+          },
+          {
+            "blank": 208,
+            "code": 865,
+            "comment": 96,
+            "files": 7,
+            "language": "C/C++ Header"
+          },
+          {
+            "blank": 73,
+            "code": 475,
+            "comment": 122,
+            "files": 7,
+            "language": "CMake"
+          },
+          {
+            "blank": 3,
+            "code": 22,
+            "comment": 0,
+            "files": 1,
+            "language": "Markdown"
+          },
+          {
+            "blank": 21,
+            "code": 53,
+            "comment": 16,
+            "files": 1,
+            "language": "Shell"
+          }
+        ],
+        "code": 10202,
+        "comment": 723,
+        "engine": "metrics/1",
+        "files": 1,
+        "todo_count": 3
+      },
+      "name": "args-test",
+      "path": "test",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:assert-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "assert-test",
+      "path": "test",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:chrono-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "chrono-test",
+      "path": "test",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:color-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "color-test",
+      "path": "test",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:compile-fp-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 6
+      },
+      "name": "compile-fp-test",
+      "path": "",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:compile-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "compile-test",
+      "path": "test",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:core-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "core-test",
+      "path": "test",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:doc",
+      "language": "cpp",
+      "metrics": {
+        "files": 8
+      },
+      "name": "doc",
+      "path": "",
+      "tags": [
+        "build:cmake",
+        "partial:codegen"
+      ],
+      "type": "unknown"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:enforce-checks-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "enforce-checks-test",
+      "path": "test",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:fmt",
+      "language": "cpp",
+      "metrics": {
+        "files": 17
+      },
+      "name": "fmt",
+      "path": "",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "static_lib"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:fmt-header-only",
+      "language": "cpp",
+      "name": "fmt-header-only",
+      "path": "",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "interface_lib"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:format-impl-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 7
+      },
+      "name": "format-impl-test",
+      "path": "",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:format-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 2
+      },
+      "name": "format-test",
+      "path": "test",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:gtest",
+      "language": "cpp",
+      "metrics": {
+        "blank": 5032,
+        "by_language": [
+          {
+            "blank": 1896,
+            "code": 8584,
+            "comment": 3954,
+            "files": 1,
+            "language": "C++"
+          },
+          {
+            "blank": 3132,
+            "code": 12894,
+            "comment": 8255,
+            "files": 3,
+            "language": "C/C++ Header"
+          },
+          {
+            "blank": 4,
+            "code": 19,
+            "comment": 9,
+            "files": 1,
+            "language": "CMake"
+          }
+        ],
+        "code": 21497,
+        "comment": 12218,
+        "engine": "metrics/1",
+        "files": 4,
+        "todo_count": 6
+      },
+      "name": "gtest",
+      "path": "test/gtest",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "static_lib"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:gtest-extra-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "gtest-extra-test",
+      "path": "test",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:os-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "os-test",
+      "path": "test",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:ostream-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "ostream-test",
+      "path": "test",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:posix-mock-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 6
+      },
+      "name": "posix-mock-test",
+      "path": "",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:printf-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "printf-test",
+      "path": "test",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:ranges-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 2
+      },
+      "name": "ranges-test",
+      "path": "test",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:scan-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "scan-test",
+      "path": "test",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:std-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "std-test",
+      "path": "test",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:test-main",
+      "language": "cpp",
+      "metrics": {
+        "files": 4
+      },
+      "name": "test-main",
+      "path": "test",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "static_lib"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:unicode-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 6
+      },
+      "name": "unicode-test",
+      "path": "",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:xchar-test",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "xchar-test",
+      "path": "test",
+      "tags": [
+        "build:cmake"
+      ],
+      "type": "executable"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+\section{Introduction}
+\label{sec:intro}
+
+%% Revised 2026-08-30 against the GPT-5.6-Sol review and tightened for the page budget: thesis
+%% stated on the autonomous rows and a reference-free build-graph property; no "human ceiling";
+%% "source of truth" -> primary evidence; module view. Numbers are macros; tool name via \tool.
+%% 2026-09-07: one coding-agent sentence added to match the abstract's motivation (agents are
+%% motivation only -- the body evaluates none; the RIG cite is the map-not-model contrast of §II).
+%% 2026-09-13 shortening pass (response plan §13): caveats live once (§IV terminology, §VII);
+%% the contribution list names results, not guards; the SAR-limits figures are §II's; the companion
+%% TR is introduced here.
+%% 2026-09-13 readability pass: sentences split, no content change.
+
+Large C/C++ and C\#\ systems outlive the documents that describe them. Their architecture erodes
+as unintended dependencies accumulate, and the diagram that would show them is stale, hand-drawn,
+or missing~\cite{perry1992foundations,anthony2024drift}. Coding agents sharpen the problem: they
+change code with no intended architecture in view, and what they receive is a map of the
+repository~\cite{chernyshahar2026rig}, not a model each change can be checked against.
+Architecture-as-code notations such as the C4 model and the Structurizr
+DSL~\cite{brown2026c4,structurizrdsl} solve the representation problem, not the content problem:
+someone still has to produce a model that is faithful to the code and stays so.
+
+Software architecture recovery (SAR) has promised that content for two decades, and its limits are
+well measured (\S\ref{sec:background}). The best classical clustering technique averages under 50
+MoJoFM against published references~\cite{lutellier-deps,zhang2023sarif}, and the most
+authoritative techniques are the least stable~\cite{wu2005comparison,link2019value}. A recovered
+clustering is also a one-off artifact: it cannot be regenerated, diffed, or checked against the
+intended architecture as the code changes. The recent LLM-centric line infers structure from files
+with a language model~\cite{archagent,deluca2026ciao} and inherits the same gaps in sharper form:
+its output is not reproducible~\cite{angermeir2026reproducibility} and tends to land at code level
+rather than at architectural abstractions~\cite{sathvika2026views}.
+
+This paper takes a different position. In C/C++ and C\#\ the build system already declares the
+units of composition (targets, projects) and their dependencies. That graph is deterministic to
+read and, for some systems, already at the altitude of an architecture diagram. \tool{} treats it
+as the \emph{primary structural evidence} and refines it with source-level evidence that may
+corroborate but never replace a declared dependency. A human curates the resulting module view
+through evidence-constrained rules that are committed and regenerated deterministically. A
+language model may name and describe elements but cannot add, remove, or move a relationship.
+The claim is two-sided. Where the build system composes many entities into few units, a property
+computable from the extracted facts without any reference, the autonomous pipeline should match
+automatic SAR with no curation and no model. Where every entity is its own unit, no autonomous
+technique should recover the decomposition either; there the contribution is to let a human
+\emph{express} it cheaply and keep it governed.
+
+We test the claim on nine open-source systems with reference architectures
+(five C/C++, four C\#) plus one anonymized industrial system. The
+comparators are \rqTwoBaselineCount{} automatic and na\"ive baselines and a controlled
+LLM-recovery baseline on the same exported graph, plus an eight-axis ablation, governance
+experiments, and a blind-curation study in which four researchers hold disjoint roles.
+The contributions are: (1)~a build-graph-first, deterministic recovery pipeline with a
+generator-independent fact model, evidence-constrained curation, and a tested governance layer
+(\S\ref{sec:approach}); (2)~the two-regime finding with a candidate reference-free build-graph
+diagnostic: on the build-modular systems the no-curation floor alone recovers a median MoJoFM of
+\rqOneFloorAdequateMoJo{} at the granularity of its build targets, a refinement of the reference
+rather than a misgrouping (ITK: ARI \rqOneFloorItkAri{}), whereas on the project-coarse
+systems the floor is
+\rqOneFloorCsMoJo{}, no classical technique reaches the recovery threshold, and reference-blind
+curators express the decomposition in \rqNineEshopMinutes{}--\rqNineSquidexMinutes{} minutes on
+two small systems (\S\ref{sec:rq1}, \S\ref{sec:rq2}, \S\ref{sec:rq9}); (3)~an ablation of each
+design choice at the operating configuration and at its extreme (\S\ref{sec:rq3}); and
+(4)~governance behaviour automatic SAR does not offer, tested rather than field-measured:
+byte-identical regeneration, identity-bound stability under turnover, a drift detector verified
+on seeded changes and evidence loss and run over \rqSixHistPairs{} release pairs, and cold runs
+within a 30-minute budget on \rqSevenColdBudget{} systems (\S\ref{sec:rq5}--\S\ref{sec:rq7}). A
+replication package regenerates every number in this paper except those from licensed or
+non-replicable inputs. Its anonymized companion technical report (\TR{}) carries the procedures,
+sensitivity analyses, and per-system tables this paper cites by section.

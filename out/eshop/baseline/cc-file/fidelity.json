@@ -1,0 +1,24 @@
+{
+  "clusters": 1,
+  "entities_clustered": 150,
+  "granularity": "file",
+  "graph": "graph-file.rsf",
+  "system": "eshop",
+  "technique": "cc",
+  "vs_pipeline_agreement": {
+    "a2a": 100.0,
+    "entities_against": 137,
+    "entities_common": 136,
+    "entities_dropped_whitespace": 0,
+    "entities_recovered": 150,
+    "mojofm": 100.0
+  },
+  "vs_reference": {
+    "a2a": 100.0,
+    "entities_against": 137,
+    "entities_common": 136,
+    "entities_dropped_whitespace": 0,
+    "entities_recovered": 150,
+    "mojofm": 100.0
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "extractor_knobs": {
+    "ANON_SKIP_DOXYGEN": "1",
+    "ANON_SKIP_ROSLYN": "1"
+  },
+  "failed": [],
+  "finding_kinds": [
+    "new_targets",
+    "removed_targets",
+    "new_edges",
+    "removed_edges",
+    "suspected_renames",
+    "coverage_gap_targets",
+    "coverage_gap_edges",
+    "layering_violations"
+  ],
+  "fixture": "fixtures/nopcommerce",
+  "fixture_head": {
+    "commit": "e7db8b45bedf8f57a8ef52a933162c93bd7cd413",
+    "date": "2026-06-07T06:34:41+03:00",
+    "describe": "e7db8b45"
+  },
+  "idiom": "csproj",
+  "l0_scoped": true,
+  "labels": [
+    "architectural",
+    "non-architectural",
+    "extraction-noise"
+  ],
+  "language": "cs",
+  "pairs": [
+    {
+      "a": "release-4.70.0",
+      "a_date": "2024-04-26T11:23:27+03:00",
+      "advisory": false,
+      "b": "release-4.80.0",
+      "b_date": "2024-12-12T18:52:24+03:00",
+      "commits_build_files": 49,
+      "commits_total": 398,
+      "counts": {
+        "coverage_gap_edges": 0,
+        "coverage_gap_targets": 0,
+        "drift_total": 12,
+        "layering_violations": 0,
+        "new_edges": 5,
+        "new_targets": 5,
+        "removed_edges": 1,
+        "removed_targets": 1,
+        "suspected_renames": 0
+      },
+      "coverage": 1.0,
+      "dir": "out/nopcommerce/history/release-4.70.0__release-4.80.0",
+      "needs_curation_a": 0,
+      "needs_curation_b": 0,
+      "shallow_clone": true,
+      "status": "ok",
+      "targets": {
+        "a_first_party": 26,
+        "b_first_party": 30
+      },
+      "warnings": [],
+      "worksheet_rows": 12
+    }
+  ],
+  "rules_dir": "overlays/nopcommerce/architecture/rules",
+  "rules_note": "Curation rules `overlays/nopcommerce/architecture/rules` (committed nopCommerce overlay) were authored against the pinned fixture commit e7db8b45b (e7db8b45, 2026-06-07T06:34:41+03:00), which is later than every release studied. They were held constant (frozen) across every pair: no re-curation between A and B, so drift findings include the rule-maintenance effect (needs-curation = first-party targets the frozen rules leave unmapped).",
+  "rules_origin": "committed nopCommerce overlay",
+  "schema": "rq6-history/1",
+  "system": "nopcommerce",
+  "totals": {
+    "coverage_gap_edges": 0,
+    "coverage_gap_targets": 0,
+    "drift_total": 12,
+    "layering_violations": 0,
+    "new_edges": 5,
+    "new_targets": 5,
+    "removed_edges": 1,
+    "removed_targets": 1,
+    "suspected_renames": 0
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "clusters": {
+    "clusters": 34,
+    "members": 207,
+    "singleton_fallbacks": 0,
+    "unclustered_graph_nodes": 26
+  },
+  "derived_from": {
+    "curated_facts_hash": "2afcd74d8964067d7373e2c34cb7322b8da6243f97ac252ff89192caaa815fac",
+    "extracted_facts_hash": "6d51b99e7ccbad6a11306f6feac1fc8f0f03b4f6f63bbc4065bb6ef1e4f702d5"
+  },
+  "granularity": "target",
+  "graph": {
+    "dropped": {
+      "excluded_endpoint": 8489,
+      "self_loop": 0
+    },
+    "edges": 1963,
+    "isolated_nodes": 7,
+    "nodes": 233
+  },
+  "include_external": false,
+  "schema": "graph-export/1"
+}

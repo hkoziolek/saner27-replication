@@ -1,0 +1,9 @@
+{
+  "a2a": 75.53,
+  "floor_kind": "each file -> owning build target (no curation)",
+  "granularity": "file",
+  "mojofm": 11.11,
+  "shared_entities": 42,
+  "system": "libxml2",
+  "targets": 3
+}

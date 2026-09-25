@@ -1,0 +1,25 @@
+# RQ9 rater worksheet (eval §10a) — assign every entity a cluster name; use the
+# project's own documented component names where they exist. Write EXCLUDE to mark an
+# entity out-of-scope (tests, samples, dead code) — record why in the notes column.
+# Blinding: do NOT consult the tool's output, any reference.rsf, or another rater.
+entity,cluster,notes
+csharp:csproj:backend/extensions/Squidex.Extensions/Squidex.Extensions.csproj,Extensions,Possibly combine with Shared?
+csharp:csproj:backend/i18n/translator/Squidex.Translator/Squidex.Translator.csproj,Translator,
+csharp:csproj:backend/src/Migrations/Migrations.csproj,Data,Might also be EXCLUDE
+csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj,Data,
+csharp:csproj:backend/src/Squidex.Data.MongoDb/Squidex.Data.MongoDb.csproj,Data,
+csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Model/Squidex.Domain.Apps.Core.Model.csproj,Core,
+csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Operations/Squidex.Domain.Apps.Core.Operations.csproj,Core,
+csharp:csproj:backend/src/Squidex.Domain.Apps.Entities/Squidex.Domain.Apps.Entities.csproj,Entities,
+csharp:csproj:backend/src/Squidex.Domain.Apps.Events/Squidex.Domain.Apps.Events.csproj,Events,
+csharp:csproj:backend/src/Squidex.Domain.Users/Squidex.Domain.Users.csproj,Users,
+csharp:csproj:backend/src/Squidex.Infrastructure/Squidex.Infrastructure.csproj,Infrastructure,MIXED
+csharp:csproj:backend/src/Squidex.Shared/Squidex.Shared.csproj,Shared,Possibly combine with Extensions?
+csharp:csproj:backend/src/Squidex.Web/Squidex.Web.csproj,Web,API
+csharp:csproj:backend/src/Squidex/Squidex.csproj,Application,
+csharp:csproj:backend/tools/GenerateLanguages/GenerateLanguages.csproj,EXCLUDE,tool
+csharp:csproj:frontend/generator/Generator/Generator.csproj,EXCLUDE,tool
+csharp:csproj:tools/TestSuite/TestSuite.ApiTests/TestSuite.ApiTests.csproj,EXCLUDE,tests
+csharp:csproj:tools/TestSuite/TestSuite.LoadTests/TestSuite.LoadTests.csproj,EXCLUDE,tests
+csharp:csproj:tools/TestSuite/TestSuite.Shared/TestSuite.Shared.csproj,EXCLUDE,tests
+# wall-clock: 18:06–18:47, total 41 min

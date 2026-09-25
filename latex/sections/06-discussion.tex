@@ -1,0 +1,55 @@
+\section{Discussion}
+\label{sec:discussion}
+
+%% Revised 2026-08-30 against the GPT-5.6-Sol review and tightened for the page budget.
+%% 2026-09-13 shortening pass (response plan §13): guards that §IV / §VII carry are referenced,
+%% not restated; numbers and rationale §V already gives are not repeated.
+%% 2026-09-13 readability pass: long sentences split; no number or claim changed.
+
+\paragraph{The build graph earns its place, with a caveat.} The build layer alone recovers most
+container edges (A1), and the autonomous floor recovers the module decomposition of every
+build-modular system without a model or a human, at the granularity of its build targets. That
+granularity is a refinement of the reference, which ARI charges and curation coarsens (RQ1). The
+never-drop-declared rule (A5) is inert at the operating threshold and decisive above it, where a
+scalar filter cuts the very \texttt{<ProjectReference>} edges that carry C\#\ structure: a
+guard, reported as one.
+
+\paragraph{Two regimes, defined by the build graph.} The diagnosis needs no reference to compute,
+but its validity is not yet established without one: the post-hoc rule agrees with the floor on
+\rqAdequacyRuleAgreement{} systems and survives leave-one-out on \rqAdequacyLooCorrect{}
+(\S\ref{sec:rq1}). Where the build system composes
+many entities into few units, the floor scores a median MoJoFM of \rqOneFloorAdequateMoJo{} and
+curation adds \rqThreeCurationLiftCpp{} points. Even \texttt{dir} is competitive on MoJoFM there,
+so a2a (curated lead on \rqTwoPipelineAtoAWins{} systems) is the fairer headline. Where every
+entity is its own unit, the floor is \rqOneFloorCsMoJo{}, no classical technique reaches the
+recovery threshold (best all-common C\#\ median: \rqTwoCsBestAllCommonName{}
+\rqTwoCsBestAllCommonMoJo{}; ARC \rqTwoArcCsMoJo{} on its own subset), and the recovered
+decomposition is the curator's grouping, worth \rqThreeCurationLiftCs{} points. The boundary
+coincides with the language line here because .NET projects sit at architectural altitude and
+CMake targets below it; libxml2 (CMake) crosses it from the C++ side, and the diagnostic
+calls fmt and Terminal project-coarse too, untested without a reference. The honest claim is not that the pipeline recovers C\#\
+architecture but that it lets a human \emph{express} it under evidence constraints (RQ7).
+
+\paragraph{Where the model belongs.} LLM-as-structure works on small systems but varied across
+reruns on one, did not fit ITK in one prompt, and was not contamination-controlled (A6); the
+zero-footprint invariant holds under an adversarial provider (A7). Evidence for structure and the model for language is where the LLM line is
+converging~\cite{sathvika2026views,angermeir2026reproducibility}.
+
+\paragraph{Governance is the differentiator, within limits.} What the paper establishes is
+governed module-view reconstruction: build-target membership, a curated module decomposition, and
+evidence-drawn dependencies, scored as partitions. 
+%Relationship validity is measured only by
+%container-edge F1 on two systems, and the usefulness of the document not at all. 
+%Per-entity rules
+%keep every survivor in place under 20\,\% turnover, as does \texttt{dir}, whereas a rerun of ACDC
+%reshuffles them down to \rqFiveAcdcChurnWorst{} (RQ4; a property of the rules, not the
+%correctness of the evolved model). 
+Seeded mutations show the detector is correct; the combined
+arm shows erosion is never hidden, though often visible only as a warning.
+
+%; and the real-history
+%arm shows how quiet release pairs are (\rqSixHistFindings{} findings over \rqSixHistCommits{}
+%commits), where the false-finding claim lives. A practitioner needs no model: run the
+%diagnostic; where build-modular, accept the floor and curate the sprawl; where project-coarse,
+%curate and commit the rules (\S\ref{sec:rq9}). The industrial system behaves like the OSS C++
+%corpus (floor \tierPMedianFloorMoJo{} MoJoFM, curated \tierPMedianMoJo{}; Table~\ref{tab:rq1}).

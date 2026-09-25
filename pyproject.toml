@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anon"
+version = "0.1.0"
+description = "Anon — evidence-grounded architecture recovery for large C/C++ and C# repos (fact-extraction pipeline -> governed C4/Structurizr models)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Proprietary" }
+authors = [{ name = "[anonymized]" }]
+dependencies = [
+    "jsonschema>=4.20",
+    "PyYAML>=6.0",
+    # LLM enrichment (Azure AI Foundry) — only imported lazily by the enrich stage.
+    "openai>=1.0",
+    "azure-ai-inference",
+    "azure-identity>=1.15",
+    # azure-anthropic client_kind: native Anthropic Messages API for Claude on Azure AI
+    # Foundry (AnthropicFoundry). Lazily imported like the others; needs >=0.69 for the
+    # Foundry client.
+    "anthropic>=0.69",
+]
+
+[project.optional-dependencies]
+# pytest-xdist parallelises the suite (`-n auto`, wired into addopts below) — the ~40
+# real-toolchain / orchestrator tests are the whole wall-clock, and they are tmp_path-
+# isolated so they fan out cleanly across cores.
+# psutil: process-tree RSS sampling for the RQ7 perf harness (baselines/rq7_perf.py);
+# the harness degrades to timing-only if it is absent.
+# Replication-package build (make_review_artifact.py, prune_pyproject): the [serve] extra
+# and the FastAPI/uvicorn/httpx dev stack are gone with the pruned serve layer.
+dev = ["pytest>=7.4", "pytest-xdist>=3.5", "psutil>=5.9"]
+# The analysis/ data->paper pipeline is stdlib-only by default (deterministic, CI-safe; figures
+# are self-contained TikZ, no matplotlib). This opt-in extra adds ONLY the §12 inferential tests
+# (Friedman/Wilcoxon/Nemenyi/Cliff's delta) to stats.json. Install `pip install -e ".[stats]"`
+# (via the venv python) to regenerate the committed inferential stats.json / macros.tex. Without
+# it, compute_stats() degrades gracefully (inferential "skipped: scipy absent", macros -> TBD) but
+# the stats.py CLI refuses to overwrite stats.json unless --allow-missing-scipy is passed, so a
+# run under the wrong interpreter cannot silently blank the paper's p-values.
+stats = ["scipy>=1.11", "scikit-posthocs>=0.9"]
+
+[project.scripts]
+# The CLI is `arch` per plan §18.2.
+arch = "anon.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+# Ship the bundled fail-closed LLM-egress redaction policy (T1.2) as package data so it is
+# available at runtime even when Anon is installed as a wheel (enrich_llm resolves it
+# via a __file__-relative walk; package-data guarantees the file is present on disk).
+anon = ["data/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Fast inner loop by default: fan out across cores with pytest-xdist (`-n auto`) and
+# DESELECT the real-toolchain `integration` tier (cmake / ninja / doxygen / dotnet /
+# MSBuild). Those tests skip on CI anyway (no SDK/compiler there), so deselecting them
+# here changes nothing on CI while making a fully-tooled dev box's run minutes shorter.
+#   Full run incl. integration:  pytest -m ""      (override the marker filter)
+#   Only the heavy tier:         pytest -m integration
+#   Serial / readable output:    pytest -n0
+# `--dist loadscope` keeps every test in a module on ONE worker, so modules that rely on
+# in-file ordering or a module-scoped fixture (e.g. test_measure's sequential measurements
+# sidecar) stay correct under parallelism — and same-fixture tests share their memoised
+# work (test_golden_cpp's per-fixture CMake configure).
+addopts = "-q -n auto --dist loadscope -m 'not integration'"
+markers = [
+    "integration: exercises a real external toolchain (cmake/ninja/doxygen/dotnet/MSBuild) and is slow; deselected by default — run with `-m ''` or `-m integration`.",
+]

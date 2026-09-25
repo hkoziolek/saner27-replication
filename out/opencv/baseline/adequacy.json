@@ -1,0 +1,17 @@
+{
+  "edges": 2067,
+  "entities": 997,
+  "fidelity_corpus": true,
+  "granularity": "file",
+  "intra_edges": 1708,
+  "intra_share": 0.8263,
+  "language": "cpp",
+  "largest_share": 0.2828,
+  "mq": 11.215,
+  "mq_per_unit": 0.8011,
+  "schema": "adequacy/1",
+  "source": "a2-rungs/none.rsf",
+  "system": "opencv",
+  "unit_ratio": 0.014,
+  "units": 14
+}

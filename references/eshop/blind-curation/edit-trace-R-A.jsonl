@@ -1,0 +1,89 @@
+{"added": 4, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 1, "ts": "2026-07-21T20:50:50+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "Order Service", "op": "create_group"}], "ts": "2026-07-21T21:03:18+00:00"}
+{"added": 3, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:03:18+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/Ordering.API/Ordering.API.csproj", "op": "move_member", "to": "Order Service"}], "ts": "2026-07-21T21:03:42+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:03:42+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj", "op": "move_member", "to": "Order Service"}], "ts": "2026-07-21T21:03:52+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:03:52+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "Redis", "op": "create_group"}], "ts": "2026-07-21T21:04:29+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:04:29+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj", "op": "move_member", "to": "Redis"}], "ts": "2026-07-21T21:04:39+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:04:39+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/OrderProcessor/OrderProcessor.csproj", "op": "move_member", "to": "Order Service"}], "ts": "2026-07-21T21:05:07+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:05:07+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"from": "Redis", "id": "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj", "op": "move_member", "to": "Order Service"}], "ts": "2026-07-21T21:06:35+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 1, "ts": "2026-07-21T21:06:35+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "Catalog Service", "op": "create_group"}], "ts": "2026-07-21T21:07:10+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:07:11+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/Catalog.API/Catalog.API.csproj", "op": "move_member", "to": "Catalog Service"}], "ts": "2026-07-21T21:07:22+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:07:22+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "Identity Service", "op": "create_group"}], "ts": "2026-07-21T21:07:59+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:07:59+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/Identity.API/Identity.API.csproj", "op": "move_member", "to": "Identity Service"}], "ts": "2026-07-21T21:08:08+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:08:08+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "Basket Service", "op": "create_group"}], "ts": "2026-07-21T21:08:35+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:08:35+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "Payment Service", "op": "create_group"}], "ts": "2026-07-21T21:08:47+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:08:47+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/Basket.API/Basket.API.csproj", "op": "move_member", "to": "Basket Service"}], "ts": "2026-07-21T21:09:04+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:09:04+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/PaymentProcessor/PaymentProcessor.csproj", "op": "move_member", "to": "Payment Service"}], "ts": "2026-07-21T21:09:26+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:09:26+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "Web App", "op": "create_group"}], "ts": "2026-07-21T21:11:44+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:11:44+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/WebApp/WebApp.csproj", "op": "move_member", "to": "Web App"}], "ts": "2026-07-21T21:11:51+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:11:51+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj", "op": "move_member", "to": "Web App"}], "ts": "2026-07-21T21:12:01+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:12:01+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "contract:proto:basket", "op": "move_member", "to": "Basket Service"}], "ts": "2026-07-21T21:17:10+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:17:10+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "Backend", "op": "create_group"}], "ts": "2026-07-21T21:18:31+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:18:31+00:00"}
+{"event": "curate_ops", "kinds": ["set_parent"], "ops": [{"container": "Basket Service", "op": "set_parent", "parent": "Backend"}], "ts": "2026-07-21T21:18:48+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:18:48+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj", "op": "move_member", "to": "Backend"}], "ts": "2026-07-21T21:19:02+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:19:02+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj", "op": "move_member", "to": "Backend"}], "ts": "2026-07-21T21:19:07+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:19:07+00:00"}
+{"event": "curate_ops", "kinds": ["set_parent"], "ops": [{"container": "Catalog Service", "op": "set_parent", "parent": "Backend"}], "ts": "2026-07-21T21:20:16+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:20:16+00:00"}
+{"event": "curate_ops", "kinds": ["set_parent"], "ops": [{"container": "Identity Service", "op": "set_parent", "parent": "Backend"}], "ts": "2026-07-21T21:20:24+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:20:24+00:00"}
+{"event": "curate_ops", "kinds": ["set_parent"], "ops": [{"container": "Order Service", "op": "set_parent", "parent": "Backend"}], "ts": "2026-07-21T21:20:33+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:20:33+00:00"}
+{"event": "curate_ops", "kinds": ["set_parent"], "ops": [{"container": "Payment Service", "op": "set_parent", "parent": "Backend"}], "ts": "2026-07-21T21:20:41+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:20:41+00:00"}
+{"event": "curate_ops", "kinds": ["remove_group"], "ops": [{"container": "Backend", "op": "remove_group"}], "ts": "2026-07-21T21:21:35+00:00"}
+{"added": 0, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 4, "ts": "2026-07-21T21:21:35+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "Admin Services", "op": "create_group"}], "ts": "2026-07-21T21:22:22+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:22:22+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/Webhooks.API/Webhooks.API.csproj", "op": "move_member", "to": "Admin Services"}], "ts": "2026-07-21T21:22:33+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:22:33+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/WebhookClient/WebhookClient.csproj", "op": "move_member", "to": "Admin Services"}], "ts": "2026-07-21T21:22:44+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:22:44+00:00"}
+{"event": "curate_ops", "kinds": ["set_parent"], "ops": [{"container": "Admin Services", "op": "set_parent", "parent": "Backend"}], "ts": "2026-07-21T21:23:15+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:23:15+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "RabbitMQ", "op": "create_group"}], "ts": "2026-07-21T21:26:04+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:26:04+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/EventBus/EventBus.csproj", "op": "move_member", "to": "RabbitMQ"}], "ts": "2026-07-21T21:26:13+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:26:13+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj", "op": "move_member", "to": "RabbitMQ"}], "ts": "2026-07-21T21:26:19+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:26:19+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "Backend", "op": "create_group"}], "ts": "2026-07-21T21:27:14+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:27:14+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 1, "ts": "2026-07-21T21:28:37+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj", "op": "move_member", "to": "Core"}], "ts": "2026-07-21T21:28:46+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:28:46+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj", "op": "move_member", "to": "Core"}], "ts": "2026-07-21T21:28:52+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:28:52+00:00"}
+{"event": "curate_ops", "kinds": ["set_parent"], "ops": [{"container": "Core", "op": "set_parent", "parent": "Backend"}], "ts": "2026-07-21T21:29:25+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:29:25+00:00"}
+{"event": "curate_ops", "kinds": ["create_group"], "ops": [{"container": "Client App", "op": "create_group"}], "ts": "2026-07-21T21:30:05+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:30:05+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/ClientApp/ClientApp.csproj", "op": "move_member", "to": "Client App"}], "ts": "2026-07-21T21:30:13+00:00"}
+{"added": 2, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:30:13+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/HybridApp/HybridApp.csproj", "op": "move_member", "to": "Client App"}], "ts": "2026-07-21T21:30:28+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:30:28+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 1, "ts": "2026-07-21T21:30:37+00:00"}
+{"event": "curate_ops", "kinds": ["move_member"], "ops": [{"id": "csharp:csproj:src/IntegrationEventLogEF/IntegrationEventLogEF.csproj", "op": "move_member", "to": "RabbitMQ"}], "ts": "2026-07-21T21:31:28+00:00"}
+{"added": 1, "event": "reviewed_write", "file": "mapping-rules.yaml", "removed": 0, "ts": "2026-07-21T21:31:28+00:00"}

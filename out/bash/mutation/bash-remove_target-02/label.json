@@ -1,0 +1,26 @@
+{
+  "alias": {},
+  "description": "remove build target cpp:target:libreadline",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "cpp:target:bash",
+        "cpp:target:libreadline"
+      ]
+    ],
+    "removed_targets": [
+      "cpp:target:libreadline"
+    ],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\bash\\mutation\\_work\\bash\\repo\\lib\\readline\\Makefile.in",
+    "<repo>\\out\\bash\\mutation\\_work\\bash\\repo\\Makefile.in"
+  ],
+  "id": "bash-remove_target-02",
+  "operator": "remove_target",
+  "system": "bash"
+}

@@ -1,0 +1,4218 @@
+{
+  "baseline_l0_edges": 36,
+  "baseline_targets": 19,
+  "idiom": "csproj",
+  "instances_requested": 4,
+  "l0_scoped": true,
+  "language": "cs",
+  "modes": {
+    "lose_l0": {
+      "by_operator": {
+        "add_forbidden_dep": {
+          "advisory": 0,
+          "advisory_runs": 0,
+          "drift": 0,
+          "findings": 8,
+          "fp": 0,
+          "gap": 8,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "add_target": {
+          "advisory": 0,
+          "advisory_runs": 0,
+          "drift": 0,
+          "findings": 4,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 4,
+          "n": 4,
+          "silent": 4
+        },
+        "merge_targets": {
+          "advisory": 0,
+          "advisory_runs": 0,
+          "drift": 0,
+          "findings": 17,
+          "fp": 0,
+          "gap": 17,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_dep": {
+          "advisory": 0,
+          "advisory_runs": 0,
+          "drift": 0,
+          "findings": 4,
+          "fp": 0,
+          "gap": 4,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_target": {
+          "advisory": 0,
+          "advisory_runs": 0,
+          "drift": 0,
+          "findings": 12,
+          "fp": 0,
+          "gap": 12,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "rename_target": {
+          "advisory": 0,
+          "advisory_runs": 0,
+          "drift": 0,
+          "findings": 28,
+          "fp": 0,
+          "gap": 24,
+          "mutations_silent": 4,
+          "n": 4,
+          "silent": 4
+        }
+      },
+      "silent_findings": [
+        {
+          "finding": [
+            "new_target",
+            "csharp:csproj:src/AnonMutant1/AnonMutant1.csproj"
+          ],
+          "mutation": "eshop-add_target-01"
+        },
+        {
+          "finding": [
+            "new_target",
+            "csharp:csproj:src/AnonMutant2/AnonMutant2.csproj"
+          ],
+          "mutation": "eshop-add_target-02"
+        },
+        {
+          "finding": [
+            "new_target",
+            "csharp:csproj:src/AnonMutant3/AnonMutant3.csproj"
+          ],
+          "mutation": "eshop-add_target-03"
+        },
+        {
+          "finding": [
+            "new_target",
+            "csharp:csproj:src/AnonMutant4/AnonMutant4.csproj"
+          ],
+          "mutation": "eshop-add_target-04"
+        },
+        {
+          "finding": [
+            "new_target",
+            "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj"
+          ],
+          "mutation": "eshop-rename_target-01"
+        },
+        {
+          "finding": [
+            "new_target",
+            "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj"
+          ],
+          "mutation": "eshop-rename_target-02"
+        },
+        {
+          "finding": [
+            "new_target",
+            "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+          ],
+          "mutation": "eshop-rename_target-03"
+        },
+        {
+          "finding": [
+            "new_target",
+            "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+          ],
+          "mutation": "eshop-rename_target-04"
+        }
+      ],
+      "totals": {
+        "advisory": 0,
+        "advisory_runs": 0,
+        "drift": 0,
+        "findings": 73,
+        "fp": 0,
+        "gap": 65,
+        "mutations_silent": 8,
+        "n": 24,
+        "silent": 8
+      }
+    },
+    "starve_l0_10": {
+      "by_operator": {
+        "add_forbidden_dep": {
+          "advisory": 4,
+          "advisory_runs": 4,
+          "drift": 4,
+          "findings": 8,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "add_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 4,
+          "findings": 4,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "merge_targets": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 16,
+          "findings": 17,
+          "fp": 0,
+          "gap": 1,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_dep": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 2,
+          "findings": 4,
+          "fp": 0,
+          "gap": 2,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 11,
+          "findings": 12,
+          "fp": 0,
+          "gap": 1,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "rename_target": {
+          "advisory": 4,
+          "advisory_runs": 4,
+          "drift": 23,
+          "findings": 28,
+          "fp": 0,
+          "gap": 1,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        }
+      },
+      "silent_findings": [],
+      "totals": {
+        "advisory": 8,
+        "advisory_runs": 24,
+        "drift": 60,
+        "findings": 73,
+        "fp": 0,
+        "gap": 5,
+        "mutations_silent": 0,
+        "n": 24,
+        "silent": 0
+      }
+    },
+    "starve_l0_30": {
+      "by_operator": {
+        "add_forbidden_dep": {
+          "advisory": 4,
+          "advisory_runs": 4,
+          "drift": 4,
+          "findings": 8,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "add_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 4,
+          "findings": 4,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "merge_targets": {
+          "advisory": 1,
+          "advisory_runs": 4,
+          "drift": 14,
+          "findings": 17,
+          "fp": 0,
+          "gap": 2,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_dep": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 1,
+          "findings": 4,
+          "fp": 0,
+          "gap": 3,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 10,
+          "findings": 12,
+          "fp": 0,
+          "gap": 2,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "rename_target": {
+          "advisory": 4,
+          "advisory_runs": 4,
+          "drift": 23,
+          "findings": 28,
+          "fp": 0,
+          "gap": 1,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        }
+      },
+      "silent_findings": [],
+      "totals": {
+        "advisory": 9,
+        "advisory_runs": 24,
+        "drift": 56,
+        "findings": 73,
+        "fp": 0,
+        "gap": 8,
+        "mutations_silent": 0,
+        "n": 24,
+        "silent": 0
+      }
+    },
+    "starve_mutated": {
+      "by_operator": {
+        "add_forbidden_dep": {
+          "advisory": 8,
+          "advisory_runs": 4,
+          "drift": 0,
+          "findings": 8,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "add_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 4,
+          "findings": 4,
+          "fp": 0,
+          "gap": 0,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "merge_targets": {
+          "advisory": 4,
+          "advisory_runs": 4,
+          "drift": 4,
+          "findings": 17,
+          "fp": 0,
+          "gap": 9,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_dep": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 0,
+          "findings": 4,
+          "fp": 0,
+          "gap": 4,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "remove_target": {
+          "advisory": 0,
+          "advisory_runs": 4,
+          "drift": 4,
+          "findings": 12,
+          "fp": 0,
+          "gap": 8,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        },
+        "rename_target": {
+          "advisory": 8,
+          "advisory_runs": 4,
+          "drift": 12,
+          "findings": 28,
+          "fp": 0,
+          "gap": 8,
+          "mutations_silent": 0,
+          "n": 4,
+          "silent": 0
+        }
+      },
+      "silent_findings": [],
+      "totals": {
+        "advisory": 20,
+        "advisory_runs": 24,
+        "drift": 24,
+        "findings": 73,
+        "fp": 0,
+        "gap": 29,
+        "mutations_silent": 0,
+        "n": 24,
+        "silent": 0
+      }
+    }
+  },
+  "mutations": [
+    {
+      "expected_findings": 2,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 41,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "violation",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 24
+        },
+        "starve_l0_10": {
+          "advisory": 2,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 0,
+          "edges_dropped": 10,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "violation",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+              ],
+              "advisory"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 2,
+          "advisory_run": true,
+          "coverage_l0": 0.6842,
+          "drift": 0,
+          "edges_dropped": 19,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "violation",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+              ],
+              "advisory"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 6
+        },
+        "starve_mutated": {
+          "advisory": 2,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 0,
+          "edges_dropped": 8,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "violation",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+              ],
+              "advisory"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/Basket.API/Basket.API.csproj",
+            "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+          ],
+          "targets_starved": 2,
+          "touched_absent": []
+        }
+      },
+      "name": "eshop-add_forbidden_dep-01",
+      "operator": "add_forbidden_dep"
+    },
+    {
+      "expected_findings": 2,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 41,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "violation",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 24
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 2,
+          "edges_dropped": 9,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "violation",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.6842,
+          "drift": 2,
+          "edges_dropped": 18,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "violation",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 6
+        },
+        "starve_mutated": {
+          "advisory": 2,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 0,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "violation",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "advisory"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj",
+            "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+          ],
+          "targets_starved": 2,
+          "touched_absent": []
+        }
+      },
+      "name": "eshop-add_forbidden_dep-02",
+      "operator": "add_forbidden_dep"
+    },
+    {
+      "expected_findings": 2,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 41,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "violation",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 24
+        },
+        "starve_l0_10": {
+          "advisory": 2,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 0,
+          "edges_dropped": 10,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "violation",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+              ],
+              "advisory"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 2,
+          "advisory_run": true,
+          "coverage_l0": 0.6842,
+          "drift": 0,
+          "edges_dropped": 19,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "violation",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+              ],
+              "advisory"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 6
+        },
+        "starve_mutated": {
+          "advisory": 2,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 0,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "violation",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Catalog.API/Catalog.API.csproj"
+              ],
+              "advisory"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/Catalog.API/Catalog.API.csproj",
+            "csharp:csproj:src/Ordering.API/Ordering.API.csproj"
+          ],
+          "targets_starved": 2,
+          "touched_absent": []
+        }
+      },
+      "name": "eshop-add_forbidden_dep-03",
+      "operator": "add_forbidden_dep"
+    },
+    {
+      "expected_findings": 2,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 41,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "violation",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 24
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 2,
+          "edges_dropped": 9,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "violation",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.6842,
+          "drift": 2,
+          "edges_dropped": 18,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "violation",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 6
+        },
+        "starve_mutated": {
+          "advisory": 2,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 0,
+          "edges_dropped": 8,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "violation",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj"
+              ],
+              "advisory"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+            "csharp:csproj:src/WebApp/WebApp.csproj"
+          ],
+          "targets_starved": 2,
+          "touched_absent": []
+        }
+      },
+      "name": "eshop-add_forbidden_dep-04",
+      "operator": "add_forbidden_dep"
+    },
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 39,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 24
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 0,
+          "edges_dropped": 8,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.6842,
+          "drift": 0,
+          "edges_dropped": 17,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 6
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 0,
+          "edges_dropped": 9,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/Basket.API/Basket.API.csproj",
+            "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+          ],
+          "targets_starved": 2,
+          "touched_absent": []
+        }
+      },
+      "name": "eshop-remove_dep-01",
+      "operator": "remove_dep"
+    },
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 39,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/OrderProcessor/OrderProcessor.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 24
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 1,
+          "edges_dropped": 9,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/OrderProcessor/OrderProcessor.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.6842,
+          "drift": 1,
+          "edges_dropped": 18,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/OrderProcessor/OrderProcessor.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 6
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 0,
+          "edges_dropped": 9,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/OrderProcessor/OrderProcessor.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj",
+            "csharp:csproj:src/OrderProcessor/OrderProcessor.csproj"
+          ],
+          "targets_starved": 2,
+          "touched_absent": []
+        }
+      },
+      "name": "eshop-remove_dep-02",
+      "operator": "remove_dep"
+    },
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 39,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/PaymentProcessor/PaymentProcessor.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 24
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 1,
+          "edges_dropped": 9,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/PaymentProcessor/PaymentProcessor.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.6842,
+          "drift": 0,
+          "edges_dropped": 17,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/PaymentProcessor/PaymentProcessor.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 6
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 0,
+          "edges_dropped": 9,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/PaymentProcessor/PaymentProcessor.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj",
+            "csharp:csproj:src/PaymentProcessor/PaymentProcessor.csproj"
+          ],
+          "targets_starved": 2,
+          "touched_absent": []
+        }
+      },
+      "name": "eshop-remove_dep-03",
+      "operator": "remove_dep"
+    },
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 39,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 24
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 0,
+          "edges_dropped": 8,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.6842,
+          "drift": 0,
+          "edges_dropped": 17,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 6
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 0,
+          "edges_dropped": 10,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/Basket.API/Basket.API.csproj",
+            "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj"
+          ],
+          "targets_starved": 2,
+          "touched_absent": []
+        }
+      },
+      "name": "eshop-remove_dep-04",
+      "operator": "remove_dep"
+    },
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 40,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/AnonMutant1/AnonMutant1.csproj"
+              ],
+              "silent"
+            ]
+          ],
+          "silent": 1,
+          "targets_starved": 25
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9,
+          "drift": 1,
+          "edges_dropped": 5,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/AnonMutant1/AnonMutant1.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7,
+          "drift": 1,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/AnonMutant1/AnonMutant1.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 6
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.95,
+          "drift": 1,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/AnonMutant1/AnonMutant1.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/AnonMutant1/AnonMutant1.csproj"
+          ],
+          "targets_starved": 1,
+          "touched_absent": []
+        }
+      },
+      "name": "eshop-add_target-01",
+      "operator": "add_target"
+    },
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 40,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/AnonMutant2/AnonMutant2.csproj"
+              ],
+              "silent"
+            ]
+          ],
+          "silent": 1,
+          "targets_starved": 25
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9,
+          "drift": 1,
+          "edges_dropped": 5,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/AnonMutant2/AnonMutant2.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7,
+          "drift": 1,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/AnonMutant2/AnonMutant2.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 6
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.95,
+          "drift": 1,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/AnonMutant2/AnonMutant2.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/AnonMutant2/AnonMutant2.csproj"
+          ],
+          "targets_starved": 1,
+          "touched_absent": []
+        }
+      },
+      "name": "eshop-add_target-02",
+      "operator": "add_target"
+    },
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 40,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/AnonMutant3/AnonMutant3.csproj"
+              ],
+              "silent"
+            ]
+          ],
+          "silent": 1,
+          "targets_starved": 25
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9,
+          "drift": 1,
+          "edges_dropped": 5,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/AnonMutant3/AnonMutant3.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7,
+          "drift": 1,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/AnonMutant3/AnonMutant3.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 6
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.95,
+          "drift": 1,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/AnonMutant3/AnonMutant3.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/AnonMutant3/AnonMutant3.csproj"
+          ],
+          "targets_starved": 1,
+          "touched_absent": []
+        }
+      },
+      "name": "eshop-add_target-03",
+      "operator": "add_target"
+    },
+    {
+      "expected_findings": 1,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 40,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/AnonMutant4/AnonMutant4.csproj"
+              ],
+              "silent"
+            ]
+          ],
+          "silent": 1,
+          "targets_starved": 25
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9,
+          "drift": 1,
+          "edges_dropped": 5,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/AnonMutant4/AnonMutant4.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7,
+          "drift": 1,
+          "edges_dropped": 11,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/AnonMutant4/AnonMutant4.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 6
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.95,
+          "drift": 1,
+          "edges_dropped": 0,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/AnonMutant4/AnonMutant4.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/AnonMutant4/AnonMutant4.csproj"
+          ],
+          "targets_starved": 1,
+          "touched_absent": []
+        }
+      },
+      "name": "eshop-add_target-04",
+      "operator": "add_target"
+    },
+    {
+      "expected_findings": 4,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 36,
+          "fp": 0,
+          "gap": 4,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 23
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8889,
+          "drift": 4,
+          "edges_dropped": 6,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7222,
+          "drift": 3,
+          "edges_dropped": 17,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 5
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8333,
+          "drift": 1,
+          "edges_dropped": 23,
+          "fp": 0,
+          "gap": 3,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj",
+            "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+            "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+          ],
+          "targets_starved": 3,
+          "touched_absent": [
+            "csharp:csproj:src/Basket.API/Basket.API.csproj"
+          ]
+        }
+      },
+      "name": "eshop-remove_target-01",
+      "operator": "remove_target"
+    },
+    {
+      "expected_findings": 2,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 39,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 23
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8889,
+          "drift": 2,
+          "edges_dropped": 5,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7222,
+          "drift": 2,
+          "edges_dropped": 13,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 5
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.9444,
+          "drift": 1,
+          "edges_dropped": 1,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+          ],
+          "targets_starved": 1,
+          "touched_absent": [
+            "csharp:csproj:src/HybridApp/HybridApp.csproj"
+          ]
+        }
+      },
+      "name": "eshop-remove_target-02",
+      "operator": "remove_target"
+    },
+    {
+      "expected_findings": 3,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 38,
+          "fp": 0,
+          "gap": 3,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 23
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8889,
+          "drift": 2,
+          "edges_dropped": 8,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7222,
+          "drift": 2,
+          "edges_dropped": 12,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 5
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8889,
+          "drift": 1,
+          "edges_dropped": 6,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+            "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj"
+          ],
+          "targets_starved": 2,
+          "touched_absent": [
+            "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+          ]
+        }
+      },
+      "name": "eshop-remove_target-03",
+      "operator": "remove_target"
+    },
+    {
+      "expected_findings": 3,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 38,
+          "fp": 0,
+          "gap": 3,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 23
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8889,
+          "drift": 3,
+          "edges_dropped": 9,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7222,
+          "drift": 3,
+          "edges_dropped": 13,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 5
+        },
+        "starve_mutated": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8889,
+          "drift": 1,
+          "edges_dropped": 3,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/HybridApp/HybridApp.csproj",
+            "csharp:csproj:src/WebApp/WebApp.csproj"
+          ],
+          "targets_starved": 2,
+          "touched_absent": [
+            "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+          ]
+        }
+      },
+      "name": "eshop-remove_target-04",
+      "operator": "remove_target"
+    },
+    {
+      "expected_findings": 9,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 40,
+          "fp": 0,
+          "gap": 8,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj"
+              ],
+              "silent"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "rename",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 1,
+          "targets_starved": 24
+        },
+        "starve_l0_10": {
+          "advisory": 3,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 6,
+          "edges_dropped": 9,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 3,
+          "advisory_run": true,
+          "coverage_l0": 0.6842,
+          "drift": 6,
+          "edges_dropped": 18,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 6
+        },
+        "starve_mutated": {
+          "advisory": 3,
+          "advisory_run": true,
+          "coverage_l0": 0.7895,
+          "drift": 3,
+          "edges_dropped": 26,
+          "fp": 0,
+          "gap": 3,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/Basket.API/Basket.APIAnonMut.csproj",
+            "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj",
+            "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+            "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+          ],
+          "targets_starved": 4,
+          "touched_absent": [
+            "csharp:csproj:src/Basket.API/Basket.API.csproj"
+          ]
+        }
+      },
+      "name": "eshop-rename_target-01",
+      "operator": "rename_target"
+    },
+    {
+      "expected_findings": 5,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 40,
+          "fp": 0,
+          "gap": 4,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj"
+              ],
+              "silent"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "rename",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 1,
+          "targets_starved": 24
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 5,
+          "edges_dropped": 9,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.6842,
+          "drift": 5,
+          "edges_dropped": 18,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 6
+        },
+        "starve_mutated": {
+          "advisory": 1,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 3,
+          "edges_dropped": 2,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj",
+            "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+          ],
+          "targets_starved": 2,
+          "touched_absent": [
+            "csharp:csproj:src/HybridApp/HybridApp.csproj"
+          ]
+        }
+      },
+      "name": "eshop-rename_target-02",
+      "operator": "rename_target"
+    },
+    {
+      "expected_findings": 7,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 40,
+          "fp": 0,
+          "gap": 6,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+              ],
+              "silent"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "rename",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 1,
+          "targets_starved": 24
+        },
+        "starve_l0_10": {
+          "advisory": 1,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 5,
+          "edges_dropped": 9,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 1,
+          "advisory_run": true,
+          "coverage_l0": 0.6842,
+          "drift": 5,
+          "edges_dropped": 18,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 6
+        },
+        "starve_mutated": {
+          "advisory": 2,
+          "advisory_run": true,
+          "coverage_l0": 0.8421,
+          "drift": 3,
+          "edges_dropped": 8,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+            "csharp:csproj:src/Ordering.Domain/Ordering.DomainAnonMut.csproj",
+            "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj"
+          ],
+          "targets_starved": 3,
+          "touched_absent": [
+            "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+          ]
+        }
+      },
+      "name": "eshop-rename_target-03",
+      "operator": "rename_target"
+    },
+    {
+      "expected_findings": 7,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 40,
+          "fp": 0,
+          "gap": 6,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+              ],
+              "silent"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "rename",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 1,
+          "targets_starved": 24
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8947,
+          "drift": 7,
+          "edges_dropped": 9,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.6842,
+          "drift": 7,
+          "edges_dropped": 18,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 6
+        },
+        "starve_mutated": {
+          "advisory": 2,
+          "advisory_run": true,
+          "coverage_l0": 0.8421,
+          "drift": 3,
+          "edges_dropped": 5,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "new_target",
+                "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "rename",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/HybridApp/HybridApp.csproj",
+            "csharp:csproj:src/WebApp/WebApp.csproj",
+            "csharp:csproj:src/WebAppComponents/WebAppComponentsAnonMut.csproj"
+          ],
+          "targets_starved": 3,
+          "touched_absent": [
+            "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+          ]
+        }
+      },
+      "name": "eshop-rename_target-04",
+      "operator": "rename_target"
+    },
+    {
+      "expected_findings": 5,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 37,
+          "fp": 0,
+          "gap": 5,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 23
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8889,
+          "drift": 5,
+          "edges_dropped": 6,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7222,
+          "drift": 4,
+          "edges_dropped": 17,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 5
+        },
+        "starve_mutated": {
+          "advisory": 1,
+          "advisory_run": true,
+          "coverage_l0": 0.8333,
+          "drift": 1,
+          "edges_dropped": 24,
+          "fp": 0,
+          "gap": 3,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Basket.API/Basket.API.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj",
+            "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+            "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+          ],
+          "targets_starved": 3,
+          "touched_absent": [
+            "csharp:csproj:src/Basket.API/Basket.API.csproj"
+          ]
+        }
+      },
+      "name": "eshop-merge_targets-01",
+      "operator": "merge_targets"
+    },
+    {
+      "expected_findings": 4,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 38,
+          "fp": 0,
+          "gap": 4,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Identity.API/Identity.API.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Identity.API/Identity.API.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Identity.API/Identity.API.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 23
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8889,
+          "drift": 4,
+          "edges_dropped": 5,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Identity.API/Identity.API.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Identity.API/Identity.API.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Identity.API/Identity.API.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7222,
+          "drift": 4,
+          "edges_dropped": 13,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Identity.API/Identity.API.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Identity.API/Identity.API.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Identity.API/Identity.API.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 5
+        },
+        "starve_mutated": {
+          "advisory": 1,
+          "advisory_run": true,
+          "coverage_l0": 0.8889,
+          "drift": 1,
+          "edges_dropped": 17,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Identity.API/Identity.API.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+                "csharp:csproj:src/Identity.API/Identity.API.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Identity.API/Identity.API.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+            "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+          ],
+          "targets_starved": 2,
+          "touched_absent": [
+            "csharp:csproj:src/Identity.API/Identity.API.csproj"
+          ]
+        }
+      },
+      "name": "eshop-merge_targets-02",
+      "operator": "merge_targets"
+    },
+    {
+      "expected_findings": 4,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 39,
+          "fp": 0,
+          "gap": 4,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 23
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8889,
+          "drift": 3,
+          "edges_dropped": 8,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 1,
+          "advisory_run": true,
+          "coverage_l0": 0.7222,
+          "drift": 2,
+          "edges_dropped": 13,
+          "fp": 0,
+          "gap": 1,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 5
+        },
+        "starve_mutated": {
+          "advisory": 1,
+          "advisory_run": true,
+          "coverage_l0": 0.8333,
+          "drift": 1,
+          "edges_dropped": 15,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/Ordering.API/Ordering.API.csproj",
+            "csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj",
+            "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+          ],
+          "targets_starved": 3,
+          "touched_absent": [
+            "csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj"
+          ]
+        }
+      },
+      "name": "eshop-merge_targets-03",
+      "operator": "merge_targets"
+    },
+    {
+      "expected_findings": 4,
+      "modes": {
+        "lose_l0": {
+          "advisory": 0,
+          "advisory_run": false,
+          "coverage_l0": 1.0,
+          "drift": 0,
+          "edges_dropped": 39,
+          "fp": 0,
+          "gap": 4,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 23
+        },
+        "starve_l0_10": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.8889,
+          "drift": 4,
+          "edges_dropped": 9,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 2
+        },
+        "starve_l0_30": {
+          "advisory": 0,
+          "advisory_run": true,
+          "coverage_l0": 0.7222,
+          "drift": 4,
+          "edges_dropped": 13,
+          "fp": 0,
+          "gap": 0,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "targets_starved": 5
+        },
+        "starve_mutated": {
+          "advisory": 1,
+          "advisory_run": true,
+          "coverage_l0": 0.8333,
+          "drift": 1,
+          "edges_dropped": 12,
+          "fp": 0,
+          "gap": 2,
+          "outcomes": [
+            [
+              [
+                "new_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+              ],
+              "advisory"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/HybridApp/HybridApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_edge",
+                "csharp:csproj:src/WebApp/WebApp.csproj",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "gap"
+            ],
+            [
+              [
+                "removed_target",
+                "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+              ],
+              "drift"
+            ]
+          ],
+          "silent": 0,
+          "starved": [
+            "csharp:csproj:src/HybridApp/HybridApp.csproj",
+            "csharp:csproj:src/WebApp/WebApp.csproj",
+            "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+          ],
+          "targets_starved": 3,
+          "touched_absent": [
+            "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+          ]
+        }
+      },
+      "name": "eshop-merge_targets-04",
+      "operator": "merge_targets"
+    }
+  ],
+  "schema": "rq6-combined/1",
+  "system": "eshop"
+}

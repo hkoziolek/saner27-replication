@@ -1,0 +1,31 @@
+{
+  "alias": {},
+  "description": "remove build target csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+        "csharp:csproj:src/Common/Toy.Common.csproj"
+      ],
+      [
+        "csharp:csproj:src/Web/Toy.Web.csproj",
+        "csharp:csproj:src/Messaging/Toy.Messaging.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/Messaging/Toy.Messaging.csproj"
+    ],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "[anonymized]-home/<scratch>\\mutwork\\toy\\repo\\src\\Web\\Toy.Web.csproj",
+    "[anonymized]-home/<scratch>\\mutwork\\toy\\repo\\Toy.sln",
+    "[anonymized]-home/<scratch>\\mutwork\\toy\\repo\\src\\Messaging\\Toy.Messaging.csproj"
+  ],
+  "id": "toy-remove_target-02",
+  "operator": "remove_target",
+  "system": "toy"
+}

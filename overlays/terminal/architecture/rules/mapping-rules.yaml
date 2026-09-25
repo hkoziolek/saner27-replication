@@ -1,0 +1,116 @@
+# Curation rules for the microsoft/terminal fixture (plan §7.4). Reviewed + committed.
+#
+# Terminal is the C++ MSBuild / VISUAL-STUDIO FRONT-END fixture (§19.1, §4.1/§16#1): a real
+# `.slnx`-based codebase whose L0 target graph comes from PURE `.vcxproj` parsing (no MSVC on
+# this box — see manifest.yaml). Raw extraction yields 76 first-party `cpp:vcxproj:*` targets
+# (19 executables + 26 DLL/WinRT components + 28 static libs + 3 misc) wired by 206
+# `<ProjectReference>` edges — already at container altitude, but ~half are unit/feature tests,
+# fuzzers, dev tools and scratch/sample apps that are not architecture. This overlay drops those
+# (35 targets) and groups the remaining 41 production targets into 11 functional containers — a
+# readable C4 Container view of Terminal's two products (Windows Terminal + the classic Console
+# Host / conhost) over their shared text engine.
+#
+# Grouping is by SOURCE PATH (the `src/<area>/...` tree maps almost 1:1 to architecture, and the
+# bare project names are inconsistent — `terminalcore-lib` vs `Microsoft.Terminal.Control.Lib`).
+# Groups are first-match-wins in rule order (§7.4); the families use disjoint `src/<area>` path
+# prefixes, so order is not load-bearing here, but the cascadia (Windows Terminal) families are
+# listed before the host/engine ones for readability.
+#
+# Run: `arch run --no-llm`. Deterministic; .vcxproj L0 is pure-parse, so no toolchain needed.
+# (The MSVC binlog L1/clang L2 tiers degrade gracefully on a non-Windows-SDK box, §18.4.)
+version: 1
+
+defaults:
+  min_relationship_weight: 3
+  drop_external: true               # std/SDK/WinRT system refs not shown as containers
+  down_weight_private: true
+  on_unmapped: annotate             # never hard-block on an unmapped target (§7.3)
+  use_llm_names: false
+
+exclude:
+  targets:
+    - glob: "scratch/*"             # scratch/ScratchIslandApp dev playground (SampleApp/WindowExe)
+    - glob: "samples/*"             # samples/ConPTY/EchoCon — API sample, not product
+    - glob: "src/tools/*"           # dev tools (ConsoleBench, VtPipeTerm, FontList, benchcat, …)
+    - glob: "*/ut_*"                # unit-test projects (ut_host, ut_app, ut_parser, ut_til, …)
+    - glob: "*/ft_*"                # feature-test / fuzzer projects (ft_host, ft_fuzzer, ft_pty, …)
+    - glob: "*UnitTests*"           # cascadia UnitTests_Control / _SettingsModel / _TerminalCore
+    - glob: "*LocalTests*"          # cascadia LocalTests_TerminalApp (+ its TestHostApp)
+    - glob: "*UIATests*"            # WindowsTerminal.UIA.Tests (C# UI-automation tests)
+    - glob: "*TestNetCore*"         # WpfTerminalTestNetCore (C# WPF control test harness)
+
+group:
+  # --- Windows Terminal (the modern app: src/cascadia) -------------------------------------
+  - container: "Windows Terminal"
+    members_glob:                   # the WinUI app, its launchers, shell integration + app layer
+      - "src/cascadia/WindowsTerminal*"   # WindowsTerminal.exe
+      - "src/cascadia/wt"                 # wt.exe (CLI launcher)
+      - "src/cascadia/ElevateShim"        # elevation shim
+      - "src/cascadia/ShellExtension"     # Explorer "Open in Terminal" shell ext
+      - "src/cascadia/TerminalApp*"       # TerminalAppLib + TerminalApp.dll (tab/pane app logic)
+      - "src/cascadia/TerminalConnection*" # ConPTY/Azure connection backends
+  - container: "Terminal Control & UI"
+    members_glob:                   # the embeddable TermControl + shared XAML UI helpers
+      - "src/cascadia/TerminalControl*"   # Microsoft.Terminal.Control(.Lib)
+      - "src/cascadia/UIHelpers*"         # Microsoft.Terminal.UI
+      - "src/cascadia/UIMarkdown*"        # Microsoft.Terminal.UI.Markdown
+      - "src/cascadia/WinRTUtils*"        # shared WinRT helpers
+      - "src/cascadia/WpfTerminalControl*" # WpfTerminalControl (C# WPF wrapper of the control)
+  - container: "Terminal Settings"
+    members_glob:                   # settings model + editor + app adapter
+      - "src/cascadia/TerminalSettings*"
+  - container: "Terminal Core"
+    members_glob:                   # headless terminal state machine (TerminalCore)
+      - "src/cascadia/TerminalCore*"
+
+  # --- Console Host / conhost (the classic Windows console, src/host + platform) -----------
+  - container: "Console Host"
+    members_glob:
+      - "src/host/*"                # conhost executable + host library + OpenConsoleProxy
+      - "src/server/*"              # console API server (driver IPC)
+      - "src/propsheet*"            # legacy console properties dialog
+      - "src/propslib*"             # console properties persistence
+      - "src/internal*"             # internal/inbox stubs
+  - container: "Interactivity"
+    members_glob:                   # platform input/window backends (base / OneCore / Win32)
+      - "src/interactivity/*"
+
+  # --- Shared text engine (used by BOTH Windows Terminal and the Console Host) -------------
+  - container: "Rendering Engine"
+    members_glob:                   # the render stack: AtlasEngine, base, GDI, UIA, WddmCon
+      - "src/renderer/*"
+  - container: "VT Parser & Adapter"
+    members_glob:                   # the VT/ANSI engine: parser, terminal-side adapter, input
+      - "src/terminal/*"
+  - container: "Text Buffer"
+    members_glob:                   # the text buffer (bufferout)
+      - "src/buffer/*"
+  - container: "ConPTY"
+    members_glob:                   # the pseudoconsole API (winconpty lib + DLL)
+      - "src/winconpty/*"
+  - container: "Foundation"
+    members_glob:                   # cross-cutting primitives shared everywhere
+      - "src/types/*"               # Types / TIL helpers
+      - "src/tsf*"                  # Text Services Framework (IME)
+      - "src/audio/*"               # MIDI audio (BEL / soundtrack)
+
+  # --- External interop boundaries (§16#15: COM/P-Invoke seams the detectors surface) ------
+  # Terminal is the COM/interop showcase fixture: ~27 COM coclass/interface identities (the
+  # console activation servers WindowsTerminalConsole/…, shell ITaskbarList/IShellLink, TSF
+  # ITfThreadMgr, WIC factories) plus Win32 system DLLs (kernel32/user32) are surfaced as
+  # external boundary targets. Rendered raw they are 29 one-box-each, blowing the element
+  # budget (§9.1). Collapse each seam into ONE external boundary so the interop story stays
+  # visible (who activates COM / calls Win32) without drowning the first-party architecture.
+  - container: "COM Activation (external)"
+    members_glob:
+      - "com:*"                     # every com:<CLSID|ProgID|interface> identity (§16#15 / 5b)
+  - container: "Win32 System (external)"
+    members_glob:
+      - "native:*"                  # kernel32 / user32 system imports (P/Invoke + native libs)
+
+technology:
+  executable: "C++ executable (MSBuild)"
+  shared_lib: "C++ DLL / WinRT component"
+  static_lib: "C++ static library"
+  object_lib: "C++ object library"
+  unknown: "MSBuild project"

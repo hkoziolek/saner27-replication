@@ -1,0 +1,70 @@
+{
+  "entities": 86,
+  "fractions": [
+    "0.05",
+    "0.10",
+    "0.20"
+  ],
+  "granularity": "file",
+  "language": "cpp",
+  "mode": "perturb",
+  "system": "libxml2",
+  "techniques": {
+    "acdc": {
+      "0.05": {
+        "churn_mojofm": 100.0,
+        "survivors_scored": 81
+      },
+      "0.10": {
+        "churn_mojofm": 98.63,
+        "survivors_scored": 77
+      },
+      "0.20": {
+        "churn_mojofm": 96.88,
+        "survivors_scored": 68
+      }
+    },
+    "cc": {
+      "0.05": {
+        "churn_mojofm": 100.0,
+        "survivors_scored": 81
+      },
+      "0.10": {
+        "churn_mojofm": 100.0,
+        "survivors_scored": 77
+      },
+      "0.20": {
+        "churn_mojofm": 100.0,
+        "survivors_scored": 68
+      }
+    },
+    "dir": {
+      "0.05": {
+        "churn_mojofm": 100.0,
+        "survivors_scored": 81
+      },
+      "0.10": {
+        "churn_mojofm": 100.0,
+        "survivors_scored": 77
+      },
+      "0.20": {
+        "churn_mojofm": 100.0,
+        "survivors_scored": 68
+      }
+    },
+    "anon": {
+      "0.05": {
+        "churn_mojofm": 100.0,
+        "survivors_scored": 50
+      },
+      "0.10": {
+        "churn_mojofm": 100.0,
+        "survivors_scored": 48
+      },
+      "0.20": {
+        "churn_mojofm": 100.0,
+        "survivors_scored": 42
+      }
+    }
+  }
+}

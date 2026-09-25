@@ -1,0 +1,10 @@
+[wca] 810 entities from graph-file.rsf
+[wca] 810 singleton clusters
+[wca] clustered to 21 clusters (target 21)
+[wca] wrote <repo>\out\abseil\baseline\wca-file\clusters.rsf
+[limbo] 810 entities from graph-file.rsf
+[limbo] 810 singleton clusters
+[limbo] clustered to 21 clusters (target 21)
+[limbo] wrote <repo>\out\abseil\baseline\limbo-file\clusters.rsf
+[wca-file] 21 clusters / 810 entities — MoJoFM=28.9 a2a=82.51982916412447 vs reference -> <repo>\out\abseil\baseline\wca-file\fidelity.json
+[limbo-file] 21 clusters / 810 entities — MoJoFM=33.08 a2a=81.36058572300183 vs reference -> <repo>\out\abseil\baseline\limbo-file\fidelity.json

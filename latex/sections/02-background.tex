@@ -1,0 +1,97 @@
+\section{Background and Related Work}
+\label{sec:background}
+
+%% Budget: ~0.9 pp. Three threads, each ending in the one sentence that separates this work from
+%% it. Every \cite key is in references.bib with a `% verified:` record (sweep 2026-06-12,
+%% re-verified 2026-08-30; six entries added 2026-09-09). 2026-09-13 (plan §13): tightened twice,
+%% no citation dropped. 2026-09-13 readability pass: sentences split, no citation changed.
+
+\subsection{Erosion, conformance, and architecture as code}
+
+Perry and Wolf distinguished architectural \emph{erosion}, violations of the intended architecture,
+from \emph{drift}, the loss of coherence that comes from insensitivity to
+it~\cite{perry1992foundations}. Surveys~\cite{desilva2012erosion,li2022erosion} and practitioner
+studies~\cite{anthony2024drift,ali2018consistency} still name outdated documentation as a main
+cause and reliable documentation as the main remedy. The classical counter-measures compare an
+intended model against the code: reflexion models~\cite{murphy2001reflexion},
+dependency-structure matrices~\cite{sangal2005dsm}, static conformance
+checking~\cite{knodel2007comparison,passos2010conformance}, lately run continuously in the
+delivery pipeline~\cite{bucaioni2024conformance}, and commercial analysers that check rules over
+the full dependency graph~\cite{understand,ndepend}. All presuppose the intended model as input,
+which is exactly what large legacy systems lack. The C4 model~\cite{brown2026c4} and the
+Structurizr DSL~\cite{structurizrdsl} made textual, version-controlled \emph{architecture as
+code}~\cite{bucaioni2025aac} mainstream. \tool{} produces that artifact from evidence rather than
+by hand, to regenerate byte-identically and drift-check rather than to draw once.
+
+\subsection{Software architecture recovery}
+
+The dominant automatic recovery line is bottom-up clustering of a dependency
+graph~\cite{ducasse2009sar,shtern2012clustering,sarhan2022clustering}. Its families include Bunch
+(search for maximal modularisation quality, MQ)~\cite{mancoridis1998mq,bunch}, ACDC
+(comprehension-driven subgraph patterns)~\cite{acdc}, WCA (agglomerative)~\cite{wca}, LIMBO
+(information-theoretic)~\cite{limbo}, FCA (a fast matrix
+heuristic)~\cite{teymourian2022fca,zhang2023sarif}, and ARC (structure plus LDA topics over
+identifiers and comments)~\cite{arc}. We run ACDC, WCA, LIMBO, and ARC as baselines
+(\S\ref{sec:design}). We do not run Bunch, which \textsc{Arcade} does not bundle and the recent
+evaluations do not compare against; its MQ objective appears only as a descriptive statistic of
+the build graph (\S\ref{sec:rq1}). \textsc{Arcade}~\cite{arcade} bundles the others with the
+standard metrics: MoJoFM, the normalised move-and-join distance between
+partitions~\cite{tzerpos1999mojo,mojofm}, c2c, the per-cluster overlap~\cite{garcia-comparative},
+and a2a, which additionally charges for adding, removing, and moving clusters~\cite{le2015a2a}.
+The metrics disagree by design: MoJoFM favours many small clusters because merging is cheap,
+whereas a2a varies little~\cite{lutellier2018measuring,zhang2023sarif}. Zhang et al.\ therefore
+brought the chance-corrected adjusted Rand index (ARI), which charges over-splitting in full, into
+SAR evaluation~\cite{zhang2023sarif,jabeen2026gaer}.
+
+Ground truth is the field's bottleneck: certified references take architect-weeks to
+obtain~\cite{garcia2013groundtruth}, the public set is a handful of C/C++ and Java
+systems~\cite{lutellier-deps,zhang2023sarif}, and none is C\#. Lutellier et al.\ showed that the
+accuracy of the \emph{dependencies} fed to a technique matters as much as the
+technique~\cite{lutellier-deps,lutellier2018measuring}, a finding our build-graph-first design
+takes to its conclusion. Stability is the second gap: Wu et al.\ found the most stable algorithms
+the least authoritative and vice versa~\cite{wu2005comparison}, and ARC moves by tens of MoJoFM
+points between identical inputs even after seeding~\cite{link2019value}. Our RQ4 makes
+byte-identical regeneration a tested invariant rather than a patch.
+
+The current frontier fuses further sources into the structural graph: multiple dependency
+models~\cite{altinisik2024multidep}, code text and folders (SARIF)~\cite{zhang2023sarif},
+pattern knowledge (SemArc)~\cite{zhao2026semarc}, code models and graph auto-encoders (SSAR,
+REFINE, GAER)~\cite{ding2026ssar,zhang2026refine,jabeen2026gaer}, or class-name embeddings
+(ClassLAR)~\cite{he2025classlar}; all treat structure as unknown and infer it from files.
+
+Build systems have been reverse-engineered before. Tu and
+Godfrey's build-time architectural view~\cite{tu2001buildtime} and Adams et al.'s MAKAO recover
+the build dependency graph and its evolution~\cite{adams2007makao,adams2008linuxbuild}. The build
+maintenance line quantifies how much that graph
+churns~\cite{mcintosh2011buildeffort,mcintosh2012javabuild,nejati2024buildchanges}, derives
+change-impact graphs from CMake and Make~\cite{meidani2023dipidi}, and finds declared build
+dependencies error-prone~\cite{lyu2024builddeps}, one reason we refine them with source evidence.
+None turns the graph into an architecture model, curates it, or checks it for drift. The nearest recent work, the Repository Intelligence Graph, reads the CMake File API to
+give coding agents a map of a repository~\cite{chernyshahar2026rig}. It too produces no
+architecture model, has no curation or drift layer, covers neither MSBuild nor C\#, and is not
+evaluated against reference architectures.
+
+\subsection{LLMs for architecture recovery and documentation}
+
+For recovery, ArchAgent lets agents synthesise multi-view diagrams of large repositories, judged
+by expert F1 rather than partition metrics; the tool is not released, and its own ablation reports
+that dependency context improves accuracy~\cite{archagent}. SemRef post-processes the output of
+ten SAR techniques with an LLM and raises MoJoFM substantially~\cite{zhang2026semref}, so the
+model edits structure after the fact. CIAO~\cite{deluca2026ciao} and CodeWiki~\cite{codewiki2026}
+generate architecture documentation end-to-end from code. Hybrids on C++~\cite{hatahet2025sad},
+ROS~2~\cite{benchat2026ros2}, and industrial Java~\cite{rukmono2026dsar} run deterministic
+extraction first and let the LLM select or abstract the elements. The evidence on what LLMs do
+well is consistent: they identify styles but struggle with
+relationships~\cite{amalfitano2025recovery}, 4{,}137 generated views over 340 repositories sat at
+code level rather than architectural abstractions~\cite{sathvika2026views}, and a reproduction
+attempt of 18 LLM-based software-engineering studies reproduced none in
+full~\cite{angermeir2026reproducibility}.
+
+\tool{} takes the opposite position on the one point every LLM-recovery line shares: structure
+comes deterministically from the build graph and refining source evidence, and the model may only
+name and describe what that evidence already contains (\S\ref{sec:approach}). The nearest
+precedent for that division of labour is a recent drift detector that diffs runtime traces
+deterministically and confines the LLM to writing the report~\cite{deangelis2026drift}. We
+evaluate with the community's own partition metrics and ground truths and add what the
+LLM-centric line does not report: reproducibility under rerun, stability under code change, and
+drift-detection accuracy.

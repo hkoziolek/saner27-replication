@@ -1,0 +1,24 @@
+{
+  "cache": {},
+  "notes": [],
+  "stages": {
+    "curate": 0.094,
+    "drift": 0.031,
+    "enrich": 870.218,
+    "extract": 184.734,
+    "generate": 0.063,
+    "normalize": 6.187,
+    "validate-curated": 0.125,
+    "validate-extracted": 0.766
+  },
+  "trust": {
+    "abstained_targets": 2,
+    "coverage_pct": {
+      "L0": 1.0
+    },
+    "edges_dropped": 8570,
+    "mean_confidence": 0.7941,
+    "over_budget_views": [],
+    "unmapped_targets": 0
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "dropped_whitespace": 0,
+  "entities": {
+    "acdc": 38,
+    "cc": 38,
+    "dir": 38,
+    "floor": 38,
+    "limbo": 38,
+    "pipeline": 37,
+    "propose": 38,
+    "wca": 38
+  },
+  "granularity": "target",
+  "projection": "all-common",
+  "reference_entities": 37,
+  "results": {
+    "acdc": {
+      "a2a": 76.51,
+      "ari": 0.0,
+      "clusters": 1,
+      "mojofm": 28.12,
+      "nested": 0.0
+    },
+    "cc": {
+      "a2a": 76.51,
+      "ari": 0.0,
+      "clusters": 1,
+      "mojofm": 28.12,
+      "nested": 0.0
+    },
+    "dir": {
+      "a2a": 80.2,
+      "ari": 0.0,
+      "clusters": 37,
+      "mojofm": 37.5,
+      "nested": 100.0
+    },
+    "floor": {
+      "a2a": 80.2,
+      "ari": 0.0,
+      "clusters": 37,
+      "mojofm": 37.5,
+      "nested": 100.0
+    },
+    "limbo": {
+      "a2a": 87.85,
+      "ari": 8.13,
+      "clusters": 16,
+      "mojofm": 34.38,
+      "nested": 81.25
+    },
+    "pipeline": {
+      "a2a": 90.23,
+      "ari": 64.62,
+      "clusters": 9,
+      "mojofm": 71.88,
+      "nested": 77.78
+    },
+    "propose": {
+      "a2a": 89.6,
+      "ari": 86.85,
+      "clusters": 8,
+      "mojofm": 71.88,
+      "nested": 62.5
+    },
+    "wca": {
+      "a2a": 90.66,
+      "ari": 16.36,
+      "clusters": 17,
+      "mojofm": 46.88,
+      "nested": 70.59
+    }
+  },
+  "shared_entities": 37,
+  "system": "nopcommerce"
+}

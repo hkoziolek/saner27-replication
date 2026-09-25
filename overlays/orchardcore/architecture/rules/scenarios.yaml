@@ -1,0 +1,23 @@
+# Hand-authored behavioral scenarios for OrchardCore dynamic views (plan §9.4).
+# Each step sequences an EXISTING curated container edge (a step naming a non-existent edge
+# is skipped, never invented — principle #3). `from`/`to` accept a container name, a
+# container_id, or a build-target id. Re-runnable via `arch run` (reads this file).
+version: 1
+
+scenarios:
+  - key: content-request
+    name: "Serving a content item for a web request"
+    scope: system
+    steps:
+      - from: "Web Hosts"
+        to: "OrchardCore Framework"
+        description: "Receives the HTTP request and resolves the route"
+      - from: "OrchardCore Framework"
+        to: "Content Management (probe)"
+        description: "Loads the requested content item"
+      - from: "Content Management (probe)"
+        to: "Framework Abstractions"
+        description: "Resolves content types and part definitions"
+      - from: "OrchardCore Framework"
+        to: "Search & Data Modules"
+        description: "Queries the document store"

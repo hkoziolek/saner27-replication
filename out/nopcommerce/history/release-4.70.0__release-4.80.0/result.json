@@ -1,0 +1,186 @@
+{
+  "advisory": false,
+  "counts": {
+    "coverage_gap_edges": 0,
+    "coverage_gap_targets": 0,
+    "drift_total": 12,
+    "layering_violations": 0,
+    "new_edges": 5,
+    "new_targets": 5,
+    "removed_edges": 1,
+    "removed_targets": 1,
+    "suspected_renames": 0
+  },
+  "coverage": 1.0,
+  "diff": {
+    "coverage_gap_edges": [],
+    "coverage_gap_targets": [],
+    "first_run": false,
+    "new_edges": [
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.OmnibusDirective/Nop.Plugin.Misc.OmnibusDirective.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.PowerBI/Nop.Plugin.Misc.PowerBI.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Payments.AmazonPay/Nop.Plugin.Payments.AmazonPay.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ],
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Search.Lucene/Nop.Plugin.Search.Lucene.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Widgets.Swiper/Nop.Plugin.Widgets.Swiper.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:src/Plugins/Nop.Plugin.Misc.OmnibusDirective/Nop.Plugin.Misc.OmnibusDirective.csproj",
+      "csharp:csproj:src/Plugins/Nop.Plugin.Misc.PowerBI/Nop.Plugin.Misc.PowerBI.csproj",
+      "csharp:csproj:src/Plugins/Nop.Plugin.Payments.AmazonPay/Nop.Plugin.Payments.AmazonPay.csproj",
+      "csharp:csproj:src/Plugins/Nop.Plugin.Search.Lucene/Nop.Plugin.Search.Lucene.csproj",
+      "csharp:csproj:src/Plugins/Nop.Plugin.Widgets.Swiper/Nop.Plugin.Widgets.Swiper.csproj"
+    ],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Widgets.NivoSlider/Nop.Plugin.Widgets.NivoSlider.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/Plugins/Nop.Plugin.Widgets.NivoSlider/Nop.Plugin.Widgets.NivoSlider.csproj"
+    ],
+    "suspected_renames": [],
+    "suspicious": []
+  },
+  "findings": {
+    "coverage_gap_edges": [],
+    "coverage_gap_targets": [],
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.OmnibusDirective/Nop.Plugin.Misc.OmnibusDirective.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.PowerBI/Nop.Plugin.Misc.PowerBI.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Payments.AmazonPay/Nop.Plugin.Payments.AmazonPay.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ],
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Search.Lucene/Nop.Plugin.Search.Lucene.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Widgets.Swiper/Nop.Plugin.Widgets.Swiper.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:src/Plugins/Nop.Plugin.Misc.OmnibusDirective/Nop.Plugin.Misc.OmnibusDirective.csproj",
+      "csharp:csproj:src/Plugins/Nop.Plugin.Misc.PowerBI/Nop.Plugin.Misc.PowerBI.csproj",
+      "csharp:csproj:src/Plugins/Nop.Plugin.Payments.AmazonPay/Nop.Plugin.Payments.AmazonPay.csproj",
+      "csharp:csproj:src/Plugins/Nop.Plugin.Search.Lucene/Nop.Plugin.Search.Lucene.csproj",
+      "csharp:csproj:src/Plugins/Nop.Plugin.Widgets.Swiper/Nop.Plugin.Widgets.Swiper.csproj"
+    ],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Widgets.NivoSlider/Nop.Plugin.Widgets.NivoSlider.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/Plugins/Nop.Plugin.Widgets.NivoSlider/Nop.Plugin.Widgets.NivoSlider.csproj"
+    ],
+    "suspected_renames": []
+  },
+  "gating": true,
+  "git": {
+    "a": "release-4.70.0",
+    "a_date": "2024-04-26T11:23:27+03:00",
+    "b": "release-4.80.0",
+    "b_date": "2024-12-12T18:52:24+03:00",
+    "build_files_touched": [
+      "src/Build/src/ClearPluginAssemblies.sln",
+      "src/Build/src/ClearPluginAssemblies/ClearPluginAssemblies.csproj",
+      "src/Directory.Build.props",
+      "src/Libraries/Nop.Core/Nop.Core.csproj",
+      "src/Libraries/Nop.Data/Nop.Data.csproj",
+      "src/Libraries/Nop.Services/Nop.Services.csproj",
+      "src/NopCommerce.sln",
+      "src/Plugins/Nop.Plugin.DiscountRules.CustomerRoles/Nop.Plugin.DiscountRules.CustomerRoles.csproj",
+      "src/Plugins/Nop.Plugin.ExchangeRate.EcbExchange/Nop.Plugin.ExchangeRate.EcbExchange.csproj",
+      "src/Plugins/Nop.Plugin.ExternalAuth.Facebook/Nop.Plugin.ExternalAuth.Facebook.csproj",
+      "src/Plugins/Nop.Plugin.Misc.Brevo/Nop.Plugin.Misc.Brevo.csproj",
+      "src/Plugins/Nop.Plugin.Misc.NopMobileApp/Nop.Plugin.Misc.NopMobileApp.csproj",
+      "src/Plugins/Nop.Plugin.Misc.OmnibusDirective/Nop.Plugin.Misc.OmnibusDirective.csproj",
+      "src/Plugins/Nop.Plugin.Misc.Omnisend/Nop.Plugin.Misc.Omnisend.csproj",
+      "src/Plugins/Nop.Plugin.Misc.PowerBI/Nop.Plugin.Misc.PowerBI.csproj",
+      "src/Plugins/Nop.Plugin.Misc.Sendinblue/Nop.Plugin.Misc.Sendinblue.csproj",
+      "src/Plugins/Nop.Plugin.Misc.WebApi.Frontend/Nop.Plugin.Misc.WebApi.Frontend.csproj",
+      "src/Plugins/Nop.Plugin.Misc.Zettle/Nop.Plugin.Misc.Zettle.csproj",
+      "src/Plugins/Nop.Plugin.MultiFactorAuth.GoogleAuthenticator/Nop.Plugin.MultiFactorAuth.GoogleAuthenticator.csproj",
+      "src/Plugins/Nop.Plugin.Payments.AmazonPay/Nop.Plugin.Payments.AmazonPay.csproj",
+      "src/Plugins/Nop.Plugin.Payments.CheckMoneyOrder/Nop.Plugin.Payments.CheckMoneyOrder.csproj",
+      "src/Plugins/Nop.Plugin.Payments.Manual/Nop.Plugin.Payments.Manual.csproj",
+      "src/Plugins/Nop.Plugin.Payments.PayPalCommerce/Nop.Plugin.Payments.PayPalCommerce.csproj",
+      "src/Plugins/Nop.Plugin.Payments.PayPalStandard/Nop.Plugin.Payments.PayPalStandard.csproj",
+      "src/Plugins/Nop.Plugin.Pickup.PickupInStore/Nop.Plugin.Pickup.PickupInStore.csproj",
+      "src/Plugins/Nop.Plugin.Search.Lucene/Nop.Plugin.Search.Lucene.csproj",
+      "src/Plugins/Nop.Plugin.Shipping.EasyPost/Nop.Plugin.Shipping.EasyPost.csproj",
+      "src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj",
+      "src/Plugins/Nop.Plugin.Shipping.UPS/Nop.Plugin.Shipping.UPS.csproj",
+      "src/Plugins/Nop.Plugin.Tax.Avalara/Nop.Plugin.Tax.Avalara.csproj",
+      "src/Plugins/Nop.Plugin.Tax.FixedOrByCountryStateZip/Nop.Plugin.Tax.FixedOrByCountryStateZip.csproj",
+      "src/Plugins/Nop.Plugin.Widgets.AccessiBe/Nop.Plugin.Widgets.AccessiBe.csproj",
+      "src/Plugins/Nop.Plugin.Widgets.FacebookPixel/Nop.Plugin.Widgets.FacebookPixel.csproj",
+      "src/Plugins/Nop.Plugin.Widgets.GoogleAnalytics/Nop.Plugin.Widgets.GoogleAnalytics.csproj",
+      "src/Plugins/Nop.Plugin.Widgets.NivoSlider/Nop.Plugin.Widgets.NivoSlider.csproj",
+      "src/Plugins/Nop.Plugin.Widgets.NivoSlider/Nop.Plugin.Widgets.Swiper.csproj",
+      "src/Plugins/Nop.Plugin.Widgets.Swiper/Nop.Plugin.Widgets.Swiper.csproj",
+      "src/Plugins/Nop.Plugin.Widgets.What3words/Nop.Plugin.Widgets.What3words.csproj",
+      "src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj",
+      "src/Presentation/Nop.Web/Nop.Web.csproj",
+      "src/Tests/Nop.Tests/Nop.Tests.csproj"
+    ],
+    "commits_build_files": 49,
+    "commits_total": 398,
+    "history_note": "shallow clone \u2014 a..b counted against the shallow boundary of a --shallow-exclude=<a> fetch",
+    "shallow_clone": true
+  },
+  "l0_scoped": true,
+  "layering": {
+    "rules_present": true,
+    "violations_a": 4,
+    "violations_b": 4
+  },
+  "needs_curation": {
+    "a": 0,
+    "b": 0,
+    "b_ids": [],
+    "new_in_b": []
+  },
+  "out_of_scope": {
+    "new_edges_non_l0_or_external": 0,
+    "removed_edges_non_l0_or_external": 0
+  },
+  "pair": {
+    "a": "release-4.70.0",
+    "b": "release-4.80.0"
+  },
+  "schema": "rq6-history-pair/1",
+  "system": "nopcommerce",
+  "targets": {
+    "a_first_party": 26,
+    "b_first_party": 30
+  },
+  "warnings": [],
+  "worksheet_rows": 12
+}

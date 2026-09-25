@@ -1,0 +1,16 @@
+{
+  "axis": "A7",
+  "edge_delta": 0,
+  "edges_hash_after": "dc2c0e9855ffdb2c",
+  "edges_hash_before": "dc2c0e9855ffdb2c",
+  "invariant_holds": true,
+  "n_edges": 40,
+  "n_targets": 20,
+  "names_changed": 20,
+  "partition_hash_after": "7dac09b7e52c6119",
+  "partition_hash_before": "7dac09b7e52c6119",
+  "partition_moved": 0,
+  "structural_delta": 0,
+  "system": "eshop",
+  "targets_delta": 0
+}

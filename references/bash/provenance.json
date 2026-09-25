@@ -1,0 +1,16 @@
+{
+  "system": "bash",
+  "grade": "GT-pub",
+  "subject_version": "Bash 4.2",
+  "subject_repo": "https://git.savannah.gnu.org/git/bash.git",
+  "subject_tag": "bash-4.2",
+  "source": "Lutellier et al., ICSE 2015 / TSE 2018 dataset (originally from Garcia et al. ground-truth line); expert-verified ground truth.",
+  "dataset_url": "http://asset.uwaterloo.ca/ArchRecovery/gt/bash_gt.rsf",
+  "retrieved_via": "Wayback Machine snapshot 2019-05-21 (https://web.archive.org/web/20190521095656id_/http://asset.uwaterloo.ca/ArchRecovery/gt/bash_gt.rsf); original host no longer resolves (checked 2026-06-12)",
+  "mirror_url": "https://www.cs.purdue.edu/homes/lintan/ArchRecovery/gt/bash_gt.rsf (live mirror, verified 2026-07-16 — cite alongside the Wayback snapshot)",
+  "retrieved_at": "2026-06-12",
+  "format": "RSF `contain <cluster> <file>` tuples, verbatim; entities are mostly basenames (flat source tree) plus lib/ subpaths",
+  "clusters": 14,
+  "entities": 373,
+  "notes": "ACTIVE Tier-A anchor #2 since 2026-07-16: the autotools gap is closed by the static Makefile.in L0 extractor (extract_autotools — pure parse, no configure/Bear needed), which recovers bash's declared build graph (bash + 9 static libs + support programs). Pipeline scores 93.15 MoJoFM / 98.12 a2a on the all-common projection (plans/notes/2026-07-16-autotools-gt-pub-unlock.md). Originally stored as a stretch anchor because the original dataset host is dead and the archive copy should be pinned while available."
+}

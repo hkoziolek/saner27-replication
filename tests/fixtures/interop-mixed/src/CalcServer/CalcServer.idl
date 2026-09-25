@@ -1,0 +1,32 @@
+// MIDL definition of the CalcServer COM type library. The coclass uuid is the CLSID the
+// C# [ComImport][Guid("3f2504e0-...")] reaches; capturing it lets interop_resolve bind the
+// com:<guid> boundary to this native server target by identity.
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+    object,
+    uuid(7d1e6a30-2b44-4c1a-9b88-1f0c0d2e3f40),
+    pointer_default(unique)
+]
+interface ICalc : IUnknown
+{
+    HRESULT Add([in] int a, [in] int b, [out, retval] int* result);
+};
+
+[
+    uuid(0a9e1b22-9c33-4d55-8e66-7788990011aa),
+    version(1.0)
+]
+library CalcServerLib
+{
+    importlib("stdole2.tlb");
+
+    [
+        uuid(3f2504e0-4f89-41d3-9a0c-0305e82c3301)
+    ]
+    coclass CalcServer
+    {
+        [default] interface ICalc;
+    };
+};

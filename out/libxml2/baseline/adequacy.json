@@ -1,0 +1,17 @@
+{
+  "edges": 54,
+  "entities": 58,
+  "fidelity_corpus": true,
+  "granularity": "file",
+  "intra_edges": 42,
+  "intra_share": 0.7778,
+  "language": "cpp",
+  "largest_share": 0.7759,
+  "mq": 0.875,
+  "mq_per_unit": 0.0625,
+  "schema": "adequacy/1",
+  "source": "a2-rungs/none.rsf",
+  "system": "libxml2",
+  "unit_ratio": 0.2414,
+  "units": 14
+}

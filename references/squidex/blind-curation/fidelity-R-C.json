@@ -1,0 +1,77 @@
+{
+  "common_with": "out/squidex/baseline/dir-target/clusters.rsf",
+  "granularity": "target",
+  "kind": "rq9-fidelity (eval §10a.4 four-row table)",
+  "labelling_rule": "detection and expression numbers never cross (eval §10a.7)",
+  "projection": "all-common",
+  "reference": "references/squidex/reference.rsf",
+  "reference_entities_dropped": [
+    "csharp:csproj:backend/i18n/translator/Squidex.Translator/Squidex.Translator.csproj",
+    "csharp:csproj:frontend/generator/Generator/Generator.csproj"
+  ],
+  "rows": {
+    "best_sar": {
+      "a2a": 92.96,
+      "ari": 17.52,
+      "candidates": [
+        "acdc",
+        "arc",
+        "limbo",
+        "wca"
+      ],
+      "clusters": 9,
+      "kind": "detection",
+      "mojofm": 60.0,
+      "nested": 66.67,
+      "technique": "limbo"
+    },
+    "blind_curator": {
+      "a2a": 95.83,
+      "clusters": 13,
+      "container_edge_f1": {
+        "candidate_edges": 31,
+        "clusters_aligned": 9,
+        "clusters_unmatched": 1,
+        "entity_edges": 45,
+        "f1": 0.667,
+        "n_common_entities": 13,
+        "precision": 0.677,
+        "recall": 0.656,
+        "reference_edges": 32,
+        "true_positive_edges": 21
+      },
+      "kind": "expression",
+      "mojofm": 70.0,
+      "n_common": 13,
+      "source": "out/squidex-rq9/architecture/generated/graph/clusters-target.rsf"
+    },
+    "floor": {
+      "a2a": 92.0,
+      "ari": 0.0,
+      "clusters": 13,
+      "kind": "detection",
+      "mojofm": 70.0,
+      "nested": 100.0,
+      "source": "comparison:dir (= the no-curation floor at target granularity, eval §13)"
+    },
+    "human_ceiling": {
+      "a2a": 86.3,
+      "kappa": 0.391,
+      "kind": "ceiling",
+      "mojofm": 54.55,
+      "n_common": 14,
+      "source": "references/squidex/blind-curation/ceiling.json"
+    }
+  },
+  "sensitivity": {
+    "blind_curator_full_reference": {
+      "a2a": 96.43,
+      "clusters": 13,
+      "kind": "expression-full-reference",
+      "mojofm": 75.0,
+      "n_common": 15,
+      "note": "the same partition scored on every reference entity, including those outside the all-common projection"
+    }
+  },
+  "system": "squidex"
+}

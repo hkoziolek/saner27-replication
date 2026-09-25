@@ -1,0 +1,795 @@
+%% references.bib -- verified bibliography (sweep of 2026-06-12, re-verified and extended 2026-08-30).
+%%
+%% Every entry below was checked against a primary record (DBLP, Crossref/doi.org, ACM DL, IEEE
+%% Xplore, Springer, ScholarSpace, or the arXiv abstract page) on 2026-08-30; the `% verified:`
+%% comment names the record used. Entries that are arXiv-only as of that date say so in
+%% `howpublished`; re-check them at camera-ready (Jan 2027). Two seed DOIs were WRONG and are fixed
+%% here (ACDC: ...891477 not ...891479; Lutellier TSE'18: ...2671865 not ...2671882).
+%%
+%% Keys cited from sections/04-study-design.tex are frozen: arcade, acdc, arc, wca, limbo, bunch,
+%% archagent, garcia-comparative, lutellier-deps, mojofm.
+%%
+%% Search notes: plans/notes/2026-06-12-related-work-search.md (seed verification + positioning
+%% risks) and latex/related-work-tool-comparison.md (industrial-tool slice).
+
+% =====================================================================================
+% C4 / Structurizr / architecture-as-code
+% =====================================================================================
+
+% verified: O'Reilly catalog API (issued 2026-06-19, ISBN 9798341660120); c4model.com
+@book{brown2026c4,
+  author    = {Simon Brown},
+  title     = {The {C4} Model: Visualizing Software Architecture},
+  publisher = {O'Reilly Media},
+  year      = {2026}
+}
+
+% verified: https://docs.structurizr.com/dsl (live 2026-08-30)
+@misc{structurizrdsl,
+  author       = {Simon Brown},
+  title        = {Structurizr {DSL}},
+  howpublished = {\url{https://docs.structurizr.com/dsl}},
+  note         = {Accessed 30 Aug 2026}
+}
+
+% verified: Crossref 10.1109/ICSA65012.2025.00027 (ICSA 2025, pp. 187-198)
+@inproceedings{bucaioni2025aac,
+  author    = {Alessio Bucaioni and Amleto {Di Salle} and Ludovico Iovino and Patrizio Pelliccione and Franco Raimondi},
+  title     = {Architecture as Code},
+  booktitle = {Proc. 22nd IEEE Int. Conf. on Software Architecture (ICSA)},
+  year      = {2025},
+  pages     = {187--198},
+  doi       = {10.1109/ICSA65012.2025.00027}
+}
+
+% verified: Crossref 10.1109/ICSA66085.2026.00015; conf.researchr.org ICSA 2026
+@inproceedings{somma2026contaac,
+  author    = {Alessandra Somma and Alessio Bucaioni and Patrizio Pelliccione},
+  title     = {{CONTAaC}: Continuous Architecting as Code},
+  booktitle = {Proc. 23rd IEEE Int. Conf. on Software Architecture (ICSA)},
+  year      = {2026},
+  doi       = {10.1109/ICSA66085.2026.00015}
+}
+
+% verified: ScholarSpace hdl 10125/112268; Crossref 10.24251/HICSS.2026.862 (pp. 7265-7274)
+@inproceedings{szczepanik2026c4,
+  author    = {Kamil Szczepanik and Jaros{\l}aw A. Chudziak},
+  title     = {Collaborative {LLM} Agents for {C4} Software Architecture Design Automation},
+  booktitle = {Proc. 59th Hawaii Int. Conf. on System Sciences (HICSS)},
+  year      = {2026},
+  pages     = {7265--7274},
+  doi       = {10.24251/HICSS.2026.862}
+}
+
+% verified: Crossref 10.1109/ICSA66085.2026.00031 (ICSA 2026, pp. 245-256); arXiv:2603.21178
+@inproceedings{sathvika2026views,
+  author    = {Miryala Sathvika and Rudra Dhar and Karthik Vaidhyanathan},
+  title     = {{LLM}-based Automated Architecture View Generation: Where Are We Now?},
+  booktitle = {Proc. 23rd IEEE Int. Conf. on Software Architecture (ICSA)},
+  year      = {2026},
+  pages     = {245--256},
+  doi       = {10.1109/ICSA66085.2026.00031}
+}
+
+% =====================================================================================
+% Software architecture recovery: techniques (the ARCADE-hosted baselines we run)
+% =====================================================================================
+
+% verified: DBLP conf/wcre/TzerposH00; Crossref 10.1109/WCRE.2000.891477 (IEEE metadata carries the typo "ACCD")
+@inproceedings{acdc,
+  author    = {Vassilios Tzerpos and Richard C. Holt},
+  title     = {{ACDC}: An Algorithm for Comprehension-Driven Clustering},
+  booktitle = {Proc. 7th Working Conf. on Reverse Engineering (WCRE)},
+  year      = {2000},
+  pages     = {258--267},
+  doi       = {10.1109/WCRE.2000.891477}
+}
+
+% verified: DBLP conf/icsm/MancoridisMCG99; Crossref 10.1109/ICSM.1999.792498
+@inproceedings{bunch,
+  author    = {Spiros Mancoridis and Brian S. Mitchell and Yih-Farn Chen and Emden R. Gansner},
+  title     = {Bunch: A Clustering Tool for the Recovery and Maintenance of Software System Structures},
+  booktitle = {Proc. IEEE Int. Conf. on Software Maintenance (ICSM)},
+  year      = {1999},
+  pages     = {50--59},
+  doi       = {10.1109/ICSM.1999.792498}
+}
+
+% verified: DBLP journals/tse/MaqboolB07
+@article{wca,
+  author  = {Onaiza Maqbool and Haroon A. Babri},
+  title   = {Hierarchical Clustering for Software Architecture Recovery},
+  journal = {IEEE Transactions on Software Engineering},
+  volume  = {33},
+  number  = {11},
+  pages   = {759--780},
+  year    = {2007},
+  doi     = {10.1109/TSE.2007.70732}
+}
+
+% verified: DBLP conf/kbse/GarciaPMMC11 (Yuanfang Cai is the 5th author -- the seed omitted her)
+@inproceedings{arc,
+  author    = {Joshua Garcia and Daniel Popescu and Chris Mattmann and Nenad Medvidovic and Yuanfang Cai},
+  title     = {Enhancing Architectural Recovery Using Concerns},
+  booktitle = {Proc. 26th IEEE/ACM Int. Conf. on Automated Software Engineering (ASE)},
+  year      = {2011},
+  pages     = {552--555},
+  doi       = {10.1109/ASE.2011.6100123}
+}
+
+% verified: Crossref 10.1109/TSE.2005.25
+@article{limbo,
+  author  = {Periklis Andritsos and Vassilios Tzerpos},
+  title   = {Information-Theoretic Software Clustering},
+  journal = {IEEE Transactions on Software Engineering},
+  volume  = {31},
+  number  = {2},
+  pages   = {150--165},
+  year    = {2005},
+  doi     = {10.1109/TSE.2005.25}
+}
+
+% verified: DBLP conf/sigsoft/LaserMLG20
+@inproceedings{arcade,
+  author    = {Marcelo {Schmitt Laser} and Nenad Medvidovic and Duc Minh Le and Joshua Garcia},
+  title     = {{ARCADE}: An Extensible Workbench for Architecture Recovery, Change, and Decay Evaluation},
+  booktitle = {Proc. 28th ACM Joint European Software Engineering Conf. and Symp. on the Foundations of Software Engineering (ESEC/FSE)},
+  year      = {2020},
+  pages     = {1546--1550},
+  doi       = {10.1145/3368089.3417941}
+}
+
+% verified: Crossref 10.1109/TSE.2009.19
+@article{ducasse2009sar,
+  author  = {St{\'e}phane Ducasse and Damien Pollet},
+  title   = {Software Architecture Reconstruction: A Process-Oriented Taxonomy},
+  journal = {IEEE Transactions on Software Engineering},
+  volume  = {35},
+  number  = {4},
+  pages   = {573--591},
+  year    = {2009},
+  doi     = {10.1109/TSE.2009.19}
+}
+
+% verified: Wiley https://onlinelibrary.wiley.com/doi/10.1002/spe.3364 (SPE 55(1):100-132)
+@article{qayum2025taxonomy,
+  author  = {Abdul Qayum and Mengqi Zhang and Simon Colreavy and Muslim Chochlov and Jim Buckley and Dayi Lin and Ashish Rajendra Sai},
+  title   = {A Framework and Taxonomy for Characterizing the Applicability of Software Architecture Recovery Approaches: A Tertiary-Mapping Study},
+  journal = {Software: Practice and Experience},
+  volume  = {55},
+  number  = {1},
+  pages   = {100--132},
+  year    = {2025},
+  doi     = {10.1002/spe.3364}
+}
+
+% verified: Crossref 10.1109/TSE.2020.3022212 (TSE 48(4):1451-1462, Apr 2022); added 2026-09-09
+% (reviewer-supplied; run as a baseline by SARIF and SemRef, not by us: unlicensed MATLAB script)
+@article{teymourian2022fca,
+  author  = {Navid Teymourian and Habib Izadkhah and Ayaz Isazadeh},
+  title   = {A Fast Clustering Algorithm for Modularization of Large-Scale Software Systems},
+  journal = {IEEE Transactions on Software Engineering},
+  volume  = {48},
+  number  = {4},
+  pages   = {1451--1462},
+  year    = {2022},
+  doi     = {10.1109/TSE.2020.3022212}
+}
+
+% =====================================================================================
+% SAR metrics, ground truth, comparative studies, stability
+% =====================================================================================
+
+% verified: DBLP conf/iwpc/WenT04; Crossref 10.1109/WPC.2004.1311061
+@inproceedings{mojofm,
+  author    = {Zhihua Wen and Vassilios Tzerpos},
+  title     = {An Effectiveness Measure for Software Clustering Algorithms},
+  booktitle = {Proc. 12th IEEE Int. Workshop on Program Comprehension (IWPC)},
+  year      = {2004},
+  pages     = {194--203},
+  doi       = {10.1109/WPC.2004.1311061}
+}
+
+% verified: DBLP conf/kbse/GarciaIM13 (introduces c2c; uses MoJoFM -- a2a is NOT from this paper)
+@inproceedings{garcia-comparative,
+  author    = {Joshua Garcia and Igor Ivkovic and Nenad Medvidovic},
+  title     = {A Comparative Analysis of Software Architecture Recovery Techniques},
+  booktitle = {Proc. 28th IEEE/ACM Int. Conf. on Automated Software Engineering (ASE)},
+  year      = {2013},
+  pages     = {486--496},
+  doi       = {10.1109/ASE.2013.6693106}
+}
+
+% verified: DBLP conf/msr/LeBGLSM15; Crossref 10.1109/MSR.2015.29 (origin of a2a and cvg; journal
+% extension = Behnamghader et al., EMSE 22(3), 2017, DOI 10.1007/s10664-016-9466-0)
+@inproceedings{le2015a2a,
+  author    = {Duc Minh Le and Pooyan Behnamghader and Joshua Garcia and Daniel Link and Arman Shahbazian and Nenad Medvidovic},
+  title     = {An Empirical Study of Architectural Change in Open-Source Software Systems},
+  booktitle = {Proc. 12th IEEE/ACM Working Conf. on Mining Software Repositories (MSR)},
+  year      = {2015},
+  pages     = {235--245},
+  doi       = {10.1109/MSR.2015.29}
+}
+
+% verified: Crossref 10.1109/ICSE.2015.136
+@inproceedings{lutellier-deps,
+  author    = {Thibaud Lutellier and Devin Chollak and Joshua Garcia and Lin Tan and Derek Rayside and Nenad Medvidovic and Robert Kroeger},
+  title     = {Comparing Software Architecture Recovery Techniques Using Accurate Dependencies},
+  booktitle = {Proc. 37th IEEE/ACM Int. Conf. on Software Engineering (ICSE), Software Engineering in Practice},
+  year      = {2015},
+  pages     = {69--78},
+  doi       = {10.1109/ICSE.2015.136}
+}
+
+% verified: Crossref 10.1109/TSE.2017.2671865 (the seed's ...2671882 does not resolve)
+@article{lutellier2018measuring,
+  author  = {Thibaud Lutellier and Devin Chollak and Joshua Garcia and Lin Tan and Derek Rayside and Nenad Medvidovic and Robert Kroeger},
+  title   = {Measuring the Impact of Code Dependencies on Software Architecture Recovery Techniques},
+  journal = {IEEE Transactions on Software Engineering},
+  volume  = {44},
+  number  = {2},
+  pages   = {159--181},
+  year    = {2018},
+  doi     = {10.1109/TSE.2017.2671865}
+}
+
+% verified: Crossref 10.1109/ICSE.2013.6606639
+@inproceedings{garcia2013groundtruth,
+  author    = {Joshua Garcia and Ivo Krka and Chris Mattmann and Nenad Medvidovic},
+  title     = {Obtaining Ground-Truth Software Architectures},
+  booktitle = {Proc. 35th Int. Conf. on Software Engineering (ICSE)},
+  year      = {2013},
+  pages     = {901--910},
+  doi       = {10.1109/ICSE.2013.6606639}
+}
+
+% verified: Crossref 10.1109/ICSM.2005.31
+@inproceedings{wu2005comparison,
+  author    = {Jingwei Wu and Ahmed E. Hassan and Richard C. Holt},
+  title     = {Comparison of Clustering Algorithms in the Context of Software Evolution},
+  booktitle = {Proc. 21st IEEE Int. Conf. on Software Maintenance (ICSM)},
+  year      = {2005},
+  pages     = {525--535},
+  doi       = {10.1109/ICSM.2005.31}
+}
+
+% verified: Crossref 10.1109/ICST46399.2020.00032; author PDF https://web.njit.edu/~ineamtiu/pubs/icst20yin.pdf
+@inproceedings{yin2020nondeterminism,
+  author    = {Xin Yin and Iulian Neamtiu and Saketan Patil and Sean T. Andrews},
+  title     = {Implementation-Induced Inconsistency and Nondeterminism in Deterministic Clustering Algorithms},
+  booktitle = {Proc. 13th IEEE Int. Conf. on Software Testing, Validation and Verification (ICST)},
+  year      = {2020},
+  pages     = {231--242},
+  doi       = {10.1109/ICST46399.2020.00032}
+}
+
+% verified: Crossref 10.1145/3299771.3299787; arXiv:1901.07700 first page (ISEC 2019, Pune).
+% Documents the determinism patches the ARCADE baselines needed (ACDC input pre-sorting, ARC fixed LDA seed).
+@inproceedings{link2019value,
+  author    = {Daniel Link and Pooyan Behnamghader and Ramin Moazeni and Barry Boehm},
+  title     = {The Value of Software Architecture Recovery for Maintenance},
+  booktitle = {Proc. 12th Innovations in Software Engineering Conf. (ISEC)},
+  year      = {2019},
+  pages     = {17:1--17:10},
+  doi       = {10.1145/3299771.3299787}
+}
+
+% verified: arXiv https://arxiv.org/abs/2510.25506; header "ICSE '26"; DBLP has only the CoRR record as of 2026-08-30
+@inproceedings{angermeir2026reproducibility,
+  author    = {Florian Angermeir and Maximilian Amougou and Mark Kreitz and Andreas Bauer and Matthias Linhuber and Davide Fucci and Fabiola Moy{\'o}n C. and Daniel Mendez and Tony Gorschek},
+  title     = {Reflections on the Reproducibility of Commercial {LLM} Performance in Empirical Software Engineering Studies},
+  booktitle = {Proc. 48th IEEE/ACM Int. Conf. on Software Engineering (ICSE)},
+  year      = {2026},
+  note      = {Preprint arXiv:2510.25506}
+}
+
+% =====================================================================================
+% Erosion, drift, conformance, dependency tooling
+% =====================================================================================
+
+% verified: Crossref 10.1016/j.jss.2011.07.036
+@article{desilva2012erosion,
+  author  = {Lakshitha de Silva and Dharini Balasubramaniam},
+  title   = {Controlling Software Architecture Erosion: A Survey},
+  journal = {Journal of Systems and Software},
+  volume  = {85},
+  number  = {1},
+  pages   = {132--151},
+  year    = {2012},
+  doi     = {10.1016/j.jss.2011.07.036}
+}
+
+% verified: Crossref 10.1002/smr.2423
+@article{li2022erosion,
+  author  = {Ruiyin Li and Peng Liang and Mohamed Soliman and Paris Avgeriou},
+  title   = {Understanding Software Architecture Erosion: A Systematic Mapping Study},
+  journal = {Journal of Software: Evolution and Process},
+  volume  = {34},
+  number  = {3},
+  pages   = {e2423},
+  year    = {2022},
+  doi     = {10.1002/smr.2423}
+}
+
+% verified: Crossref 10.1109/32.917525
+@article{murphy2001reflexion,
+  author  = {Gail C. Murphy and David Notkin and Kevin J. Sullivan},
+  title   = {Software Reflexion Models: Bridging the Gap between Design and Implementation},
+  journal = {IEEE Transactions on Software Engineering},
+  volume  = {27},
+  number  = {4},
+  pages   = {364--380},
+  year    = {2001},
+  doi     = {10.1109/32.917525}
+}
+
+% verified: Crossref 10.1109/MS.2009.117
+@article{passos2010conformance,
+  author  = {Leonardo Passos and Ricardo Terra and Marco Tulio Valente and Renato Diniz and Nabor das Chagas Mendon{\c{c}}a},
+  title   = {Static Architecture-Conformance Checking: An Illustrative Overview},
+  journal = {IEEE Software},
+  volume  = {27},
+  number  = {5},
+  pages   = {82--89},
+  year    = {2010},
+  doi     = {10.1109/MS.2009.117}
+}
+
+% verified: Crossref 10.1145/1094811.1094824
+@inproceedings{sangal2005dsm,
+  author    = {Neeraj Sangal and Ev Jordan and Vineet Sinha and Daniel Jackson},
+  title     = {Using Dependency Models to Manage Complex Software Architecture},
+  booktitle = {Proc. 20th ACM SIGPLAN Conf. on Object-Oriented Programming, Systems, Languages, and Applications (OOPSLA)},
+  year      = {2005},
+  pages     = {167--176},
+  doi       = {10.1145/1094811.1094824}
+}
+
+% verified: Crossref 10.1109/ICSA59870.2024.00018 (pp. 101-111); IEEE Xplore 10592790
+@inproceedings{anthony2024drift,
+  author    = {Emilie Anthony and Astrid Berntsson and Tiziano Santilli and Rebekka Wohlrab},
+  title     = {We're Drifting Apart: Architectural Drift from the Developers' Perspective},
+  booktitle = {Proc. 21st IEEE Int. Conf. on Software Architecture (ICSA)},
+  year      = {2024},
+  pages     = {101--111},
+  doi       = {10.1109/ICSA59870.2024.00018}
+}
+
+% verified: arXiv https://arxiv.org/abs/2607.03135 ("accepted at ICSME 2026"); no DOI yet
+@inproceedings{deangelis2026drift,
+  author    = {Domenico Francesco {De Angelis} and Marco {De Luca} and Domenico Amalfitano and Pasquale Cimmino and Anna Rita Fasolino},
+  title     = {Detecting Architectural Drift in Safety-Critical Firmware through Runtime Trace Analysis},
+  booktitle = {Proc. 42nd IEEE Int. Conf. on Software Maintenance and Evolution (ICSME)},
+  year      = {2026},
+  note      = {Preprint arXiv:2607.03135}
+}
+
+% verified: vendor site (live 2026-08-30); commercial tool, no peer-reviewed origin
+@misc{understand,
+  author       = {{SciTools}},
+  title        = {Understand: Static Code Analysis and Code Comprehension},
+  howpublished = {\url{https://scitools.com}},
+  note         = {Accessed 30 Aug 2026}
+}
+
+% verified: vendor site (live 2026-08-30); commercial tool, no peer-reviewed origin
+@misc{ndepend,
+  author       = {{NDepend}},
+  title        = {{NDepend} and {CppDepend}: Static Analysis for {.NET} and {C/C++}},
+  howpublished = {\url{https://www.ndepend.com}, \url{https://www.cppdepend.com}},
+  note         = {Accessed 30 Aug 2026}
+}
+
+% verified: Crossref 10.1109/ICSA59870.2024.00019 (ICSA 2024, pp. 112-122); added 2026-09-09
+@inproceedings{bucaioni2024conformance,
+  author    = {Alessio Bucaioni and Amleto {Di Salle} and Ludovico Iovino and Leonardo Mariani and Patrizio Pelliccione},
+  title     = {Continuous Conformance of Software Architectures},
+  booktitle = {Proc. 21st IEEE Int. Conf. on Software Architecture (ICSA)},
+  year      = {2024},
+  pages     = {112--122},
+  doi       = {10.1109/ICSA59870.2024.00019}
+}
+
+% =====================================================================================
+% Semantics-augmented and LLM-based recovery (2023--2026)
+% =====================================================================================
+
+% verified: Crossref 10.1145/3611643.3616285 (pp. 1535-1547); DBLP conf/sigsoft/ZhangXL0SQL23
+@inproceedings{zhang2023sarif,
+  author    = {Yiran Zhang and Zhengzi Xu and Chengwei Liu and Hongxu Chen and Jianwen Sun and Dong Qiu and Yang Liu},
+  title     = {Software Architecture Recovery with Information Fusion},
+  booktitle = {Proc. 31st ACM Joint European Software Engineering Conf. and Symp. on the Foundations of Software Engineering (ESEC/FSE)},
+  year      = {2023},
+  pages     = {1535--1547},
+  doi       = {10.1145/3611643.3616285}
+}
+
+% verified: Crossref 10.1109/TSE.2025.3620670; DBLP journals/tse/ZhaoJZFWLLL26 (TSE 52(1), Jan 2026)
+@article{zhao2026semarc,
+  author  = {Wenting Zhao and Wuxia Jin and Yiran Zhang and Ming Fan and Haijun Wang and Li Li and Yang Liu and Ting Liu},
+  title   = {Software Architecture Recovery Augmented with Semantics},
+  journal = {IEEE Transactions on Software Engineering},
+  volume  = {52},
+  number  = {1},
+  pages   = {338--359},
+  year    = {2026},
+  doi     = {10.1109/TSE.2025.3620670}
+}
+
+% verified: conf.researchr.org ICSE 2026 research track; arXiv https://arxiv.org/abs/2607.23774 ("Accepted by ICSE 2026").
+% ICSE 2026 research-track DOIs not indexed as of 2026-08-30 -- fill pages/DOI at camera-ready.
+@inproceedings{zhang2026semref,
+  author    = {Yiran Zhang and Chengwei Liu and Yuqiang Sun and Zhengzi Xu and Weisong Sun and Wenke Li and Wuxia Jin and Yang Liu},
+  title     = {Semantic-Enhanced Automatic Refinement of Architecture Recovery Results Using {LLMs}},
+  booktitle = {Proc. 48th IEEE/ACM Int. Conf. on Software Engineering (ICSE)},
+  year      = {2026},
+  note      = {Preprint arXiv:2607.23774}
+}
+
+% verified: conf.researchr.org ICSE 2026 research track (no DOI indexed as of 2026-08-30)
+@inproceedings{ding2026ssar,
+  author    = {Wei Ding and Ran Mo and Chaochao Wu and Haopeng Song},
+  title     = {{SSAR}: A Novel Software Architecture Recovery Approach Enhancing Accuracy and Scalability},
+  booktitle = {Proc. 48th IEEE/ACM Int. Conf. on Software Engineering (ICSE)},
+  year      = {2026}
+}
+
+% verified: Crossref 10.1109/SANER67736.2026.00123 (SANER 2026, pp. 1045-1056)
+@inproceedings{zhang2026refine,
+  author    = {Chunguang Zhang and Bixin Li and Yan Xiao},
+  title     = {Beyond Lexical: Functional Semantics and Fusion for Precise Architecture Recovery},
+  booktitle = {Proc. IEEE Int. Conf. on Software Analysis, Evolution and Reengineering (SANER)},
+  year      = {2026},
+  pages     = {1045--1056},
+  doi       = {10.1109/SANER67736.2026.00123}
+}
+
+% verified: Crossref 10.1145/3808187 (PACMSE 3(FSE), pp. 4094-4115)
+@article{jabeen2026gaer,
+  author  = {Rakhshanda Jabeen and Morgan Ericsson and Jonas Nordqvist and Anna Wingkvist},
+  title   = {{GAER}: Graph Auto-Encoders for Unsupervised Software Architecture Recovery},
+  journal = {Proceedings of the ACM on Software Engineering},
+  volume  = {3},
+  number  = {FSE},
+  pages   = {4094--4115},
+  year    = {2026},
+  doi     = {10.1145/3808187}
+}
+
+% verified: arXiv https://arxiv.org/abs/2512.15980 (arXiv-only as of 2026-08-30)
+@misc{he2025classlar,
+  author       = {Yirui He and Yuqi Huai and Xingyu Chen and Joshua Garcia},
+  title        = {Embedding Software Intent: Lightweight {Java} Module Recovery},
+  howpublished = {arXiv preprint arXiv:2512.15980},
+  year         = {2025}
+}
+
+% verified: Crossref 10.1109/ICASSP55912.2026.11462552 (pp. 19357-19361); arXiv:2601.13007.
+% Tool NOT released (dataset + prompts only) -> cited as related work, not run as a baseline (eval plan 6.2).
+% Do NOT confuse with arXiv:2602.22425 "ArchAgent: Agentic AI-driven Computer Architecture Discovery" (hardware).
+@inproceedings{archagent,
+  author    = {Rusheng Pan and Bingcheng Mao and Tianyi Ma and Zhenhua Ling},
+  title     = {{ArchAgent}: Scalable Legacy Software Architecture Recovery with {LLMs}},
+  booktitle = {Proc. IEEE Int. Conf. on Acoustics, Speech and Signal Processing (ICASSP)},
+  year      = {2026},
+  pages     = {19357--19361},
+  doi       = {10.1109/ICASSP55912.2026.11462552}
+}
+
+% verified: Crossref 10.1109/ICSA66085.2026.00026 (ICSA 2026, pp. 201-212); arXiv:2604.08293
+@inproceedings{deluca2026ciao,
+  author    = {Marco {De Luca} and Tiziano Santilli and Domenico Amalfitano and Anna Rita Fasolino and Patrizio Pelliccione},
+  title     = {{CIAO} -- {Code In Architecture Out} -- Automated Software Architecture Documentation with Large Language Models},
+  booktitle = {Proc. 23rd IEEE Int. Conf. on Software Architecture (ICSA)},
+  year      = {2026},
+  pages     = {201--212},
+  doi       = {10.1109/ICSA66085.2026.00026}
+}
+
+% verified: Crossref 10.1007/978-3-032-02138-0_5; DBLP conf/ecsa/2025 (LNCS 15929, pp. 73-89; conference Sept 2025)
+@inproceedings{amalfitano2025recovery,
+  author    = {Domenico Amalfitano and Marco {De Luca} and Tiziano Santilli and Patrizio Pelliccione and Anna Rita Fasolino},
+  title     = {Automated Software Architecture Design Recovery from Source Code Using {LLMs}},
+  booktitle = {Proc. 19th European Conf. on Software Architecture (ECSA)},
+  series    = {LNCS},
+  volume    = {15929},
+  publisher = {Springer},
+  year      = {2025},
+  pages     = {73--89},
+  doi       = {10.1007/978-3-032-02138-0_5}
+}
+
+% verified: Crossref 10.1109/MODELS-C68889.2025.00080 (pp. 566-575); arXiv:2511.05165
+@inproceedings{hatahet2025sad,
+  author    = {Ahmad Hatahet and Christoph Knieke and Andreas Rausch},
+  title     = {Generating Software Architecture Description from Source Code using Reverse Engineering and Large Language Model},
+  booktitle = {Proc. ACM/IEEE Int. Conf. on Model Driven Engineering Languages and Systems Companion (MODELS-C)},
+  year      = {2025},
+  pages     = {566--575},
+  doi       = {10.1109/MODELS-C68889.2025.00080}
+}
+
+% verified: Crossref 10.1109/ICSA-C68850.2026.00078 (pp. 401-408); arXiv:2602.18644
+@inproceedings{benchat2026ros2,
+  author    = {Mohamed Benchat and Dominique Briechle and Raj Chanchad and Mitbhai Chauhan and Meet Chavda and Ruidi He and Dhruv Jajadiya and Dhruv Kapadiya and Nidhiben Kaswala and Daniel Osterholz and Andreas Rausch and Meng Zhang},
+  title     = {Modeling and Recovering Hierarchical Structural Architectures of {ROS}~2 Systems from Code and Launch Configurations Using {LLM}-Based Agents},
+  booktitle = {Proc. IEEE Int. Conf. on Software Architecture Companion (ICSA-C)},
+  year      = {2026},
+  pages     = {401--408},
+  doi       = {10.1109/ICSA-C68850.2026.00078}
+}
+
+% verified: Crossref 10.1145/3803437.3805259 (FSE Companion 2026, industry track, pp. 880-891)
+@inproceedings{rukmono2026dsar,
+  author    = {Satrio Adi Rukmono and Lina Ochoa and Thijs M. J. Bressers and Jacob Kr{\"u}ger and Michel R. V. Chaudron},
+  title     = {Evaluating Explanatory Artefacts of {DSAR}-Recovered Software Architectures from Industrial Codebases},
+  booktitle = {Proc. 34th ACM Int. Conf. on the Foundations of Software Engineering Companion (FSE Companion), Industry Track},
+  year      = {2026},
+  pages     = {880--891},
+  doi       = {10.1145/3803437.3805259}
+}
+
+% verified: arXiv https://arxiv.org/abs/2602.08181 (arXiv-only as of 2026-08-30)
+@misc{manglaras2026modaro,
+  author       = {Oscar Manglaras and Alex Farkas and Thomas Woolford and Christoph Treude and Markus Wagner},
+  title        = {{ModARO}: A Modular Approach to Architecture Reconstruction of Distributed Microservice Codebases},
+  howpublished = {arXiv preprint arXiv:2602.08181},
+  year         = {2026}
+}
+
+% verified: Crossref 10.1007/s10664-025-10686-2 (EMSE 30(5), article 128); registered report MSR'24 (arXiv:2403.06941)
+@article{schneider2025microservice,
+  author  = {Simon Schneider and Alexander Bakhtin and Xiaozhou Li and Jacopo Soldani and Antonio Brogi and Tomas Cerny and Riccardo Scandariato and Davide Taibi},
+  title   = {Comparison of Static Analysis Architecture Recovery Tools for Microservice Applications},
+  journal = {Empirical Software Engineering},
+  volume  = {30},
+  number  = {5},
+  pages   = {128},
+  year    = {2025},
+  doi     = {10.1007/s10664-025-10686-2}
+}
+
+% verified: arXiv https://arxiv.org/abs/2601.10112 (arXiv-only as of 2026-08-30). Closest prior work on
+% deterministic CMake-File-API extraction; different goal (LLM-agent context, no SAR evaluation, no MSBuild/C#).
+@misc{chernyshahar2026rig,
+  author       = {Tsvi Cherny-Shahar and Amiram Yehudai},
+  title        = {Repository Intelligence Graph: Deterministic Architectural Map for {LLM} Code Assistants},
+  howpublished = {arXiv preprint arXiv:2601.10112},
+  year         = {2026}
+}
+
+% verified: Crossref 10.1145/3605098.3635917 (SAC 2024, Avila, pp. 1185-1192); added 2026-09-09
+@inproceedings{altinisik2024multidep,
+  author    = {Metin Alt{\i}n{\i}{\c{s}}{\i}k and Hasan S{\"o}zer and Gonca G{\"u}rsun},
+  title     = {Software Architecture Recovery from Multiple Dependency Models},
+  booktitle = {Proc. 39th ACM/SIGAPP Symposium on Applied Computing (SAC)},
+  year      = {2024},
+  pages     = {1185--1192},
+  doi       = {10.1145/3605098.3635917}
+}
+
+% verified: ACL Anthology 2026.findings-acl.288; Crossref 10.18653/v1/2026.findings-acl.288
+% (Findings of ACL 2026, pp. 5812-5827); arXiv:2510.24428; added 2026-09-09
+@inproceedings{codewiki2026,
+  author    = {Anh {Nguyen Hoang} and Minh Le-Anh and Bach Le and Nghi D. Q. Bui},
+  title     = {{CodeWiki}: Evaluating {AI}'s Ability to Generate Holistic Documentation for Large-Scale Codebases},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2026},
+  year      = {2026},
+  pages     = {5812--5827},
+  doi       = {10.18653/v1/2026.findings-acl.288}
+}
+
+% =====================================================================================
+% Surveys of LLMs in software architecture
+% =====================================================================================
+
+% verified: arXiv https://arxiv.org/abs/2505.16697 (v1 only; no peer-reviewed version found as of 2026-08-30)
+@misc{schmid2025slr,
+  author       = {Larissa Schmid and Tobias Hey and Martin Armbruster and Sophie Corallo and Dominik Fuch{\ss} and Jan Keim and Haoyu Liu and Anne Koziolek},
+  title        = {Software Architecture Meets {LLMs}: A Systematic Literature Review},
+  howpublished = {arXiv preprint arXiv:2505.16697},
+  year         = {2025}
+}
+
+% verified: Crossref 10.1016/j.jss.2025.112607 (JSS 231, article 112607; peer-reviewed version of arXiv:2503.13310)
+@article{esposito2026genai,
+  author  = {Matteo Esposito and Xiaozhou Li and Sergio Moreschini and Noman Ahmad and Tomas Cerny and Karthik Vaidhyanathan and Valentina Lenarduzzi and Davide Taibi},
+  title   = {Generative {AI} for Software Architecture: Applications, Challenges, and Future Directions},
+  journal = {Journal of Systems and Software},
+  volume  = {231},
+  pages   = {112607},
+  year    = {2026},
+  doi     = {10.1016/j.jss.2025.112607}
+}
+
+% verified: Crossref 10.1145/3807453 ("Just Accepted", online 2026-04-07; no volume/issue yet); arXiv:2511.02434
+@article{fuchss2026whoswho,
+  author  = {Dominik Fuch{\ss} and Haoyu Liu and Sophie Corallo and Tobias Hey and Jan Keim and Johannes von Geisau and Anne Koziolek},
+  title   = {Who's Who? {LLM}-assisted Software Traceability with Architecture Entity Recognition},
+  journal = {ACM Transactions on Autonomous and Adaptive Systems},
+  year    = {2026},
+  doi     = {10.1145/3807453}
+}
+
+% =====================================================================================
+% Metrics origins, clustering surveys, conformance tooling, erosion definitions
+% =====================================================================================
+
+% verified: Crossref 10.1109/WPC.1998.693283; DBLP conf/iwpc/MancoridisMRCG98 (origin of the MQ metric)
+@inproceedings{mancoridis1998mq,
+  author    = {Spiros Mancoridis and Brian S. Mitchell and Chris Rorres and Yih-Farn Chen and Emden R. Gansner},
+  title     = {Using Automatic Clustering to Produce High-Level System Organizations of Source Code},
+  booktitle = {Proc. 6th Int. Workshop on Program Comprehension (IWPC)},
+  year      = {1998},
+  pages     = {45--52},
+  doi       = {10.1109/WPC.1998.693283}
+}
+
+% verified: Crossref 10.1109/WCRE.1999.806959; DBLP conf/wcre/TzerposH99
+@inproceedings{tzerpos1999mojo,
+  author    = {Vassilios Tzerpos and Richard C. Holt},
+  title     = {{MoJo}: A Distance Metric for Software Clusterings},
+  booktitle = {Proc. 6th Working Conf. on Reverse Engineering (WCRE)},
+  year      = {1999},
+  pages     = {187--193},
+  doi       = {10.1109/WCRE.1999.806959}
+}
+
+% verified: Crossref 10.1109/TSE.2020.3042553 (143-paper literature analysis of software module clustering)
+@article{sarhan2022clustering,
+  author  = {Qusay I. Sarhan and Bestoun S. Ahmed and Miroslav Bures and Kamal Z. Zamli},
+  title   = {Software Module Clustering: An In-Depth Literature Analysis},
+  journal = {IEEE Transactions on Software Engineering},
+  volume  = {48},
+  number  = {6},
+  pages   = {1905--1928},
+  year    = {2022},
+  doi     = {10.1109/TSE.2020.3042553}
+}
+
+% verified: Crossref 10.1145/141874.141884 (erosion vs. drift definitions, p. 43)
+@article{perry1992foundations,
+  author  = {Dewayne E. Perry and Alexander L. Wolf},
+  title   = {Foundations for the Study of Software Architecture},
+  journal = {ACM SIGSOFT Software Engineering Notes},
+  volume  = {17},
+  number  = {4},
+  pages   = {40--52},
+  year    = {1992},
+  doi     = {10.1145/141874.141884}
+}
+
+% verified: Crossref 10.1109/WICSA.2007.1
+@inproceedings{knodel2007comparison,
+  author    = {Jens Knodel and Daniel Popescu},
+  title     = {A Comparison of Static Architecture Compliance Checking Approaches},
+  booktitle = {Proc. 6th Working IEEE/IFIP Conf. on Software Architecture (WICSA)},
+  year      = {2007},
+  doi       = {10.1109/WICSA.2007.1}
+}
+
+% verified: Crossref 10.1002/spe.2421 (ten compliance-checking tools benchmarked on dependency accuracy)
+@article{pruijt2017accuracy,
+  author  = {Leo Pruijt and Christian K{\"o}ppe and Jan Martijn E. M. van der Werf and Sjaak Brinkkemper},
+  title   = {The Accuracy of Dependency Analysis in Static Architecture Compliance Checking},
+  journal = {Software: Practice and Experience},
+  volume  = {47},
+  number  = {2},
+  pages   = {273--309},
+  year    = {2017},
+  doi     = {10.1002/spe.2421}
+}
+
+% verified: Crossref 10.1007/s10664-017-9515-3 (19 practitioner interviews on architecture consistency)
+@article{ali2018consistency,
+  author  = {Nour Ali and Sean Baker and Ross O'Crowley and Sebastian Herold and Jim Buckley},
+  title   = {Architecture Consistency: State of the Practice, Challenges and Requirements},
+  journal = {Empirical Software Engineering},
+  volume  = {23},
+  number  = {1},
+  pages   = {224--258},
+  year    = {2018},
+  doi     = {10.1007/s10664-017-9515-3}
+}
+
+% verified: Crossref 10.1155/2012/792024 (Article ID 792024, 18 pp.)
+@article{shtern2012clustering,
+  author  = {Mark Shtern and Vassilios Tzerpos},
+  title   = {Clustering Methodologies for Software Engineering},
+  journal = {Advances in Software Engineering},
+  volume  = {2012},
+  pages   = {792024},
+  year    = {2012},
+  doi     = {10.1155/2012/792024}
+}
+
+% =====================================================================================
+% Build-system reverse engineering and build maintenance (added 2026-08-30 after reviewer
+% pointed out the build-system precedents for the "structure from the build graph" claim)
+% =====================================================================================
+
+% verified: DBLP conf/icsm/AdamsTSM07; Crossref 10.1109/ICSM.2007.4362624 (ICSM 2007, pp. 114-123; the MAKAO paper)
+@inproceedings{adams2007makao,
+  author    = {Bram Adams and Herman Tromp and Kris {De Schutter} and Wolfgang {De Meuter}},
+  title     = {Design Recovery and Maintenance of Build Systems},
+  booktitle = {Proc. 23rd IEEE Int. Conf. on Software Maintenance (ICSM)},
+  year      = {2007},
+  pages     = {114--123},
+  doi       = {10.1109/ICSM.2007.4362624}
+}
+
+% verified: DBLP journals/eceasst/AdamsSTM07; DataCite 10.14279/tuj.eceasst.8.115 + eceasst.org article 1456
+% (vol. 8 = ERCIM Symposium on Software Evolution 2007; DOI is DataCite-registered, not Crossref; journal
+% follow-up on MAKAO; no page range published -- none given here)
+@article{adams2008linuxbuild,
+  author  = {Bram Adams and Kris {De Schutter} and Herman Tromp and Wolfgang {De Meuter}},
+  title   = {The Evolution of the {Linux} Build System},
+  journal = {Electronic Communications of the EASST},
+  volume  = {8},
+  year    = {2008},
+  doi     = {10.14279/tuj.eceasst.8.115}
+}
+
+% verified: DBLP conf/icsm/TuG01; Crossref 10.1109/ICSM.2001.972753 (pp. 398-407; the DBLP proceedings title carries no ordinal)
+@inproceedings{tu2001buildtime,
+  author    = {Qiang Tu and Michael W. Godfrey},
+  title     = {The Build-Time Software Architecture View},
+  booktitle = {Proc. IEEE Int. Conf. on Software Maintenance (ICSM)},
+  year      = {2001},
+  pages     = {398--407},
+  doi       = {10.1109/ICSM.2001.972753}
+}
+
+% verified: Crossref 10.1145/1985793.1985813 (ICSE 2011, pp. 141-150)
+@inproceedings{mcintosh2011buildeffort,
+  author    = {Shane McIntosh and Bram Adams and Thanh H. D. Nguyen and Yasutaka Kamei and Ahmed E. Hassan},
+  title     = {An Empirical Study of Build Maintenance Effort},
+  booktitle = {Proc. 33rd Int. Conf. on Software Engineering (ICSE)},
+  year      = {2011},
+  pages     = {141--150},
+  doi       = {10.1145/1985793.1985813}
+}
+
+% verified: Crossref 10.1007/s10664-011-9169-5 (EMSE 17(4-5):578-608, 2012; online 2011)
+@article{mcintosh2012javabuild,
+  author  = {Shane McIntosh and Bram Adams and Ahmed E. Hassan},
+  title   = {The Evolution of {Java} Build Systems},
+  journal = {Empirical Software Engineering},
+  volume  = {17},
+  number  = {4--5},
+  pages   = {578--608},
+  year    = {2012},
+  doi     = {10.1007/s10664-011-9169-5}
+}
+
+% verified: Crossref 10.1145/3691620.3695514 (ASE 2024, pp. 1421-1433); added 2026-09-09
+@inproceedings{nejati2024buildchanges,
+  author    = {Mahtab Nejati and Mahmoud Alfadel and Shane McIntosh},
+  title     = {Understanding the Implications of Changes to Build Systems},
+  booktitle = {Proc. 39th IEEE/ACM Int. Conf. on Automated Software Engineering (ASE)},
+  year      = {2024},
+  pages     = {1421--1433},
+  doi       = {10.1145/3691620.3695514}
+}
+
+% verified: Crossref 10.1007/s10664-022-10270-y (EMSE 28(2), article 41, 2023; the Crossref title
+% carries no "DiPiDi" subtitle); added 2026-09-09
+@article{meidani2023dipidi,
+  author  = {Mehran Meidani and Maxime Lamothe and Shane McIntosh},
+  title   = {Assessing the Exposure of Software Changes},
+  journal = {Empirical Software Engineering},
+  volume  = {28},
+  number  = {2},
+  year    = {2023},
+  doi     = {10.1007/s10664-022-10270-y}
+}
+
+% verified: Crossref 10.1145/3650212.3652105 (ISSTA 2024, Vienna, pp. 1-12); added 2026-09-09
+@inproceedings{lyu2024builddeps,
+  author    = {Jun Lyu and Shanshan Li and He Zhang and Yang Zhang and Guoping Rong and Manuel Rigger},
+  title     = {Detecting Build Dependency Errors in Incremental Builds},
+  booktitle = {Proc. 33rd ACM SIGSOFT Int. Symposium on Software Testing and Analysis (ISSTA)},
+  year      = {2024},
+  pages     = {1--12},
+  doi       = {10.1145/3650212.3652105}
+}

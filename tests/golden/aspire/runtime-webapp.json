@@ -1,0 +1,113 @@
+{
+  "confidence": "high",
+  "derived_from_hash": "8e969c9c994f718b67a1249627db4eed5f4c39b05fd0316cb219414c0e11aa6c",
+  "note": "edge existence is declared in Aspire AppHost wiring (high confidence); the ORDERING confidence is only medium — sibling fan-out order is sort-order, not declared by Aspire",
+  "notes": {
+    "out_of_model": [
+      {
+        "kind": "calls",
+        "source": "csharp:csproj:Basket.API/Basket.API.csproj",
+        "target": "infra:cache:redis"
+      }
+    ]
+  },
+  "ordering_provenance": "declared-in-aspire",
+  "proposal": {
+    "key": "runtime-webapp",
+    "name": "Runtime: WebApp request flow",
+    "scope": "system",
+    "steps": [
+      {
+        "description": "references Basket.API — AddProject<Projects.WebApp>().WithReference(basketApi)",
+        "from": "csharp:csproj:WebApp/WebApp.csproj",
+        "from_name": "WebApp",
+        "order": 1,
+        "to": "csharp:csproj:Basket.API/Basket.API.csproj",
+        "to_name": "Basket.API"
+      },
+      {
+        "description": "references Catalog.API — AddProject<Projects.WebApp>().WithReference(catalogApi)",
+        "from": "csharp:csproj:WebApp/WebApp.csproj",
+        "from_name": "WebApp",
+        "order": 1,
+        "to": "csharp:csproj:Catalog.API/Catalog.API.csproj",
+        "to_name": "Catalog.API"
+      }
+    ]
+  },
+  "salience": 13.0,
+  "salience_reasons": [
+    "entry-point (sdk-role:service-web)",
+    "crosses 3 containers"
+  ],
+  "schema": "scenario-candidate/1",
+  "source": "runtime",
+  "validated_view": {
+    "derived_from_hash": "8e969c9c994f718b67a1249627db4eed5f4c39b05fd0316cb219414c0e11aa6c",
+    "dsl_steps": 0,
+    "flagged_steps": 0,
+    "name": "Runtime: WebApp request flow",
+    "note": "existence of every step is validator-checked against the build container graph or the runtime deployment facet; the call ORDERING is declared-in-aspire and is never treated as observed unless the source observed it (engine §6.9c; dynamic-view plan §1a#4)",
+    "ordering_provenance": "declared-in-aspire",
+    "scenario": "runtime-webapp",
+    "schema": "dynamic-view/2",
+    "scope": {
+      "status": "ok",
+      "value": "system"
+    },
+    "slug": "runtime-webapp",
+    "steps": [
+      {
+        "cited_edges": [
+          {
+            "detail": "AddProject<Projects.WebApp>().WithReference(basketApi)",
+            "evidence_layer": "runtime",
+            "source": "csharp:csproj:WebApp/WebApp.csproj",
+            "target": "csharp:csproj:Basket.API/Basket.API.csproj",
+            "weight": null
+          }
+        ],
+        "description": "references Basket.API — AddProject<Projects.WebApp>().WithReference(basketApi)",
+        "dsl": false,
+        "dsl_reason": "no static container relationship exists for Structurizr to reference (runtime-only edge, plan §0.4#3)",
+        "evidence_layer": "runtime",
+        "from": "csharp:csproj:WebApp/WebApp.csproj",
+        "from_name": "WebApp",
+        "from_raw": "csharp:csproj:WebApp/WebApp.csproj",
+        "index": 1,
+        "order": 1,
+        "status": "ok",
+        "to": "csharp:csproj:Basket.API/Basket.API.csproj",
+        "to_name": "Basket.API",
+        "to_raw": "csharp:csproj:Basket.API/Basket.API.csproj",
+        "weight": null
+      },
+      {
+        "cited_edges": [
+          {
+            "detail": "AddProject<Projects.WebApp>().WithReference(catalogApi)",
+            "evidence_layer": "runtime",
+            "source": "csharp:csproj:WebApp/WebApp.csproj",
+            "target": "csharp:csproj:Catalog.API/Catalog.API.csproj",
+            "weight": null
+          }
+        ],
+        "description": "references Catalog.API — AddProject<Projects.WebApp>().WithReference(catalogApi)",
+        "dsl": false,
+        "dsl_reason": "no static container relationship exists for Structurizr to reference (runtime-only edge, plan §0.4#3)",
+        "evidence_layer": "runtime",
+        "from": "csharp:csproj:WebApp/WebApp.csproj",
+        "from_name": "WebApp",
+        "from_raw": "csharp:csproj:WebApp/WebApp.csproj",
+        "index": 2,
+        "order": 1,
+        "status": "ok",
+        "to": "csharp:csproj:Catalog.API/Catalog.API.csproj",
+        "to_name": "Catalog.API",
+        "to_raw": "csharp:csproj:Catalog.API/Catalog.API.csproj",
+        "weight": null
+      }
+    ],
+    "valid_steps": 2
+  }
+}

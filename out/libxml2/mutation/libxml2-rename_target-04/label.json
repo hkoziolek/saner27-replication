@@ -1,0 +1,44 @@
+{
+  "alias": {
+    "cpp:target:testXPathstrucmut": "cpp:target:testXPath"
+  },
+  "description": "rename build target cpp:target:testXPath -> cpp:target:testXPathstrucmut",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "cpp:target:testXPathstrucmut",
+        "cpp:target:libxml2"
+      ]
+    ],
+    "new_targets": [
+      "cpp:target:testXPathstrucmut"
+    ],
+    "removed_edges": [
+      [
+        "cpp:target:testXPath",
+        "cpp:target:libxml2"
+      ]
+    ],
+    "removed_targets": [
+      "cpp:target:testXPath"
+    ],
+    "suspected_renames": [
+      [
+        "cpp:target:testXPath",
+        "cpp:target:testXPathstrucmut"
+      ]
+    ]
+  },
+  "files_touched": [
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am"
+  ],
+  "id": "libxml2-rename_target-04",
+  "operator": "rename_target",
+  "system": "libxml2"
+}

@@ -1,0 +1,56 @@
+{
+  "alias": {},
+  "description": "merge build target csharp:csproj:src/Basket.API/Basket.API.csproj into csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+        "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+      ]
+    ],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Basket.API/Basket.API.csproj",
+        "csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj"
+      ],
+      [
+        "csharp:csproj:src/Basket.API/Basket.API.csproj",
+        "csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj"
+      ],
+      [
+        "csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj",
+        "csharp:csproj:src/Basket.API/Basket.API.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/Basket.API/Basket.API.csproj"
+    ],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\eShop.AppHost\\eShop.AppHost.csproj",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\tests\\Basket.UnitTests\\Basket.UnitTests.csproj",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\eShop.slnx",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\appsettings.Development.json",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\appsettings.json",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\Basket.API.csproj",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\Extensions\\Extensions.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\Extensions\\ServerCallContextIdentityExtensions.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\GlobalUsings.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\Grpc\\BasketService.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\IntegrationEvents\\EventHandling\\OrderStartedIntegrationEventHandler.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\IntegrationEvents\\Events\\OrderStartedIntegrationEvent.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\Model\\BasketItem.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\Model\\CustomerBasket.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\Program.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\Properties\\launchSettings.json",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\Proto\\basket.proto",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\Repositories\\IBasketRepository.cs",
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\Basket.API\\Repositories\\RedisBasketRepository.cs"
+  ],
+  "id": "eshop-merge_targets-01",
+  "operator": "merge_targets",
+  "system": "eshop"
+}

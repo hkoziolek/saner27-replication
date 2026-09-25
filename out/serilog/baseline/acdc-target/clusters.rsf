@@ -1,0 +1,6 @@
+contain csharp:csproj:test/Serilog.Tests/Serilog.Tests.ss csharp:csproj:test/Serilog.Tests/Serilog.Tests.csproj
+contain csharp:csproj:test/Serilog.Tests/Serilog.Tests.ss csharp:csproj:test/TestDummies/TestDummies.csproj
+contain csharp:csproj:test/Serilog.Tests/Serilog.Tests.ss csharp:csproj:src/Serilog/Serilog.csproj
+contain csharp:csproj:test/Serilog.Tests/Serilog.Tests.ss csharp:csproj:test/AotTestApp/AotTestApp.csproj
+contain csharp:csproj:test/Serilog.Tests/Serilog.Tests.ss csharp:csproj:test/Serilog.ApprovalTests/Serilog.ApprovalTests.csproj
+contain csharp:csproj:test/Serilog.Tests/Serilog.Tests.ss csharp:csproj:test/Serilog.PerformanceTests/Serilog.PerformanceTests.csproj

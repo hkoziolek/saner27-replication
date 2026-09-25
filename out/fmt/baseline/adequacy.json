@@ -1,0 +1,17 @@
+{
+  "edges": 139,
+  "entities": 66,
+  "fidelity_corpus": false,
+  "granularity": "file",
+  "intra_edges": 26,
+  "intra_share": 0.1871,
+  "language": "cpp",
+  "largest_share": 0.3182,
+  "mq": 1.253,
+  "mq_per_unit": 0.057,
+  "schema": "adequacy/1",
+  "source": "sidecar-or-singletons",
+  "system": "fmt",
+  "unit_ratio": 0.3333,
+  "units": 22
+}

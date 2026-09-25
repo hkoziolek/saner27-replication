@@ -1,0 +1,16 @@
+{
+  "axis": "A7",
+  "edge_delta": 0,
+  "edges_hash_after": "76456c74a4a2ce39",
+  "edges_hash_before": "76456c74a4a2ce39",
+  "invariant_holds": true,
+  "n_edges": 12,
+  "n_targets": 14,
+  "names_changed": 14,
+  "partition_hash_after": "56dd2bc78cda31bd",
+  "partition_hash_before": "56dd2bc78cda31bd",
+  "partition_moved": 0,
+  "structural_delta": 0,
+  "system": "libxml2",
+  "targets_delta": 0
+}

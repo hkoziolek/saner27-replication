@@ -1,0 +1,399 @@
+{
+  "provenance": {
+    "boundary_promoted": 0,
+    "commit": "83984d9aa8b6c7f5a5838c026bb40b20957ce36b",
+    "coverage": {
+      "csharp:csproj:src/Common/Toy.Common.csproj": {
+        "L0": true,
+        "L1": true,
+        "L2": true,
+        "L3": false
+      },
+      "csharp:csproj:src/Domain/Toy.Domain.csproj": {
+        "L0": true,
+        "L1": true,
+        "L2": true,
+        "L3": false
+      },
+      "csharp:csproj:src/Messaging/Toy.Messaging.csproj": {
+        "L0": true,
+        "L1": true,
+        "L2": true,
+        "L3": false
+      },
+      "csharp:csproj:src/Web/Toy.Web.csproj": {
+        "L0": true,
+        "L1": true,
+        "L2": true,
+        "L3": false
+      },
+      "csharp:csproj:tests/Toy.Web.Tests/Toy.Web.Tests.csproj": {
+        "L0": true,
+        "L1": true,
+        "L2": true,
+        "L3": false
+      }
+    },
+    "edges_dropped": 14,
+    "extractors": [
+      {
+        "name": "csharp-build-graph",
+        "version": "0.3.0"
+      },
+      {
+        "name": "csproj-sdk-role",
+        "version": "0.1.0"
+      },
+      {
+        "name": "roslyn-csharp",
+        "version": "0.3.0"
+      }
+    ],
+    "generated_at": "2026-06-20T07:54:15.492384+00:00",
+    "kinds_renamed": 0,
+    "repo": "toy-repo"
+  },
+  "relationships": [
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "detail": "<ProjectReference Include=\"src/Common/Toy.Common.csproj\">",
+          "type": "project_ref",
+          "visibility": "public"
+        },
+        {
+          "count": 6,
+          "detail": "Toy.Common",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "project_ref + symbol_use corroborate",
+      "id": "rel:csharp:csproj:src/Domain/Toy.Domain.csproj->csharp:csproj:src/Common/Toy.Common.csproj",
+      "is_declared_dependency": true,
+      "source": "csharp:csproj:src/Domain/Toy.Domain.csproj",
+      "target": "csharp:csproj:src/Common/Toy.Common.csproj",
+      "weight": 11
+    },
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "detail": "<ProjectReference Include=\"src/Common/Toy.Common.csproj\">",
+          "type": "project_ref",
+          "visibility": "public"
+        },
+        {
+          "count": 6,
+          "detail": "Toy.Common",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "project_ref + symbol_use corroborate",
+      "id": "rel:csharp:csproj:src/Messaging/Toy.Messaging.csproj->csharp:csproj:src/Common/Toy.Common.csproj",
+      "is_declared_dependency": true,
+      "source": "csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+      "target": "csharp:csproj:src/Common/Toy.Common.csproj",
+      "weight": 11
+    },
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "detail": "<ProjectReference Include=\"src/Domain/Toy.Domain.csproj\">",
+          "type": "project_ref",
+          "visibility": "public"
+        },
+        {
+          "count": 6,
+          "detail": "Toy.Domain",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "project_ref + symbol_use corroborate",
+      "id": "rel:csharp:csproj:src/Web/Toy.Web.csproj->csharp:csproj:src/Domain/Toy.Domain.csproj",
+      "is_declared_dependency": true,
+      "source": "csharp:csproj:src/Web/Toy.Web.csproj",
+      "target": "csharp:csproj:src/Domain/Toy.Domain.csproj",
+      "weight": 11
+    },
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "detail": "<ProjectReference Include=\"src/Messaging/Toy.Messaging.csproj\">",
+          "type": "project_ref",
+          "visibility": "public"
+        },
+        {
+          "count": 4,
+          "detail": "Toy.Messaging",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "project_ref + symbol_use corroborate",
+      "id": "rel:csharp:csproj:src/Web/Toy.Web.csproj->csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+      "is_declared_dependency": true,
+      "source": "csharp:csproj:src/Web/Toy.Web.csproj",
+      "target": "csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+      "weight": 9
+    }
+  ],
+  "schema_version": "1.3",
+  "targets": [
+    {
+      "components": [
+        {
+          "code": [
+            {
+              "id": "csharp:csproj:src/Common/Toy.Common.csproj/component:Toy.Common/code:Result",
+              "level": "code",
+              "name": "Result"
+            }
+          ],
+          "id": "csharp:csproj:src/Common/Toy.Common.csproj/component:Toy.Common",
+          "key": "Toy.Common",
+          "level": "component",
+          "name": "Toy.Common",
+          "source": "namespace"
+        }
+      ],
+      "container_id": "container:coreLibrary",
+      "container_name": "Core Library",
+      "external": false,
+      "grouped_by": {
+        "container": "Core Library",
+        "rule_index": 1,
+        "signal": "members"
+      },
+      "id": "csharp:csproj:src/Common/Toy.Common.csproj",
+      "language": "csharp",
+      "metrics": {
+        "blank": 1,
+        "by_language": [
+          {
+            "blank": 1,
+            "code": 6,
+            "comment": 0,
+            "files": 1,
+            "language": "C#"
+          },
+          {
+            "blank": 0,
+            "code": 6,
+            "comment": 0,
+            "files": 1,
+            "language": "MSBuild"
+          }
+        ],
+        "code": 12,
+        "comment": 0,
+        "engine": "metrics/1",
+        "todo_count": 0
+      },
+      "name": "Toy.Common",
+      "namespaces": [
+        "Toy.Common"
+      ],
+      "path": "src/Common",
+      "tags": [
+        "build:msbuild",
+        "sdk-role:library"
+      ],
+      "technology": ".NET assembly",
+      "type": "csproj"
+    },
+    {
+      "components": [
+        {
+          "code": [
+            {
+              "id": "csharp:csproj:src/Domain/Toy.Domain.csproj/component:Toy.Domain/code:Order",
+              "level": "code",
+              "name": "Order"
+            }
+          ],
+          "id": "csharp:csproj:src/Domain/Toy.Domain.csproj/component:Toy.Domain",
+          "key": "Toy.Domain",
+          "level": "component",
+          "name": "Toy.Domain",
+          "source": "namespace"
+        }
+      ],
+      "container_id": "container:coreLibrary",
+      "container_name": "Core Library",
+      "external": false,
+      "grouped_by": {
+        "container": "Core Library",
+        "rule_index": 1,
+        "signal": "members"
+      },
+      "id": "csharp:csproj:src/Domain/Toy.Domain.csproj",
+      "language": "csharp",
+      "metrics": {
+        "blank": 2,
+        "by_language": [
+          {
+            "blank": 2,
+            "code": 7,
+            "comment": 0,
+            "files": 1,
+            "language": "C#"
+          },
+          {
+            "blank": 0,
+            "code": 9,
+            "comment": 0,
+            "files": 1,
+            "language": "MSBuild"
+          }
+        ],
+        "code": 16,
+        "comment": 0,
+        "engine": "metrics/1",
+        "todo_count": 0
+      },
+      "name": "Toy.Domain",
+      "namespaces": [
+        "Toy.Domain"
+      ],
+      "path": "src/Domain",
+      "tags": [
+        "build:msbuild",
+        "sdk-role:library"
+      ],
+      "technology": ".NET assembly",
+      "type": "csproj"
+    },
+    {
+      "components": [
+        {
+          "code": [
+            {
+              "id": "csharp:csproj:src/Messaging/Toy.Messaging.csproj/component:Toy.Messaging/code:Publisher",
+              "level": "code",
+              "name": "Publisher"
+            }
+          ],
+          "id": "csharp:csproj:src/Messaging/Toy.Messaging.csproj/component:Toy.Messaging",
+          "key": "Toy.Messaging",
+          "level": "component",
+          "name": "Toy.Messaging",
+          "source": "namespace"
+        }
+      ],
+      "container_id": "container:messaging",
+      "container_name": "Messaging",
+      "external": false,
+      "grouped_by": {
+        "container": "Messaging",
+        "rule_index": 2,
+        "signal": "members"
+      },
+      "id": "csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+      "language": "csharp",
+      "metrics": {
+        "blank": 2,
+        "by_language": [
+          {
+            "blank": 2,
+            "code": 7,
+            "comment": 0,
+            "files": 1,
+            "language": "C#"
+          },
+          {
+            "blank": 0,
+            "code": 12,
+            "comment": 0,
+            "files": 1,
+            "language": "MSBuild"
+          }
+        ],
+        "code": 19,
+        "comment": 0,
+        "engine": "metrics/1",
+        "todo_count": 0
+      },
+      "name": "Toy.Messaging",
+      "namespaces": [
+        "Toy.Messaging"
+      ],
+      "package_refs": [
+        "Newtonsoft.Json"
+      ],
+      "path": "src/Messaging",
+      "tags": [
+        "build:msbuild",
+        "sdk-role:library"
+      ],
+      "technology": ".NET assembly",
+      "type": "csproj"
+    },
+    {
+      "components": [
+        {
+          "code": [
+            {
+              "id": "csharp:csproj:src/Web/Toy.Web.csproj/component:Toy.Web/code:Program",
+              "level": "code",
+              "name": "Program"
+            }
+          ],
+          "id": "csharp:csproj:src/Web/Toy.Web.csproj/component:Toy.Web",
+          "key": "Toy.Web",
+          "level": "component",
+          "name": "Toy.Web",
+          "source": "namespace"
+        }
+      ],
+      "container_id": "container:webFrontend",
+      "container_name": "Web Frontend",
+      "external": false,
+      "grouped_by": {
+        "container": "Web Frontend",
+        "rule_index": 0,
+        "signal": "members"
+      },
+      "id": "csharp:csproj:src/Web/Toy.Web.csproj",
+      "language": "csharp",
+      "metrics": {
+        "blank": 2,
+        "by_language": [
+          {
+            "blank": 2,
+            "code": 13,
+            "comment": 0,
+            "files": 1,
+            "language": "C#"
+          },
+          {
+            "blank": 0,
+            "code": 13,
+            "comment": 0,
+            "files": 1,
+            "language": "MSBuild"
+          }
+        ],
+        "code": 26,
+        "comment": 0,
+        "engine": "metrics/1",
+        "todo_count": 0
+      },
+      "name": "Toy.Web",
+      "namespaces": [
+        "Toy.Web"
+      ],
+      "package_refs": [
+        "Serilog"
+      ],
+      "path": "src/Web",
+      "tags": [
+        "build:msbuild",
+        "sdk-role:service-web"
+      ],
+      "technology": ".NET assembly",
+      "type": "csproj"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+# RQ9 rater worksheet (eval §10a) — assign every entity a cluster name; use the
+# project's own documented component names where they exist. Write EXCLUDE to mark an
+# entity out-of-scope (tests, samples, dead code) — record why in the notes column.
+# Blinding: do NOT consult the tool's output, any reference.rsf, or another rater.
+# REPAIRED 2026-08-30 by the facilitator from worksheet-R-A.raw.csv (Excel-damaged export)
+# with repair-worksheet-R-A.py — labels unchanged; '[Parent container: X]' moved to notes;
+# two spliced rows filled from R-A's own confirmation (see notes). Frozen thereafter.
+entity,cluster,notes
+csharp:csproj:backend/extensions/Squidex.Extensions/Squidex.Extensions.csproj,Extensions,parent: backend
+csharp:csproj:backend/i18n/translator/Squidex.Translator/Squidex.Translator.csproj,Translator,parent: backend
+csharp:csproj:backend/src/Migrations/Migrations.csproj,Data,parent: backend
+csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj,Data,parent: backend
+csharp:csproj:backend/src/Squidex.Data.MongoDb/Squidex.Data.MongoDb.csproj,Data,parent: backend
+csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Model/Squidex.Domain.Apps.Core.Model.csproj,Domain,parent: backend
+csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Operations/Squidex.Domain.Apps.Core.Operations.csproj,Domain,parent: backend
+csharp:csproj:backend/src/Squidex.Domain.Apps.Entities/Squidex.Domain.Apps.Entities.csproj,Domain,parent: backend
+csharp:csproj:backend/src/Squidex.Domain.Apps.Events/Squidex.Domain.Apps.Events.csproj,Domain,parent: backend
+csharp:csproj:backend/src/Squidex.Domain.Users/Squidex.Domain.Users.csproj,Domain,parent: backend; row spliced in the raw export — cluster confirmed by R-A on 2026-08-30 (the orphaned '[Parent container: backend] Domain' cell in the raw file is this row's)
+csharp:csproj:backend/src/Squidex.Infrastructure/Squidex.Infrastructure.csproj,Infrastructure,row spliced in the raw export (cluster cell lost) — cluster confirmed by R-A on 2026-08-30; parent not recoverable
+csharp:csproj:backend/src/Squidex.Shared/Squidex.Shared.csproj,Domain,parent: backend
+csharp:csproj:backend/src/Squidex.Web/Squidex.Web.csproj,API,parent: backend
+csharp:csproj:backend/src/Squidex/Squidex.csproj,Domain,parent: backend
+csharp:csproj:backend/tools/GenerateLanguages/GenerateLanguages.csproj,EXCLUDE,
+csharp:csproj:frontend/generator/Generator/Generator.csproj,Generator,parent: Frontend
+csharp:csproj:tools/TestSuite/TestSuite.ApiTests/TestSuite.ApiTests.csproj,EXCLUDE,
+csharp:csproj:tools/TestSuite/TestSuite.LoadTests/TestSuite.LoadTests.csproj,EXCLUDE,
+csharp:csproj:tools/TestSuite/TestSuite.Shared/TestSuite.Shared.csproj,EXCLUDE,
+# wall-clock: 18:40-19:40, total 60 min

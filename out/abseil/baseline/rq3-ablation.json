@@ -1,0 +1,171 @@
+{
+  "axes": {
+    "A1_evidence_layers": {
+      "+L2": {
+        "added": 0,
+        "edges": 83,
+        "f1": 1.0,
+        "jaccard": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "rels_retained": 1249,
+        "removed": 0
+      },
+      "+L3": {
+        "added": 0,
+        "edges": 83,
+        "f1": 1.0,
+        "jaccard": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "rels_retained": 1249,
+        "removed": 0
+      },
+      "L0": {
+        "added": 0,
+        "edges": 79,
+        "f1": 0.9753,
+        "jaccard": 0.9518,
+        "precision": 1.0,
+        "recall": 0.9518,
+        "rels_retained": 893,
+        "removed": 4
+      },
+      "L0+L1": {
+        "added": 0,
+        "edges": 79,
+        "f1": 0.9753,
+        "jaccard": 0.9518,
+        "precision": 1.0,
+        "recall": 0.9518,
+        "rels_retained": 893,
+        "removed": 4
+      }
+    },
+    "A3_min_weight": {
+      "0": {
+        "added": 19,
+        "edges": 102,
+        "f1": 0.8973,
+        "jaccard": 0.8137,
+        "precision": 0.8137,
+        "recall": 1.0,
+        "removed": 0
+      },
+      "1": {
+        "added": 19,
+        "edges": 102,
+        "f1": 0.8973,
+        "jaccard": 0.8137,
+        "precision": 0.8137,
+        "recall": 1.0,
+        "removed": 0
+      },
+      "3": {
+        "added": 0,
+        "edges": 83,
+        "f1": 1.0,
+        "jaccard": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "removed": 0
+      },
+      "5": {
+        "added": 0,
+        "edges": 80,
+        "f1": 0.9816,
+        "jaccard": 0.9639,
+        "precision": 1.0,
+        "recall": 0.9639,
+        "removed": 3
+      },
+      "8": {
+        "added": 0,
+        "edges": 79,
+        "f1": 0.9753,
+        "jaccard": 0.9518,
+        "precision": 1.0,
+        "recall": 0.9518,
+        "removed": 4
+      }
+    },
+    "A4_down_weight_private": {
+      "off": {
+        "added": 0,
+        "edges": 83,
+        "f1": 1.0,
+        "jaccard": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "removed": 0
+      },
+      "on": {
+        "added": 0,
+        "edges": 83,
+        "f1": 1.0,
+        "jaccard": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "removed": 0
+      }
+    },
+    "A5_declared_never_dropped": {
+      "t0": {
+        "added": 0,
+        "edges": 102,
+        "edges_saved_by_rule": 0,
+        "f1": 1.0,
+        "jaccard": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "removed": 0
+      },
+      "t1": {
+        "added": 0,
+        "edges": 102,
+        "edges_saved_by_rule": 0,
+        "f1": 1.0,
+        "jaccard": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "removed": 0
+      },
+      "t3": {
+        "added": 0,
+        "edges": 83,
+        "edges_saved_by_rule": 0,
+        "f1": 1.0,
+        "jaccard": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "removed": 0
+      },
+      "t5": {
+        "added": 0,
+        "edges": 80,
+        "edges_saved_by_rule": 0,
+        "f1": 1.0,
+        "jaccard": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "removed": 0
+      },
+      "t8": {
+        "added": 0,
+        "edges": 34,
+        "edges_saved_by_rule": 45,
+        "f1": 0.6018,
+        "jaccard": 0.4304,
+        "precision": 1.0,
+        "recall": 0.4304,
+        "removed": 45
+      }
+    }
+  },
+  "full_config_edges": 83,
+  "granularity": "target",
+  "language": "cpp",
+  "reference_edges": null,
+  "reference_scored": false,
+  "system": "abseil"
+}

@@ -1,0 +1,87 @@
+# Curation rules for the InsightSoftwareConsortium/ITK fixture (plan §7.4). Reviewed + committed.
+#
+# ITK is the Tier-A FIDELITY ANCHOR (eval plan §5.2): the only C/C++ corpus system with a
+# published ground-truth architecture (Lutellier et al. ICSE'15/TSE'18, ITK 4.5.2 —
+# references/itk/provenance.json). The fixture is pinned to tag v4.5.2 so the code matches
+# the ground truth's subject version.
+#
+# The ground truth clusters files by ITK's post-2013-refactoring MODULE GROUPS — the second
+# path level under Modules/ (Core, Filtering, Segmentation, …, ThirdParty). Curation groups
+# the per-module CMake targets into exactly that tier by source path. Two deliberate choices:
+#   * ThirdParty STAYS IN (no exclude): ITK builds its vendored libs (itkzlib, itkpng,
+#     vnl, …) as first-party CMake targets and the ground truth has a group_thirdParty
+#     cluster with ~1/3 of all files — excluding it would silently shrink the comparison set.
+#   * Cluster NAMES need not match the ground truth's (MoJoFM/a2a are label-agnostic);
+#     they follow ITK's own group names for readability.
+version: 1
+
+defaults:
+  min_relationship_weight: 3
+  drop_external: true
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false
+
+exclude:
+  targets:
+    - glob: "*-all"               # per-module CMake aggregator custom targets (ITKCommon-all, …) — no code, no source dir
+    - glob: "ITKData"             # test-data fetch utility target (no code)
+    - glob: "ITKHeaderTests"      # header-compile-check utility target (no code)
+
+group:
+  - container: "Core"
+    members_glob: ["Modules/Core/*"]
+  - container: "Filtering"
+    members_glob: ["Modules/Filtering/*"]
+  - container: "Segmentation"
+    members_glob: ["Modules/Segmentation/*"]
+  - container: "Registration"
+    members_glob: ["Modules/Registration/*"]
+  - container: "IO"
+    members_glob: ["Modules/IO/*"]
+  - container: "Numerics"
+    members_glob: ["Modules/Numerics/*"]
+  - container: "Bridge"
+    members_glob: ["Modules/Bridge/*"]
+  - container: "Video"
+    members_glob: ["Modules/Video/*"]
+  - container: "Compatibility"
+    members_glob: ["Modules/Compatibility/*"]
+  - container: "Nonunit"
+    members_glob: ["Modules/Nonunit/*"]
+  - container: "Remote"
+    members_glob: ["Modules/Remote/*"]
+  - container: "ThirdParty"
+    members_glob: ["Modules/ThirdParty/*"]
+    # itkhdf5 / itksys report an empty source path through the CMake File API (their
+    # add_library is driven from HDF5's/KWSys's bundled build logic) — map by name.
+    members:
+      - cpp:target:itkhdf5
+      - cpp:target:itksys
+
+descriptions:
+  "Core": "Foundational data objects and infrastructure: itk::Image/Mesh, common macros, transforms, spatial objects, finite-difference and test kernels (Modules/Core)."
+  "Filtering": "Image-filtering pipeline: smoothing, thresholding, mathematical morphology, FFT, distance maps and the general image-filter framework (Modules/Filtering)."
+  "Segmentation": "Segmentation algorithms: region growing, level sets, watersheds, classifiers, label maps (Modules/Segmentation)."
+  "Registration": "Image registration: metrics, optimizers-driven registration methods, PDE-deformable and FEM-based registration (Modules/Registration)."
+  "IO": "Image and mesh readers/writers for the supported file formats plus the IO factory framework (Modules/IO)."
+  "Numerics": "Numeric foundations: optimizers, statistics, FEM, eigen/polynomial solvers built on VNL (Modules/Numerics)."
+  "Bridge": "Bridges to external toolkits (VTK, OpenCV) and the video bridge (Modules/Bridge)."
+  "Video": "Video processing core, filtering and IO (Modules/Video)."
+  "Compatibility": "Deprecated and v3-compatibility shims kept for migration (Modules/Compatibility)."
+  "Nonunit": "Integration/review umbrella module (Modules/Nonunit)."
+  "Remote": "Remote-module stubs fetched on demand (Modules/Remote)."
+  "ThirdParty": "Vendored third-party libraries ITK builds itself: VNL/VXL, zlib, libpng, libtiff, GDCM, HDF5, Expat, JPEG, MetaIO, NIFTI, NrrdIO, KWSys (Modules/ThirdParty)."
+
+technology:
+  shared_lib: "ITK module (shared library)"
+  static_lib: "ITK module (static library)"
+  object_lib: "Object library"
+  interface_lib: "Interface target"
+
+rationale:
+  "module-group-tier":
+    reason: "Containers mirror ITK's documented module-group tier — the same decomposition tier the published ground truth (references/itk) uses, so RQ1 fidelity is measured against the project's own architecture, not an invented grouping"
+    decided_by: "architect"
+    date: "2026-06-12"
+    confidence: "high"

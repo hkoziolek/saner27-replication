@@ -1,0 +1,113 @@
+# Curation rules for dotnet/eShop — the ROLE×CONTEXT hybrid decomposition (eval §7-A2 follow-up,
+# plans/notes/2026-06-14-a2-curation-ablation.md).
+#
+# eShop is the one C# system whose reference carries a genuine NON-name judgment: the four
+# `BuildingBlocks` libraries (EventBus, EventBusRabbitMQ, IntegrationEventLogEF, eShop.ServiceDefaults)
+# share no name token and no directory — only their deployable ROLE (plain class libraries). No
+# directory/name/dependency heuristic recovers that cluster (the ablation's deterministic rungs all
+# cap at ~47 MoJoFM). This overlay tests whether COMBINING two deterministic signals closes it:
+#   * NAME globs for the mechanically-named parts (the reference's service->project mapping is, per
+#     references/eshop/provenance.json, "near-mechanical — the project names mirror the services"):
+#     each *.API service, the Ordering DDD context (Ordering.* + OrderProcessor worker), the Webhooks
+#     pair, the WebApps clients, the Aspire host.
+#   * the `sdk-role:library` TAG (from extract_csproj_sdk) as the residual-after-naming catch-all:
+#     once every named project is claimed, the libraries that remain ARE the four BuildingBlocks.
+#
+# So `members_tag: [sdk-role:library]`, ordered LAST, recovers the one role-judgment no name captures.
+# This is the honest test of "is eShop's curation value reducible to deterministic signals?" — and
+# unlike orchardcore/nopcommerce it is NOT a pure reconstruction of a single naming convention (the
+# BuildingBlocks role-grouping is a real cross-cutting-infrastructure judgment the role tag supplies).
+#
+# Run (needs extract_csproj_sdk run for the sdk-role tags; that extractor is not yet in the default
+# registry — measured in-process by the ablation, or wire it + UPDATE_GOLDENS to run via `arch run`):
+#   arch run --repo fixtures/eshop --no-llm \
+#       --arch-dir out/eshop-role/architecture \
+#       --rules-dir overlays/eshop-role/architecture/rules
+version: 1
+
+defaults:
+  min_relationship_weight: 3
+  drop_external: true
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false
+
+exclude:
+  targets:
+    - glob: "tests/*"
+    - glob: "*Tests*"
+
+group:
+  # --- NAME globs for the mechanically-named parts (ordered before the role catch-all) ---------
+  - container: "Ordering"            # the DDD bounded context: API + Domain + Infrastructure + worker
+    members_glob:
+      - "*Ordering.*"
+      - "*OrderProcessor*"
+  - container: "Webhooks"
+    members_glob:
+      - "*Webhook*"                  # Webhooks.API + WebhookClient
+  - container: "WebApps"
+    members_glob:
+      - "*WebApp*"                   # WebApp + WebAppComponents
+      - "*ClientApp*"                # MAUI client
+      - "*HybridApp*"                # MAUI hybrid client
+  - container: "Orchestration"
+    members_glob:
+      - "*AppHost*"                  # eShop.AppHost (Aspire)
+  - container: "Catalog"
+    members_glob:
+      - "*Catalog.API*"
+  - container: "Basket"
+    members_glob:
+      - "*Basket.API*"
+  - container: "Identity"
+    members_glob:
+      - "*Identity.API*"
+  - container: "Payment"
+    members_glob:
+      - "*PaymentProcessor*"
+
+  # --- the ROLE signal: the residual class libraries = BuildingBlocks (sdk-role tag, LAST) -------
+  - container: "Building Blocks"
+    members_tag:
+      - "sdk-role:library"           # EventBus, EventBusRabbitMQ, IntegrationEventLogEF, ServiceDefaults
+
+# Component-tier (namespace drill-down) curation (§7.4 / §16#10b). eShop's L2 namespace tier
+# leaks framework + source-generated namespaces that are not part of eShop's architecture:
+# the DI/Hosting/Config source generators, the *.Generated OpenAPI/Maui/regex emitters, the
+# WinRT/WindowsAppSDK interop shims, Aspire's generated `Projects`/`Packages` roots, and the
+# `__XamlGeneratedCode__` / `*.__Internals` compiler artifacts. Drop them so the Model-Y
+# drill-down and the datasheets show only the application's own namespaces (eShop.* /
+# Webhooks.API.* / Ordering.* / the IdentityServer quickstart UI). Globs match the full
+# namespace key (fnmatchcase); a namespace edge whose endpoint is dropped here is dropped at
+# render too (build_namespace_edges' emitted-component guard), never left dangling.
+components:
+  exclude_namespaces:
+    - "System"              # BCL / framework
+    - "System.*"
+    - "Microsoft"          # framework + source-generated (DI, Hosting, Config, OpenApi.Generated, Maui, WindowsAppSDK)
+    - "Microsoft.*"
+    - "WinRT"              # generated WinRT interop (MAUI / WindowsAppSDK)
+    - "WinRT.*"
+    - "CommunityToolkit.*"  # third-party MVVM toolkit (source-generator internals)
+    - "__*"                # __XamlGeneratedCode__ and other compiler-generated roots
+    - "*.__Internals"      # source-generator internals
+    - "DDLM"               # WindowsAppSDK Dynamic Dependency Lifetime Manager (generated)
+    - "Projects"           # Aspire-generated project-reference namespace
+    - "Packages"           # generated package-reference namespace
+    - "Runtime"            # generated interop fragment
+
+technology:
+  csproj: ".NET assembly"
+
+naming:
+  style: descriptive
+  expand_acronyms: false
+  max_name_words: 4
+
+rationale:
+  "Building Blocks":
+    reason: "The cross-cutting infrastructure libraries share no name/dir; the deployable library ROLE (sdk-role tag), applied as the residual after naming, is the only deterministic signal that recovers the documented BuildingBlocks group"
+    decided_by: "architect"
+    date: "2026-06-14"
+    confidence: "medium"

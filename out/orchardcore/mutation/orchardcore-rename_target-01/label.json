@@ -1,0 +1,50 @@
+{
+  "alias": {
+    "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.WebAnonMut.csproj": "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj"
+  },
+  "description": "rename build target csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj -> csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.WebAnonMut.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.WebAnonMut.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.WebAnonMut.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Logging.NLog/OrchardCore.Logging.NLog.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.WebAnonMut.csproj"
+    ],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Logging.NLog/OrchardCore.Logging.NLog.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj"
+    ],
+    "suspected_renames": [
+      [
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.Web.csproj",
+        "csharp:csproj:src/OrchardCore.Cms.Web/OrchardCore.Cms.WebAnonMut.csproj"
+      ]
+    ]
+  },
+  "files_touched": [
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\test\\OrchardCore.Tests\\OrchardCore.Tests.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\test\\OrchardCore.Tests.Functional\\OrchardCore.Tests.Functional.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\OrchardCore.slnx",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Cms.Web\\OrchardCore.Cms.Web.csproj -> <repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Cms.Web\\OrchardCore.Cms.WebAnonMut.csproj"
+  ],
+  "id": "orchardcore-rename_target-01",
+  "operator": "rename_target",
+  "system": "orchardcore"
+}

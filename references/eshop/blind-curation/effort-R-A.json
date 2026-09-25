@@ -1,0 +1,32 @@
+{
+  "kind": "rq9-effort (eval §10a.4 effort row)",
+  "propose": {
+    "draft_groups_offered": 2,
+    "final_groups_hand_authored": 11,
+    "final_groups_propose_derived": 0,
+    "propose_derived_fraction": 0.0
+  },
+  "rules": {
+    "excludes": 3,
+    "explicit_members": 20,
+    "groups": 11,
+    "member_globs": 0,
+    "member_tags": 0,
+    "name_overrides": 0,
+    "rule_lines": 63
+  },
+  "trace": {
+    "curate_op_batches": 43,
+    "events": 89,
+    "ops_by_kind": {
+      "create_group": 12,
+      "move_member": 23,
+      "remove_group": 1,
+      "set_parent": 7
+    },
+    "ops_total": 43,
+    "reviewed_writes": 46,
+    "wall_clock_minutes_trace": 40.6
+  },
+  "wall_clock_minutes_reported": 43.0
+}

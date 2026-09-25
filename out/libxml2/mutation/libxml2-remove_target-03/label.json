@@ -1,0 +1,29 @@
+{
+  "alias": {},
+  "description": "remove build target cpp:target:testSchemas",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "cpp:target:testSchemas",
+        "cpp:target:libxml2"
+      ]
+    ],
+    "removed_targets": [
+      "cpp:target:testSchemas"
+    ],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am"
+  ],
+  "id": "libxml2-remove_target-03",
+  "operator": "remove_target",
+  "system": "libxml2"
+}

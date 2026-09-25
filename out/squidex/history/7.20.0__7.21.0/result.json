@@ -1,0 +1,89 @@
+{
+  "advisory": false,
+  "counts": {
+    "coverage_gap_edges": 0,
+    "coverage_gap_targets": 0,
+    "drift_total": 0,
+    "layering_violations": 0,
+    "new_edges": 0,
+    "new_targets": 0,
+    "removed_edges": 0,
+    "removed_targets": 0,
+    "suspected_renames": 0
+  },
+  "coverage": 1.0,
+  "diff": {
+    "coverage_gap_edges": [],
+    "coverage_gap_targets": [],
+    "first_run": false,
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": [],
+    "suspicious": []
+  },
+  "findings": {
+    "coverage_gap_edges": [],
+    "coverage_gap_targets": [],
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "gating": false,
+  "git": {
+    "a": "7.20.0",
+    "a_date": "2025-05-30T00:00:05+02:00",
+    "b": "7.21.0",
+    "b_date": "2025-07-23T17:51:33+02:00",
+    "build_files_touched": [
+      "backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj",
+      "backend/src/Squidex.Data.MongoDb/Squidex.Data.MongoDb.csproj",
+      "backend/src/Squidex.Domain.Apps.Core.Model/Squidex.Domain.Apps.Core.Model.csproj",
+      "backend/src/Squidex.Domain.Apps.Core.Operations/Squidex.Domain.Apps.Core.Operations.csproj",
+      "backend/src/Squidex.Domain.Apps.Entities/Squidex.Domain.Apps.Entities.csproj",
+      "backend/src/Squidex.Infrastructure/Squidex.Infrastructure.csproj",
+      "backend/src/Squidex/Squidex.csproj",
+      "tools/TestSuite/TestSuite.ApiTests/TestSuite.ApiTests.csproj",
+      "tools/TestSuite/TestSuite.LoadTests/TestSuite.LoadTests.csproj",
+      "tools/TestSuite/TestSuite.Shared/TestSuite.Shared.csproj"
+    ],
+    "commits_build_files": 5,
+    "commits_total": 19,
+    "history_note": "full clone",
+    "shallow_clone": false
+  },
+  "l0_scoped": true,
+  "layering": {
+    "rules_present": false,
+    "violations_a": 0,
+    "violations_b": 0
+  },
+  "needs_curation": {
+    "a": 1,
+    "b": 1,
+    "b_ids": [
+      "csharp:csproj:backend/src/Squidex/Squidex.csproj"
+    ],
+    "new_in_b": []
+  },
+  "out_of_scope": {
+    "new_edges_non_l0_or_external": 0,
+    "removed_edges_non_l0_or_external": 0
+  },
+  "pair": {
+    "a": "7.20.0",
+    "b": "7.21.0"
+  },
+  "schema": "rq6-history-pair/1",
+  "system": "squidex",
+  "targets": {
+    "a_first_party": 26,
+    "b_first_party": 26
+  },
+  "warnings": [],
+  "worksheet_rows": 0
+}

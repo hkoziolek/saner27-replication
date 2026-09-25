@@ -1,0 +1,70 @@
+# Squidex curation — YOUR working rules (RQ9 blind curation, curator R-C).
+# You start from nothing on purpose: group the build targets into containers by your
+# own architectural judgment. The `arch propose` draft shown in the GUI is a starting
+# suggestion you may accept, reject, or modify. Exclude non-production targets (tests,
+# build tooling) yourself. The file updates as you edit in the GUI curation tree.
+#
+# Stop when the model is review-complete by your judgment (runbook §6 step 4). There is
+# no score to chase, and you must not look at any reference or fidelity number (§4).
+version: 1
+
+defaults:
+  min_relationship_weight: 3
+  drop_external: true
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false
+
+exclude:
+  targets: []
+
+group: 
+  - container: database
+    members:
+      - 'csharp:csproj:backend/src/Squidex.Data.MongoDb/Squidex.Data.MongoDb.csproj'
+  - container: EXCLUDE
+    members:
+      - 'csharp:csproj:backend/tests/Squidex.Data.Tests/Squidex.Data.Tests.csproj'
+      - 'csharp:csproj:backend/tests/Squidex.Data.Tests.CodeGenerator/Squidex.Data.Tests.CodeGenerator.csproj'
+      - 'csharp:csproj:backend/tests/Squidex.Domain.Apps.Core.Tests/Squidex.Domain.Apps.Core.Tests.csproj'
+      - 'csharp:csproj:backend/tests/Squidex.Domain.Apps.Entities.Tests/Squidex.Domain.Apps.Entities.Tests.csproj'
+      - 'csharp:csproj:backend/tests/Squidex.Domain.Users.Tests/Squidex.Domain.Users.Tests.csproj'
+      - 'csharp:csproj:backend/tests/Squidex.Infrastructure.Tests/Squidex.Infrastructure.Tests.csproj'
+      - 'csharp:csproj:backend/tests/Squidex.Web.Tests/Squidex.Web.Tests.csproj'
+      - 'csharp:csproj:tools/TestSuite/TestSuite.ApiTests/TestSuite.ApiTests.csproj'
+      - 'csharp:csproj:tools/TestSuite/TestSuite.LoadTests/TestSuite.LoadTests.csproj'
+      - 'csharp:csproj:tools/TestSuite/TestSuite.Shared/TestSuite.Shared.csproj'
+  - container: generator
+    members:
+      - 'csharp:csproj:frontend/generator/Generator/Generator.csproj'
+      - 'csharp:csproj:backend/tools/GenerateLanguages/GenerateLanguages.csproj'
+  - container: translator
+    members:
+      - 'csharp:csproj:backend/i18n/translator/Squidex.Translator/Squidex.Translator.csproj'
+  - container: events
+    members:
+      - 'csharp:csproj:backend/src/Squidex.Domain.Apps.Events/Squidex.Domain.Apps.Events.csproj'
+  - container: infrastructure
+    members:
+      - 'csharp:csproj:backend/src/Squidex.Infrastructure/Squidex.Infrastructure.csproj'
+      - 'csharp:csproj:backend/src/Squidex.Domain.Apps.Entities/Squidex.Domain.Apps.Entities.csproj'
+      - 'csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj'
+  - container: migrations
+    members:
+      - 'csharp:csproj:backend/src/Migrations/Migrations.csproj'
+  - container: core
+    members:
+      - 'csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Model/Squidex.Domain.Apps.Core.Model.csproj'
+      - 'csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Operations/Squidex.Domain.Apps.Core.Operations.csproj'
+  - container: extensions
+    members:
+      - 'csharp:csproj:backend/extensions/Squidex.Extensions/Squidex.Extensions.csproj'
+  - container: users
+    members:
+      - 'csharp:csproj:backend/src/Squidex.Domain.Users/Squidex.Domain.Users.csproj'
+  - container: shared
+    members:
+      - 'csharp:csproj:backend/src/Squidex.Shared/Squidex.Shared.csproj'
+  - container: web
+    members:
+      - 'csharp:csproj:backend/src/Squidex.Web/Squidex.Web.csproj'

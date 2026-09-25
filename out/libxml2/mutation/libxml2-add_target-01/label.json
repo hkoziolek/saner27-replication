@@ -1,0 +1,21 @@
+{
+  "alias": {},
+  "description": "add new build target cpp:target:libstrucmut1",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [
+      "cpp:target:libstrucmut1"
+    ],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\strucmut1.c",
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am"
+  ],
+  "id": "libxml2-add_target-01",
+  "operator": "add_target",
+  "system": "libxml2"
+}

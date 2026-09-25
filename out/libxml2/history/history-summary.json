@@ -1,0 +1,146 @@
+{
+  "extractor_knobs": {
+    "ANON_SKIP_CMAKE": "1",
+    "ANON_SKIP_DOXYGEN": "1",
+    "ANON_SKIP_ROSLYN": "1"
+  },
+  "failed": [],
+  "finding_kinds": [
+    "new_targets",
+    "removed_targets",
+    "new_edges",
+    "removed_edges",
+    "suspected_renames",
+    "coverage_gap_targets",
+    "coverage_gap_edges",
+    "layering_violations"
+  ],
+  "fixture": "fixtures/libxml2",
+  "fixture_head": {
+    "commit": "d5e22ef5802bc1d2d730cded59a700a88abfa47a",
+    "date": "2002-05-27T21:17:57Z",
+    "describe": "LIBXML_2_4_22"
+  },
+  "idiom": "automake",
+  "l0_scoped": true,
+  "labels": [
+    "architectural",
+    "non-architectural",
+    "extraction-noise"
+  ],
+  "language": "cpp",
+  "pairs": [
+    {
+      "a": "v2.13.0",
+      "a_date": "2024-06-12T15:45:38+02:00",
+      "advisory": false,
+      "b": "v2.14.0",
+      "b_date": "2025-03-27T15:17:22+01:00",
+      "commits_build_files": 108,
+      "commits_total": 673,
+      "counts": {
+        "coverage_gap_edges": 0,
+        "coverage_gap_targets": 0,
+        "drift_total": 2,
+        "layering_violations": 0,
+        "new_edges": 0,
+        "new_targets": 0,
+        "removed_edges": 1,
+        "removed_targets": 1,
+        "suspected_renames": 0
+      },
+      "coverage": 1.0,
+      "dir": "out/libxml2/history/v2.13.0__v2.14.0",
+      "needs_curation_a": 20,
+      "needs_curation_b": 20,
+      "shallow_clone": false,
+      "status": "ok",
+      "targets": {
+        "a_first_party": 32,
+        "b_first_party": 31
+      },
+      "warnings": [],
+      "worksheet_rows": 2
+    },
+    {
+      "a": "v2.14.0",
+      "a_date": "2025-03-27T15:17:22+01:00",
+      "advisory": false,
+      "b": "v2.15.0",
+      "b_date": "2025-09-15T13:34:13+02:00",
+      "commits_build_files": 51,
+      "commits_total": 368,
+      "counts": {
+        "coverage_gap_edges": 0,
+        "coverage_gap_targets": 0,
+        "drift_total": 0,
+        "layering_violations": 0,
+        "new_edges": 0,
+        "new_targets": 0,
+        "removed_edges": 0,
+        "removed_targets": 0,
+        "suspected_renames": 0
+      },
+      "coverage": 1.0,
+      "dir": "out/libxml2/history/v2.14.0__v2.15.0",
+      "needs_curation_a": 20,
+      "needs_curation_b": 20,
+      "shallow_clone": false,
+      "status": "ok",
+      "targets": {
+        "a_first_party": 31,
+        "b_first_party": 31
+      },
+      "warnings": [],
+      "worksheet_rows": 0
+    },
+    {
+      "a": "v2.15.0",
+      "a_date": "2025-09-15T13:34:13+02:00",
+      "advisory": false,
+      "b": "v2.15.3",
+      "b_date": "2026-04-15T12:14:59+02:00",
+      "commits_build_files": 10,
+      "commits_total": 79,
+      "counts": {
+        "coverage_gap_edges": 0,
+        "coverage_gap_targets": 0,
+        "drift_total": 2,
+        "layering_violations": 0,
+        "new_edges": 1,
+        "new_targets": 1,
+        "removed_edges": 0,
+        "removed_targets": 0,
+        "suspected_renames": 0
+      },
+      "coverage": 1.0,
+      "dir": "out/libxml2/history/v2.15.0__v2.15.3",
+      "needs_curation_a": 20,
+      "needs_curation_b": 20,
+      "shallow_clone": false,
+      "status": "ok",
+      "targets": {
+        "a_first_party": 31,
+        "b_first_party": 32
+      },
+      "warnings": [],
+      "worksheet_rows": 2
+    }
+  ],
+  "rules_dir": "overlays/libxml2/architecture/rules",
+  "rules_note": "Curation rules `overlays/libxml2/architecture/rules` (committed libxml2 overlay (GT-pub anchor curation)) were authored against the pinned fixture commit d5e22ef58 (LIBXML_2_4_22, 2002-05-27T21:17:57Z), which is earlier than every release studied. They were held constant (frozen) across every pair: no re-curation between A and B, so drift findings include the rule-maintenance effect (needs-curation = first-party targets the frozen rules leave unmapped).",
+  "rules_origin": "committed libxml2 overlay (GT-pub anchor curation)",
+  "schema": "rq6-history/1",
+  "system": "libxml2",
+  "totals": {
+    "coverage_gap_edges": 0,
+    "coverage_gap_targets": 0,
+    "drift_total": 4,
+    "layering_violations": 0,
+    "new_edges": 1,
+    "new_targets": 1,
+    "removed_edges": 1,
+    "removed_targets": 1,
+    "suspected_renames": 0
+  }
+}

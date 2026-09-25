@@ -1,0 +1,39 @@
+{
+  "granularity": "file",
+  "language": "cpp",
+  "reference_clusters": 21,
+  "rungs": {
+    "dir_leaf": {
+      "a2a": 90.01,
+      "clusters": 31,
+      "mojofm": 97.85
+    },
+    "dir_top": {
+      "a2a": 100.0,
+      "clusters": 15,
+      "mojofm": 100.0
+    },
+    "edge_cc": {
+      "a2a": 79.91,
+      "clusters": 1,
+      "mojofm": 19.49
+    },
+    "hand_curation": {
+      "a2a": 98.76,
+      "clusters": 14,
+      "mojofm": 95.16
+    },
+    "none": {
+      "a2a": 85.13,
+      "clusters": 90,
+      "mojofm": 89.92
+    },
+    "propose_all": {
+      "a2a": 100.0,
+      "clusters": 15,
+      "mojofm": 100.0
+    }
+  },
+  "shared_entities": 759,
+  "system": "abseil"
+}

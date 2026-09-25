@@ -1,0 +1,27 @@
+{
+  "clusters": 12,
+  "entities_clustered": 23,
+  "granularity": "target",
+  "graph": "graph-target.rsf",
+  "reruns": 5,
+  "system": "squidex",
+  "technique": "llm",
+  "vs_pipeline_agreement": {
+    "a2a": 91.30434782608697,
+    "entities_against": 19,
+    "entities_common": 16,
+    "entities_dropped_whitespace": 0,
+    "entities_recovered": 23,
+    "mojofm": 73.33
+  },
+  "vs_reference": {
+    "a2a": 97.22222222222221,
+    "ari": 47.3,
+    "entities_against": 15,
+    "entities_common": 13,
+    "entities_dropped_whitespace": 0,
+    "entities_recovered": 23,
+    "mojofm": 80.0,
+    "nested": 90.0
+  }
+}

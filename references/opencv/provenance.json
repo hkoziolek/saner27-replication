@@ -1,0 +1,18 @@
+{
+  "system": "opencv",
+  "grade": "GT-doc",
+  "subject_version": "OpenCV 4.9.0",
+  "subject_repo": "https://github.com/opencv/opencv",
+  "granularity": "file",
+  "source": "OpenCV's documented module list (docs.opencv.org): the library is a set of modules — core, imgproc, imgcodecs, calib3d, features2d, dnn, ml, objdetect, photo, stitching, video, videoio, highgui, flann — each with its own documented responsibility, one directory per module under modules/.",
+  "construction": "Each source/header file under modules/<module>/ is assigned to that <module>. Files outside modules/ are excluded. 1087 files across 14 modules (the reduced build config; the full OpenCV has more modules but this fixture builds the documented core+main set).",
+  "format": "RSF `contain mod_<module> <repo-rel-file>` tuples; entities match the file-granularity graph export's node ids.",
+  "clusters": 14,
+  "entities": 1087,
+  "rater_agreement": "GT-doc: the module list is OpenCV's own published architecture (each module is documented as the unit of the library), and the modules/<name>/ directory convention is authoritative. Single transcriber; the directory->module mapping is mechanical. Second rater + kappa deferred (eval §5.3).",
+  "caveats": [
+    "Directory-aligned module structure -> a naive directory baseline will be competitive (as with ITK); a2a and cluster count discriminate.",
+    "The fixture builds a reduced module set (14 modules); OpenCV's full module list (incl. contrib) is larger. The reference covers exactly the built modules, matching the file-deps sidecar's coverage.",
+    "Module interdependence: imgproc/core are depended on by nearly every other module, so dependency-only baselines tend to collapse them together."
+  ]
+}

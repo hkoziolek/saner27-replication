@@ -1,0 +1,104 @@
+{
+  "advisory": false,
+  "coverage": 1.0,
+  "diff": {
+    "coverage_gap_edges": [],
+    "coverage_gap_targets": [],
+    "first_run": false,
+    "new_edges": [
+      [
+        "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj",
+        "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj"
+    ],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/HybridApp/HybridApp.csproj",
+        "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/HybridApp/HybridApp.csproj"
+    ],
+    "suspected_renames": [
+      {
+        "new": "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj",
+        "old": "csharp:csproj:src/HybridApp/HybridApp.csproj"
+      }
+    ],
+    "suspicious": []
+  },
+  "score": {
+    "advisory": false,
+    "alias_findings_in_scope": 0,
+    "alias_suppressed": true,
+    "attributed_violations": [],
+    "coverage": 1.0,
+    "coverage_gaps_in_scope": {
+      "coverage_gap_edges": [],
+      "coverage_gap_targets": []
+    },
+    "detected": true,
+    "fn": [],
+    "fn_count": 0,
+    "fp": [],
+    "fp_count": 0,
+    "rename_classified": true,
+    "scored": {
+      "layering_violations": [],
+      "new_edges": [
+        [
+          "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj",
+          "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+        ]
+      ],
+      "new_targets": [
+        "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj"
+      ],
+      "removed_edges": [
+        [
+          "csharp:csproj:src/HybridApp/HybridApp.csproj",
+          "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+        ]
+      ],
+      "removed_targets": [
+        "csharp:csproj:src/HybridApp/HybridApp.csproj"
+      ],
+      "suspected_renames": [
+        {
+          "new": "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj",
+          "old": "csharp:csproj:src/HybridApp/HybridApp.csproj"
+        }
+      ]
+    },
+    "tp": [
+      [
+        "new_edge",
+        "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj",
+        "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+      ],
+      [
+        "new_target",
+        "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/HybridApp/HybridApp.csproj",
+        "csharp:csproj:src/WebAppComponents/WebAppComponents.csproj"
+      ],
+      [
+        "removed_target",
+        "csharp:csproj:src/HybridApp/HybridApp.csproj"
+      ],
+      [
+        "rename",
+        "csharp:csproj:src/HybridApp/HybridApp.csproj",
+        "csharp:csproj:src/HybridApp/HybridAppAnonMut.csproj"
+      ]
+    ],
+    "tp_count": 5
+  }
+}

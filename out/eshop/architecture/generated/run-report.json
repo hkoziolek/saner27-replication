@@ -1,0 +1,26 @@
+{
+  "cache": {},
+  "notes": [],
+  "stages": {
+    "curate": 0.094,
+    "drift": 0.031,
+    "enrich": 89.344,
+    "extract": 31.422,
+    "generate": 0.0,
+    "normalize": 5.266,
+    "validate-curated": 0.031,
+    "validate-extracted": 0.047
+  },
+  "trust": {
+    "abstained_targets": 0,
+    "coverage_pct": {
+      "L0": 1.0
+    },
+    "edges_dropped": 113,
+    "mean_confidence": 0.7967,
+    "over_budget_views": [
+      "Component-ClientApp (39 > 20)"
+    ],
+    "unmapped_targets": 0
+  }
+}

@@ -1,0 +1,378 @@
+{
+  "provenance": {
+    "coverage": {
+      "csharp:csproj:src/Common/Toy.Common.csproj": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "csharp:csproj:src/Domain/Toy.Domain.csproj": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "csharp:csproj:src/Messaging/Toy.Messaging.csproj": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "csharp:csproj:src/Web/Toy.Web.csproj": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "csharp:csproj:tests/Toy.Web.Tests/Toy.Web.Tests.csproj": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      }
+    },
+    "extractors": [
+      {
+        "name": "csharp-build-graph",
+        "version": "0.3.0"
+      }
+    ],
+    "repo": "toy-src"
+  },
+  "relationships": [
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "<ProjectReference Include=\"src/Common/Toy.Common.csproj\">",
+          "type": "project_ref",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "project_ref only",
+      "id": "rel:csharp:csproj:src/Domain/Toy.Domain.csproj->csharp:csproj:src/Common/Toy.Common.csproj",
+      "is_declared_dependency": true,
+      "source": "csharp:csproj:src/Domain/Toy.Domain.csproj",
+      "target": "csharp:csproj:src/Common/Toy.Common.csproj",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "<ProjectReference Include=\"src/Common/Toy.Common.csproj\">",
+          "type": "project_ref",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "project_ref only",
+      "id": "rel:csharp:csproj:src/Messaging/Toy.Messaging.csproj->csharp:csproj:src/Common/Toy.Common.csproj",
+      "is_declared_dependency": true,
+      "source": "csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+      "target": "csharp:csproj:src/Common/Toy.Common.csproj",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "<PackageReference Include=\"Newtonsoft.Json\">",
+          "type": "package_ref"
+        }
+      ],
+      "evidence_strength": "package_ref only",
+      "id": "rel:csharp:csproj:src/Messaging/Toy.Messaging.csproj->csharp:package:Newtonsoft.Json",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+      "target": "csharp:package:Newtonsoft.Json",
+      "weight": 1
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "<ProjectReference Include=\"src/Domain/Toy.Domain.csproj\">",
+          "type": "project_ref",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "project_ref only",
+      "id": "rel:csharp:csproj:src/Web/Toy.Web.csproj->csharp:csproj:src/Domain/Toy.Domain.csproj",
+      "is_declared_dependency": true,
+      "source": "csharp:csproj:src/Web/Toy.Web.csproj",
+      "target": "csharp:csproj:src/Domain/Toy.Domain.csproj",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "<ProjectReference Include=\"src/Messaging/Toy.Messaging.csproj\">",
+          "type": "project_ref",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "project_ref only",
+      "id": "rel:csharp:csproj:src/Web/Toy.Web.csproj->csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+      "is_declared_dependency": true,
+      "source": "csharp:csproj:src/Web/Toy.Web.csproj",
+      "target": "csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "<PackageReference Include=\"Serilog\">",
+          "type": "package_ref"
+        }
+      ],
+      "evidence_strength": "package_ref only",
+      "id": "rel:csharp:csproj:src/Web/Toy.Web.csproj->csharp:package:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Web/Toy.Web.csproj",
+      "target": "csharp:package:Serilog",
+      "weight": 1
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "<ProjectReference Include=\"src/Web/Toy.Web.csproj\">",
+          "type": "project_ref",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "project_ref only",
+      "id": "rel:csharp:csproj:tests/Toy.Web.Tests/Toy.Web.Tests.csproj->csharp:csproj:src/Web/Toy.Web.csproj",
+      "is_declared_dependency": true,
+      "source": "csharp:csproj:tests/Toy.Web.Tests/Toy.Web.Tests.csproj",
+      "target": "csharp:csproj:src/Web/Toy.Web.csproj",
+      "weight": 5
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "detail": "<PackageReference Include=\"xunit\">",
+          "type": "package_ref"
+        }
+      ],
+      "evidence_strength": "package_ref only",
+      "id": "rel:csharp:csproj:tests/Toy.Web.Tests/Toy.Web.Tests.csproj->csharp:package:xunit",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:tests/Toy.Web.Tests/Toy.Web.Tests.csproj",
+      "target": "csharp:package:xunit",
+      "weight": 1
+    }
+  ],
+  "schema_version": "1.3",
+  "targets": [
+    {
+      "external": false,
+      "id": "csharp:csproj:src/Common/Toy.Common.csproj",
+      "language": "csharp",
+      "metrics": {
+        "blank": 1,
+        "by_language": [
+          {
+            "blank": 1,
+            "code": 6,
+            "comment": 0,
+            "files": 1,
+            "language": "C#"
+          },
+          {
+            "blank": 0,
+            "code": 6,
+            "comment": 0,
+            "files": 1,
+            "language": "MSBuild"
+          }
+        ],
+        "code": 12,
+        "comment": 0,
+        "engine": "metrics/1",
+        "todo_count": 0
+      },
+      "name": "Toy.Common",
+      "path": "src/Common",
+      "tags": [
+        "build:msbuild"
+      ],
+      "type": "csproj"
+    },
+    {
+      "external": false,
+      "id": "csharp:csproj:src/Domain/Toy.Domain.csproj",
+      "language": "csharp",
+      "metrics": {
+        "blank": 2,
+        "by_language": [
+          {
+            "blank": 2,
+            "code": 7,
+            "comment": 0,
+            "files": 1,
+            "language": "C#"
+          },
+          {
+            "blank": 0,
+            "code": 9,
+            "comment": 0,
+            "files": 1,
+            "language": "MSBuild"
+          }
+        ],
+        "code": 16,
+        "comment": 0,
+        "engine": "metrics/1",
+        "todo_count": 0
+      },
+      "name": "Toy.Domain",
+      "path": "src/Domain",
+      "tags": [
+        "build:msbuild"
+      ],
+      "type": "csproj"
+    },
+    {
+      "external": false,
+      "id": "csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+      "language": "csharp",
+      "metrics": {
+        "blank": 2,
+        "by_language": [
+          {
+            "blank": 2,
+            "code": 7,
+            "comment": 0,
+            "files": 1,
+            "language": "C#"
+          },
+          {
+            "blank": 0,
+            "code": 12,
+            "comment": 0,
+            "files": 1,
+            "language": "MSBuild"
+          }
+        ],
+        "code": 19,
+        "comment": 0,
+        "engine": "metrics/1",
+        "todo_count": 0
+      },
+      "name": "Toy.Messaging",
+      "package_refs": [
+        "Newtonsoft.Json"
+      ],
+      "path": "src/Messaging",
+      "tags": [
+        "build:msbuild"
+      ],
+      "type": "csproj"
+    },
+    {
+      "external": false,
+      "id": "csharp:csproj:src/Web/Toy.Web.csproj",
+      "language": "csharp",
+      "metrics": {
+        "blank": 2,
+        "by_language": [
+          {
+            "blank": 2,
+            "code": 13,
+            "comment": 0,
+            "files": 1,
+            "language": "C#"
+          },
+          {
+            "blank": 0,
+            "code": 13,
+            "comment": 0,
+            "files": 1,
+            "language": "MSBuild"
+          }
+        ],
+        "code": 26,
+        "comment": 0,
+        "engine": "metrics/1",
+        "todo_count": 0
+      },
+      "name": "Toy.Web",
+      "package_refs": [
+        "Serilog"
+      ],
+      "path": "src/Web",
+      "tags": [
+        "build:msbuild"
+      ],
+      "type": "csproj"
+    },
+    {
+      "external": false,
+      "id": "csharp:csproj:tests/Toy.Web.Tests/Toy.Web.Tests.csproj",
+      "language": "csharp",
+      "metrics": {
+        "blank": 0,
+        "by_language": [
+          {
+            "blank": 0,
+            "code": 12,
+            "comment": 0,
+            "files": 1,
+            "language": "MSBuild"
+          }
+        ],
+        "code": 12,
+        "comment": 0,
+        "engine": "metrics/1",
+        "todo_count": 0
+      },
+      "name": "Toy.Web.Tests",
+      "package_refs": [
+        "xunit"
+      ],
+      "path": "tests/Toy.Web.Tests",
+      "tags": [
+        "build:msbuild"
+      ],
+      "type": "csproj"
+    },
+    {
+      "external": true,
+      "id": "csharp:package:Newtonsoft.Json",
+      "language": "csharp",
+      "name": "Newtonsoft.Json",
+      "tags": [
+        "external",
+        "nuget"
+      ],
+      "type": "package"
+    },
+    {
+      "external": true,
+      "id": "csharp:package:Serilog",
+      "language": "csharp",
+      "name": "Serilog",
+      "tags": [
+        "external",
+        "nuget"
+      ],
+      "type": "package"
+    },
+    {
+      "external": true,
+      "id": "csharp:package:xunit",
+      "language": "csharp",
+      "name": "xunit",
+      "tags": [
+        "external",
+        "nuget"
+      ],
+      "type": "package"
+    }
+  ]
+}

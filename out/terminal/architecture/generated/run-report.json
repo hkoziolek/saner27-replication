@@ -1,0 +1,29 @@
+{
+  "cache": {},
+  "notes": [],
+  "stages": {
+    "curate": 0.047,
+    "drift": 0.0,
+    "enrich": 381.266,
+    "extract": 290.75,
+    "generate": 0.047,
+    "normalize": 1.734,
+    "validate-curated": 0.078,
+    "validate-extracted": 0.125
+  },
+  "trust": {
+    "abstained_targets": 8,
+    "coverage_pct": {
+      "L0": 0.98
+    },
+    "edges_dropped": 206,
+    "mean_confidence": 0.6244,
+    "over_budget_views": [
+      "Component-COM Activation (external) (27 > 20)",
+      "Component-Terminal Control & UI (29 > 20)",
+      "Component-Terminal Settings (56 > 20)",
+      "Component-Windows Terminal (36 > 20)"
+    ],
+    "unmapped_targets": 0
+  }
+}

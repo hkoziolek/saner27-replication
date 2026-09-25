@@ -1,0 +1,24 @@
+{
+  "clusters": 1,
+  "entities_clustered": 3596,
+  "granularity": "file",
+  "graph": "graph-file.rsf",
+  "system": "nopcommerce",
+  "technique": "cc",
+  "vs_pipeline_agreement": {
+    "a2a": 83.26064835005089,
+    "entities_against": 3442,
+    "entities_common": 3437,
+    "entities_dropped_whitespace": 5,
+    "entities_recovered": 3596,
+    "mojofm": 33.05
+  },
+  "vs_reference": {
+    "a2a": 83.21226209501671,
+    "entities_against": 3442,
+    "entities_common": 3437,
+    "entities_dropped_whitespace": 5,
+    "entities_recovered": 3596,
+    "mojofm": 32.89
+  }
+}

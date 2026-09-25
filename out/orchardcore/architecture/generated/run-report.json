@@ -1,0 +1,28 @@
+{
+  "cache": {},
+  "notes": [],
+  "stages": {
+    "curate": 0.187,
+    "drift": 0.016,
+    "enrich": 667.61,
+    "extract": 210.094,
+    "generate": 0.187,
+    "normalize": 146.937,
+    "validate-curated": 0.36,
+    "validate-extracted": 1.063
+  },
+  "trust": {
+    "abstained_targets": 7,
+    "coverage_pct": {
+      "L0": 1.0
+    },
+    "edges_dropped": 8767,
+    "mean_confidence": 0.913,
+    "over_budget_views": [
+      "Component-Content & Media Modules (22 > 20)",
+      "Component-Framework Abstractions (44 > 20)",
+      "Component-OrchardCore Framework (54 > 20)"
+    ],
+    "unmapped_targets": 0
+  }
+}

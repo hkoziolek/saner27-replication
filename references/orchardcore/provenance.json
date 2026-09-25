@@ -1,0 +1,23 @@
+{
+  "system": "orchardcore",
+  "grade": "GT-doc",
+  "subject_version": "OrchardCore main @ ab28487 (2026-06-04)",
+  "subject_repo": "https://github.com/OrchardCMS/OrchardCore",
+  "granularity": "target (project / .csproj)",
+  "source": "The project's own authoritative taxonomy, transcribed from source — not author-constructed.",
+  "construction": {
+    "feature_modules": "Each src/OrchardCore.Modules/<Module>/Manifest.cs declares a `Category = \"...\"` attribute (OrchardCore's own module taxonomy, surfaced in its admin UI and docs). The module .csproj is assigned verbatim to its declared Category. 91 modules across 28 categories; one module (OrchardCore.Mvc.HelloWorld, a sample) has no Category and is mapped to `Uncategorized`.",
+    "framework": "src/OrchardCore/* projects are the framework, not feature modules, so they carry no Category. They are split by OrchardCore's pervasive, documented `.Abstractions` convention into `Framework Abstractions` (interface/contract assemblies) and `Framework Core` (implementations). This is a documented structural-role assignment, lower-confidence than the manifest Categories.",
+    "other": "src/OrchardCore.Themes/* -> Themes; src/Templates/* -> Templates; src/OrchardCore.Cms.Web + src/OrchardCore.Mvc.Web -> Hosting (the runnable web hosts).",
+    "excluded": "test/* projects, src/docs, and OrchardCore.Docs are not production architecture (matches the curation overlay's exclusions)."
+  },
+  "format": "RSF `contain <cluster> <csproj-id>` tuples; entity ids are the `csharp:csproj:<repo-rel-path>` ids the pipeline's target-granularity graph export emits (so reference and recovered clusterings share an entity space).",
+  "clusters": 34,
+  "entities": 207,
+  "rater_agreement": "Single-transcriber, mechanical (regex over Manifest.cs). The eval §5.3 GT-doc protocol calls for two independent transcribers + reported kappa; because the module->Category mapping is a deterministic extraction from source (not a judgement call), a second human transcription is deferred. The judgement-laden part — the framework abstractions/core split and the theme/template/host roles — is flagged above as lower-confidence and is a stated threat.",
+  "caveats": [
+    "Fragmentation: 28 module categories include ~17 singletons (Api, Tasks, Settings, GitHub, Google, X (Twitter), OpenID Connect, ...). OrchardCore's documented taxonomy is genuinely fine-grained; the reference reflects that and is not consolidated. A directory/dependency-based recovery will not recover singleton categories, which is an honest granularity-mismatch finding rather than a tool error.",
+    "The framework (101 of 207 projects, 49%) collapses into 2 clusters, so framework placement dominates MoJoFM. Report a2a and per-cluster c2c alongside.",
+    "C# is scored at TARGET (project) granularity only — the Roslyn helper emits no per-document references yet (open eval item), so OrchardCore has no file-granularity run."
+  ]
+}

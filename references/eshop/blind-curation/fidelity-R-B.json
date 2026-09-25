@@ -1,0 +1,60 @@
+{
+  "granularity": "target",
+  "kind": "rq9-fidelity (eval §10a.4 four-row table)",
+  "labelling_rule": "detection and expression numbers never cross (eval §10a.7)",
+  "reference": "references/eshop/reference.rsf",
+  "rows": {
+    "best_sar": {
+      "a2a": 85.87,
+      "ari": 1.49,
+      "candidates": [
+        "acdc",
+        "limbo",
+        "wca"
+      ],
+      "clusters": 7,
+      "kind": "detection",
+      "mojofm": 26.67,
+      "nested": 57.14,
+      "technique": "limbo"
+    },
+    "blind_curator": {
+      "a2a": 90.82,
+      "clusters": 13,
+      "container_edge_f1": {
+        "candidate_edges": 25,
+        "clusters_aligned": 9,
+        "clusters_unmatched": 4,
+        "entity_edges": 43,
+        "f1": 0.564,
+        "n_common_entities": 19,
+        "precision": 0.44,
+        "recall": 0.786,
+        "reference_edges": 14,
+        "true_positive_edges": 11
+      },
+      "kind": "expression",
+      "mojofm": 66.67,
+      "n_common": 19,
+      "source": "out/eshop-rq9-R-B/architecture/generated/graph/clusters-target.rsf"
+    },
+    "floor": {
+      "a2a": 80.77,
+      "ari": 0.0,
+      "clusters": 19,
+      "kind": "detection",
+      "mojofm": 33.33,
+      "nested": 100.0,
+      "source": "comparison:dir (= the no-curation floor at target granularity, eval §13)"
+    },
+    "human_ceiling": {
+      "a2a": 89.69,
+      "kappa": 0.0,
+      "kind": "ceiling",
+      "mojofm": 66.52,
+      "n_common": 19,
+      "source": "references/eshop/blind-curation/ceiling.json"
+    }
+  },
+  "system": "eshop"
+}

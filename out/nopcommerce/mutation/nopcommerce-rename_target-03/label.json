@@ -1,0 +1,40 @@
+{
+  "alias": {
+    "csharp:csproj:src/Plugins/Nop.Plugin.Misc.RFQ/Nop.Plugin.Misc.RFQAnonMut.csproj": "csharp:csproj:src/Plugins/Nop.Plugin.Misc.RFQ/Nop.Plugin.Misc.RFQ.csproj"
+  },
+  "description": "rename build target csharp:csproj:src/Plugins/Nop.Plugin.Misc.RFQ/Nop.Plugin.Misc.RFQ.csproj -> csharp:csproj:src/Plugins/Nop.Plugin.Misc.RFQ/Nop.Plugin.Misc.RFQAnonMut.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.RFQ/Nop.Plugin.Misc.RFQAnonMut.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:src/Plugins/Nop.Plugin.Misc.RFQ/Nop.Plugin.Misc.RFQAnonMut.csproj"
+    ],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.RFQ/Nop.Plugin.Misc.RFQ.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/Plugins/Nop.Plugin.Misc.RFQ/Nop.Plugin.Misc.RFQ.csproj"
+    ],
+    "suspected_renames": [
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.RFQ/Nop.Plugin.Misc.RFQ.csproj",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.RFQ/Nop.Plugin.Misc.RFQAnonMut.csproj"
+      ]
+    ]
+  },
+  "files_touched": [
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\NopCommerce.sln",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Misc.RFQ\\Nop.Plugin.Misc.RFQ.csproj -> <repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Misc.RFQ\\Nop.Plugin.Misc.RFQAnonMut.csproj"
+  ],
+  "id": "nopcommerce-rename_target-03",
+  "operator": "rename_target",
+  "system": "nopcommerce"
+}

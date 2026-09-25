@@ -1,0 +1,111 @@
+# Curation rules for the opencv/opencv fixture (plan §7.4). Reviewed + committed.
+#
+# OpenCV is the C++ ~1M-LOC SCALE fixture (§19.1). The reduced build config yields 37 CMake
+# targets: 14 `opencv_*` module shared-libs, ~10 bundled 3rd-party libs, and a handful of
+# codegen/meta UTILITY targets. This overlay excludes the non-architectural codegen/meta
+# targets and groups the modules into four functional families plus a bundled-3rd-party box
+# — a readable five-container C4 view of OpenCV's module architecture.
+#
+# COMPONENT TIER (drill-down plan D§2.2): OpenCV renders as MODEL Y — every module is a
+# container, the four functional families become cosmetic group{} boundaries, and each
+# module's namespace tier (Doxygen L2/L3) nests natively. The shape is PINNED because
+# N=24 curated targets hovers at the MODEL_Y_MAX=25 auto-select threshold (D§2.3
+# anti-flapping). Doxygen stays scoped to the library subtree for the time budget:
+#
+#   $env:ANON_DOXYGEN_INPUT = "modules"   # Doxygen reads only modules/ (§18.3 knob)
+#   arch run --no-llm                          # NOT --skip-doxygen: the component tier needs L3
+#
+# Without Doxygen all module containers still render; only their namespace interior is empty.
+version: 1
+
+model_shape: y                      # pinned (D§2.3): N=24 hovers at the 25 threshold
+
+defaults:
+  min_relationship_weight: 3
+  drop_external: true
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false
+
+exclude:
+  targets:
+    - glob: "gen_opencv_*"        # language-binding (java/python/js/objc) source generators — codegen
+    - glob: "opencv_modules"      # CMake meta-aggregator (no code)
+    - glob: "*_plugins"           # empty plugin meta-targets (opencv_dnn_plugins, …)
+    - glob: "uninstall"           # CMake utility target
+    - glob: "jsimdcfg"            # libjpeg-turbo SIMD config codegen helper
+
+# Component-tier curation (§7.4 / §16#10b). OpenCV puts almost everything under the `cv`
+# umbrella namespace. Doxygen reports a CLASS that has nested types (cv::Mat, cv::Allocator,
+# cv::dnn::Layer, …) as its own "namespace", which floods the tier with hundreds of class-
+# scopes. OpenCV's real sub-namespaces are lower-case (cv::dnn, cv::ml, cv::ocl, cv::cuda) while
+# classes are CamelCase, so excluding any `::`-qualified segment that starts UPPER-CASE drops
+# the class-scopes and keeps the genuine namespaces. `aggregate_depth: 2` then folds deep
+# sub-namespaces (cv::dnn::details -> cv::dnn) so each family's Component view is readable (§1.1#1).
+components:
+  aggregate_depth: 2
+  exclude_namespaces:
+    - "*::[A-Z]*"                 # nested class-as-namespace scopes (cv::Mat, cv::dnn::Layer, …)
+    - "[A-Z]*"                    # global class-as-namespace scopes (CirclesGridFinder, Graph, TH, …)
+    - "cv::detail*"               # internal implementation helpers
+    - "cv::impl*"
+    - "cv::internal*"
+    - "cv::instr*"                # instrumentation/tracing
+    - "cv::traits*"
+    - "cv::cudev*"                # CUDA device-side helpers
+    - "cv::debug_build_guard*"
+    - "std*"                      # leaked standard-library symbols
+    - "__*"                       # compiler/builtins
+
+group:
+  - container: "OpenCV Core"
+    members:
+      - cpp:target:opencv_core
+      - cpp:target:opencv_imgproc
+      - cpp:target:opencv_imgcodecs
+  - container: "Computer Vision"
+    members:
+      - cpp:target:opencv_calib3d
+      - cpp:target:opencv_features2d
+      - cpp:target:opencv_objdetect
+      - cpp:target:opencv_photo
+      - cpp:target:opencv_stitching
+  - container: "ML & DNN"
+    members:
+      - cpp:target:opencv_dnn
+      - cpp:target:opencv_ml
+      - cpp:target:opencv_flann
+  - container: "Video & UI"
+    members:
+      - cpp:target:opencv_video
+      - cpp:target:opencv_videoio
+      - cpp:target:opencv_highgui
+  - container: "Third-party (bundled)"
+    members_glob:
+      - "3rdparty/*"              # by source path (libpng, libwebp, openjp2, zlib, jsimd, …)
+      - "lib*"                    # by name (libjpeg-turbo, libtiff, …)
+      - "zlib"
+      - "IlmImf"
+      - "ocv.3rdparty.*"
+
+# Hand-authored container descriptions (§7.4) — rendered as the C4 container description and
+# folded into the generated documentation page. Keyed by container display name.
+descriptions:
+  "OpenCV Core": "Core data structures (cv::Mat, cv::UMat), arithmetic and the image-processing & codec primitives every other module builds on (modules core, imgproc, imgcodecs)."
+  "Computer Vision": "Classic computer-vision algorithms: camera calibration & 3D reconstruction (calib3d), local features (features2d), object detection (objdetect), computational photography (photo) and panorama stitching (stitching)."
+  "ML & DNN": "Machine learning and deep-neural-network inference: the DNN module, classic ML estimators, and the FLANN approximate-nearest-neighbour library (modules dnn, ml, flann)."
+  "Video & UI": "Video analysis & I/O plus the high-level GUI: motion estimation and tracking (video), capture/encoding back-ends (videoio) and window display (highgui)."
+  "Third-party (bundled)": "Vendored third-party libraries OpenCV builds and links: image codecs (libpng, libjpeg-turbo, libtiff, libwebp, openjp2, IlmImf), compression (zlib) and SIMD helpers (jsimd)."
+
+technology:
+  shared_lib: "OpenCV module (shared library)"
+  static_lib: "Bundled C/C++ library"
+  object_lib: "Object library"
+  interface_lib: "Interface target"
+
+rationale:
+  "component-tier":
+    reason: "OpenCV's interesting internal structure is the namespaces/classes within each module family; surfaced as a Doxygen-backed Component drill-down per family (§9.1)"
+    decided_by: "architect"
+    date: "2026-06-07"
+    confidence: "high"

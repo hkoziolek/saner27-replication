@@ -1,0 +1,92 @@
+# DRAFT auto-proposed grouping (T1.4) — advisory, human-gated.
+# Review, copy the blocks you want into rules/mapping-rules.yaml, and lock.
+# NEVER auto-applied.
+group:
+- confidence: high
+  container: data
+  members:
+  - csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj
+  - csharp:csproj:backend/src/Squidex.Data.MongoDb/Squidex.Data.MongoDb.csproj
+  - csharp:csproj:backend/tests/Squidex.Data.Tests.CodeGenerator/Squidex.Data.Tests.CodeGenerator.csproj
+  - csharp:csproj:backend/tests/Squidex.Data.Tests/Squidex.Data.Tests.csproj
+  provenance: solution-folder:data
+- confidence: high
+  container: domain
+  members:
+  - csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Model/Squidex.Domain.Apps.Core.Model.csproj
+  - csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Operations/Squidex.Domain.Apps.Core.Operations.csproj
+  - csharp:csproj:backend/src/Squidex.Domain.Apps.Entities/Squidex.Domain.Apps.Entities.csproj
+  - csharp:csproj:backend/src/Squidex.Domain.Apps.Events/Squidex.Domain.Apps.Events.csproj
+  - csharp:csproj:backend/tests/Squidex.Domain.Apps.Core.Tests/Squidex.Domain.Apps.Core.Tests.csproj
+  - csharp:csproj:backend/tests/Squidex.Domain.Apps.Entities.Tests/Squidex.Domain.Apps.Entities.Tests.csproj
+  provenance: solution-folder:domain
+- confidence: high
+  container: infrastructure
+  members:
+  - csharp:csproj:backend/src/Squidex.Infrastructure/Squidex.Infrastructure.csproj
+  - csharp:csproj:backend/tests/Squidex.Infrastructure.Tests/Squidex.Infrastructure.Tests.csproj
+  provenance: solution-folder:infrastructure
+- confidence: high
+  container: shared
+  members:
+  - csharp:csproj:backend/src/Squidex.Domain.Users/Squidex.Domain.Users.csproj
+  - csharp:csproj:backend/src/Squidex.Shared/Squidex.Shared.csproj
+  - csharp:csproj:backend/src/Squidex.Web/Squidex.Web.csproj
+  - csharp:csproj:backend/tests/Squidex.Domain.Users.Tests/Squidex.Domain.Users.Tests.csproj
+  - csharp:csproj:backend/tests/Squidex.Web.Tests/Squidex.Web.Tests.csproj
+  provenance: solution-folder:shared
+- confidence: medium
+  container: TestSuite
+  members:
+  - csharp:csproj:tools/TestSuite/TestSuite.ApiTests/TestSuite.ApiTests.csproj
+  - csharp:csproj:tools/TestSuite/TestSuite.LoadTests/TestSuite.LoadTests.csproj
+  - csharp:csproj:tools/TestSuite/TestSuite.Shared/TestSuite.Shared.csproj
+  members_glob:
+  - tools/TestSuite
+  - tools/TestSuite/*
+  provenance: directory:tools/TestSuite
+- confidence: medium
+  container: backend
+  members:
+  - csharp:csproj:backend/extensions/Squidex.Extensions/Squidex.Extensions.csproj
+  - csharp:csproj:backend/i18n/translator/Squidex.Translator/Squidex.Translator.csproj
+  - csharp:csproj:backend/tools/GenerateLanguages/GenerateLanguages.csproj
+  members_glob:
+  - backend
+  - backend/*
+  provenance: directory:backend
+- confidence: medium
+  container: src
+  members:
+  - csharp:csproj:backend/src/Migrations/Migrations.csproj
+  - csharp:csproj:backend/src/Squidex/Squidex.csproj
+  provenance: directory:backend/src
+rationale:
+  TestSuite:
+    confidence: medium
+    provenance: directory:tools/TestSuite
+    reason: auto-proposed by directory:tools/TestSuite (3 targets)
+  backend:
+    confidence: medium
+    provenance: directory:backend
+    reason: auto-proposed by directory:backend (3 targets)
+  data:
+    confidence: high
+    provenance: solution-folder:data
+    reason: auto-proposed by solution-folder:data (4 targets)
+  domain:
+    confidence: high
+    provenance: solution-folder:domain
+    reason: auto-proposed by solution-folder:domain (6 targets)
+  infrastructure:
+    confidence: high
+    provenance: solution-folder:infrastructure
+    reason: auto-proposed by solution-folder:infrastructure (2 targets)
+  shared:
+    confidence: high
+    provenance: solution-folder:shared
+    reason: auto-proposed by solution-folder:shared (5 targets)
+  src:
+    confidence: medium
+    provenance: directory:backend/src
+    reason: auto-proposed by directory:backend/src (2 targets)

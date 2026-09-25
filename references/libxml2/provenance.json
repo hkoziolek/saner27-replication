@@ -1,0 +1,16 @@
+{
+  "system": "libxml2",
+  "grade": "GT-pub",
+  "subject_version": "libxml2 2.4.22",
+  "subject_repo": "https://gitlab.gnome.org/GNOME/libxml2.git",
+  "subject_tag": "LIBXML_2_4_22",
+  "source": "Zhang, Xu, Liu et al., \"Software Architecture Recovery with Information Fusion\", ESEC/FSE 2023 (DOI 10.1145/3611643.3616285) — the 'Labeled' (industry-collaborator-labeled) ground-truth tier of the SARIF replication package.",
+  "dataset_url": "https://github.com/anonymous2f4a9d/SARIF_FSE23/blob/main/Data/Ground%20Truth%20Architectures/Labeled/libxml2-2.4.22-GT.json",
+  "retrieved_via": "raw.githubusercontent.com, converted verbatim to RSF (group name -> `contain <group> <file>`; entity paths kept as published, repo-relative)",
+  "retrieved_at": "2026-07-16",
+  "format": "RSF `contain <cluster> <file>` tuples converted 1:1 from the published JSON (structure[].name -> cluster, structure[].nested[].name -> file); entities are repo-relative paths (root basenames + include/libxml/, python/, macos/)",
+  "clusters": 18,
+  "entities": 82,
+  "license_note": "The SARIF replication repository is anonymous and carries NO LICENSE file (all-rights-reserved by default), so the converted reference.rsf and the retrieved JSON are LOCAL-ONLY (see .gitignore), mirroring the nopCommerce precedent (P§19.6). Reproduce with: python -c \"import json,pathlib; gt=json.loads(pathlib.Path('references/libxml2/libxml2-2.4.22-GT.json').read_text(encoding='utf-8')); pathlib.Path('references/libxml2/reference.rsf').write_bytes(('\\n'.join(sorted(f'contain {g[\\\"name\\\"]} {i[\\\"name\\\"]}' for g in gt['structure'] for i in g.get('nested',[])))+'\\n').encode())\" after downloading the dataset_url.",
+  "notes": "Third usable public C/C++ ground truth (after ITK and bash). ARCHITECTURAL SHAPE CONTRAST: unlike bash (whose GT clusters coincide with its static-library build targets), the libxml2 GT's 18 clusters are semantic module groups INSIDE the single libxml2 shared-library target — the monolithic-library case where the build graph deliberately cannot carry the decomposition. Expected/observed: the no-curation floor and target-based pipeline collapse here (the C-language analogue of the C# regime), which bounds the deterministic-first thesis by build-graph shape rather than by language."
+}

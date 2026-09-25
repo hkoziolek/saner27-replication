@@ -1,0 +1,158 @@
+%% Empirical Evaluation of a Build-Graph-First, Deterministic
+%% Fact-Extraction -> Structurizr Architecture Pipeline
+%% Target: SANER 2027 Research Track (IEEE format).
+%% See ../plans/2026-06-04-empirical-evaluation-fact-extraction-pipeline.md
+%%
+%% BUILD: `make` (latexmk) in this directory. Tables/figures/macros under
+%% tables/, figures/, generated/ are GENERATED from raw experiment data by the
+%% analysis/ pipeline (see README.md, plan section 15) -- do not hand-edit them.
+
+%% SANER 2027 requires exactly this: 10pt, conference, no compsoc/compsocconf.
+\documentclass[10pt,conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+% --- packages ---
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}      % generated tables use \toprule/\midrule/\bottomrule
+\usepackage{siunitx}       % aligned numbers in generated tables
+\usepackage{xcolor}
+\usepackage{tikz}          % figures emitted as .pgf by analysis/make_figures.py are tikzpictures
+\usepackage{url}
+%% NOT microtype: it is not installed and MiKTeX's auto-install hangs on this machine (memory
+%% latex-toolchain-setup); the page budget is met by content, not by font expansion.
+\usepackage[hidelinks]{hyperref}
+
+\graphicspath{{figures/}}
+
+%% SANER 2027 enforces full double-anonymous review: a submission carrying author
+%% names, affiliations, or acknowledgments is desk-rejected without review.
+%% Keep this TRUE for the 25 Sep 2026 submission build; flip to \anonymousfalse
+%% for internal drafts and for the camera-ready (notification 1 Dec 2026).
+\newif\ifanonymous
+\anonymoustrue
+
+%% Eval plan section 1.4 #5: the SANER manuscript ALSO anonymizes the TOOL, not just the
+%% authors -- the CFP requires that the submission not be trivially associable with a
+%% public version, and the technical report is the artifact that carries the real name.
+%% Prose therefore NEVER writes the tool name literally: use \tool, which resolves to the real
+%% name only in the non-anonymous build. The console-script name `arch` is generic, is not
+%% in the anonymity audit list, and is what the artifact's README and pyproject install in
+%% both builds -- so \cli is `arch` everywhere (audit 2026-08-31: the anonymous PDF said
+%% `anon propose` while the artifact shipped `arch`).
+\ifanonymous
+  \newcommand{\tool}{\textsc{Anon}}
+  \newcommand{\cli}{\texttt{arch}}
+\else
+  \newcommand{\tool}{\textsc{Anon}}
+  \newcommand{\cli}{\texttt{arch}}
+\fi
+
+%% Bibliography scaffold switch. \nocite{*} typesets every references.bib entry; it was the
+%% build-green scaffold while section II was a placeholder. OFF since 2026-08-30 (section II
+%% cites for real; every entry verified). A SUBMISSION MUST NOT LIST UNCITED REFERENCES --
+%% keep this false and verify the reference list before 25 Sep 2026.
+\newif\ifdraftbib
+\draftbibfalse   % Section II cites for real since 2026-08-30; uncited references.bib entries stay out of the list
+
+%% Companion technical report (response plan section 13, 2026-09-13). The paper is
+%% self-contained on every claim; procedures, sensitivity analyses, and per-system tables live in
+%% the anonymized TR shipped in the mirror package (latex/tr.tex, built from the SAME macros and
+%% tables). Forward references are macros so a TR reorder is a one-line fix here.
+\newcommand{\TR}{TR}
+\newcommand{\trExtract}{\TR{}\,\S2}      % evidence extraction per build idiom
+\newcommand{\trInputs}{\TR{}\,\S3}       % baseline inputs, entity ownership, LLM runner
+\newcommand{\trStats}{\TR{}\,\S4}        % metrics and inferential procedures, full p-values
+\newcommand{\trDiagnostic}{\TR{}\,\S5}   % reference-free diagnostic: sensitivity, Tier-B calls
+\newcommand{\trPublished}{\TR{}\,\S6}    % published scores on shared references (SARIF, FCA)
+\newcommand{\trAblation}{\TR{}\,\S7}     % ablation detail (A1 per layer, A3/A4)
+\newcommand{\trDrift}{\TR{}\,\S8}        % drift arms: per-operator, combined-loss, history tables
+\newcommand{\trPerf}{\TR{}\,\S9}         % per-system performance table
+\newcommand{\trCuration}{\TR{}\,\S10}    % blind curation: rater agreement, effort table
+
+% --- generated numbers: every in-prose statistic is a \newcommand here, ---
+% --- emitted by analysis/make_macros.py. Prose cites macros, never literals. ---
+\input{generated/macros}
+
+\begin{document}
+
+%% The anonymous title drops the tool name (section 1.4 #5). The named variant is the
+%% technical report's / camera-ready's title.
+%% "and Governance" added 2026-09-07 (eval plan section 16.1 candidate A1): the abstract and
+%% section I now frame the tool as continuous maintenance of a model beside the code, and the
+%% governance results (RQ4--RQ5, RQ7) are the differentiator the discussion names. "Recovery" stays
+%% so the paper still indexes under the SAR genre.
+\ifanonymous
+  \title{Evidence-Grounded Architecture Recovery and Governance for C/C++ and C\# Systems}
+\else
+  \title{Anon: Evidence-Grounded Architecture Recovery and Governance for C/C++ and C\# Systems}
+\fi
+
+\ifanonymous
+  \author{\IEEEauthorblockN{Anonymous Author(s)}
+  \IEEEauthorblockA{Affiliation withheld for double-anonymous review}}
+\else
+  \author{\IEEEauthorblockN{[anonymized] \textit{et al.}}
+  \IEEEauthorblockA{(affiliations TBD)\\
+  \texttt{[anonymized]\,...}}}
+\fi
+
+\maketitle
+
+\begin{abstract}
+%% Rewritten 2026-09-07 (second pass): five moves -- context, problem, related work and its gap,
+%% approach delimited from prior work, evaluation and headline results -- for a reader who does not
+%% know the SAR literature. Coding agents are MOTIVATION only. 2026-09-13 (plan section 13): shortened
+%% for the page budget (reviewer P1 "overloaded"); every number is still a macro.
+Large C/C++ and C\#\ systems often outlive their architecture models: unintended dependencies
+accumulate, the diagram that would show them is stale or missing, and coding agents now change code
+with no intended architecture in view. Automatic architecture recovery could produce the model a conformance checker needs, but
+existing clustering approaches score well below published references and may shift between runs,
+and LLM-based recovery inherits both gaps. We
+propose \tool{}, which instead maintains a versioned C4 module view alongside the code. The build
+system's declared targets and dependencies (CMake, MSBuild, .NET projects) are the primary
+structural evidence; a human architect curates the view through committed, evidence-constrained
+rules; and every run regenerates the model byte-identically and drift-checks it against the code.
+We evaluate on nine open-source systems plus one industrial system against
+classical and LLM baselines. The results split into two regimes. Where the build system already
+composes many source files into few units, the uncurated output alone reaches a median MoJoFM
+(agreement with the reference, 100 = identical) of \rqOneFloorAdequateMoJo{} at the granularity
+of its build targets, and no autonomous technique separates from another on an underpowered
+eight-system omnibus. Where every entity is its own unit (the .NET
+systems), every classical technique falls short of the recovery threshold, and reference-blind
+curators expressed the decomposition with \tool{} in \rqNineEshopMinutes{}--\rqNineSquidexMinutes{}
+minutes on two small systems. Seeded changes show that drift is detected and, when evidence goes
+missing, never silently hidden, though often only as a warning that evidence dropped.
+\end{abstract}
+
+\begin{IEEEkeywords}
+software architecture recovery, C4 model, Structurizr, empirical evaluation,
+large language models, software architecture reconstruction, MoJoFM
+\end{IEEEkeywords}
+
+\input{sections/01-introduction}
+\input{sections/02-background}
+\input{sections/03-approach}
+\input{sections/04-study-design}
+\input{sections/05-results}
+\input{sections/06-discussion}
+\input{sections/07-threats}
+\input{sections/08-conclusion}
+
+%% 2026-09-13 (owner decision, plan section 13 status): the URL only. What the package holds, the
+%% four reproducibility classes of its rows (review O1), and the on-acceptance DOI/TR are in the
+%% package README (baselines/make_review_artifact.py writes it), not here.
+\paragraph{Data availability} Anonymized replication package, with the companion technical
+report \TR{}: \texttt{<anonymous mirror URL>}.
+\paragraph{Acknowledgments} Generative AI assisted manuscript editing and code implementation. All research methodology, analysis, and conclusions are the authors' contributions. 
+ 
+
+\bibliographystyle{IEEEtran}
+%% SCAFFOLD -- gated on \ifdraftbib (declared in the preamble). OFF since 2026-08-30: section II
+%% cites for real, so the list holds only cited entries (a submission must not list uncited
+%% references). Leave it off; references.bib may hold uncited spares for sections I/VI.
+\ifdraftbib\nocite{*}\fi
+\bibliography{references}
+
+\end{document}

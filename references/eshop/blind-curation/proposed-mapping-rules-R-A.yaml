@@ -1,0 +1,45 @@
+# DRAFT auto-proposed grouping (T1.4) — advisory, human-gated.
+# Review, copy the blocks you want into rules/mapping-rules.yaml, and lock.
+# NEVER auto-applied.
+group:
+- confidence: high
+  container: src
+  members:
+  - csharp:csproj:src/Basket.API/Basket.API.csproj
+  - csharp:csproj:src/Catalog.API/Catalog.API.csproj
+  - csharp:csproj:src/ClientApp/ClientApp.csproj
+  - csharp:csproj:src/EventBus/EventBus.csproj
+  - csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj
+  - csharp:csproj:src/HybridApp/HybridApp.csproj
+  - csharp:csproj:src/Identity.API/Identity.API.csproj
+  - csharp:csproj:src/IntegrationEventLogEF/IntegrationEventLogEF.csproj
+  - csharp:csproj:src/OrderProcessor/OrderProcessor.csproj
+  - csharp:csproj:src/Ordering.API/Ordering.API.csproj
+  - csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj
+  - csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj
+  - csharp:csproj:src/PaymentProcessor/PaymentProcessor.csproj
+  - csharp:csproj:src/WebApp/WebApp.csproj
+  - csharp:csproj:src/WebAppComponents/WebAppComponents.csproj
+  - csharp:csproj:src/WebhookClient/WebhookClient.csproj
+  - csharp:csproj:src/Webhooks.API/Webhooks.API.csproj
+  - csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj
+  - csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj
+  provenance: solution-folder:src
+- confidence: high
+  container: tests
+  members:
+  - csharp:csproj:tests/Basket.UnitTests/Basket.UnitTests.csproj
+  - csharp:csproj:tests/Catalog.FunctionalTests/Catalog.FunctionalTests.csproj
+  - csharp:csproj:tests/ClientApp.UnitTests/ClientApp.UnitTests.csproj
+  - csharp:csproj:tests/Ordering.FunctionalTests/Ordering.FunctionalTests.csproj
+  - csharp:csproj:tests/Ordering.UnitTests/Ordering.UnitTests.csproj
+  provenance: solution-folder:tests
+rationale:
+  src:
+    confidence: high
+    provenance: solution-folder:src
+    reason: auto-proposed by solution-folder:src (19 targets)
+  tests:
+    confidence: high
+    provenance: solution-folder:tests
+    reason: auto-proposed by solution-folder:tests (5 targets)

@@ -1,0 +1,58 @@
+\section{Threats to Validity}
+\label{sec:threats}
+
+%% Revised 2026-08-30: every residual the response plan (§6) leaves to the extension is named here
+%% in the words the rebuttal uses. 2026-09-13 (plan §13): this section is the ONE home of every
+%% caveat the results sections used to restate; design facts §IV states are referenced, not
+%% repeated. 2026-09-13 readability pass: long sentences split; no threat added or dropped.
+
+\paragraph{Construct.} ``Correct decomposition'' is a judgement, and no metric here assesses
+semantic validity with architects. What we recover is a development-time module view rendered in
+C4 notation, not a runtime container model (\S\ref{sec:approach}). Both RQ7
+references fell below the raw-$\kappa$ flag; label-free measures and the nesting count show the
+disagreement is granularity (\S\ref{sec:rq9}). Container-edge F1 is
+curation-constrained, not curation-proof. c2c and adjusted a2a are not reported. The recovery
+bands and the adequacy thresholds are post-hoc reading labels, not established boundaries. The
+build graph is extracted, not validated against an independent evaluated source: CMake's File
+API is the configured project's own evaluated model, cross-checked against CMake's graphviz
+output, and the MSBuild-C++, automake, and C\#\ L0 parses are static, so a consistently
+extracted graph can be consistently incomplete.
+
+\paragraph{Internal.} The committed curations were authored with an LLM assistant and, on three
+C\#\ systems and P-1, with the reference in view (Table~\ref{tab:corpus}). Their scores are
+oracle-assisted upper bounds (\S\ref{sec:design}; RQ7 bounds the leakage on eShop only). Two C\#\ references transcribe the projects' naming and manifest
+conventions, which the refinement extractors also mine, so a rule keyed on the convention scores
+near-perfectly by construction; that score is reported only as a labelled reconstruction ceiling.
+OpenCV's GT-doc mirrors the CMake module list and abseil's GT-exp the one-library-per-directory
+layout, so their floor scores carry the same convention overlap. The LLM baseline's prompt named
+the system and used the real identifiers of publicly documented systems, so training-data
+contamination is uncontrolled.
+The regime claim is confounded by build technology, granularity, style, size, and reference
+provenance, all co-varying with language here. The reference-free diagnostic separates the
+build-graph property from the language, but it is post hoc, selected on the nine systems it
+separates, with one of its two clauses carried by a single system (\S\ref{sec:rq1}): a
+candidate diagnostic, not a validated predictor.
+
+\paragraph{External.} Nine OSS  and one proprietary
+system are not the industrial population, and the pipeline favours CMake. %
+%; the MSBuild-C++ path has no Tier-A system and is never scored against a reference. 
+RQ7 ran on two systems of 19 and 15 projects with three curators overall. Curator variance therefore rests on one pair
+(\rqNineEshopCuratorMoJoSpread{} MoJoFM points apart), the
+effort numbers are two measurements, and we claim nothing about larger C\#\ systems or manual
+modelling.
+%, whose comparator arm did not run: the governance advantages over hand
+%modelling are stated as properties, not measured. 
+Blinding removed copying and tuning, not the
+priors of shared public documentation (\S\ref{sec:design}). The drift results are largely
+construction-verified. The seeded and combined arms confirm correctness under evidence loss, and
+the real-history arm covers \rqSixHistPairs{} release pairs of \rqSixHistSystems{} systems with a
+handful of findings, under rules that post-date the releases on two of the three. The seeded
+operators cover no splits or file moves, and on real history most changes are intended evolution,
+so effectiveness on real erosion at scale is not established and the false-finding rate rests on
+two raters' labels of \rqSixHistFindings{} findings.
+
+\paragraph{Conclusion.} With $N\le 9$ paired systems we use non-parametric tests with Holm
+correction, paired effect sizes, and per-system deltas. We fixed every threshold in the plan
+before the data except the adequacy rule and the recovery bands; the plan's dated commit history
+is the only record of that order, and no external registry was used. The RQ2 omnibus is reported
+with and without the ninth system (\trStats{}).

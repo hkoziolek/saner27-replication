@@ -1,0 +1,30 @@
+# rules/datasheet-overrides.yaml — hand-owned (datasheet-enrichment plan §4.4).
+# Per-container narrative overrides: they WIN over any LLM proposal, survive
+# every run, and are never machine-rejected (an unresolvable citation renders
+# as a warning). Accepting a GUI/LLM proposal copies it here — from then on it
+# is yours. NOTE: this file is rewritten whole on GUI accept (comments above
+# this header are not preserved).
+narratives:
+  csharp:csproj:src/OrderProcessor/OrderProcessor.csproj:
+    abstract_md: '**OrderProcessor** is the ordering-side component that likely hosts
+      the long-running “grace period” workflow: it reads background-task settings,
+      runs a `BackgroundService`, and emits a `GracePeriodConfirmedIntegrationEvent`
+      when an order’s grace period has been checked/finished. The shape suggests a
+      small event-driven processing slice with a dedicated service extension for wiring
+      and a typed options object for scheduling limits. It appears'
+    key_points:
+    - cites:
+      - csharp:csproj:src/OrderProcessor/OrderProcessor.csproj
+      text: Appears to exist to monitor order grace periods and publish a confirmation
+        event when the window completes or is checked.
+    - cites:
+      - csharp:csproj:src/OrderProcessor/OrderProcessor.csproj
+      text: 'The main domain terms are explicit: `GracePeriod`, `Order`, `CheckUpdateTime`,
+        and `GracePeriodConfirmedIntegrationEvent`, which suggests an event-driven
+        workflow around order state transition.'
+    - cites:
+      - csharp:csproj:src/OrderProcessor/OrderProcessor.csproj
+      text: '`GracePeriodManagerService : BackgroundService` plus `IEventBus`/`BackgroundTaskOptions`
+        suggests a hosted background worker pattern with configurable timing and integration-event
+        publication. Start reading from the entry-point project file and then the
+        service/extension classes.'

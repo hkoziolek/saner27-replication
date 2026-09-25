@@ -1,0 +1,144 @@
+scenarios:
+  # ordering: synthesized (llm-proposed; not an observed flow)
+  - key: llm-ordering-api-and-infrastructure-startup
+    name: Ordering API and infrastructure startup
+    scope: system
+    ordering_provenance: llm-proposed
+    steps:
+      - from: 'csharp:csproj:src/Ordering.API/Ordering.API.csproj'
+        to: 'csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj'
+        order: 1
+        description: Ordering API references the ordering domain model.
+      - from: 'csharp:csproj:src/Ordering.API/Ordering.API.csproj'
+        to: 'csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj'
+        order: 2
+        description: Ordering API depends on ordering infrastructure.
+      - from: 'csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj'
+        to: 'csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj'
+        order: 3
+        description: Ordering infrastructure uses the ordering domain model.
+      - from: 'csharp:csproj:src/Ordering.API/Ordering.API.csproj'
+        to: 'csharp:csproj:src/EventBus/EventBus.csproj'
+        order: 4
+        description: Ordering API depends on event bus abstractions.
+      - from: 'csharp:csproj:src/Ordering.API/Ordering.API.csproj'
+        to: 'csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj'
+        order: 5
+        description: Ordering API uses the RabbitMQ-backed event bus implementation.
+      - from: 'csharp:csproj:src/Ordering.API/Ordering.API.csproj'
+        to: 'csharp:csproj:src/IntegrationEventLogEF/IntegrationEventLogEF.csproj'
+        order: 6
+        description: Ordering API uses the integration event log building block.
+      - from: 'csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj'
+        to: 'csharp:csproj:src/IntegrationEventLogEF/IntegrationEventLogEF.csproj'
+        order: 7
+        description: Ordering infrastructure uses the integration event log building block.
+      - from: 'csharp:csproj:src/Ordering.API/Ordering.API.csproj'
+        to: 'csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj'
+        order: 8
+        description: Ordering API adopts shared service defaults.
+  - key: runtime-webapp
+    name: 'Runtime: WebApp request flow'
+    scope: system
+    ordering_provenance: declared-in-aspire
+    steps:
+      # runtime-only: not emitted to Structurizr DSL (no static container relationship)
+      - from: 'csharp:csproj:src/WebApp/WebApp.csproj'
+        to: 'csharp:csproj:src/Basket.API/Basket.API.csproj'
+        order: 1
+        description: "references Basket.API \u2014 AddProject<Projects.WebApp>().WithReference(basketApi)"
+      # runtime-only: not emitted to Structurizr DSL (no static container relationship)
+      - from: 'csharp:csproj:src/WebApp/WebApp.csproj'
+        to: 'csharp:csproj:src/Catalog.API/Catalog.API.csproj'
+        order: 1
+        description: "references Catalog \u2014 AddProject<Projects.WebApp>().WithReference(catalogApi)"
+      # runtime-only: not emitted to Structurizr DSL (no static container relationship)
+      - from: 'csharp:csproj:src/WebApp/WebApp.csproj'
+        to: 'csharp:csproj:src/Ordering.API/Ordering.API.csproj'
+        order: 1
+        description: "references Ordering.API \u2014 AddProject<Projects.WebApp>().WithReference(orderingApi)"
+  # ordering: synthesized (llm-proposed; not an observed flow)
+  - key: llm-submit-an-order-through-the-ordering-service
+    name: Submit an order through the ordering service
+    scope: system
+    ordering_provenance: llm-proposed
+    steps:
+      # runtime-only: not emitted to Structurizr DSL (no static container relationship)
+      - from: 'csharp:csproj:src/WebApp/WebApp.csproj'
+        to: 'csharp:csproj:src/Ordering.API/Ordering.API.csproj'
+        order: 1
+        description: WebApp forwards checkout and order commands to Ordering.API.
+      - from: 'csharp:csproj:src/Ordering.API/Ordering.API.csproj'
+        to: 'csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj'
+        order: 2
+        description: Ordering.API invokes the domain model to apply order business rules.
+      - from: 'csharp:csproj:src/Ordering.API/Ordering.API.csproj'
+        to: 'csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj'
+        order: 3
+        description: Ordering.API delegates persistence and infrastructure concerns to Ordering.Infrastructure.
+      - from: 'csharp:csproj:src/Ordering.API/Ordering.API.csproj'
+        to: 'csharp:csproj:src/IntegrationEventLogEF/IntegrationEventLogEF.csproj'
+        order: 4
+        description: Ordering.API records integration events through the event log component.
+  # ordering: synthesized (llm-proposed; not an observed flow)
+  - key: llm-browse-catalog-and-manage-basket-from-webapp
+    name: Browse catalog and manage basket from WebApp
+    scope: system
+    ordering_provenance: llm-proposed
+    steps:
+      # runtime-only: not emitted to Structurizr DSL (no static container relationship)
+      - from: 'csharp:csproj:src/WebApp/WebApp.csproj'
+        to: 'csharp:csproj:src/Catalog.API/Catalog.API.csproj'
+        order: 1
+        description: WebApp requests catalog data while rendering the shopping experience.
+      # runtime-only: not emitted to Structurizr DSL (no static container relationship)
+      - from: 'csharp:csproj:src/WebApp/WebApp.csproj'
+        to: 'csharp:csproj:src/Basket.API/Basket.API.csproj'
+        order: 2
+        description: WebApp sends basket operations to Basket.API for the current user.
+      - from: 'csharp:csproj:src/WebApp/WebApp.csproj'
+        to: 'contract:proto:basket'
+        order: 3
+        description: WebApp uses the basket contract to interact with basket operations.
+  # ordering: synthesized (llm-proposed; not an observed flow)
+  - key: llm-run-the-platform-through-apphost
+    name: Run the platform through AppHost
+    scope: system
+    ordering_provenance: llm-proposed
+    steps:
+      - from: 'csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj'
+        to: 'csharp:csproj:src/Basket.API/Basket.API.csproj'
+        order: 1
+        description: AppHost orchestrates Basket.API as part of the composed application.
+      - from: 'csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj'
+        to: 'csharp:csproj:src/Catalog.API/Catalog.API.csproj'
+        order: 2
+        description: AppHost starts and wires the Catalog service.
+      - from: 'csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj'
+        to: 'csharp:csproj:src/Identity.API/Identity.API.csproj'
+        order: 3
+        description: AppHost includes the Identity service in the runtime composition.
+      - from: 'csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj'
+        to: 'csharp:csproj:src/OrderProcessor/OrderProcessor.csproj'
+        order: 4
+        description: AppHost launches OrderProcessor for background processing.
+      - from: 'csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj'
+        to: 'csharp:csproj:src/Ordering.API/Ordering.API.csproj'
+        order: 5
+        description: AppHost brings up the Ordering API service.
+      - from: 'csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj'
+        to: 'csharp:csproj:src/PaymentProcessor/PaymentProcessor.csproj'
+        order: 6
+        description: AppHost starts the Payment processor service.
+      - from: 'csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj'
+        to: 'csharp:csproj:src/WebApp/WebApp.csproj'
+        order: 7
+        description: AppHost runs the WebApp front end.
+      - from: 'csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj'
+        to: 'csharp:csproj:src/WebhookClient/WebhookClient.csproj'
+        order: 8
+        description: AppHost includes the WebhookClient integration component.
+      - from: 'csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj'
+        to: 'csharp:csproj:src/Webhooks.API/Webhooks.API.csproj'
+        order: 9
+        description: AppHost starts the Webhooks API service.

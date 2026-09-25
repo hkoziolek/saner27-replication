@@ -1,0 +1,25 @@
+# RQ9 rater worksheet (eval §10a) — assign every entity a cluster name; use the
+# project's own documented component names where they exist. Write EXCLUDE to mark an
+# entity out-of-scope (tests, samples, dead code) — record why in the notes column.
+# Blinding: do NOT consult the tool's output, any reference.rsf, or another rater.
+entity,cluster,notes
+csharp:csproj:src/WebApp/WebApp.csproj,View,browser-frontend
+csharp:csproj:src/WebAppComponents/WebAppComponents.csproj,View,browser-frontend
+csharp:csproj:src/ClientApp/ClientApp.csproj,View,ios-android-windows-frontend
+csharp:csproj:src/HybridApp/HybridApp.csproj,View,ios-android-windows-frontend
+csharp:csproj:src/Basket.API/Basket.API.csproj,Basket,
+csharp:csproj:src/PaymentProcessor/PaymentProcessor.csproj,Payment,
+csharp:csproj:src/OrderProcessor/OrderProcessor.csproj,Ordering,
+csharp:csproj:src/Ordering.API/Ordering.API.csproj,Ordering,
+csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj,Ordering,
+csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj,Ordering,
+csharp:csproj:src/WebhookClient/WebhookClient.csproj,Data,
+csharp:csproj:src/Webhooks.API/Webhooks.API.csproj,Data,
+csharp:csproj:src/Catalog.API/Catalog.API.csproj,Catalog,
+csharp:csproj:src/Identity.API/Identity.API.csproj,Identity,
+csharp:csproj:src/EventBus/EventBus.csproj,Infrastructure,
+csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj,Infrastructure,
+csharp:csproj:src/IntegrationEventLogEF/IntegrationEventLogEF.csproj,Infrastructure,
+csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj,Infrastructure,
+csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj,Infrastructure,
+# wall-clock: 12:51-13:23, total 32 min

@@ -1,0 +1,161 @@
+{
+  "baseline_l0_edges": 12,
+  "baseline_targets": 14,
+  "idiom": "automake",
+  "instances_requested": 4,
+  "l0_scoped": true,
+  "language": "cpp",
+  "operators": {
+    "add_forbidden_dep": {
+      "alias_suppressed": 0,
+      "alias_total": 0,
+      "applicable": false,
+      "detected": 0,
+      "false_rename_clean": 0,
+      "false_rename_total": 0,
+      "fn": 0,
+      "fp": 0,
+      "fp_per_run": [],
+      "mutations": [],
+      "n": 0,
+      "rename_correct": 0,
+      "rename_total": 0,
+      "tp": 0
+    },
+    "add_target": {
+      "alias_suppressed": 0,
+      "alias_total": 0,
+      "applicable": true,
+      "detected": 4,
+      "false_rename_clean": 0,
+      "false_rename_total": 0,
+      "fn": 0,
+      "fp": 0,
+      "fp_per_run": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "mutations": [
+        "libxml2-add_target-01",
+        "libxml2-add_target-02",
+        "libxml2-add_target-03",
+        "libxml2-add_target-04"
+      ],
+      "n": 4,
+      "rename_correct": 0,
+      "rename_total": 0,
+      "tp": 4
+    },
+    "merge_targets": {
+      "alias_suppressed": 0,
+      "alias_total": 0,
+      "applicable": false,
+      "detected": 0,
+      "false_rename_clean": 0,
+      "false_rename_total": 0,
+      "fn": 0,
+      "fp": 0,
+      "fp_per_run": [],
+      "mutations": [],
+      "n": 0,
+      "rename_correct": 0,
+      "rename_total": 0,
+      "tp": 0
+    },
+    "remove_dep": {
+      "alias_suppressed": 0,
+      "alias_total": 0,
+      "applicable": true,
+      "detected": 4,
+      "false_rename_clean": 0,
+      "false_rename_total": 0,
+      "fn": 0,
+      "fp": 0,
+      "fp_per_run": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "mutations": [
+        "libxml2-remove_dep-01",
+        "libxml2-remove_dep-02",
+        "libxml2-remove_dep-03",
+        "libxml2-remove_dep-04"
+      ],
+      "n": 4,
+      "rename_correct": 0,
+      "rename_total": 0,
+      "tp": 4
+    },
+    "remove_target": {
+      "alias_suppressed": 0,
+      "alias_total": 0,
+      "applicable": true,
+      "detected": 4,
+      "false_rename_clean": 0,
+      "false_rename_total": 0,
+      "fn": 0,
+      "fp": 0,
+      "fp_per_run": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "mutations": [
+        "libxml2-remove_target-01",
+        "libxml2-remove_target-02",
+        "libxml2-remove_target-03",
+        "libxml2-remove_target-04"
+      ],
+      "n": 4,
+      "rename_correct": 0,
+      "rename_total": 0,
+      "tp": 8
+    },
+    "rename_target": {
+      "alias_suppressed": 4,
+      "alias_total": 4,
+      "applicable": true,
+      "detected": 4,
+      "false_rename_clean": 0,
+      "false_rename_total": 0,
+      "fn": 0,
+      "fp": 0,
+      "fp_per_run": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "mutations": [
+        "libxml2-rename_target-01",
+        "libxml2-rename_target-02",
+        "libxml2-rename_target-03",
+        "libxml2-rename_target-04"
+      ],
+      "n": 4,
+      "rename_correct": 4,
+      "rename_total": 4,
+      "tp": 20
+    }
+  },
+  "schema": "rq6-mutation-summary/1",
+  "system": "libxml2",
+  "totals": {
+    "alias_suppressed": 4,
+    "alias_total": 4,
+    "detected": 16,
+    "false_rename_clean": 0,
+    "false_rename_total": 0,
+    "fn": 0,
+    "fp": 0,
+    "n": 16,
+    "rename_correct": 4,
+    "rename_total": 4,
+    "tp": 36
+  }
+}

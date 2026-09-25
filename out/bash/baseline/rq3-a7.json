@@ -1,0 +1,16 @@
+{
+  "axis": "A7",
+  "edge_delta": 0,
+  "edges_hash_after": "8482ffe1f5086d8f",
+  "edges_hash_before": "8482ffe1f5086d8f",
+  "invariant_holds": true,
+  "n_edges": 34,
+  "n_targets": 49,
+  "names_changed": 49,
+  "partition_hash_after": "0f7354cde8f75073",
+  "partition_hash_before": "0f7354cde8f75073",
+  "partition_moved": 0,
+  "structural_delta": 0,
+  "system": "bash",
+  "targets_delta": 0
+}

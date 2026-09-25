@@ -1,0 +1,9 @@
+{
+  "a2a": 85.13,
+  "floor_kind": "each file -> owning build target (no curation)",
+  "granularity": "file",
+  "mojofm": 89.92,
+  "shared_entities": 759,
+  "system": "abseil",
+  "targets": 90
+}

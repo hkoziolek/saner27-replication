@@ -1,0 +1,76 @@
+{
+  "agreement": {
+    "a2a": 89.69,
+    "ari": 0.527,
+    "chance_agreement": 0.0,
+    "kappa": 0.0,
+    "kappa_aligned": 0.702,
+    "labels_a": 8,
+    "labels_b": 13,
+    "labels_shared": 0,
+    "mojofm_ab": 68.75,
+    "mojofm_ba": 64.29,
+    "mojofm_mean": 66.52,
+    "n_common": 19,
+    "nmi": 0.868,
+    "pair_agreement": 0.918,
+    "raw_agreement": 0.0,
+    "raw_agreement_aligned": 0.737
+  },
+  "clusters": {
+    "a": 8,
+    "b": 13
+  },
+  "entities": {
+    "a": 19,
+    "b": 19,
+    "only_a": 0,
+    "only_b": 0
+  },
+  "flag": "kappa < 0.6 — lower-confidence reference (eval §5.3/§10a.6); reconcile harder or report the disagreement itself",
+  "flag_interpretation": "VOCABULARY-INDUCED: the raters share 0 label(s), so the raw κ measures wording, not structure. Aligning the two label vocabularies optimally gives κ=0.702 (>= 0.6), ARI=0.527, pair agreement=0.918 — the raters agree substantively. The flag rule is applied as written in the plan and explained, not lifted.",
+  "kind": "rq9-ceiling (eval §10a.4 human-ceiling row)",
+  "raters": {
+    "a": "R-C",
+    "b": "R-D"
+  },
+  "vs_reference": {
+    "a": {
+      "a2a": 97.85,
+      "ari": 0.892,
+      "chance_agreement": 0.055,
+      "kappa": 0.387,
+      "kappa_aligned": 0.937,
+      "labels_a": 8,
+      "labels_b": 9,
+      "labels_shared": 5,
+      "mojofm_ab": 93.33,
+      "mojofm_ba": 92.86,
+      "mojofm_mean": 93.09,
+      "n_common": 19,
+      "nmi": 0.966,
+      "pair_agreement": 0.977,
+      "raw_agreement": 0.421,
+      "raw_agreement_aligned": 0.947
+    },
+    "b": {
+      "a2a": 91.84,
+      "ari": 0.615,
+      "chance_agreement": 0.0,
+      "kappa": 0.0,
+      "kappa_aligned": 0.762,
+      "labels_a": 13,
+      "labels_b": 9,
+      "labels_shared": 0,
+      "mojofm_ab": 73.33,
+      "mojofm_ba": 75.0,
+      "mojofm_mean": 74.16,
+      "n_common": 19,
+      "nmi": 0.901,
+      "pair_agreement": 0.942,
+      "raw_agreement": 0.0,
+      "raw_agreement_aligned": 0.789
+    },
+    "reference": "references\\eshop\\reference.rsf"
+  }
+}

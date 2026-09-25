@@ -1,0 +1,177 @@
+{
+  "extractor_knobs": {
+    "ANON_SKIP_DOXYGEN": "1",
+    "ANON_SKIP_ROSLYN": "1"
+  },
+  "failed": [],
+  "finding_kinds": [
+    "new_targets",
+    "removed_targets",
+    "new_edges",
+    "removed_edges",
+    "suspected_renames",
+    "coverage_gap_targets",
+    "coverage_gap_edges",
+    "layering_violations"
+  ],
+  "fixture": "fixtures/squidex",
+  "fixture_head": {
+    "commit": "9dbc5ede7510775ab9fc9d96b61e486089efd04f",
+    "date": "2026-06-16T15:31:52+02:00",
+    "describe": "7.23.0-7-g9dbc5ede7"
+  },
+  "idiom": "csproj",
+  "l0_scoped": true,
+  "labels": [
+    "architectural",
+    "non-architectural",
+    "extraction-noise"
+  ],
+  "language": "cs",
+  "pairs": [
+    {
+      "a": "7.17.0",
+      "a_date": "2025-01-27T20:03:42+01:00",
+      "advisory": false,
+      "b": "7.18.0",
+      "b_date": "2025-03-09T23:53:29+01:00",
+      "commits_build_files": 6,
+      "commits_total": 16,
+      "counts": {
+        "coverage_gap_edges": 0,
+        "coverage_gap_targets": 0,
+        "drift_total": 8,
+        "layering_violations": 0,
+        "new_edges": 6,
+        "new_targets": 2,
+        "removed_edges": 0,
+        "removed_targets": 0,
+        "suspected_renames": 0
+      },
+      "coverage": 1.0,
+      "dir": "out/squidex/history/7.17.0__7.18.0",
+      "needs_curation_a": 1,
+      "needs_curation_b": 1,
+      "shallow_clone": false,
+      "status": "ok",
+      "targets": {
+        "a_first_party": 23,
+        "b_first_party": 25
+      },
+      "warnings": [],
+      "worksheet_rows": 8
+    },
+    {
+      "a": "7.18.0",
+      "a_date": "2025-03-09T23:53:29+01:00",
+      "advisory": false,
+      "b": "7.19.0",
+      "b_date": "2025-05-28T20:19:33+02:00",
+      "commits_build_files": 7,
+      "commits_total": 29,
+      "counts": {
+        "coverage_gap_edges": 0,
+        "coverage_gap_targets": 0,
+        "drift_total": 2,
+        "layering_violations": 0,
+        "new_edges": 1,
+        "new_targets": 1,
+        "removed_edges": 0,
+        "removed_targets": 0,
+        "suspected_renames": 0
+      },
+      "coverage": 1.0,
+      "dir": "out/squidex/history/7.18.0__7.19.0",
+      "needs_curation_a": 1,
+      "needs_curation_b": 1,
+      "shallow_clone": false,
+      "status": "ok",
+      "targets": {
+        "a_first_party": 25,
+        "b_first_party": 26
+      },
+      "warnings": [],
+      "worksheet_rows": 2
+    },
+    {
+      "a": "7.20.0",
+      "a_date": "2025-05-30T00:00:05+02:00",
+      "advisory": false,
+      "b": "7.21.0",
+      "b_date": "2025-07-23T17:51:33+02:00",
+      "commits_build_files": 5,
+      "commits_total": 19,
+      "counts": {
+        "coverage_gap_edges": 0,
+        "coverage_gap_targets": 0,
+        "drift_total": 0,
+        "layering_violations": 0,
+        "new_edges": 0,
+        "new_targets": 0,
+        "removed_edges": 0,
+        "removed_targets": 0,
+        "suspected_renames": 0
+      },
+      "coverage": 1.0,
+      "dir": "out/squidex/history/7.20.0__7.21.0",
+      "needs_curation_a": 1,
+      "needs_curation_b": 1,
+      "shallow_clone": false,
+      "status": "ok",
+      "targets": {
+        "a_first_party": 26,
+        "b_first_party": 26
+      },
+      "warnings": [],
+      "worksheet_rows": 0
+    },
+    {
+      "a": "7.21.0",
+      "a_date": "2025-07-23T17:51:33+02:00",
+      "advisory": false,
+      "b": "7.22.0",
+      "b_date": "2026-04-14T10:18:23+02:00",
+      "commits_build_files": 11,
+      "commits_total": 51,
+      "counts": {
+        "coverage_gap_edges": 0,
+        "coverage_gap_targets": 0,
+        "drift_total": 0,
+        "layering_violations": 0,
+        "new_edges": 0,
+        "new_targets": 0,
+        "removed_edges": 0,
+        "removed_targets": 0,
+        "suspected_renames": 0
+      },
+      "coverage": 1.0,
+      "dir": "out/squidex/history/7.21.0__7.22.0",
+      "needs_curation_a": 1,
+      "needs_curation_b": 1,
+      "shallow_clone": false,
+      "status": "ok",
+      "targets": {
+        "a_first_party": 26,
+        "b_first_party": 26
+      },
+      "warnings": [],
+      "worksheet_rows": 0
+    }
+  ],
+  "rules_dir": "overlays/squidex-blind-R-C",
+  "rules_note": "Curation rules `overlays/squidex-blind-R-C` (RQ9 reference-blind curator R-C, frozen at sign-off) were authored against the pinned fixture commit 9dbc5ede7 (7.23.0-7-g9dbc5ede7, 2026-06-16T15:31:52+02:00), which is later than every release studied. They were held constant (frozen) across every pair: no re-curation between A and B, so drift findings include the rule-maintenance effect (needs-curation = first-party targets the frozen rules leave unmapped).",
+  "rules_origin": "RQ9 reference-blind curator R-C, frozen at sign-off",
+  "schema": "rq6-history/1",
+  "system": "squidex",
+  "totals": {
+    "coverage_gap_edges": 0,
+    "coverage_gap_targets": 0,
+    "drift_total": 10,
+    "layering_violations": 0,
+    "new_edges": 7,
+    "new_targets": 3,
+    "removed_edges": 0,
+    "removed_targets": 0,
+    "suspected_renames": 0
+  }
+}

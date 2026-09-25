@@ -1,0 +1,29 @@
+{
+  "clusters": {
+    "clusters": 13,
+    "members": 2088,
+    "unclustered": {
+      "target_not_in_curated": 519,
+      "unattributed_file": 0
+    }
+  },
+  "derived_from": {
+    "curated_facts_hash": "f7a91ca89e62bdc3c9a4efab64c67f6ddb5fb1f713f133c4adfee21ed8c199ee",
+    "extracted_facts_hash": "809a9ba8719b7723b9226c829bc6ce1398906b52000fd9400fd1b4a18b3a9513"
+  },
+  "granularity": "file",
+  "graph": {
+    "attribution_conflicts": 0,
+    "dropped": {
+      "unknown_endpoint": 0
+    },
+    "edges": 27443,
+    "isolated_nodes": 6,
+    "nodes": 2607,
+    "sidecars": [
+      "roslyn-csharp"
+    ]
+  },
+  "include_external": false,
+  "schema": "graph-export/1"
+}

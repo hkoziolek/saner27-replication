@@ -1,0 +1,22 @@
+{
+  "clusters": 98,
+  "entities_clustered": 1087,
+  "granularity": "file",
+  "graph": "graph-file.rsf",
+  "system": "opencv",
+  "technique": "dir",
+  "vs_pipeline_agreement": {
+    "a2a": 79.32310946589106,
+    "entities_against": 997,
+    "entities_common": 923,
+    "entities_recovered": 1087,
+    "mojofm": 91.08
+  },
+  "vs_reference": {
+    "a2a": 85.96412556053812,
+    "entities_against": 1087,
+    "entities_common": 1087,
+    "entities_recovered": 1087,
+    "mojofm": 92.17
+  }
+}

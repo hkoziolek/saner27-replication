@@ -1,0 +1,78 @@
+# eShop curation — YOUR working rules (RQ9 blind curation, curator R-A).
+# You start from nothing on purpose: group the build targets (projects) into containers
+# by your own architectural judgment. The `arch propose` draft shown in the GUI is a
+# starting suggestion you may accept, reject, or modify. Exclude non-production targets
+# (the tests/* projects) yourself. The file updates as you edit in the GUI curation tree.
+#
+# Stop when the model is review-complete by your judgment (runbook §6 step 4). There is
+# no score to chase, and you must not look at any reference or fidelity number (§4).
+version: 1
+
+defaults:
+  min_relationship_weight: 3
+  drop_external: true
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false
+
+exclude:
+  targets: 
+     - glob: "Basket.UnitTests"
+     - glob: "Catalog.FunctionalTests"
+     - glob: "ClientApp.UnitTests"
+     - glob: "Ordering.FunctionalTests"
+     - glob: "Ordering.UnitTests"
+     - id: 'contract:proto:basket'
+
+
+group: []
+
+group:
+  - container: Ordering Service
+    members:
+      - 'csharp:csproj:src/Ordering.API/Ordering.API.csproj'
+      - 'csharp:csproj:src/Ordering.Domain/Ordering.Domain.csproj'
+      - 'csharp:csproj:src/Ordering.Infrastructure/Ordering.Infrastructure.csproj'
+  - container: Basket Service
+    members:
+      - 'csharp:csproj:src/Basket.API/Basket.API.csproj'
+  - container: Catalog Service
+    members:
+      - 'csharp:csproj:src/Catalog.API/Catalog.API.csproj'
+  - container: Identity Service
+    members:
+      - 'csharp:csproj:src/Identity.API/Identity.API.csproj'
+  - container: Order Processing
+    members:
+      - 'csharp:csproj:src/OrderProcessor/OrderProcessor.csproj'
+  - container: Payment Processing
+    members:
+      - 'csharp:csproj:src/PaymentProcessor/PaymentProcessor.csproj'
+  - container: Webhooks Service
+    members:
+      - 'csharp:csproj:src/Webhooks.API/Webhooks.API.csproj'
+      - 'csharp:csproj:src/WebhookClient/WebhookClient.csproj'
+  - container: Web Frontend
+    parent: frontend
+    members:
+      - 'csharp:csproj:src/WebApp/WebApp.csproj'
+  - container: Client Frontend
+    parent: frontend
+    members:
+      - 'csharp:csproj:src/ClientApp/ClientApp.csproj'
+  - container: Hybrid Frontend
+    parent: frontend
+    members:
+      - 'csharp:csproj:src/HybridApp/HybridApp.csproj'
+  - container: Shared UI Components
+    members:
+      - 'csharp:csproj:src/WebAppComponents/WebAppComponents.csproj'
+  - container: Message Infrastructure
+    members:
+      - 'csharp:csproj:src/EventBus/EventBus.csproj'
+      - 'csharp:csproj:src/EventBusRabbitMQ/EventBusRabbitMQ.csproj'
+      - 'csharp:csproj:src/IntegrationEventLogEF/IntegrationEventLogEF.csproj'
+  - container: Application Hosting
+    members:
+      - 'csharp:csproj:src/eShop.ServiceDefaults/eShop.ServiceDefaults.csproj'
+      - 'csharp:csproj:src/eShop.AppHost/eShop.AppHost.csproj'

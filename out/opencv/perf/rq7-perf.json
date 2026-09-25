@@ -1,0 +1,98 @@
+{
+  "budget": {
+    "cold_budget_s": 1800,
+    "cold_within": true,
+    "warm_budget_s": 180,
+    "warm_within": true
+  },
+  "cold": {
+    "cache": {},
+    "peak_rss_mb": 697.2,
+    "rc": 0,
+    "stages": {
+      "curate": 0.078,
+      "drift": 0.0,
+      "enrich": 0.032,
+      "extract": 679.937,
+      "generate": 0.062,
+      "normalize": 4.829,
+      "validate-curated": 0.141,
+      "validate-extracted": 0.187
+    },
+    "substeps": {
+      "extract": {
+        "autotools-graph": 0.953,
+        "clang-scan-deps": 9.563,
+        "cmake-graph": 370.421,
+        "contracts": 106.593,
+        "csharp-build-graph": 3.391,
+        "csharp-interop": 65.766,
+        "csproj-sdk-role": 1.125,
+        "deployment": 5.719,
+        "doxygen-xml": 109.718,
+        "msbuild-cpp": 1.063,
+        "orchardcore-manifest": 0.984,
+        "plugin-namespace": 1.063,
+        "roslyn-csharp": 1.719,
+        "runtime": 1.859
+      }
+    },
+    "timed_out": false,
+    "wall_s": 696.6
+  },
+  "env": {
+    "ANON_DOXYGEN_INPUT": "modules"
+  },
+  "host": {
+    "cpus": 22,
+    "ram_gb": 31
+  },
+  "language": "cpp",
+  "profile": "full",
+  "schema": "rq7-perf/1",
+  "size": {
+    "edges_file": 2575,
+    "edges_target": 54,
+    "files": 1171,
+    "kloc": 131.6,
+    "targets": 24
+  },
+  "speedup": 10.08,
+  "success": true,
+  "system": "opencv",
+  "warm": {
+    "cache": {},
+    "peak_rss_mb": 110.0,
+    "rc": 0,
+    "stages": {
+      "curate": 0.093,
+      "drift": 0.0,
+      "enrich": 0.031,
+      "extract": 55.797,
+      "generate": 0.063,
+      "normalize": 4.578,
+      "validate-curated": 0.172,
+      "validate-extracted": 0.25
+    },
+    "substeps": {
+      "extract": {
+        "autotools-graph": 1.359,
+        "clang-scan-deps": 9.671,
+        "cmake-graph": 1.312,
+        "contracts": 11.938,
+        "csharp-build-graph": 1.453,
+        "csharp-interop": 9.766,
+        "csproj-sdk-role": 1.422,
+        "deployment": 3.047,
+        "doxygen-xml": 8.438,
+        "msbuild-cpp": 1.188,
+        "orchardcore-manifest": 1.578,
+        "plugin-namespace": 1.656,
+        "roslyn-csharp": 1.266,
+        "runtime": 1.703
+      }
+    },
+    "timed_out": false,
+    "wall_s": 69.1
+  }
+}

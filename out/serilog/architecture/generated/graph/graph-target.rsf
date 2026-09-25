@@ -1,0 +1,6 @@
+depend csharp:csproj:test/AotTestApp/AotTestApp.csproj csharp:csproj:src/Serilog/Serilog.csproj
+depend csharp:csproj:test/Serilog.ApprovalTests/Serilog.ApprovalTests.csproj csharp:csproj:src/Serilog/Serilog.csproj
+depend csharp:csproj:test/Serilog.PerformanceTests/Serilog.PerformanceTests.csproj csharp:csproj:src/Serilog/Serilog.csproj
+depend csharp:csproj:test/Serilog.Tests/Serilog.Tests.csproj csharp:csproj:src/Serilog/Serilog.csproj
+depend csharp:csproj:test/Serilog.Tests/Serilog.Tests.csproj csharp:csproj:test/TestDummies/TestDummies.csproj
+depend csharp:csproj:test/TestDummies/TestDummies.csproj csharp:csproj:src/Serilog/Serilog.csproj

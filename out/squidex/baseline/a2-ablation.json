@@ -1,0 +1,54 @@
+{
+  "granularity": "target",
+  "language": "cs",
+  "reference_clusters": 12,
+  "rungs": {
+    "dir_leaf": {
+      "a2a": 92.0,
+      "clusters": 13,
+      "mojofm": 70.0
+    },
+    "dir_top": {
+      "a2a": 73.44,
+      "clusters": 2,
+      "mojofm": 10.0
+    },
+    "edge_cc": {
+      "a2a": 69.84,
+      "clusters": 1,
+      "mojofm": 0.0
+    },
+    "hand_curation": {
+      "a2a": 95.83,
+      "clusters": 10,
+      "mojofm": 70.0
+    },
+    "name": {
+      "a2a": 71.88,
+      "clusters": 2,
+      "mojofm": 0.0
+    },
+    "name_segment": {
+      "a2a": 91.43,
+      "clusters": 8,
+      "mojofm": 60.0
+    },
+    "none": {
+      "a2a": 92.0,
+      "clusters": 13,
+      "mojofm": 70.0
+    },
+    "propose_all": {
+      "a2a": 86.76,
+      "clusters": 6,
+      "mojofm": 50.0
+    },
+    "sdk_role": {
+      "a2a": 73.44,
+      "clusters": 2,
+      "mojofm": 10.0
+    }
+  },
+  "shared_entities": 13,
+  "system": "squidex"
+}

@@ -1,0 +1,130 @@
+{
+  "alias": {},
+  "description": "merge build target csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj into csharp:csproj:src/OrchardCore/OrchardCore.Module.Targets/OrchardCore.Module.Targets.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Module.Targets/OrchardCore.Module.Targets.csproj"
+      ]
+    ],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Flows/OrchardCore.Flows.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Menu/OrchardCore.Menu.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Notifications/OrchardCore.Notifications.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Themes/OrchardCore.Themes.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.Users/OrchardCore.Users.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Admin.Abstractions/OrchardCore.Admin.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.ContentManagement/OrchardCore.ContentManagement.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.DisplayManagement/OrchardCore.DisplayManagement.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.ResourceManagement/OrchardCore.ResourceManagement.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Theme.Targets/OrchardCore.Theme.Targets.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Users.Abstractions/OrchardCore.Users.Abstractions.csproj"
+      ],
+      [
+        "csharp:csproj:src/OrchardCore/OrchardCore.Application.Cms.Targets/OrchardCore.Application.Cms.Targets.csproj",
+        "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/OrchardCore.Themes/TheTheme/TheTheme.csproj"
+    ],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore\\OrchardCore.Application.Cms.Targets\\OrchardCore.Application.Cms.Targets.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\OrchardCore.slnx",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Assets\\package.json",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Assets\\scss\\_variables.scss",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Assets\\scss\\main\\_layout.scss",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Assets\\scss\\modules\\_pager.scss",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Assets\\scss\\modules\\_recaptcha.scss",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Assets\\scss\\modules\\_taxonomy.scss",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Assets\\scss\\modules\\_widgets.scss",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Assets\\scss\\theme.scss",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Assets\\scss\\themes\\dark\\_index.scss",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Assets\\scss\\themes\\dark\\_theme-helpers.scss",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Assets\\scss\\themes\\light\\_index.scss",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Assets\\scss\\themes\\light\\_theme-helpers.scss",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Assets.json",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Controllers\\HomeController.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Drivers\\ToggleThemeNavbarDisplayDriver.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Manifest.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Recipes\\saas.recipe.json",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Startup.cs",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\TheTheme.csproj",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\_ViewImports.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Branding.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\FlowPart.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Home\\Index.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Layout.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Menu.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\MenuItem-MainMenu.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\MenuItem.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\MenuItemLink-ContentMenuItem.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\MenuItemLink-HtmlMenuItem.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\MenuItemLink-LinkMenuItem.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Message.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\NavbarUserMenu.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\NotifyMessages.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Pager.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Pager_CurrentPage.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Pager_First.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Pager_Gap.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Pager_Last.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Pager_Link.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Pager_Next.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Pager_Previous.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\ToggleTheme.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\UserNotificationNavbar.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Widget-Form.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Widget-Input.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Widget-Label.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Widget-Select.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Widget-TextArea.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Widget-Validation.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Widget-ValidationSummary.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\Views\\Widget.Wrapper-Zone-HeadMeta.cshtml",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\wwwroot\\images\\favicon.ico",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\wwwroot\\styles\\theme.css",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\wwwroot\\styles\\theme.min.css",
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Themes\\TheTheme\\wwwroot\\Theme.png"
+  ],
+  "id": "orchardcore-merge_targets-03",
+  "operator": "merge_targets",
+  "system": "orchardcore"
+}

@@ -1,0 +1,75 @@
+{
+  "system": "squidex",
+  "grade": "GT-exp",
+  "subject_version": "Squidex/squidex main @ 9dbc5ed (2026-06-16)",
+  "subject_repo": "https://github.com/Squidex/squidex",
+  "granularity": "target (project / .csproj)",
+  "granularity_note": "DEVIATION from the HG1 verdict (plans/notes/2026-07-21-squidex-onboarding-hg1.md: 'score at file granularity'): the raters received the 19-entity target-granularity worksheet; R-B flagged exactly one unit as MIXED (Squidex.Infrastructure) and the pre-registered stage-2 file-level worksheet for it was not issued, so the reference is a target-granularity consensus. The 'fraction of code needing file-level judgment' (companion plan §5 step 3) is therefore recorded as 1 of 15 in-scope units FLAGGED, none split. A file-granularity extension (Infrastructure only) remains possible later without touching this file's clusters.",
+  "source": "Primarily the current source code at the pinned SHA. The project's public docs as handed to the raters (packet docs/LINKS.md: docs.squidex.io incl. the ~2019 architecture overview, the repository README, Orleans/CQRS background, maintainer discussions) were consulted but — per both raters at the 2026-08-28 reconciliation — found to carry little usable information for clustering build targets, and were largely not used (doc-delta.json `finding`). No source ships a project-level decomposition; the reference is the raters' code-derived expert consensus — GT-exp.",
+  "construction": {
+    "protocol": "companion plan 2026-07-13-human-reference-oss-extension.md §5 steps 2–4 + eval §10a / docs/rq9-blind-curation-runbook.md §5: two raters mapped every first-party build target independently from code + docs, blind to each other and to all tool output; pre-consensus worksheets frozen; reconciliation to consensus afterwards.",
+    "raters": [
+      "R-A",
+      "R-B"
+    ],
+    "rated_on": {
+      "R-A": "2026-08-14",
+      "R-B": "2026-08-26"
+    },
+    "wall_clock_min": {
+      "R-A": 60,
+      "R-B": 41
+    },
+    "reconciled_on": "2026-08-28",
+    "reconciliation_decision": "FINE granularity: one cluster per cohesive project, Domain split into its parts (Core / Entities / Events / Users / Shared / Application) rather than R-A's single Domain; Web (R-B's label) over API; frontend/generator kept in scope as its own cluster (R-A's position) rather than excluded (R-B's).",
+    "consensus_relation_to_raters": "Identical to R-B's partition on the 14 entities both raters kept (0 boundary conflicts, 0 merges, 0 splits) plus Generator retained from R-A; a strict refinement of R-A's partition (R-A's Domain = the union of six consensus clusters; 0 boundary conflicts). Every disagreement between the raters was granularity or scope, never a cut across a boundary.",
+    "excluded": "backend/tools/GenerateLanguages and the three tools/TestSuite projects (both raters: build tooling / tests). The backend/tests/* projects were never in the worksheet (first-party production targets only).",
+    "artifacts": "references/squidex/blind-curation/ — worksheet-R-A.raw.csv (as received, Excel-damaged) + worksheet-R-A.csv (deterministic repair, repair-worksheet-R-A.py; two spliced rows filled from R-A's own confirmation of 2026-08-30) + worksheet-R-B.csv (frozen) + rater-*.rsf + ceiling.json + worksheet-consensus.csv → consensus.rsf (= this reference.rsf) + attestations (names redacted) + README.md."
+  },
+  "format": "RSF `contain <cluster> <csproj-id>` tuples; entity ids are the `csharp:csproj:<repo-rel-path>` ids the target-granularity graph export emits.",
+  "clusters": 12,
+  "entities": 15,
+  "independent_raters": {
+    "agreement": {
+      "kappa": 0.391,
+      "raw_agreement": 0.429,
+      "chance_agreement": 0.061,
+      "labels": {
+        "R-A": 6,
+        "R-B": 11,
+        "shared": 4
+      },
+      "mojofm_ab": 54.55,
+      "mojofm_ba": 54.55,
+      "mojofm_mean": 54.55,
+      "a2a": 86.3,
+      "entities_common": 14,
+      "only_R-A": 1,
+      "only_R-B": 0,
+      "clusters": {
+        "R-A": 7,
+        "R-B": 11
+      },
+      "excluded": {
+        "R-A": 4,
+        "R-B": 5
+      },
+      "flag": "kappa < 0.6 — the pre-registered lower-confidence flag (eval §5.3 / §10a.6) FIRED.",
+      "note": "κ is computed on normalized labels; the raters shared 4 label strings (Extensions, Translator, Data, Infrastructure) and differed on the rest mostly by altitude (R-A 'Domain' vs R-B's six parts) or synonym (API vs Web). Partition structure: R-A's 7 clusters are a strict coarsening of R-B's 11 on the common set — 0 boundary conflicts. The low κ therefore measures granularity + vocabulary disagreement, not structural disagreement; the pairwise MoJoFM 54.6 is the pre-registered ceiling row and is reported as is."
+    },
+    "mixed_units": {
+      "Squidex.Infrastructure": "flagged MIXED by R-B; kept whole (see granularity_note)"
+    },
+    "delta_ledger": "references/squidex/doc-delta.json — CLOSED with no entries by finding: the 2019 doc was judged uninformative for target-level clustering and largely bypassed (staleness not measurable through the delta instrument at this granularity).",
+    "maintainer_reviewed": "not-posted — companion plan §5 step 5 (non-blocking) still open; record yes/no/partial/no-response + link here when done."
+  },
+  "rq1_pipeline_row": "Decision 2026-08-30: Squidex's RQ1/RQ2 `pipeline` row is the reference-blind RQ9 curation (overlays/squidex-blind-R-C, curator R-C, never saw this reference) — the only curated Squidex model and non-circular by construction; out/squidex/baseline/comparison-target.json is built with --arch-dir out/squidex-rq9/architecture. The onboarding overlay (overlays/squidex) is a floor-level bootstrap, never a result. Its admission moves the RQ2 Friedman p across 0.05 (0.054 on 8 systems -> 0.012 on 9): both are reported (eval §12 corpus-extension rule).",
+  "rater_agreement": "Two blind raters (R-A, R-B), see independent_raters: κ 0.391 (flagged), MoJoFM 54.6, a2a 86.3, 0 boundary conflicts; consensus reconciled 2026-08-28 at fine granularity.",
+  "caveats": [
+    "Mostly-singleton reference: 12 clusters over 15 entities (only Data=3 and Core=2 are multi-project). At target granularity the reference is close to 'one project per cluster', so any technique that keeps projects apart scores well and the discriminating cases are few (Data, Core, and whether Generator/Migrations are in scope). Report a2a and cluster counts beside MoJoFM, and treat this as the expected consequence of the fine-granularity decision, not as strong evidence of recoverability.",
+    "Convention-derived in part: cluster names mirror the Squidex.<X> project names, i.e. the raters' fine cut coincides with the project layout — the R1 circularity caveat applies at target granularity; the CQRS write/read cut that motivated Squidex's selection (companion §4) lives INSIDE projects and is not expressed at this granularity (granularity_note).",
+    "Lower-confidence reference by the pre-registered κ rule (0.391 < 0.6); the nesting analysis shows the disagreement is granularity/vocabulary, not boundaries — state both.",
+    "Doc staleness (R6): the ~2019 architecture doc was offered as the raters' primary non-code input, but both raters reported at reconciliation that it carried little usable information for clustering build targets and mapped mainly from current code. The delta ledger is therefore empty by finding, not by measurement of agreement: staleness could not be measured as doc-vs-code deltas at this granularity — report the doc as too old/coarse to seed a target-level reference, and the reference as code-derived (doc-delta.json).",
+    "R-A's worksheet was repaired from an Excel-damaged export (labels unchanged; two rows confirmed by the rater afterwards) — the raw file is the artifact of record."
+  ]
+}

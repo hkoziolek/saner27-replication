@@ -1,0 +1,416 @@
+[arc] 24 entities from graph-target.rsf
+[arc] 24/24 entities had readable source text
+Mallet LDA: 12 topics, 4 topic bits, 1111 topic mask
+max tokens: 16607
+total tokens: 58930
+<10> LL/token: -7,25494
+<20> LL/token: -6,95311
+<30> LL/token: -6,81949
+<40> LL/token: -6,73967
+
+0	1	eshop public task return int static services 
+1	1	var assert args object null task testmethod 
+2	1	catalog public api items type item null 
+3	1	property hascolumntype int id ordering modelbuilder eshop 
+4	1	logger api await async application var task 
+5	1	string public user identity model license null 
+6	1	public order ordering string command orderstatus eshop 
+7	1	public string private await bool readonly false 
+8	1	var response cancellationtoken await version result catalog 
+9	1	services event public builder integrationevent global eshop 
+10	1	string var public return microsoft namespace builder 
+11	1	clientapp global null system set settingsservice compiler 
+
+<50> LL/token: -6,67907
+<60> LL/token: -6,65962
+<70> LL/token: -6,63164
+<80> LL/token: -6,62385
+<90> LL/token: -6,60094
+
+0	1	public eshop string task system int static 
+1	1	var assert args testmethod string task mockviewmodel 
+2	1	catalog public api items string item type 
+3	1	property hascolumntype id int ordering modelbuilder table 
+4	1	logger api await var application id task 
+5	1	string public identity user null model license 
+6	1	public order ordering string eshop command orderstatus 
+7	1	public await string private bool readonly set 
+8	1	var api response cancellationtoken version assert await 
+9	1	builder event global eventbus static extensions public 
+10	1	public var string return namespace microsoft class 
+11	1	clientapp global null return var settingsservice generatedcode 
+
+<100> LL/token: -6,59162
+<110> LL/token: -6,58592
+<120> LL/token: -6,5795
+<130> LL/token: -6,58197
+<140> LL/token: -6,58137
+
+0	1	public eshop task string system return int 
+1	1	var assert args testmethod mockviewmodel task result 
+2	1	catalog public api items string item services 
+3	1	property hascolumntype int id ordering modelbuilder integer 
+4	1	logger api await task event async application 
+5	1	string public user identity null text model 
+6	1	public string order ordering command eshop private 
+7	1	public clientapp string private await set bool 
+8	1	var api response version assert cancellationtoken await 
+9	1	builder event private global extensions var public 
+10	1	public var return string microsoft class builder 
+11	1	global null var clientapp settingsservice compiler generatedcode 
+
+<150> LL/token: -6,57784
+<160> LL/token: -6,57593
+<170> LL/token: -6,56741
+<180> LL/token: -6,56717
+<190> LL/token: -6,56828
+
+0	1	public eshop task system string static int 
+1	1	var assert args testmethod mockviewmodel null task 
+2	1	catalog public api items item catalogitem type 
+3	1	property hascolumntype int id ordering modelbuilder integer 
+4	1	logger await api event async task application 
+5	1	string public user identity null model text 
+6	1	public order ordering string eshop command private 
+7	1	public string private await clientapp bool set 
+8	1	var api response version await assert cancellationtoken 
+9	1	builder context extensions event var global return 
+10	1	public var string return microsoft class options 
+11	1	global null clientapp var return compiler settingsservice 
+
+<200> LL/token: -6,56631
+<210> LL/token: -6,56564
+<220> LL/token: -6,56299
+<230> LL/token: -6,56084
+<240> LL/token: -6,56313
+
+0	1	public eshop string task return int static 
+1	1	var assert args testmethod mockviewmodel task null 
+2	1	catalog public api items item catalogitem string 
+3	1	property hascolumntype id int ordering modelbuilder integer 
+4	1	logger await api var event async id 
+5	1	string public identity user null text model 
+6	1	public order string ordering eshop private command 
+7	1	public string clientapp private await set bool 
+8	1	var api response await assert cancellationtoken version 
+9	1	builder extensions event static context options var 
+10	1	public return string microsoft var builder class 
+11	1	global null system clientapp var return compiler 
+
+[beta: 0,03238] 
+<250> LL/token: -6,51889
+<260> LL/token: -6,5131
+<270> LL/token: -6,50285
+<280> LL/token: -6,51158
+<290> LL/token: -6,51228
+
+0	0,9477	public eshop task int string namespace static 
+1	0,37704	var assert args testmethod mockviewmodel null result 
+2	0,57499	catalog public int api items context item 
+3	0,47675	property hascolumntype id ordering int modelbuilder table 
+4	0,73082	logger await api event async var services 
+5	0,3374	string public user identity var text null 
+6	0,65094	public string order command ordering private int 
+7	0,42961	public string set eshop private await bool 
+8	0,62556	var api response assert await version cancellationtoken 
+9	0,67831	var builder extensions microsoft options static return 
+10	0,88365	string public var services return api builder 
+11	0,30744	null global clientapp system var return compiler 
+
+[beta: 0,03721] 
+<300> LL/token: -6,49833
+<310> LL/token: -6,48904
+<320> LL/token: -6,48932
+<330> LL/token: -6,48128
+<340> LL/token: -6,48988
+
+0	0,78399	public eshop string basket task int class 
+1	0,14575	var assert args testmethod mockviewmodel null result 
+2	0,28647	catalog public api int items string context 
+3	0,22228	property hascolumntype ordering id integer int modelbuilder 
+4	0,51295	logger await public var api event async 
+5	0,11345	string public user identity var text null 
+6	0,40044	public string ordering order command private eshop 
+7	0,17231	public string eshop clientapp set private await 
+8	0,35396	var api response assert cancellationtoken await version 
+9	0,35081	builder var microsoft extensions static options return 
+10	0,67319	public string services return options app var 
+11	0,07627	global null system return var clientapp compiler 
+
+[beta: 0,03829] 
+<350> LL/token: -6,48422
+<360> LL/token: -6,47922
+<370> LL/token: -6,46697
+<380> LL/token: -6,46872
+<390> LL/token: -6,46784
+
+0	0,58912	public eshop string basket int class return 
+1	0,06899	var assert args testmethod mockviewmodel null result 
+2	0,16112	catalog public int api items id item 
+3	0,10932	property hascolumntype ordering id int eshop modelbuilder 
+4	0,38694	logger await public event task var api 
+5	0,0393	string public user var identity text null 
+6	0,23494	public string command order ordering private eshop 
+7	0,095	public string private set eshop clientapp task 
+8	0,19876	var api response assert cancellationtoken await testcontext 
+9	0,17909	builder static var microsoft return options extensions 
+10	0,45429	public string return var services builder class 
+11	0,02446	global null system return clientapp public var 
+
+[beta: 0,03909] 
+<400> LL/token: -6,46864
+<410> LL/token: -6,4668
+<420> LL/token: -6,4706
+<430> LL/token: -6,47035
+<440> LL/token: -6,47371
+
+0	0,42548	public string basket int eshop items task 
+1	0,03765	var assert args testmethod mockviewmodel null result 
+2	0,09384	catalog api int public items string id 
+3	0,07644	property hascolumntype ordering id int modelbuilder integer 
+4	0,31861	public logger await event var task eshop 
+5	0,01763	string public user identity var text null 
+6	0,15057	public string order command ordering return private 
+7	0,05929	public string clientapp set private task bool 
+8	0,11054	var api response assert cancellationtoken await testcontext 
+9	0,11051	builder var static microsoft return options extensions 
+10	0,2576	string public return services var api webhooks 
+11	0,01037	global null system public eshop return var 
+
+[beta: 0,03932] 
+<450> LL/token: -6,46968
+<460> LL/token: -6,46554
+<470> LL/token: -6,47677
+<480> LL/token: -6,46739
+<490> LL/token: -6,46612
+
+0	0,31148	public eshop int basket string var class 
+1	0,02785	var assert args testmethod mockviewmodel public null 
+2	0,06745	catalog int api string items property public 
+3	0,05412	property hascolumntype ordering id int modelbuilder eshop 
+4	0,2691	public logger await event eshop task api 
+5	0,01088	string public user identity var text null 
+6	0,10427	public string command order ordering return int 
+7	0,04151	public string set private clientapp task bool 
+8	0,0614	var response api assert await testcontext cancellationtoken 
+9	0,09008	builder return static microsoft var options extensions 
+10	0,14571	public string var services webhooks return builder 
+11	0,00912	global public null system return eshop clientapp 
+
+[beta: 0,03947] 
+<500> LL/token: -6,46905
+<510> LL/token: -6,46703
+<520> LL/token: -6,45677
+<530> LL/token: -6,46993
+<540> LL/token: -6,45909
+
+0	0,22967	public eshop string basket int class var 
+1	0,02389	var assert args testmethod mockviewmodel null result 
+2	0,05563	catalog string int public property api id 
+3	0,05144	property hascolumntype ordering int id modelbuilder integer 
+4	0,23034	logger public await eshop event task global 
+5	0,009	string public user identity var text null 
+6	0,07659	public string command order ordering private int 
+7	0,02693	string public clientapp private namespace void task 
+8	0,04455	var api response assert await testcontext version 
+9	0,07297	builder var return microsoft options static text 
+10	0,08574	public string var services webhooks return options 
+11	0,00655	public global null system eshop clientapp return 
+
+[beta: 0,04024] 
+<550> LL/token: -6,46837
+<560> LL/token: -6,46048
+<570> LL/token: -6,46453
+<580> LL/token: -6,45612
+<590> LL/token: -6,45135
+
+0	0,15933	public eshop string task var basket int 
+1	0,02117	var assert args testmethod mockviewmodel public null 
+2	0,04841	catalog int api id string property public 
+3	0,04741	property hascolumntype ordering id modelbuilder int eshop 
+4	0,21635	public await logger event eshop task global 
+5	0,00906	string public user identity text var property 
+6	0,06127	public order string command ordering int private 
+7	0,01727	public string clientapp private namespace appenvironmentservice set 
+8	0,03414	var api response assert cancellationtoken await testcontext 
+9	0,05971	builder static microsoft var return options extensions 
+10	0,05862	public string var api services return webhooks 
+11	0,0066	public global eshop null system return clientapp 
+
+[beta: 0,04067] 
+<600> LL/token: -6,45269
+<610> LL/token: -6,45118
+<620> LL/token: -6,43742
+<630> LL/token: -6,4471
+<640> LL/token: -6,43576
+
+0	0,1288	public string eshop basket int items var 
+1	0,01921	var assert args public testmethod null result 
+2	0,03863	catalog int api id property string public 
+3	0,04218	property ordering hascolumntype id int modelbuilder eshop 
+4	0,20157	public await eshop event logger task async 
+5	0,00803	string public user identity text property var 
+6	0,05318	public command order string ordering private api 
+7	0,01376	string public clientapp appenvironmentservice private navigationservice nameof 
+8	0,03091	var api response assert await testcontext version 
+9	0,05544	builder return microsoft var options static extensions 
+10	0,04113	public string var api services webhooks builder 
+11	0,00629	public global eshop null system return clientapp 
+
+[beta: 0,04185] 
+<650> LL/token: -6,4351
+<660> LL/token: -6,43309
+<670> LL/token: -6,41886
+<680> LL/token: -6,42285
+<690> LL/token: -6,41944
+
+0	0,11703	string eshop public basket int var namespace 
+1	0,01955	var assert args public null string testmethod 
+2	0,03528	catalog int property id api hascolumntype string 
+3	0,0395	property ordering hascolumntype id int eshop string 
+4	0,17545	public await event logger eshop task global 
+5	0,00741	string public user text identity property var 
+6	0,05248	public command order string ordering eshop logger 
+7	0,01311	public string appenvironmentservice var clientapp private navigationservice 
+8	0,02785	var api response assert await cancellationtoken version 
+9	0,04766	builder return var microsoft static string extensions 
+10	0,03811	public string var services api options return 
+11	0,00694	public global null clientapp system eshop return 
+
+[beta: 0,04217] 
+<700> LL/token: -6,41635
+<710> LL/token: -6,41348
+<720> LL/token: -6,41392
+<730> LL/token: -6,41654
+<740> LL/token: -6,41183
+
+0	0,1012	public eshop var string int basket task 
+1	0,02057	var args assert public null result testmethod 
+2	0,03309	catalog int property api id hascolumntype public 
+3	0,03554	ordering property hascolumntype id int eshop string 
+4	0,16018	public await event logger eshop async global 
+5	0,00586	string public user identity text property hascolumntype 
+6	0,04822	public command string order ordering private logger 
+7	0,01264	public string navigationservice var private assert catalogviewmodel 
+8	0,02715	var api response assert cancellationtoken await testcontext 
+9	0,04696	builder var return static microsoft options extensions 
+10	0,03362	public string services var webhooks options namespace 
+11	0,00681	public clientapp global eshop null system string 
+
+[beta: 0,04271] 
+<750> LL/token: -6,41026
+<760> LL/token: -6,40678
+<770> LL/token: -6,39947
+<780> LL/token: -6,39736
+<790> LL/token: -6,38874
+
+0	0,09064	public string var basket int task eshop 
+1	0,01766	var args assert public null result string 
+2	0,03137	catalog int api id property hascolumntype public 
+3	0,02027	ordering property hascolumntype id int eshop string 
+4	0,15239	public event eshop logger global task builder 
+5	0,0067	string public user text identity var property 
+6	0,05223	public command string order ordering logger private 
+7	0,011	public string var navigationservice assert catalogviewmodel mockviewmodel 
+8	0,02532	var api response assert cancellationtoken testcontext await 
+9	0,04838	builder var microsoft options static return text 
+10	0,03408	public string var services webhooks eshop return 
+11	0,00507	public global clientapp eshop null system return 
+
+[beta: 0,04334] 
+<800> LL/token: -6,39919
+<810> LL/token: -6,39177
+<820> LL/token: -6,38787
+<830> LL/token: -6,38782
+<840> LL/token: -6,39082
+
+0	0,08891	public int eshop basket string var task 
+1	0,01484	var args assert public null string result 
+2	0,03461	catalog int api property id hascolumntype string 
+3	0,01775	ordering property hascolumntype id int eshop string 
+4	0,1508	public event logger eshop global task builder 
+5	0,00559	string public user var identity text property 
+6	0,04805	public command order string ordering eshop api 
+7	0,01204	public string var assert private catalogviewmodel navigationservice 
+8	0,02917	var api response assert cancellationtoken await testcontext 
+9	0,04068	builder var microsoft return static options string 
+10	0,03384	public string var services webhooks eshop task 
+11	0,00508	public clientapp global eshop null system string 
+
+[beta: 0,04396] 
+<850> LL/token: -6,39153
+<860> LL/token: -6,39386
+<870> LL/token: -6,38758
+<880> LL/token: -6,38355
+<890> LL/token: -6,37809
+
+0	0,08122	public eshop basket string int task var 
+1	0,01167	var args assert public null string result 
+2	0,03191	catalog int property id api hascolumntype public 
+3	0,01971	ordering property hascolumntype id int eshop string 
+4	0,14759	public event eshop logger await namespace global 
+5	0,00559	string public user text identity property var 
+6	0,04516	public command string order ordering logger api 
+7	0,01209	public string var assert navigationservice catalogviewmodel mockviewmodel 
+8	0,02959	var api response assert cancellationtoken await testcontext 
+9	0,03526	builder var microsoft return static options string 
+10	0,0332	public string var services return task api 
+11	0,00559	public global clientapp eshop null string system 
+
+[beta: 0,04379] 
+<900> LL/token: -6,37923
+<910> LL/token: -6,38316
+<920> LL/token: -6,39078
+<930> LL/token: -6,38225
+<940> LL/token: -6,38654
+
+0	0,08242	public int string eshop basket var items 
+1	0,0107	var args assert public null string result 
+2	0,02722	catalog int property api id hascolumntype string 
+3	0,0196	ordering property hascolumntype int id eshop string 
+4	0,14121	public event logger eshop global task await 
+5	0,00525	string public user identity var property text 
+6	0,04582	public command string order ordering eshop private 
+7	0,0121	public string var assert navigationservice catalogviewmodel mockviewmodel 
+8	0,03138	var response api assert cancellationtoken await testcontext 
+9	0,02852	builder var return microsoft options static extensions 
+10	0,03182	public string var services eshop webhooks return 
+11	0,00571	public clientapp global eshop null system string 
+
+[beta: 0,04412] 
+<950> LL/token: -6,38632
+<960> LL/token: -6,38322
+<970> LL/token: -6,39234
+<980> LL/token: -6,38468
+<990> LL/token: -6,39225
+
+0	0,08406	public eshop basket string var int items 
+1	0,01142	var args assert public null result testmethod 
+2	0,02401	catalog int api property id hascolumntype string 
+3	0,01741	ordering property hascolumntype id int eshop modelbuilder 
+4	0,1388	public event logger global eshop await task 
+5	0,00473	string public user text identity property var 
+6	0,04405	public command string order ordering logger private 
+7	0,01162	public string var assert catalogviewmodel mockviewmodel appenvironmentservice 
+8	0,02886	var api response assert cancellationtoken await testcontext 
+9	0,02294	builder var microsoft options return public static 
+10	0,03713	public string var services return namespace options 
+11	0,0053	public global clientapp eshop null system string 
+
+[beta: 0,04371] 
+<1000> LL/token: -6,38191
+
+Total time: 8 seconds
+[arc] LDA done: 12 topics, 1000 iterations
+[arc] DocTopics parsed 24 items, numTopics=12
+    src='/eshop-0/csharp:csproj:src/Ordering/Infrastructure/Ordering/Infrastructure/csproj' cSourced=false
+    src='/eshop-0/csharp:csproj:src/WebApp/WebApp/csproj' cSourced=false
+    src='/eshop-0/csharp:csproj:src/EventBus/EventBus/csproj' cSourced=false
+    src='/eshop-0/csharp:csproj:src/eShop/ServiceDefaults/eShop/ServiceDefaults/csproj' cSourced=false
+    src='/eshop-0/csharp:csproj:src/HybridApp/HybridApp/csproj' cSourced=false
+[arc] 0/24 DocTopicItems are C-sourced
+No DocTopics file found, generating new one.
+[arc] architecture initialized: 24 singleton clusters (entities matched to a topic vector)
+[arc] clustered to 9 clusters (target 9)
+[arc] wrote <repo>\out\eshop\baseline\arc-target\clusters.rsf
+[arc-target] 9 clusters / 24 entities — MoJoFM=26.67 a2a=85.86956521739131 vs reference -> <repo>\out\eshop\baseline\arc-target\fidelity.json

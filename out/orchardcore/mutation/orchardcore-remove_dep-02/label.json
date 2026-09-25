@@ -1,0 +1,23 @@
+{
+  "alias": {},
+  "description": "remove declared dependency csharp:csproj:src/OrchardCore.Modules/OrchardCore.GitHub/OrchardCore.GitHub.csproj -> csharp:csproj:src/OrchardCore/OrchardCore.Admin.Abstractions/OrchardCore.Admin.Abstractions.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/OrchardCore.Modules/OrchardCore.GitHub/OrchardCore.GitHub.csproj",
+        "csharp:csproj:src/OrchardCore/OrchardCore.Admin.Abstractions/OrchardCore.Admin.Abstractions.csproj"
+      ]
+    ],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\orchardcore\\mutation\\_work\\orchardcore\\repo\\src\\OrchardCore.Modules\\OrchardCore.GitHub\\OrchardCore.GitHub.csproj"
+  ],
+  "id": "orchardcore-remove_dep-02",
+  "operator": "remove_dep",
+  "system": "orchardcore"
+}

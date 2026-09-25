@@ -1,0 +1,607 @@
+{
+  "provenance": {
+    "commit": "d5e22ef5802bc1d2d730cded59a700a88abfa47a",
+    "coverage": {
+      "cpp:target:gjobread": {
+        "L0": true,
+        "L1": false,
+        "L2": "1 files",
+        "L3": true
+      },
+      "cpp:target:libxml2": {
+        "L0": true,
+        "L1": false,
+        "L2": "10 files",
+        "L3": false
+      },
+      "cpp:target:testAutomata": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:testC14N": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:testDocbook": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:testHTML": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:testRegexp": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:testSAX": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:testSchemas": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:testThreads": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:testURI": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:testXPath": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:xmlcatalog": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      },
+      "cpp:target:xmllint": {
+        "L0": true,
+        "L1": false,
+        "L2": false,
+        "L3": false
+      }
+    },
+    "extractors": [
+      {
+        "name": "autotools-make",
+        "version": "0.1.0"
+      },
+      {
+        "name": "csharp-build-graph",
+        "version": "0.3.0"
+      },
+      {
+        "name": "doxygen-xml",
+        "version": "0.1.0"
+      }
+    ],
+    "generated_at": "2026-07-16T17:02:40.049319+00:00",
+    "repo": "libxml2"
+  },
+  "relationships": [
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "count": 1,
+          "detail": "#include \"libxml.h\"",
+          "type": "include"
+        },
+        {
+          "detail": "Makefile: testAutomata links libxml2",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link + include corroborate",
+      "id": "rel:cpp:target:testAutomata->cpp:target:libxml2",
+      "is_declared_dependency": true,
+      "source": "cpp:target:testAutomata",
+      "target": "cpp:target:libxml2",
+      "weight": 6
+    },
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "count": 1,
+          "detail": "#include \"libxml.h\"",
+          "type": "include"
+        },
+        {
+          "detail": "Makefile: testC14N links libxml2",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link + include corroborate",
+      "id": "rel:cpp:target:testC14N->cpp:target:libxml2",
+      "is_declared_dependency": true,
+      "source": "cpp:target:testC14N",
+      "target": "cpp:target:libxml2",
+      "weight": 6
+    },
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "count": 1,
+          "detail": "#include \"libxml.h\"",
+          "type": "include"
+        },
+        {
+          "detail": "Makefile: testDocbook links libxml2",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link + include corroborate",
+      "id": "rel:cpp:target:testDocbook->cpp:target:libxml2",
+      "is_declared_dependency": true,
+      "source": "cpp:target:testDocbook",
+      "target": "cpp:target:libxml2",
+      "weight": 6
+    },
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "count": 1,
+          "detail": "#include \"libxml.h\"",
+          "type": "include"
+        },
+        {
+          "detail": "Makefile: testHTML links libxml2",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link + include corroborate",
+      "id": "rel:cpp:target:testHTML->cpp:target:libxml2",
+      "is_declared_dependency": true,
+      "source": "cpp:target:testHTML",
+      "target": "cpp:target:libxml2",
+      "weight": 6
+    },
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "count": 1,
+          "detail": "#include \"libxml.h\"",
+          "type": "include"
+        },
+        {
+          "detail": "Makefile: testRegexp links libxml2",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link + include corroborate",
+      "id": "rel:cpp:target:testRegexp->cpp:target:libxml2",
+      "is_declared_dependency": true,
+      "source": "cpp:target:testRegexp",
+      "target": "cpp:target:libxml2",
+      "weight": 6
+    },
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "count": 1,
+          "detail": "#include \"libxml.h\"",
+          "type": "include"
+        },
+        {
+          "detail": "Makefile: testSAX links libxml2",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link + include corroborate",
+      "id": "rel:cpp:target:testSAX->cpp:target:libxml2",
+      "is_declared_dependency": true,
+      "source": "cpp:target:testSAX",
+      "target": "cpp:target:libxml2",
+      "weight": 6
+    },
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "count": 1,
+          "detail": "#include \"libxml.h\"",
+          "type": "include"
+        },
+        {
+          "detail": "Makefile: testSchemas links libxml2",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link + include corroborate",
+      "id": "rel:cpp:target:testSchemas->cpp:target:libxml2",
+      "is_declared_dependency": true,
+      "source": "cpp:target:testSchemas",
+      "target": "cpp:target:libxml2",
+      "weight": 6
+    },
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "count": 1,
+          "detail": "#include \"libxml.h\"",
+          "type": "include"
+        },
+        {
+          "detail": "Makefile: testThreads links libxml2",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link + include corroborate",
+      "id": "rel:cpp:target:testThreads->cpp:target:libxml2",
+      "is_declared_dependency": true,
+      "source": "cpp:target:testThreads",
+      "target": "cpp:target:libxml2",
+      "weight": 6
+    },
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "count": 1,
+          "detail": "#include \"libxml.h\"",
+          "type": "include"
+        },
+        {
+          "detail": "Makefile: testURI links libxml2",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link + include corroborate",
+      "id": "rel:cpp:target:testURI->cpp:target:libxml2",
+      "is_declared_dependency": true,
+      "source": "cpp:target:testURI",
+      "target": "cpp:target:libxml2",
+      "weight": 6
+    },
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "count": 1,
+          "detail": "#include \"libxml.h\"",
+          "type": "include"
+        },
+        {
+          "detail": "Makefile: testXPath links libxml2",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link + include corroborate",
+      "id": "rel:cpp:target:testXPath->cpp:target:libxml2",
+      "is_declared_dependency": true,
+      "source": "cpp:target:testXPath",
+      "target": "cpp:target:libxml2",
+      "weight": 6
+    },
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "count": 1,
+          "detail": "#include \"libxml.h\"",
+          "type": "include"
+        },
+        {
+          "detail": "Makefile: xmlcatalog links libxml2",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link + include corroborate",
+      "id": "rel:cpp:target:xmlcatalog->cpp:target:libxml2",
+      "is_declared_dependency": true,
+      "source": "cpp:target:xmlcatalog",
+      "target": "cpp:target:libxml2",
+      "weight": 6
+    },
+    {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "count": 1,
+          "detail": "#include \"libxml.h\"",
+          "type": "include"
+        },
+        {
+          "detail": "Makefile: xmllint links libxml2",
+          "type": "link",
+          "visibility": "public"
+        }
+      ],
+      "evidence_strength": "link + include corroborate",
+      "id": "rel:cpp:target:xmllint->cpp:target:libxml2",
+      "is_declared_dependency": true,
+      "source": "cpp:target:xmllint",
+      "target": "cpp:target:libxml2",
+      "weight": 6
+    }
+  ],
+  "schema_version": "1.3",
+  "targets": [
+    {
+      "components": [
+        {
+          "code": [
+            {
+              "id": "cpp:target:gjobread/component:example/code:gjob",
+              "level": "code",
+              "name": "gjob"
+            },
+            {
+              "id": "cpp:target:gjobread/component:example/code:job",
+              "level": "code",
+              "name": "job"
+            },
+            {
+              "id": "cpp:target:gjobread/component:example/code:person",
+              "level": "code",
+              "name": "person"
+            }
+          ],
+          "id": "cpp:target:gjobread/component:example",
+          "key": "example",
+          "level": "component",
+          "name": "example",
+          "source": "subdir"
+        }
+      ],
+      "external": false,
+      "id": "cpp:target:gjobread",
+      "language": "cpp",
+      "metrics": {
+        "blank": 47,
+        "by_language": [
+          {
+            "blank": 37,
+            "code": 195,
+            "comment": 66,
+            "files": 1,
+            "language": "C"
+          },
+          {
+            "blank": 10,
+            "code": 47,
+            "comment": 0,
+            "files": 1,
+            "language": "XML"
+          }
+        ],
+        "code": 242,
+        "comment": 66,
+        "engine": "metrics/1",
+        "files": 1,
+        "todo_count": 0
+      },
+      "name": "gjobread",
+      "path": "example",
+      "tags": [
+        "build:autotools"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:libxml2",
+      "language": "cpp",
+      "metrics": {
+        "files": 46
+      },
+      "name": "libxml2",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "type": "shared_lib"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:testAutomata",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "testAutomata",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:testC14N",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "testC14N",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:testDocbook",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "testDocbook",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:testHTML",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "testHTML",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:testRegexp",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "testRegexp",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:testSAX",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "testSAX",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:testSchemas",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "testSchemas",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:testThreads",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "testThreads",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:testURI",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "testURI",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:testXPath",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "testXPath",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:xmlcatalog",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "xmlcatalog",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "type": "executable"
+    },
+    {
+      "external": false,
+      "id": "cpp:target:xmllint",
+      "language": "cpp",
+      "metrics": {
+        "files": 1
+      },
+      "name": "xmllint",
+      "path": "",
+      "tags": [
+        "build:autotools"
+      ],
+      "type": "executable"
+    }
+  ]
+}

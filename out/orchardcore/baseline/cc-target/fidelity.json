@@ -1,0 +1,22 @@
+{
+  "clusters": 1,
+  "entities_clustered": 226,
+  "granularity": "target",
+  "graph": "graph-target.rsf",
+  "system": "orchardcore",
+  "technique": "cc",
+  "vs_pipeline_agreement": {
+    "a2a": 80.26796589524969,
+    "entities_against": 207,
+    "entities_common": 201,
+    "entities_recovered": 226,
+    "mojofm": 21.39
+  },
+  "vs_reference": {
+    "a2a": 78.99761336515513,
+    "entities_against": 207,
+    "entities_common": 201,
+    "entities_recovered": 226,
+    "mojofm": 24.21
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "edges": 6,
+  "entities": 6,
+  "fidelity_corpus": false,
+  "granularity": "target",
+  "intra_edges": 0,
+  "intra_share": 0.0,
+  "language": "cs",
+  "largest_share": 0.1667,
+  "mq": 0.0,
+  "mq_per_unit": 0.0,
+  "schema": "adequacy/1",
+  "source": "sidecar-or-singletons",
+  "system": "serilog",
+  "unit_ratio": 1.0,
+  "units": 6
+}

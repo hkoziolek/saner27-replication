@@ -1,0 +1,11 @@
+{
+  "entries": [
+    "csharp:csproj:WebApp/WebApp.csproj"
+  ],
+  "reasons": {
+    "csharp:csproj:WebApp/WebApp.csproj": [
+      "entry-point (sdk-role:service-web)",
+      "entry-point (zero in-degree)"
+    ]
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "advisory": false,
+  "coverage": 1.0,
+  "diff": {
+    "coverage_gap_edges": [],
+    "coverage_gap_targets": [],
+    "first_run": false,
+    "new_edges": [
+      [
+        "cpp:target:testSchemasstrucmut",
+        "cpp:target:libxml2"
+      ]
+    ],
+    "new_targets": [
+      "cpp:target:testSchemasstrucmut"
+    ],
+    "removed_edges": [
+      [
+        "cpp:target:testSchemas",
+        "cpp:target:libxml2"
+      ]
+    ],
+    "removed_targets": [
+      "cpp:target:testSchemas"
+    ],
+    "suspected_renames": [
+      {
+        "new": "cpp:target:testSchemasstrucmut",
+        "old": "cpp:target:testSchemas"
+      }
+    ],
+    "suspicious": []
+  },
+  "score": {
+    "advisory": false,
+    "alias_findings_in_scope": 0,
+    "alias_suppressed": true,
+    "attributed_violations": [],
+    "coverage": 1.0,
+    "coverage_gaps_in_scope": {
+      "coverage_gap_edges": [],
+      "coverage_gap_targets": []
+    },
+    "detected": true,
+    "fn": [],
+    "fn_count": 0,
+    "fp": [],
+    "fp_count": 0,
+    "rename_classified": true,
+    "scored": {
+      "layering_violations": [],
+      "new_edges": [
+        [
+          "cpp:target:testSchemasstrucmut",
+          "cpp:target:libxml2"
+        ]
+      ],
+      "new_targets": [
+        "cpp:target:testSchemasstrucmut"
+      ],
+      "removed_edges": [
+        [
+          "cpp:target:testSchemas",
+          "cpp:target:libxml2"
+        ]
+      ],
+      "removed_targets": [
+        "cpp:target:testSchemas"
+      ],
+      "suspected_renames": [
+        {
+          "new": "cpp:target:testSchemasstrucmut",
+          "old": "cpp:target:testSchemas"
+        }
+      ]
+    },
+    "tp": [
+      [
+        "new_edge",
+        "cpp:target:testSchemasstrucmut",
+        "cpp:target:libxml2"
+      ],
+      [
+        "new_target",
+        "cpp:target:testSchemasstrucmut"
+      ],
+      [
+        "removed_edge",
+        "cpp:target:testSchemas",
+        "cpp:target:libxml2"
+      ],
+      [
+        "removed_target",
+        "cpp:target:testSchemas"
+      ],
+      [
+        "rename",
+        "cpp:target:testSchemas",
+        "cpp:target:testSchemasstrucmut"
+      ]
+    ],
+    "tp_count": 5
+  }
+}

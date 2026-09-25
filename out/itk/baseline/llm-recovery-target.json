@@ -1,0 +1,28 @@
+{
+  "aggregate": null,
+  "cost_estimate": {
+    "price_in_per_1m": 5.0,
+    "price_out_per_1m": 30.0,
+    "reruns": 5,
+    "total_input_tokens": 19070,
+    "total_output_tokens": 3160,
+    "usd_uncached": 0.19,
+    "usd_with_prompt_caching": 0.12
+  },
+  "edges": 265,
+  "entities": 79,
+  "granularity": "target",
+  "message": "dry-run",
+  "model_id": null,
+  "reference": "references\\itk\\reference.rsf",
+  "reruns": 5,
+  "runs": [],
+  "status": "estimate-only",
+  "system": "itk",
+  "target_clusters": 13,
+  "token_estimate_per_call": {
+    "input": 3814,
+    "output": 632,
+    "per_call_total": 4446
+  }
+}

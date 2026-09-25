@@ -1,0 +1,10 @@
+[wca] 226 entities from graph-target.rsf
+[wca] 226 singleton clusters
+[wca] clustered to 34 clusters (target 34)
+[wca] wrote <repo>\out\orchardcore\baseline\wca-target\clusters.rsf
+[limbo] 226 entities from graph-target.rsf
+[limbo] 226 singleton clusters
+[limbo] clustered to 34 clusters (target 34)
+[limbo] wrote <repo>\out\orchardcore\baseline\limbo-target\clusters.rsf
+[wca-target] 34 clusters / 226 entities — MoJoFM=32.63 a2a=81.97474167623422 vs reference -> <repo>\out\orchardcore\baseline\wca-target\fidelity.json
+[limbo-target] 34 clusters / 226 entities — MoJoFM=47.37 a2a=83.5632183908046 vs reference -> <repo>\out\orchardcore\baseline\limbo-target\fidelity.json

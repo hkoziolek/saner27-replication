@@ -1,0 +1,10 @@
+[wca] 24 entities from graph-target.rsf
+[wca] 24 singleton clusters
+[wca] clustered to 9 clusters (target 9)
+[wca] wrote <repo>\out\eshop\baseline\wca-target\clusters.rsf
+[limbo] 24 entities from graph-target.rsf
+[limbo] 24 singleton clusters
+[limbo] clustered to 9 clusters (target 9)
+[limbo] wrote <repo>\out\eshop\baseline\limbo-target\clusters.rsf
+[wca-target] 9 clusters / 24 entities — MoJoFM=20.0 a2a=86.02150537634408 vs reference -> <repo>\out\eshop\baseline\wca-target\fidelity.json
+[limbo-target] 9 clusters / 24 entities — MoJoFM=26.67 a2a=85.86956521739131 vs reference -> <repo>\out\eshop\baseline\limbo-target\fidelity.json

@@ -1,0 +1,55 @@
+{
+  "alias": {},
+  "description": "remove build target csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj"
+    ],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\NopCommerce.sln",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Controllers\\FixedByWeightByTotalController.cs",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Data\\ShippingByWeightByTotalRecordBuilder.cs",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Domain\\ShippingByWeightByTotalRecord.cs",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\FixedByWeightByTotalComputationMethod.cs",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\FixedByWeightByTotalDefaults.cs",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\FixedByWeightByTotalSettings.cs",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Infrastructure\\Cache\\FixedByWeightByTotalEventConsumer.cs",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Infrastructure\\NopStartup.cs",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\logo.png",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Migrations\\AddLoadAllRecordSetting.cs",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Migrations\\SchemaMigration.cs",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Migrations\\UpgradeTo450.cs",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Models\\ConfigurationModel.cs",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Models\\FixedRateListModel.cs",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Models\\FixedRateModel.cs",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Models\\ShippingByWeightByTotalListModel.cs",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Models\\ShippingByWeightByTotalModel.cs",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Nop.Plugin.Shipping.FixedByWeightByTotal.csproj",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Notes.txt",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\plugin.json",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Services\\IShippingByWeightByTotalService.cs",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Services\\ShippingByWeightByTotalService.cs",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Views\\_ByWeightByTotal.cshtml",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Views\\_CreateOrUpdateRateByWeightByTotal.cshtml",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Views\\_FixedRate.cshtml",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Views\\_FixedRate.Tour.cshtml",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Views\\_ViewImports.cshtml",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Views\\AddRateByWeightByTotalPopup.cshtml",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Views\\Configure.cshtml",
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Plugins\\Nop.Plugin.Shipping.FixedByWeightByTotal\\Views\\EditRateByWeightByTotalPopup.cshtml"
+  ],
+  "id": "nopcommerce-remove_target-04",
+  "operator": "remove_target",
+  "system": "nopcommerce"
+}

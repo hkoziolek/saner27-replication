@@ -1,0 +1,181 @@
+{
+  "baseline_l0_edges": 1171,
+  "baseline_targets": 207,
+  "idiom": "csproj",
+  "instances_requested": 4,
+  "l0_scoped": true,
+  "language": "cs",
+  "operators": {
+    "add_forbidden_dep": {
+      "alias_suppressed": 0,
+      "alias_total": 0,
+      "applicable": true,
+      "detected": 4,
+      "false_rename_clean": 0,
+      "false_rename_total": 0,
+      "fn": 0,
+      "fp": 0,
+      "fp_per_run": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "mutations": [
+        "orchardcore-add_forbidden_dep-01",
+        "orchardcore-add_forbidden_dep-02",
+        "orchardcore-add_forbidden_dep-03",
+        "orchardcore-add_forbidden_dep-04"
+      ],
+      "n": 4,
+      "rename_correct": 0,
+      "rename_total": 0,
+      "tp": 8
+    },
+    "add_target": {
+      "alias_suppressed": 0,
+      "alias_total": 0,
+      "applicable": true,
+      "detected": 4,
+      "false_rename_clean": 0,
+      "false_rename_total": 0,
+      "fn": 0,
+      "fp": 0,
+      "fp_per_run": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "mutations": [
+        "orchardcore-add_target-01",
+        "orchardcore-add_target-02",
+        "orchardcore-add_target-03",
+        "orchardcore-add_target-04"
+      ],
+      "n": 4,
+      "rename_correct": 0,
+      "rename_total": 0,
+      "tp": 4
+    },
+    "merge_targets": {
+      "alias_suppressed": 0,
+      "alias_total": 0,
+      "applicable": true,
+      "detected": 4,
+      "false_rename_clean": 4,
+      "false_rename_total": 4,
+      "fn": 0,
+      "fp": 0,
+      "fp_per_run": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "mutations": [
+        "orchardcore-merge_targets-01",
+        "orchardcore-merge_targets-02",
+        "orchardcore-merge_targets-03",
+        "orchardcore-merge_targets-04"
+      ],
+      "n": 4,
+      "rename_correct": 0,
+      "rename_total": 0,
+      "tp": 66
+    },
+    "remove_dep": {
+      "alias_suppressed": 0,
+      "alias_total": 0,
+      "applicable": true,
+      "detected": 4,
+      "false_rename_clean": 0,
+      "false_rename_total": 0,
+      "fn": 0,
+      "fp": 0,
+      "fp_per_run": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "mutations": [
+        "orchardcore-remove_dep-01",
+        "orchardcore-remove_dep-02",
+        "orchardcore-remove_dep-03",
+        "orchardcore-remove_dep-04"
+      ],
+      "n": 4,
+      "rename_correct": 0,
+      "rename_total": 0,
+      "tp": 4
+    },
+    "remove_target": {
+      "alias_suppressed": 0,
+      "alias_total": 0,
+      "applicable": true,
+      "detected": 4,
+      "false_rename_clean": 0,
+      "false_rename_total": 0,
+      "fn": 0,
+      "fp": 0,
+      "fp_per_run": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "mutations": [
+        "orchardcore-remove_target-01",
+        "orchardcore-remove_target-02",
+        "orchardcore-remove_target-03",
+        "orchardcore-remove_target-04"
+      ],
+      "n": 4,
+      "rename_correct": 0,
+      "rename_total": 0,
+      "tp": 59
+    },
+    "rename_target": {
+      "alias_suppressed": 4,
+      "alias_total": 4,
+      "applicable": true,
+      "detected": 4,
+      "false_rename_clean": 0,
+      "false_rename_total": 0,
+      "fn": 0,
+      "fp": 0,
+      "fp_per_run": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "mutations": [
+        "orchardcore-rename_target-01",
+        "orchardcore-rename_target-02",
+        "orchardcore-rename_target-03",
+        "orchardcore-rename_target-04"
+      ],
+      "n": 4,
+      "rename_correct": 4,
+      "rename_total": 4,
+      "tp": 122
+    }
+  },
+  "schema": "rq6-mutation-summary/1",
+  "system": "orchardcore",
+  "totals": {
+    "alias_suppressed": 4,
+    "alias_total": 4,
+    "detected": 24,
+    "false_rename_clean": 4,
+    "false_rename_total": 4,
+    "fn": 0,
+    "fp": 0,
+    "n": 24,
+    "rename_correct": 4,
+    "rename_total": 4,
+    "tp": 263
+  }
+}

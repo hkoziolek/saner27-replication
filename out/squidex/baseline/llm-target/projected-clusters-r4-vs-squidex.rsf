@@ -1,0 +1,13 @@
+contain application-host csharp:csproj:backend/src/Squidex/Squidex.csproj
+contain apps-core csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Model/Squidex.Domain.Apps.Core.Model.csproj
+contain apps-core csharp:csproj:backend/src/Squidex.Domain.Apps.Core.Operations/Squidex.Domain.Apps.Core.Operations.csproj
+contain apps-entities csharp:csproj:backend/src/Squidex.Domain.Apps.Entities/Squidex.Domain.Apps.Entities.csproj
+contain apps-events csharp:csproj:backend/src/Squidex.Domain.Apps.Events/Squidex.Domain.Apps.Events.csproj
+contain data-persistence csharp:csproj:backend/src/Squidex.Data.EntityFramework/Squidex.Data.EntityFramework.csproj
+contain data-persistence csharp:csproj:backend/src/Squidex.Data.MongoDb/Squidex.Data.MongoDb.csproj
+contain extensions csharp:csproj:backend/extensions/Squidex.Extensions/Squidex.Extensions.csproj
+contain infrastructure csharp:csproj:backend/src/Squidex.Infrastructure/Squidex.Infrastructure.csproj
+contain migrations csharp:csproj:backend/src/Migrations/Migrations.csproj
+contain shared csharp:csproj:backend/src/Squidex.Shared/Squidex.Shared.csproj
+contain users csharp:csproj:backend/src/Squidex.Domain.Users/Squidex.Domain.Users.csproj
+contain web csharp:csproj:backend/src/Squidex.Web/Squidex.Web.csproj

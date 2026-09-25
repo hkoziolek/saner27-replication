@@ -1,0 +1,37 @@
+contain "client APIs" csharp:csproj:src/Plugins/Nop.Plugin.Misc.NopMobileApp/Nop.Plugin.Misc.NopMobileApp.csproj
+contain "client APIs" csharp:csproj:src/Plugins/Nop.Plugin.Misc.WebApi.Frontend/Nop.Plugin.Misc.WebApi.Frontend.csproj
+contain "community content" csharp:csproj:src/Plugins/Nop.Plugin.Misc.Forums/Nop.Plugin.Misc.Forums.csproj
+contain "community content" csharp:csproj:src/Plugins/Nop.Plugin.Misc.News/Nop.Plugin.Misc.News.csproj
+contain "community content" csharp:csproj:src/Plugins/Nop.Plugin.Misc.Polls/Nop.Plugin.Misc.Polls.csproj
+contain "core platform" csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj
+contain "core platform" csharp:csproj:src/Libraries/Nop.Data/Nop.Data.csproj
+contain "core platform" csharp:csproj:src/Libraries/Nop.Services/Nop.Services.csproj
+contain "enterprise analytics" csharp:csproj:src/Plugins/Nop.Plugin.Misc.Dynamics365/Nop.Plugin.Misc.Dynamics365.csproj
+contain "enterprise analytics" csharp:csproj:src/Plugins/Nop.Plugin.Misc.PowerBI/Nop.Plugin.Misc.PowerBI.csproj
+contain "media storage" csharp:csproj:src/Plugins/Nop.Plugin.Misc.AzureBlob/Nop.Plugin.Misc.AzureBlob.csproj
+contain "media storage" csharp:csproj:src/Plugins/Nop.Plugin.Misc.CloudflareImages/Nop.Plugin.Misc.CloudflareImages.csproj
+contain "sales channels" csharp:csproj:src/Plugins/Nop.Plugin.Misc.RFQ/Nop.Plugin.Misc.RFQ.csproj
+contain "sales channels" csharp:csproj:src/Plugins/Nop.Plugin.Misc.Zettle/Nop.Plugin.Misc.Zettle.csproj
+contain "web presentation" csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj
+contain "web presentation" csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj
+contain "web widgets" csharp:csproj:src/Plugins/Nop.Plugin.Widgets.FacebookPixel/Nop.Plugin.Widgets.FacebookPixel.csproj
+contain "web widgets" csharp:csproj:src/Plugins/Nop.Plugin.Widgets.GoogleAnalytics/Nop.Plugin.Widgets.GoogleAnalytics.csproj
+contain "web widgets" csharp:csproj:src/Plugins/Nop.Plugin.Widgets.Jotform/Nop.Plugin.Widgets.Jotform.csproj
+contain "web widgets" csharp:csproj:src/Plugins/Nop.Plugin.Widgets.Swiper/Nop.Plugin.Widgets.Swiper.csproj
+contain compliance csharp:csproj:src/Plugins/Nop.Plugin.Misc.OmnibusDirective/Nop.Plugin.Misc.OmnibusDirective.csproj
+contain fulfillment csharp:csproj:src/Plugins/Nop.Plugin.Pickup.PickupInStore/Nop.Plugin.Pickup.PickupInStore.csproj
+contain fulfillment csharp:csproj:src/Plugins/Nop.Plugin.Shipping.FixedByWeightByTotal/Nop.Plugin.Shipping.FixedByWeightByTotal.csproj
+contain fulfillment csharp:csproj:src/Plugins/Nop.Plugin.Shipping.UPS/Nop.Plugin.Shipping.UPS.csproj
+contain identity csharp:csproj:src/Plugins/Nop.Plugin.ExternalAuth.Facebook/Nop.Plugin.ExternalAuth.Facebook.csproj
+contain identity csharp:csproj:src/Plugins/Nop.Plugin.MultiFactorAuth.GoogleAuthenticator/Nop.Plugin.MultiFactorAuth.GoogleAuthenticator.csproj
+contain messaging csharp:csproj:src/Plugins/Nop.Plugin.Misc.Brevo/Nop.Plugin.Misc.Brevo.csproj
+contain messaging csharp:csproj:src/Plugins/Nop.Plugin.Misc.Omnisend/Nop.Plugin.Misc.Omnisend.csproj
+contain messaging csharp:csproj:src/Plugins/Nop.Plugin.Sms.Twilio/Nop.Plugin.Sms.Twilio.csproj
+contain payments csharp:csproj:src/Plugins/Nop.Plugin.Payments.CheckMoneyOrder/Nop.Plugin.Payments.CheckMoneyOrder.csproj
+contain payments csharp:csproj:src/Plugins/Nop.Plugin.Payments.Manual/Nop.Plugin.Payments.Manual.csproj
+contain payments csharp:csproj:src/Plugins/Nop.Plugin.Payments.PayPalCommerce/Nop.Plugin.Payments.PayPalCommerce.csproj
+contain pricing csharp:csproj:src/Plugins/Nop.Plugin.DiscountRules.CustomerRoles/Nop.Plugin.DiscountRules.CustomerRoles.csproj
+contain pricing csharp:csproj:src/Plugins/Nop.Plugin.ExchangeRate.EcbExchange/Nop.Plugin.ExchangeRate.EcbExchange.csproj
+contain search csharp:csproj:src/Plugins/Nop.Plugin.Search.Lucene/Nop.Plugin.Search.Lucene.csproj
+contain taxation csharp:csproj:src/Plugins/Nop.Plugin.Tax.Avalara/Nop.Plugin.Tax.Avalara.csproj
+contain taxation csharp:csproj:src/Plugins/Nop.Plugin.Tax.FixedOrByCountryStateZip/Nop.Plugin.Tax.FixedOrByCountryStateZip.csproj

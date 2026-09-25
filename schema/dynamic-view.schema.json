@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://arch-pipeline/schema/dynamic-view-2.json",
+  "title": "Dynamic (behavioral) view — evidence-validated step list",
+  "description": "The engine §6.9(c) artifact for one scenario (`generated/views/dynamic/<slug>.json`) and the `validated_view` subtree of a `scenario-candidate/1` envelope. The ordered step list of a dynamic (sequence) view, each step validated against the BUILD container graph OR the RUNTIME deployment facet (dynamic-view plan §0.3/§3.1). Anon computes this; serve echoes it verbatim; the GUI <SequenceStrip> renders it (engine §2.1 iron rule). The validator's green check evidences edge EXISTENCE only, never call ORDER — `ordering_provenance` tells the reader whether the ordering was observed/declared/synthesized/proposed (plan §1a#4).",
+  "$comment": "ADVISORY schema (NOT the determinism-hashed fact-model core): no `arch validate` wiring and no schema/CHANGELOG core entry — validated INLINE by the producer (stages/scenarios.py) and tests via validate_facts.find_schema('dynamic-view.schema.json') + jsonschema.validate, exactly the enrich_llm.py pattern for llm-output / llm-narrative. `dynamic-view/2` is a SUPERSET of the (file-less) `dynamic-view/1` string constant: it preserves every /1 field (schema, scenario, slug, name, scope, derived_from_hash, steps, valid_steps, flagged_steps, note) and FOLDS IN AT ONCE all the dynamic-view-generation-plan fields so there is no later churn — evidence_layer, dsl, dsl_reason, dsl_steps, order, ordering_provenance, from_name, to_name, reason, weight. derived_from_hash = content_hash(facts_emitted) (emission-normalized provenance, plan §0.4#4), NEVER the serve If-Hash freshness comparator. Step rows are a status-discriminated union (ok | unresolved | unevidenced): the schema lists the union of all step fields with additionalProperties:false and requires only the common ones (index, order, from_raw, to_raw, status); status determines which optionals are present.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "scenario", "slug", "name", "scope", "ordering_provenance",
+               "derived_from_hash", "steps", "valid_steps", "flagged_steps", "dsl_steps", "note"],
+  "properties": {
+    "schema": {
+      "const": "dynamic-view/2",
+      "description": "The advisory schema id; matches the DYNAMIC_VIEW_SCHEMA constant in stages/scenarios.py."
+    },
+    "scenario": {
+      "type": "string",
+      "description": "The authored scenario key (rules/scenarios.yaml) or the candidate proposal key."
+    },
+    "slug": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Filesystem/URL-safe slug for the scenario key; drives the <slug>.json filename and the serve GET /model/dynamic/<scenario> lookup."
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable scenario title."
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "status"],
+      "description": "The dynamic-view scope: the literal 'system' or a container the view drills into.",
+      "properties": {
+        "value": { "type": "string" },
+        "status": { "type": "string", "enum": ["ok", "unresolved"] },
+        "container_id": { "type": "string" },
+        "reason": { "type": "string" }
+      }
+    },
+    "ordering_provenance": {
+      "type": "string",
+      "enum": ["observed-in-test", "declared-in-aspire", "synthesized", "hand-authored", "llm-proposed"],
+      "description": "How the step ORDERING was arrived at (plan §1a#4 / §0.4#5). The validator never validates order, so this is the reader's trust signal; it survives promotion into scenarios.yaml. Defaults to 'hand-authored' for the existing rules/scenarios.yaml path."
+    },
+    "derived_from_hash": {
+      "type": "string",
+      "description": "content_hash(facts_emitted) — honest provenance of exactly the emission-normalized facts the steps were validated against (plan §0.4#4). NOT the serve If-Hash freshness comparator (that is the envelope curated hash)."
+    },
+    "steps": {
+      "type": "array",
+      "description": "Authored steps in declaration order — every step kept (honest abstention); a flagged step is reported, never dropped.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["index", "order", "from_raw", "to_raw", "status"],
+        "properties": {
+          "index": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "1-based sequential position (the renumber-proof DSL/GUI step number)."
+          },
+          "order": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "The non-unique parallel-band index (plan §2/§3.1#5): concurrent / fan-out steps share an `order`; defaults to the sequential position when the proposal omits it."
+          },
+          "from_raw": { "type": "string", "description": "The authored 'from' value before resolution." },
+          "to_raw": { "type": "string", "description": "The authored 'to' value before resolution." },
+          "status": {
+            "type": "string",
+            "enum": ["ok", "unresolved", "unevidenced"],
+            "description": "ok = (from,to) is an evidenced build OR runtime container edge; unresolved = an endpoint does not name a container/build target; unevidenced = both resolve but no evidenced container edge exists."
+          },
+          "from": { "type": "string", "description": "Resolved source container_id (ok / unevidenced)." },
+          "to": { "type": "string", "description": "Resolved target container_id (ok / unevidenced)." },
+          "from_name": { "type": "string", "description": "Source container display name — the SequenceStrip lane label." },
+          "to_name": { "type": "string", "description": "Target container display name — the SequenceStrip lane label." },
+          "reason": { "type": "string", "description": "Human explanation for a flagged step (unresolved / unevidenced)." },
+          "description": { "type": "string", "description": "The step message (label policy §1a#2 — never a bare 'Uses' for the LLM/runtime paths)." },
+          "evidence_layer": {
+            "type": "string",
+            "enum": ["build", "runtime"],
+            "description": "Which evidence layer backs an `ok` step. 'build' wins ties (the stronger structural layer); 'runtime' is a .WithReference-class deployment edge (plan §0.3)."
+          },
+          "dsl": {
+            "type": "boolean",
+            "description": "True iff this step is emittable to a Structurizr `dynamic{}` block (a static container relationship exists). Build-backed ok steps are dsl:true; runtime-only ok steps are dsl:false (plan §0.4#3)."
+          },
+          "dsl_reason": {
+            "type": "string",
+            "description": "Why a runtime-only ok step is dsl:false (no static container relationship for Structurizr to reference)."
+          },
+          "weight": {
+            "type": ["integer", "null"],
+            "description": "Sum of contributing build-edge weights; null/omitted for runtime-only steps (runtime edges carry no relationships[] weight, plan §3.1#1)."
+          },
+          "cited_edges": {
+            "type": "array",
+            "description": "The contributing target-level edges (citation tooltip). Build steps cite relationships[]; runtime steps cite deployment.edges[].",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "source": { "type": "string" },
+                "target": { "type": "string" },
+                "evidence_strength": { "type": "string" },
+                "evidence_layer": { "type": "string", "enum": ["build", "runtime"] },
+                "weight": { "type": ["integer", "null"] },
+                "detail": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "valid_steps": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Count of status==ok steps (build-backed + runtime-only). Runtime-only steps are valid but not DSL steps (plan §3.1#4)."
+    },
+    "dsl_steps": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Count of steps emitted to Structurizr DSL (ok AND dsl:true)."
+    },
+    "flagged_steps": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Count of unresolved + unevidenced steps."
+    },
+    "note": {
+      "type": "string",
+      "description": "Provenance-aware note: the existence of every step is validator-checked, but call order is never treated as observed unless the source observed it (parameterized by ordering_provenance, plan §0.4#5)."
+    }
+  }
+}

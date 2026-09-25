@@ -1,0 +1,81 @@
+{
+  "language": "cpp",
+  "modes": {
+    "disable_l2": {
+      "advisory": false,
+      "coverage_l0": 1.0,
+      "erosion_visible": true,
+      "findings_off": 0,
+      "fp_suppression_rate": null,
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 0,
+        "mode": "disable_l2",
+        "targets_starved": 0
+      },
+      "suppressed_on": 0,
+      "would_be_false_findings": 0
+    },
+    "lose_l0": {
+      "advisory": true,
+      "coverage_l0": 0.0,
+      "erosion_visible": true,
+      "findings_off": 78,
+      "fp_suppression_rate": 1.0,
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 54,
+        "mode": "lose_l0",
+        "targets_starved": 37
+      },
+      "suppressed_on": 78,
+      "would_be_false_findings": 78
+    },
+    "starve_l0_10": {
+      "advisory": true,
+      "coverage_l0": 0.9167,
+      "erosion_visible": true,
+      "findings_off": 5,
+      "fp_suppression_rate": 1.0,
+      "gating": false,
+      "layering": {
+        "intact_rule_status": "VIOLATION",
+        "intact_still_violation": true,
+        "starved_honest": true,
+        "starved_rule_status": "UNVERIFIED (degraded)"
+      },
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 5,
+        "mode": "starve_l0_10",
+        "targets_starved": 2
+      },
+      "suppressed_on": 5,
+      "would_be_false_findings": 5
+    },
+    "starve_l0_30": {
+      "advisory": true,
+      "coverage_l0": 0.7083,
+      "erosion_visible": true,
+      "findings_off": 9,
+      "fp_suppression_rate": 1.0,
+      "gating": false,
+      "layering": {
+        "intact_rule_status": "VIOLATION",
+        "intact_still_violation": true,
+        "starved_honest": true,
+        "starved_rule_status": "UNVERIFIED (degraded)"
+      },
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 9,
+        "mode": "starve_l0_30",
+        "targets_starved": 7
+      },
+      "suppressed_on": 9,
+      "would_be_false_findings": 9
+    }
+  },
+  "schema": "rq6-degradation/1",
+  "system": "opencv"
+}

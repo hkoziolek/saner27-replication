@@ -1,0 +1,116 @@
+# Curation rules for the nopSolutions/nopCommerce fixture (plan §7.4). Reviewed + committed.
+#
+# nopCommerce is a CLASSIC LAYERED MONOLITH (the §19.3 layering / fitness-function fixture).
+# Its 39 production .csproj live under src/ in four solution folders: Libraries (Nop.Core,
+# Nop.Data, Nop.Services), Presentation (Nop.Web.Framework, Nop.Web) and a large Plugins tree
+# (~32 plugin projects). We group those into the canonical nopCommerce layers as C4 containers
+# and fold the plugin tree into a few functional families, keeping the Containers view readable
+# (9 containers). The strict dependency direction Web -> Services -> Data -> Core is asserted
+# separately in layering-rules.yaml (plan §11.2).
+#
+# Run mode: `arch run --no-llm`, deterministic. nopCommerce ships src/NopCommerce.sln and pins
+# the .NET 10 SDK (Directory.Build.props). The L0 build graph (project refs) is SDK-independent
+# and always populates; the Roslyn L2 namespace tier (the per-project Component drill-down)
+# populates only when `dotnet restore` + the .NET 10 SDK succeed (plan §4.2/§18.4) — here it did,
+# so the "Core" container below renders a real Component view.
+version: 1
+
+defaults:
+  min_relationship_weight: 3          # non-declared edges only; declared project refs never dropped (§7.4)
+  drop_external: true                 # NuGet packages are technology tags / external, not containers
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false                # --no-llm baseline
+
+exclude:
+  targets:
+    - glob: "src/Tests/*"             # the Nop.Tests tree (not production architecture)
+    - glob: "*Tests*"
+    - glob: "*Test*"
+    - glob: "*Benchmark*"
+    - glob: "src/Build/*"             # ClearPluginAssemblies build helper, not a runtime element
+
+group:
+  # --- the canonical layered-monolith tiers (Libraries + Presentation) ---------------
+  # "Core" keeps its namespace drill-down via the D§5 deep path (`expand:` — under Model Y
+  # the standalone target nests its tier natively and the stamp is a no-op; under Model X
+  # it promotes the target). The `components:` block below tames it to the §1.1#1 budget.
+  # (Nop.Core aggregates to 10 namespace components at depth 3 — a clean in-budget drill-down.
+  #  Nop.Services would be 41 components @ depth 3 = over budget, and Nop.Web.Framework
+  #  collapses to a single key, so Core is the meaningful L2 demonstrator here — §19.3.)
+  - container: "Core"
+    expand:
+      - "csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj"
+    members:
+      - "csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj"
+  - container: "Data Access"
+    members:
+      - "csharp:csproj:src/Libraries/Nop.Data/Nop.Data.csproj"
+  - container: "Services"
+    members:
+      - "csharp:csproj:src/Libraries/Nop.Services/Nop.Services.csproj"
+  - container: "Web Framework"
+    members:
+      - "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+  - container: "Web Application"
+    members:
+      - "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+
+  # --- the plugin tree, folded into functional families (glob-grouped, §7.4) ---------
+  #     Scoped to src/Plugins/ so a broad family name can't pull in core libraries.
+  #     The catch-all "Misc & Other Plugins" MUST stay last so the named families win first.
+  - container: "Payment Plugins"
+    members_glob:
+      - "src/Plugins/Nop.Plugin.Payments.*"
+  - container: "Shipping & Tax Plugins"
+    members_glob:
+      - "src/Plugins/Nop.Plugin.Shipping.*"
+      - "src/Plugins/Nop.Plugin.Tax.*"
+      - "src/Plugins/Nop.Plugin.Pickup.*"
+      - "src/Plugins/Nop.Plugin.ExchangeRate.*"
+      - "src/Plugins/Nop.Plugin.DiscountRules.*"
+  - container: "Widget Plugins"
+    members_glob:
+      - "src/Plugins/Nop.Plugin.Widgets.*"
+  - container: "Misc & Other Plugins"
+    members_glob:
+      - "src/Plugins/Nop.Plugin.*"    # catch-all — MUST stay after the family globs above
+
+# Component-tier curation for the "Core" container (§7.4 / §16#10b): drop framework/runtime
+# namespaces and aggregate to depth 3 so the Component view stays inside the ≤20 budget.
+components:
+  exclude_namespaces:
+    - "System*"
+    - "Microsoft*"
+    - "Newtonsoft*"
+  aggregate_depth: 3
+
+technology:
+  csproj: ".NET assembly"
+
+naming:
+  style: descriptive
+  expand_acronyms: false
+  max_name_words: 4
+
+rationale:
+  "Core":
+    reason: "Nop.Core is the foundational library (domain entities, caching, infrastructure) that every other layer depends on and that depends on nothing; opted into a Component drill-down to inspect the §6.3 namespace-tier granularity (§19.3)"
+    decided_by: "architect"
+    date: "2026-06-07"
+    confidence: "high"
+  "Web Framework":
+    reason: "Nop.Web.Framework is presentation INFRASTRUCTURE (model factories, MVC filters, theming) shared by the web app and plugins — a distinct container from the Nop.Web MVC application proper"
+    decided_by: "architect"
+    date: "2026-06-07"
+    confidence: "high"
+  "Shipping & Tax Plugins":
+    reason: "Shipping, Tax, Pickup, ExchangeRate and DiscountRules plugins are the checkout/pricing extension family; grouped together to keep the Containers view readable rather than one container per plugin"
+    decided_by: "architect"
+    date: "2026-06-07"
+    confidence: "medium"
+  "Misc & Other Plugins":
+    reason: "Catch-all for plugins not in a named payment/shipping/widget family (Misc.*, ExternalAuth, MultiFactorAuth, Search, Sms); glob-ordered last so the named families win first"
+    decided_by: "architect"
+    date: "2026-06-07"
+    confidence: "low"

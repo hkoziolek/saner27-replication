@@ -1,0 +1,32 @@
+# Curation rules for the libxml2 2.4.22 fixture (eval plan §5.2 — GT-pub anchor #3,
+# SARIF FSE'23 industry-labeled ground truth).
+#
+# libxml2 is the MONOLITHIC-LIBRARY contrast case: the automake build graph
+# (extract_autotools) declares ONE installed artifact (libxml2.la) plus thin tools
+# (xmllint, xmlcatalog) and test drivers — while the published ground truth's 18
+# clusters are semantic module groups INSIDE that single target (trio, xpath, tree,
+# parser, SAX, ...). No build or directory signal carries that split (the source tree
+# is flat), so curation here deliberately stays thin: park the test drivers and the
+# example, and let the honest result stand — the C-language analogue of the C# regime,
+# bounding the deterministic-first thesis by BUILD-GRAPH SHAPE, not by language.
+#
+# Run: `arch run --repo fixtures/libxml2 --arch-dir out/libxml2/architecture
+#       --rules-dir overlays/libxml2/architecture/rules --no-llm`. Deterministic; no configure.
+version: 1
+
+defaults:
+  min_relationship_weight: 3
+  drop_external: true
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false
+
+group:
+  - container: "Test Drivers"
+    members_glob: ["test*"]
+  - container: "Examples"
+    members_glob: ["gjobread", "example/*"]
+
+technology:
+  shared_lib: "C shared library (libtool)"
+  executable: "C executable"

@@ -1,0 +1,24 @@
+{
+  "clusters": 624,
+  "entities_clustered": 5197,
+  "granularity": "file",
+  "graph": "graph-file.rsf",
+  "system": "orchardcore",
+  "technique": "acdc",
+  "vs_pipeline_agreement": {
+    "a2a": 75.54932900752101,
+    "entities_against": 4933,
+    "entities_common": 4930,
+    "entities_dropped_whitespace": 0,
+    "entities_recovered": 5197,
+    "mojofm": 61.82
+  },
+  "vs_reference": {
+    "a2a": 76.90569744597249,
+    "entities_against": 4933,
+    "entities_common": 4930,
+    "entities_dropped_whitespace": 0,
+    "entities_recovered": 5197,
+    "mojofm": 62.16
+  }
+}

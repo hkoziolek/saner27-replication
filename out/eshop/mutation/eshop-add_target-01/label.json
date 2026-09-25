@@ -1,0 +1,20 @@
+{
+  "alias": {},
+  "description": "add new build target csharp:csproj:src/AnonMutant1/AnonMutant1.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [
+      "csharp:csproj:src/AnonMutant1/AnonMutant1.csproj"
+    ],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\eshop\\mutation\\_work\\eshop\\repo\\src\\AnonMutant1\\AnonMutant1.csproj"
+  ],
+  "id": "eshop-add_target-01",
+  "operator": "add_target",
+  "system": "eshop"
+}

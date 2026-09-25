@@ -1,0 +1,55 @@
+# Fidelity-curated opencv variant (eval §4.1): each documented OpenCV module is its OWN
+# container, at the granularity of the GT-doc reference (references/opencv, 14 modules).
+# This is the REPRESENTATIVE fidelity curation — the committed overlays/opencv/ groups the
+# 14 modules into 4 functional families for a readable top-level C4 diagram (a presentation
+# choice that scores 59.6 against the 14-module reference). Here each opencv_<module> target
+# maps to its own container, so the pipeline decomposition matches the documented module tier.
+# Reuses the opencv exclude set (codegen / meta / plugin / 3rdparty-utility targets).
+version: 1
+
+defaults:
+  min_relationship_weight: 3
+  drop_external: true
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false
+
+exclude:
+  targets:
+    - glob: "gen_opencv_*"
+    - glob: "opencv_modules"
+    - glob: "*_plugins"
+    - glob: "uninstall"
+    - glob: "jsimdcfg"
+
+# One container per module. The opencv_<module> targets carry the module's files via the
+# build-graph attribution; mapping each to its own container reproduces the documented tier.
+group:
+  - container: "core"
+    members: [ "cpp:target:opencv_core" ]
+  - container: "imgproc"
+    members: [ "cpp:target:opencv_imgproc" ]
+  - container: "imgcodecs"
+    members: [ "cpp:target:opencv_imgcodecs" ]
+  - container: "calib3d"
+    members: [ "cpp:target:opencv_calib3d" ]
+  - container: "features2d"
+    members: [ "cpp:target:opencv_features2d" ]
+  - container: "objdetect"
+    members: [ "cpp:target:opencv_objdetect" ]
+  - container: "photo"
+    members: [ "cpp:target:opencv_photo" ]
+  - container: "stitching"
+    members: [ "cpp:target:opencv_stitching" ]
+  - container: "dnn"
+    members: [ "cpp:target:opencv_dnn" ]
+  - container: "ml"
+    members: [ "cpp:target:opencv_ml" ]
+  - container: "flann"
+    members: [ "cpp:target:opencv_flann" ]
+  - container: "video"
+    members: [ "cpp:target:opencv_video" ]
+  - container: "videoio"
+    members: [ "cpp:target:opencv_videoio" ]
+  - container: "highgui"
+    members: [ "cpp:target:opencv_highgui" ]

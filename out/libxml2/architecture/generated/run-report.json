@@ -1,0 +1,42 @@
+{
+  "cache": {},
+  "notes": [],
+  "stages": {
+    "curate": 0.032,
+    "drift": 0.0,
+    "enrich": 0.0,
+    "extract": 6.375,
+    "generate": 0.047,
+    "normalize": 0.266,
+    "validate-curated": 0.031,
+    "validate-extracted": 0.078
+  },
+  "substeps": {
+    "extract": {
+      "autotools-graph": 0.062,
+      "clang-scan-deps": 0.0,
+      "cmake-graph": 0.015,
+      "contracts": 0.093,
+      "csharp-build-graph": 0.032,
+      "csharp-interop": 0.188,
+      "csproj-sdk-role": 0.015,
+      "deployment": 0.125,
+      "doxygen-xml": 5.765,
+      "msbuild-cpp": 0.016,
+      "orchardcore-manifest": 0.0,
+      "plugin-namespace": 0.016,
+      "roslyn-csharp": 0.032,
+      "runtime": 0.016
+    }
+  },
+  "trust": {
+    "abstained_targets": 4,
+    "coverage_pct": {
+      "L0": 1.0
+    },
+    "edges_dropped": 0,
+    "mean_confidence": 0.7014,
+    "over_budget_views": [],
+    "unmapped_targets": 3
+  }
+}

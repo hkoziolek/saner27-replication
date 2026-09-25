@@ -1,0 +1,39 @@
+{
+  "granularity": "file",
+  "language": "cpp",
+  "reference_clusters": 14,
+  "rungs": {
+    "dir_leaf": {
+      "a2a": 86.63,
+      "clusters": 86,
+      "mojofm": 92.08
+    },
+    "dir_top": {
+      "a2a": 100.0,
+      "clusters": 14,
+      "mojofm": 100.0
+    },
+    "edge_cc": {
+      "a2a": 81.37,
+      "clusters": 3,
+      "mojofm": 25.41
+    },
+    "hand_curation": {
+      "a2a": 100.0,
+      "clusters": 14,
+      "mojofm": 100.0
+    },
+    "none": {
+      "a2a": 100.0,
+      "clusters": 14,
+      "mojofm": 100.0
+    },
+    "propose_all": {
+      "a2a": 87.0,
+      "clusters": 2,
+      "mojofm": 48.29
+    }
+  },
+  "shared_entities": 923,
+  "system": "opencv"
+}

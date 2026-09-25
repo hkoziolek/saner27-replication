@@ -1,0 +1,96 @@
+{
+  "budget": {
+    "cold_budget_s": 1800,
+    "cold_within": true,
+    "warm_budget_s": 180,
+    "warm_within": true
+  },
+  "cold": {
+    "cache": {},
+    "peak_rss_mb": 108.0,
+    "rc": 0,
+    "stages": {
+      "curate": 0.046,
+      "drift": 0.0,
+      "enrich": 0.0,
+      "extract": 24.297,
+      "generate": 0.062,
+      "normalize": 0.781,
+      "validate-curated": 0.063,
+      "validate-extracted": 0.063
+    },
+    "substeps": {
+      "extract": {
+        "autotools-graph": 1.0,
+        "clang-scan-deps": 0.375,
+        "cmake-graph": 0.047,
+        "contracts": 0.485,
+        "csharp-build-graph": 0.078,
+        "csharp-interop": 0.953,
+        "csproj-sdk-role": 0.047,
+        "deployment": 0.281,
+        "doxygen-xml": 20.734,
+        "msbuild-cpp": 0.047,
+        "orchardcore-manifest": 0.047,
+        "plugin-namespace": 0.047,
+        "roslyn-csharp": 0.062,
+        "runtime": 0.094
+      }
+    },
+    "timed_out": false,
+    "wall_s": 27.3
+  },
+  "env": {},
+  "host": {
+    "cpus": 22,
+    "ram_gb": 31
+  },
+  "language": "cpp",
+  "profile": "full",
+  "schema": "rq7-perf/1",
+  "size": {
+    "edges_file": 967,
+    "edges_target": 86,
+    "files": 411,
+    "kloc": 55.1,
+    "targets": 49
+  },
+  "speedup": 4.88,
+  "success": true,
+  "system": "bash",
+  "warm": {
+    "cache": {},
+    "peak_rss_mb": 49.8,
+    "rc": 0,
+    "stages": {
+      "curate": 0.046,
+      "drift": 0.0,
+      "enrich": 0.0,
+      "extract": 2.781,
+      "generate": 0.063,
+      "normalize": 0.5,
+      "validate-curated": 0.047,
+      "validate-extracted": 0.063
+    },
+    "substeps": {
+      "extract": {
+        "autotools-graph": 0.141,
+        "clang-scan-deps": 0.297,
+        "cmake-graph": 0.047,
+        "contracts": 0.594,
+        "csharp-build-graph": 0.047,
+        "csharp-interop": 0.75,
+        "csproj-sdk-role": 0.047,
+        "deployment": 0.234,
+        "doxygen-xml": 0.344,
+        "msbuild-cpp": 0.046,
+        "orchardcore-manifest": 0.046,
+        "plugin-namespace": 0.047,
+        "roslyn-csharp": 0.063,
+        "runtime": 0.078
+      }
+    },
+    "timed_out": false,
+    "wall_s": 5.6
+  }
+}

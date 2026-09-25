@@ -1,0 +1,165 @@
+{
+  "aggregate": {
+    "a2a": {
+      "max": 98.94,
+      "mean": 97.87,
+      "min": 96.81,
+      "n": 5,
+      "stdev": 0.67
+    },
+    "ari": {
+      "max": 87.59,
+      "mean": 75.2,
+      "min": 66.67,
+      "n": 5,
+      "stdev": 6.8
+    },
+    "mojofm": {
+      "max": 93.33,
+      "mean": 86.67,
+      "min": 80.0,
+      "n": 5,
+      "stdev": 4.22
+    }
+  },
+  "cost_estimate": {
+    "price_in_per_1m": 5.0,
+    "price_out_per_1m": 30.0,
+    "reruns": 5,
+    "total_input_tokens": 9445,
+    "total_output_tokens": 960,
+    "usd_uncached": 0.08,
+    "usd_with_prompt_caching": 0.04
+  },
+  "edges": 46,
+  "entities": 24,
+  "granularity": "target",
+  "model_id": "gpt-5.6-sol",
+  "reference": "references\\eshop\\reference.rsf",
+  "reruns": 5,
+  "runs": [
+    {
+      "clusters": 9,
+      "entities_clustered": 24,
+      "run": 1,
+      "vs_pipeline_agreement": {
+        "a2a": 88.88888888888889,
+        "entities_against": 19,
+        "entities_common": 19,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 24,
+        "mojofm": 62.5
+      },
+      "vs_reference": {
+        "a2a": 97.87234042553192,
+        "ari": 73.91,
+        "entities_against": 19,
+        "entities_common": 19,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 24,
+        "mojofm": 86.67,
+        "nested": 77.78
+      }
+    },
+    {
+      "clusters": 9,
+      "entities_clustered": 24,
+      "run": 2,
+      "vs_pipeline_agreement": {
+        "a2a": 88.88888888888889,
+        "entities_against": 19,
+        "entities_common": 19,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 24,
+        "mojofm": 62.5
+      },
+      "vs_reference": {
+        "a2a": 97.87234042553192,
+        "ari": 73.91,
+        "entities_against": 19,
+        "entities_common": 19,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 24,
+        "mojofm": 86.67,
+        "nested": 77.78
+      }
+    },
+    {
+      "clusters": 9,
+      "entities_clustered": 24,
+      "run": 3,
+      "vs_pipeline_agreement": {
+        "a2a": 88.88888888888889,
+        "entities_against": 19,
+        "entities_common": 19,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 24,
+        "mojofm": 62.5
+      },
+      "vs_reference": {
+        "a2a": 98.93617021276596,
+        "ari": 87.59,
+        "entities_against": 19,
+        "entities_common": 19,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 24,
+        "mojofm": 93.33,
+        "nested": 88.89
+      }
+    },
+    {
+      "clusters": 9,
+      "entities_clustered": 24,
+      "run": 4,
+      "vs_pipeline_agreement": {
+        "a2a": 88.88888888888889,
+        "entities_against": 19,
+        "entities_common": 19,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 24,
+        "mojofm": 62.5
+      },
+      "vs_reference": {
+        "a2a": 97.87234042553192,
+        "ari": 73.91,
+        "entities_against": 19,
+        "entities_common": 19,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 24,
+        "mojofm": 86.67,
+        "nested": 77.78
+      }
+    },
+    {
+      "clusters": 9,
+      "entities_clustered": 24,
+      "run": 5,
+      "vs_pipeline_agreement": {
+        "a2a": 88.88888888888889,
+        "entities_against": 19,
+        "entities_common": 19,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 24,
+        "mojofm": 62.5
+      },
+      "vs_reference": {
+        "a2a": 96.80851063829788,
+        "ari": 66.67,
+        "entities_against": 19,
+        "entities_common": 19,
+        "entities_dropped_whitespace": 0,
+        "entities_recovered": 24,
+        "mojofm": 80.0,
+        "nested": 77.78
+      }
+    }
+  ],
+  "status": "ran",
+  "system": "eshop",
+  "target_clusters": 9,
+  "token_estimate_per_call": {
+    "input": 1889,
+    "output": 192,
+    "per_call_total": 2081
+  }
+}

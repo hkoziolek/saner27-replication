@@ -1,0 +1,23 @@
+{
+  "alias": {},
+  "description": "remove declared dependency cpp:target:testXPath -> cpp:target:libxml2",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "cpp:target:testXPath",
+        "cpp:target:libxml2"
+      ]
+    ],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\libxml2\\mutation\\_work\\libxml2\\repo\\Makefile.am"
+  ],
+  "id": "libxml2-remove_dep-04",
+  "operator": "remove_dep",
+  "system": "libxml2"
+}

@@ -1,0 +1,22 @@
+{
+  "clusters": 9,
+  "entities_clustered": 24,
+  "granularity": "target",
+  "graph": "graph-target.rsf",
+  "system": "eshop",
+  "technique": "arc",
+  "vs_pipeline_agreement": {
+    "a2a": 83.83838383838383,
+    "entities_against": 19,
+    "entities_common": 19,
+    "entities_recovered": 24,
+    "mojofm": 31.25
+  },
+  "vs_reference": {
+    "a2a": 89.36170212765957,
+    "entities_against": 19,
+    "entities_common": 19,
+    "entities_recovered": 24,
+    "mojofm": 33.33
+  }
+}

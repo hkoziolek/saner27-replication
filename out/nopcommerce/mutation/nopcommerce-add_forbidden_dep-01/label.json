@@ -1,0 +1,28 @@
+{
+  "alias": {},
+  "description": "inject forbidden dependency csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj -> csharp:csproj:src/Plugins/Nop.Plugin.DiscountRules.CustomerRoles/Nop.Plugin.DiscountRules.CustomerRoles.csproj",
+  "expected": {
+    "layering_violations": [
+      [
+        "csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj",
+        "csharp:csproj:src/Plugins/Nop.Plugin.DiscountRules.CustomerRoles/Nop.Plugin.DiscountRules.CustomerRoles.csproj"
+      ]
+    ],
+    "new_edges": [
+      [
+        "csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj",
+        "csharp:csproj:src/Plugins/Nop.Plugin.DiscountRules.CustomerRoles/Nop.Plugin.DiscountRules.CustomerRoles.csproj"
+      ]
+    ],
+    "new_targets": [],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Libraries\\Nop.Core\\Nop.Core.csproj"
+  ],
+  "id": "nopcommerce-add_forbidden_dep-01",
+  "operator": "add_forbidden_dep",
+  "system": "nopcommerce"
+}

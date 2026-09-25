@@ -1,0 +1,267 @@
+{
+  "advisory": true,
+  "coverage": 0.972972972972973,
+  "diff": {
+    "coverage_gap_edges": [
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.ExchangeRate.EcbExchange/Nop.Plugin.ExchangeRate.EcbExchange.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj",
+        "csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj"
+      ],
+      [
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj",
+        "csharp:csproj:src/Libraries/Nop.Data/Nop.Data.csproj"
+      ],
+      [
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj",
+        "csharp:csproj:src/Libraries/Nop.Services/Nop.Services.csproj"
+      ],
+      [
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ]
+    ],
+    "coverage_gap_targets": [],
+    "first_run": false,
+    "new_edges": [
+      [
+        "csharp:csproj:src/Plugins/Nop.Plugin.ExchangeRate.EcbExchange/Nop.Plugin.ExchangeRate.EcbExchange.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ]
+    ],
+    "new_targets": [],
+    "removed_edges": [],
+    "removed_targets": [],
+    "suspected_renames": [],
+    "suspicious": []
+  },
+  "score": {
+    "advisory": true,
+    "attributed_violations": [],
+    "coverage": 0.972972972972973,
+    "coverage_gaps_in_scope": {
+      "coverage_gap_edges": [
+        [
+          "csharp:csproj:src/Plugins/Nop.Plugin.ExchangeRate.EcbExchange/Nop.Plugin.ExchangeRate.EcbExchange.csproj",
+          "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+        ],
+        [
+          "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj",
+          "csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj"
+        ],
+        [
+          "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj",
+          "csharp:csproj:src/Libraries/Nop.Data/Nop.Data.csproj"
+        ],
+        [
+          "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj",
+          "csharp:csproj:src/Libraries/Nop.Services/Nop.Services.csproj"
+        ],
+        [
+          "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj",
+          "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+        ]
+      ],
+      "coverage_gap_targets": []
+    },
+    "detected": false,
+    "fn": [
+      [
+        "new_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.DiscountRules.CustomerRoles/Nop.Plugin.DiscountRules.CustomerRoles.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ],
+      [
+        "new_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.ExternalAuth.Facebook/Nop.Plugin.ExternalAuth.Facebook.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ],
+      [
+        "new_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.AzureBlob/Nop.Plugin.Misc.AzureBlob.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ],
+      [
+        "new_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.CloudflareImages/Nop.Plugin.Misc.CloudflareImages.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ],
+      [
+        "new_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.Dynamics365/Nop.Plugin.Misc.Dynamics365.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ],
+      [
+        "new_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.NopMobileApp/Nop.Plugin.Misc.NopMobileApp.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ],
+      [
+        "new_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.OmnibusDirective/Nop.Plugin.Misc.OmnibusDirective.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ],
+      [
+        "new_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.PowerBI/Nop.Plugin.Misc.PowerBI.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ],
+      [
+        "new_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.WebApi.Frontend/Nop.Plugin.Misc.WebApi.Frontend.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ],
+      [
+        "new_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.MultiFactorAuth.GoogleAuthenticator/Nop.Plugin.MultiFactorAuth.GoogleAuthenticator.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ],
+      [
+        "new_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Pickup.PickupInStore/Nop.Plugin.Pickup.PickupInStore.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ],
+      [
+        "new_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Search.Lucene/Nop.Plugin.Search.Lucene.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ],
+      [
+        "new_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.UPS/Nop.Plugin.Shipping.UPS.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ],
+      [
+        "new_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Sms.Twilio/Nop.Plugin.Sms.Twilio.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.DiscountRules.CustomerRoles/Nop.Plugin.DiscountRules.CustomerRoles.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.ExchangeRate.EcbExchange/Nop.Plugin.ExchangeRate.EcbExchange.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.ExternalAuth.Facebook/Nop.Plugin.ExternalAuth.Facebook.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.AzureBlob/Nop.Plugin.Misc.AzureBlob.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.CloudflareImages/Nop.Plugin.Misc.CloudflareImages.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.Dynamics365/Nop.Plugin.Misc.Dynamics365.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.NopMobileApp/Nop.Plugin.Misc.NopMobileApp.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.OmnibusDirective/Nop.Plugin.Misc.OmnibusDirective.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.PowerBI/Nop.Plugin.Misc.PowerBI.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Misc.WebApi.Frontend/Nop.Plugin.Misc.WebApi.Frontend.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.MultiFactorAuth.GoogleAuthenticator/Nop.Plugin.MultiFactorAuth.GoogleAuthenticator.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Pickup.PickupInStore/Nop.Plugin.Pickup.PickupInStore.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Search.Lucene/Nop.Plugin.Search.Lucene.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Shipping.UPS/Nop.Plugin.Shipping.UPS.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.Sms.Twilio/Nop.Plugin.Sms.Twilio.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj",
+        "csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj",
+        "csharp:csproj:src/Libraries/Nop.Data/Nop.Data.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj",
+        "csharp:csproj:src/Libraries/Nop.Services/Nop.Services.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ],
+      [
+        "removed_target",
+        "csharp:csproj:src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+      ]
+    ],
+    "fn_count": 34,
+    "fp": [],
+    "fp_count": 0,
+    "scored": {
+      "layering_violations": [],
+      "new_edges": [
+        [
+          "csharp:csproj:src/Plugins/Nop.Plugin.ExchangeRate.EcbExchange/Nop.Plugin.ExchangeRate.EcbExchange.csproj",
+          "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+        ]
+      ],
+      "new_targets": [],
+      "removed_edges": [],
+      "removed_targets": [],
+      "suspected_renames": []
+    },
+    "tp": [
+      [
+        "new_edge",
+        "csharp:csproj:src/Plugins/Nop.Plugin.ExchangeRate.EcbExchange/Nop.Plugin.ExchangeRate.EcbExchange.csproj",
+        "csharp:csproj:src/Presentation/Nop.Web/Nop.Web.csproj"
+      ]
+    ],
+    "tp_count": 1
+  }
+}

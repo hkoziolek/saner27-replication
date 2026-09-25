@@ -1,0 +1,130 @@
+{
+  "advisory": false,
+  "coverage": 1.0,
+  "diff": {
+    "coverage_gap_edges": [],
+    "coverage_gap_targets": [],
+    "first_run": false,
+    "new_edges": [
+      [
+        "csharp:csproj:src/Domain/Toy.Domain.csproj",
+        "csharp:csproj:src/Common/Toy.CommonAnonMut.csproj"
+      ],
+      [
+        "csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+        "csharp:csproj:src/Common/Toy.CommonAnonMut.csproj"
+      ]
+    ],
+    "new_targets": [
+      "csharp:csproj:src/Common/Toy.CommonAnonMut.csproj"
+    ],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Domain/Toy.Domain.csproj",
+        "csharp:csproj:src/Common/Toy.Common.csproj"
+      ],
+      [
+        "csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+        "csharp:csproj:src/Common/Toy.Common.csproj"
+      ]
+    ],
+    "removed_targets": [
+      "csharp:csproj:src/Common/Toy.Common.csproj"
+    ],
+    "suspected_renames": [
+      {
+        "new": "csharp:csproj:src/Common/Toy.CommonAnonMut.csproj",
+        "old": "csharp:csproj:src/Common/Toy.Common.csproj"
+      }
+    ],
+    "suspicious": []
+  },
+  "score": {
+    "advisory": false,
+    "alias_findings_in_scope": 0,
+    "alias_suppressed": true,
+    "attributed_violations": [],
+    "coverage": 1.0,
+    "coverage_gaps_in_scope": {
+      "coverage_gap_edges": [],
+      "coverage_gap_targets": []
+    },
+    "detected": true,
+    "fn": [],
+    "fn_count": 0,
+    "fp": [],
+    "fp_count": 0,
+    "rename_classified": true,
+    "scored": {
+      "layering_violations": [],
+      "new_edges": [
+        [
+          "csharp:csproj:src/Domain/Toy.Domain.csproj",
+          "csharp:csproj:src/Common/Toy.CommonAnonMut.csproj"
+        ],
+        [
+          "csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+          "csharp:csproj:src/Common/Toy.CommonAnonMut.csproj"
+        ]
+      ],
+      "new_targets": [
+        "csharp:csproj:src/Common/Toy.CommonAnonMut.csproj"
+      ],
+      "removed_edges": [
+        [
+          "csharp:csproj:src/Domain/Toy.Domain.csproj",
+          "csharp:csproj:src/Common/Toy.Common.csproj"
+        ],
+        [
+          "csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+          "csharp:csproj:src/Common/Toy.Common.csproj"
+        ]
+      ],
+      "removed_targets": [
+        "csharp:csproj:src/Common/Toy.Common.csproj"
+      ],
+      "suspected_renames": [
+        {
+          "new": "csharp:csproj:src/Common/Toy.CommonAnonMut.csproj",
+          "old": "csharp:csproj:src/Common/Toy.Common.csproj"
+        }
+      ]
+    },
+    "tp": [
+      [
+        "new_edge",
+        "csharp:csproj:src/Domain/Toy.Domain.csproj",
+        "csharp:csproj:src/Common/Toy.CommonAnonMut.csproj"
+      ],
+      [
+        "new_edge",
+        "csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+        "csharp:csproj:src/Common/Toy.CommonAnonMut.csproj"
+      ],
+      [
+        "new_target",
+        "csharp:csproj:src/Common/Toy.CommonAnonMut.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Domain/Toy.Domain.csproj",
+        "csharp:csproj:src/Common/Toy.Common.csproj"
+      ],
+      [
+        "removed_edge",
+        "csharp:csproj:src/Messaging/Toy.Messaging.csproj",
+        "csharp:csproj:src/Common/Toy.Common.csproj"
+      ],
+      [
+        "removed_target",
+        "csharp:csproj:src/Common/Toy.Common.csproj"
+      ],
+      [
+        "rename",
+        "csharp:csproj:src/Common/Toy.Common.csproj",
+        "csharp:csproj:src/Common/Toy.CommonAnonMut.csproj"
+      ]
+    ],
+    "tp_count": 7
+  }
+}

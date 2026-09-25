@@ -1,0 +1,76 @@
+{
+  "dropped_whitespace": 0,
+  "entities": {
+    "acdc": 226,
+    "cc": 226,
+    "dir": 226,
+    "floor": 226,
+    "limbo": 226,
+    "pipeline": 207,
+    "propose": 226,
+    "wca": 226
+  },
+  "granularity": "target",
+  "projection": "all-common",
+  "reference_entities": 207,
+  "results": {
+    "acdc": {
+      "a2a": 80.24,
+      "ari": -1.84,
+      "clusters": 13,
+      "mojofm": 24.21,
+      "nested": 7.69
+    },
+    "cc": {
+      "a2a": 79.0,
+      "ari": 0.0,
+      "clusters": 1,
+      "mojofm": 24.21,
+      "nested": 0.0
+    },
+    "dir": {
+      "a2a": 67.63,
+      "ari": 0.0,
+      "clusters": 201,
+      "mojofm": 11.58,
+      "nested": 100.0
+    },
+    "floor": {
+      "a2a": 67.63,
+      "ari": 0.0,
+      "clusters": 201,
+      "mojofm": 11.58,
+      "nested": 100.0
+    },
+    "limbo": {
+      "a2a": 83.56,
+      "ari": 10.24,
+      "clusters": 33,
+      "mojofm": 47.37,
+      "nested": 39.39
+    },
+    "pipeline": {
+      "a2a": 91.68,
+      "ari": 84.07,
+      "clusters": 16,
+      "mojofm": 72.11,
+      "nested": 43.75
+    },
+    "propose": {
+      "a2a": 91.13,
+      "ari": 59.35,
+      "clusters": 20,
+      "mojofm": 69.47,
+      "nested": 85.0
+    },
+    "wca": {
+      "a2a": 81.97,
+      "ari": 3.52,
+      "clusters": 34,
+      "mojofm": 32.63,
+      "nested": 38.24
+    }
+  },
+  "shared_entities": 201,
+  "system": "orchardcore"
+}

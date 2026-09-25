@@ -1,0 +1,28 @@
+{
+  "aggregate": null,
+  "cost_estimate": {
+    "price_in_per_1m": 5.0,
+    "price_out_per_1m": 30.0,
+    "reruns": 5,
+    "total_input_tokens": 92455,
+    "total_output_tokens": 7560,
+    "usd_uncached": 0.69,
+    "usd_with_prompt_caching": 0.36
+  },
+  "edges": 1249,
+  "entities": 189,
+  "granularity": "target",
+  "message": "dry-run",
+  "model_id": null,
+  "reference": "references\\abseil\\reference.rsf",
+  "reruns": 5,
+  "runs": [],
+  "status": "estimate-only",
+  "system": "abseil",
+  "target_clusters": 21,
+  "token_estimate_per_call": {
+    "input": 18491,
+    "output": 1512,
+    "per_call_total": 20003
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "axis": "A7",
+  "edge_delta": 0,
+  "edges_hash_after": "ee97fa8166432909",
+  "edges_hash_before": "ee97fa8166432909",
+  "invariant_holds": true,
+  "n_edges": 1025,
+  "n_targets": 190,
+  "names_changed": 190,
+  "partition_hash_after": "64996d57220f19d2",
+  "partition_hash_before": "64996d57220f19d2",
+  "partition_moved": 0,
+  "structural_delta": 0,
+  "system": "abseil",
+  "targets_delta": 0
+}

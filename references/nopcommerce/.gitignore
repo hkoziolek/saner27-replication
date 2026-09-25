@@ -1,0 +1,10 @@
+# nopCommerce ships under the restrictive nopCommerce Public License (eval §5.4 / P§19.6):
+# this reference is LOCAL-ONLY and must NOT be committed to the redistributable
+# replication package. Ignore everything here except this .gitignore (which documents why).
+*
+!.gitignore
+# The RQ6 real-history rater worksheets (eval §8.3) live here, TRACKED: filled labels are
+# human artifacts (the §14.2 carve-out) and are not the withheld reference — they carry
+# only build-target ids and commit hints.
+!history/
+!history/**

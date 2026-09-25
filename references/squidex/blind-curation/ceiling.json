@@ -1,0 +1,37 @@
+{
+  "agreement": {
+    "a2a": 86.3,
+    "ari": 0.228,
+    "chance_agreement": 0.061,
+    "kappa": 0.391,
+    "kappa_aligned": 0.586,
+    "labels_a": 6,
+    "labels_b": 11,
+    "labels_shared": 4,
+    "mojofm_ab": 54.55,
+    "mojofm_ba": 54.55,
+    "mojofm_mean": 54.55,
+    "n_common": 14,
+    "nmi": 0.766,
+    "pair_agreement": 0.78,
+    "raw_agreement": 0.429,
+    "raw_agreement_aligned": 0.643
+  },
+  "clusters": {
+    "a": 7,
+    "b": 11
+  },
+  "entities": {
+    "a": 15,
+    "b": 14,
+    "only_a": 1,
+    "only_b": 0
+  },
+  "flag": "kappa < 0.6 — lower-confidence reference (eval §5.3/§10a.6); reconcile harder or report the disagreement itself",
+  "flag_interpretation": "SUBSTANTIVE: κ=0.586 even after optimal label alignment (ARI=0.228, pair agreement=0.78) — the raters genuinely disagree, most often on granularity rather than on boundaries.",
+  "kind": "rq9-ceiling (eval §10a.4 human-ceiling row)",
+  "raters": {
+    "a": "R-A",
+    "b": "R-B"
+  }
+}

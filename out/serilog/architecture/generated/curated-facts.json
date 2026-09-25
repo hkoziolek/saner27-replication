@@ -1,0 +1,2199 @@
+{
+  "provenance": {
+    "boundary_promoted": 0,
+    "commit": "2ef63645cf0d0edd4b187510b238754249c4348f",
+    "coverage": {
+      "csharp:csproj:src/Serilog/Serilog.csproj": {
+        "L0": true,
+        "L1": true,
+        "L2": true,
+        "L3": false
+      },
+      "csharp:csproj:test/AotTestApp/AotTestApp.csproj": {
+        "L0": true,
+        "L1": true,
+        "L2": true,
+        "L3": false
+      },
+      "csharp:csproj:test/Serilog.ApprovalTests/Serilog.ApprovalTests.csproj": {
+        "L0": true,
+        "L1": true,
+        "L2": true,
+        "L3": false
+      },
+      "csharp:csproj:test/Serilog.PerformanceTests/Serilog.PerformanceTests.csproj": {
+        "L0": true,
+        "L1": true,
+        "L2": true,
+        "L3": false
+      },
+      "csharp:csproj:test/Serilog.Tests/Serilog.Tests.csproj": {
+        "L0": true,
+        "L1": true,
+        "L2": true,
+        "L3": false
+      },
+      "csharp:csproj:test/TestDummies/TestDummies.csproj": {
+        "L0": true,
+        "L1": true,
+        "L2": true,
+        "L3": false
+      }
+    },
+    "edges_dropped": 185,
+    "extractors": [
+      {
+        "name": "csharp-build-graph",
+        "version": "0.3.0"
+      },
+      {
+        "name": "csproj-sdk-role",
+        "version": "0.1.0"
+      },
+      {
+        "name": "roslyn-csharp",
+        "version": "0.3.0"
+      }
+    ],
+    "generated_at": "2026-06-17T13:17:40.905390+00:00",
+    "kinds_renamed": 0,
+    "repo": "serilog"
+  },
+  "relationships": [
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 28,
+          "detail": "Serilog.Capturing.MessageTemplateProcessor",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing",
+      "weight": 28
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 65,
+          "detail": "Serilog.Configuration.LoggerAuditSinkConfiguration",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration",
+      "weight": 65
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 716,
+          "detail": "Serilog.Core.Constants",
+          "type": "symbol_use"
+        },
+        {
+          "count": 489,
+          "detail": "Serilog.Core.IDestructuringPolicy",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "weight": 1205
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 18,
+          "detail": "Serilog.Core.Enrichers.EmptyEnricher",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Enrichers",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "weight": 18
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 28,
+          "detail": "Serilog.Core.Sinks.AggregateSink",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "weight": 28
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 1384,
+          "detail": "Serilog.Events.LevelAlias",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 1384
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 35,
+          "detail": "Serilog.Capturing",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 35
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 105,
+          "detail": "Serilog.Core.IDestructuringPolicy",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "weight": 105
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 14,
+          "detail": "Serilog.Core.Pipeline.MessageTemplateCache",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Pipeline",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "weight": 14
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 140,
+          "detail": "Serilog.Debugging.SelfLog",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "weight": 140
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 520,
+          "detail": "Serilog.Events.DictionaryValue",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 520
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 217,
+          "detail": "Serilog.Parsing.Destructuring",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing",
+      "weight": 217
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 46,
+          "detail": "Serilog.Policies.ByteArrayScalarConversionPolicy",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies",
+      "weight": 46
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 623,
+          "detail": "Serilog.Configuration",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 623
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 7,
+          "detail": "Serilog.Context.LogContextEnricher",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Context",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Context",
+      "weight": 7
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 476,
+          "detail": "Serilog.Core.IBatchedLogEventSink",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "weight": 476
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 35,
+          "detail": "Serilog.Core.Enrichers.ConditionalEnricher",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Enrichers",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "weight": 35
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 14,
+          "detail": "Serilog.Core.Filters.DelegateFilter",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Filters",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "weight": 14
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 224,
+          "detail": "Serilog.Core.Sinks.ConditionalSink",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "weight": 224
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 7,
+          "detail": "Serilog.Core.Sinks.Batching.BatchingSink",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks.Batching",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "weight": 7
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 56,
+          "detail": "Serilog.Debugging.SelfLog",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "weight": 56
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 448,
+          "detail": "Serilog.Events.LevelAlias",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 448
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 28,
+          "detail": "Serilog.Policies.ProjectedDestructuringPolicy",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies",
+      "weight": 28
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 7,
+          "detail": "Serilog.Settings.KeyValuePairs.KeyValuePairSettings",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Settings.KeyValuePairs",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Settings",
+      "weight": 7
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 21,
+          "detail": "Serilog.Context",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Context->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Context",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 21
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 154,
+          "detail": "Serilog.Core.ILogEventEnricher",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Context->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Context",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "weight": 154
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 14,
+          "detail": "Serilog.Core.Enrichers.PropertyEnricher",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Context->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Enrichers",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Context",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "weight": 14
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 14,
+          "detail": "Serilog.Events.LogEvent",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Context->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Context",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 14
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 183,
+          "detail": "Serilog.Core",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 183
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 35,
+          "detail": "Serilog.Core",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Enrichers->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 35
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 7,
+          "detail": "Serilog.Core",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Filters->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 7
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 63,
+          "detail": "Serilog.Core",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Pipeline->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 63
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 91,
+          "detail": "Serilog.Core",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 91
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 14,
+          "detail": "Serilog.Core",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks.Batching->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 14
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 46,
+          "detail": "Serilog.Capturing.MessageTemplateProcessor",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing",
+      "weight": 46
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 63,
+          "detail": "Serilog.Configuration.BatchingOptions",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks.Batching->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration",
+      "weight": 63
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 28,
+          "detail": "Serilog.Debugging.SelfLog",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "weight": 28
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 14,
+          "detail": "Serilog.Debugging.SelfLog",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Enrichers->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "weight": 14
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 70,
+          "detail": "Serilog.Debugging.SelfLog",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "weight": 70
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 14,
+          "detail": "Serilog.Debugging.SelfLog",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks.Batching->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "weight": 14
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 1189,
+          "detail": "Serilog.Events.LevelAlias",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 1189
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 112,
+          "detail": "Serilog.Events.EventProperty",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Enrichers->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 112
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 21,
+          "detail": "Serilog.Events.LogEvent",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Filters->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 21
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 126,
+          "detail": "Serilog.Events.LogEvent",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Pipeline->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 126
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 112,
+          "detail": "Serilog.Events.LogEvent",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 112
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 70,
+          "detail": "Serilog.Events.LogEvent",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks.Batching->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 70
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 14,
+          "detail": "Serilog.Data",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Data->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Data",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 14
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 343,
+          "detail": "Serilog.Events.DictionaryValue",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Data->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Data",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 343
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 14,
+          "detail": "Serilog.Debugging",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 14
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 21,
+          "detail": "Serilog.Core.ILoggingFailureListener",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "weight": 21
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 7,
+          "detail": "Serilog.Events.LogEvent",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 7
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 77,
+          "detail": "Serilog.Events",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 77
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 28,
+          "detail": "Serilog.Core.ILogEventPropertyFactory",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "weight": 28
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 14,
+          "detail": "Serilog.Debugging.SelfLog",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "weight": 14
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 77,
+          "detail": "Serilog.Parsing.MessageTemplateToken",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing",
+      "weight": 77
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 42,
+          "detail": "Serilog.Rendering.MessageTemplateRenderer",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering",
+      "weight": 42
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 7,
+          "detail": "Serilog.Filters",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Filters->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Filters",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 7
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 28,
+          "detail": "Serilog.Core.Constants",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Filters->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Filters",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "weight": 28
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 105,
+          "detail": "Serilog.Events.LogEvent",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Filters->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Filters",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 105
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 7,
+          "detail": "Serilog.Formatting",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 7
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 28,
+          "detail": "Serilog.Formatting",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting.Display->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 28
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 14,
+          "detail": "Serilog.Formatting",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting.Json->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 14
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 35,
+          "detail": "Serilog.Data.LogEventPropertyValueVisitor<System.IO.TextWriter, bool>",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting.Json->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Data",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Data",
+      "weight": 35
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 7,
+          "detail": "Serilog.Events.LogEvent",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 7
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 308,
+          "detail": "Serilog.Events.LogEvent",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting.Display->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 308
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 259,
+          "detail": "Serilog.Events.LogEvent",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting.Json->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 259
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 245,
+          "detail": "Serilog.Parsing.MessageTemplateParser",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting.Display->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing",
+      "weight": 245
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 42,
+          "detail": "Serilog.Parsing.PropertyToken",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting.Json->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing",
+      "weight": 42
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 182,
+          "detail": "Serilog.Rendering.Casing",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting.Display->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering",
+      "weight": 182
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 42,
+          "detail": "Serilog.Rendering.MessageTemplateRenderer",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting.Json->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering",
+      "weight": 42
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 49,
+          "detail": "Serilog.Parsing",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 49
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 7,
+          "detail": "Serilog.Core.IMessageTemplateParser",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "weight": 7
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 28,
+          "detail": "Serilog.Events.LogEventPropertyValue",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 28
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 42,
+          "detail": "Serilog.Rendering.MessageTemplateRenderer",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering",
+      "weight": 42
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 53,
+          "detail": "Serilog.Policies",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 53
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 88,
+          "detail": "Serilog.Core.IDestructuringPolicy",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "weight": 88
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 95,
+          "detail": "Serilog.Events.LogEventPropertyValue",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 95
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 28,
+          "detail": "Serilog.Rendering",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 28
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 70,
+          "detail": "Serilog.Events.LogEventPropertyValue",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 70
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 14,
+          "detail": "Serilog.Formatting.Json.JsonValueFormatter",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting.Json",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting",
+      "weight": 14
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 204,
+          "detail": "Serilog.Parsing.Alignment",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing",
+      "weight": 204
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 189,
+          "detail": "Serilog.ILogger",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Settings.KeyValuePairs->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Settings",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+      "weight": 189
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 322,
+          "detail": "Serilog.Configuration.ILoggerSettings",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Settings.KeyValuePairs->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Settings",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration",
+      "weight": 322
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 126,
+          "detail": "Serilog.Core.IDestructuringPolicy",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Settings.KeyValuePairs->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Settings",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+      "weight": 126
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 14,
+          "detail": "Serilog.Debugging.SelfLog",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Settings.KeyValuePairs->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Settings",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+      "weight": 14
+    },
+    {
+      "confidence": "low",
+      "evidence": [
+        {
+          "count": 77,
+          "detail": "Serilog.Events.LevelAlias",
+          "type": "symbol_use"
+        }
+      ],
+      "evidence_strength": "symbol_use only",
+      "id": "rel:csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Settings.KeyValuePairs->csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "is_declared_dependency": false,
+      "source": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Settings",
+      "target": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+      "weight": 77
+    }
+  ],
+  "schema_version": "1.3",
+  "targets": [
+    {
+      "components": [
+        {
+          "code": [
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog/code:ILogger",
+              "level": "code",
+              "name": "ILogger"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog/code:Log",
+              "level": "code",
+              "name": "Log"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog/code:LoggerConfiguration",
+              "level": "code",
+              "name": "LoggerConfiguration"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog/code:LoggerExtensions",
+              "level": "code",
+              "name": "LoggerExtensions"
+            }
+          ],
+          "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog",
+          "key": "Serilog",
+          "level": "component",
+          "name": "Serilog",
+          "source": "namespace"
+        },
+        {
+          "code": [
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing/code:MessageTemplateProcessor",
+              "level": "code",
+              "name": "MessageTemplateProcessor"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing/code:PropertyBinder",
+              "level": "code",
+              "name": "PropertyBinder"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing/code:PropertyValueConverter",
+              "level": "code",
+              "name": "PropertyValueConverter"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing/code:TrimConfiguration",
+              "level": "code",
+              "name": "TrimConfiguration"
+            }
+          ],
+          "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Capturing",
+          "key": "Serilog.Capturing",
+          "level": "component",
+          "name": "Serilog.Capturing",
+          "source": "namespace"
+        },
+        {
+          "code": [
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration/code:BatchingOptions",
+              "level": "code",
+              "name": "BatchingOptions"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration/code:ILoggerSettings",
+              "level": "code",
+              "name": "ILoggerSettings"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration/code:LoggerAuditSinkConfiguration",
+              "level": "code",
+              "name": "LoggerAuditSinkConfiguration"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration/code:LoggerDestructuringConfiguration",
+              "level": "code",
+              "name": "LoggerDestructuringConfiguration"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration/code:LoggerEnrichmentConfiguration",
+              "level": "code",
+              "name": "LoggerEnrichmentConfiguration"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration/code:LoggerFilterConfiguration",
+              "level": "code",
+              "name": "LoggerFilterConfiguration"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration/code:LoggerMinimumLevelConfiguration",
+              "level": "code",
+              "name": "LoggerMinimumLevelConfiguration"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration/code:LoggerSettingsConfiguration",
+              "level": "code",
+              "name": "LoggerSettingsConfiguration"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration/code:LoggerSinkConfiguration",
+              "level": "code",
+              "name": "LoggerSinkConfiguration"
+            }
+          ],
+          "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Configuration",
+          "key": "Serilog.Configuration",
+          "level": "component",
+          "name": "Serilog.Configuration",
+          "source": "namespace"
+        },
+        {
+          "code": [
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Context/code:EnricherStack",
+              "level": "code",
+              "name": "EnricherStack"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Context/code:LogContext",
+              "level": "code",
+              "name": "LogContext"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Context/code:LogContextEnricher",
+              "level": "code",
+              "name": "LogContextEnricher"
+            }
+          ],
+          "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Context",
+          "key": "Serilog.Context",
+          "level": "component",
+          "name": "Serilog.Context",
+          "source": "namespace"
+        },
+        {
+          "code": [
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:Constants",
+              "level": "code",
+              "name": "Constants"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:CustomDefaultMethodImplementationAttribute",
+              "level": "code",
+              "name": "CustomDefaultMethodImplementationAttribute"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:IBatchedLogEventSink",
+              "level": "code",
+              "name": "IBatchedLogEventSink"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:IDestructuringPolicy",
+              "level": "code",
+              "name": "IDestructuringPolicy"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:ILogEventEnricher",
+              "level": "code",
+              "name": "ILogEventEnricher"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:ILogEventFilter",
+              "level": "code",
+              "name": "ILogEventFilter"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:ILogEventPropertyFactory",
+              "level": "code",
+              "name": "ILogEventPropertyFactory"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:ILogEventPropertyValueFactory",
+              "level": "code",
+              "name": "ILogEventPropertyValueFactory"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:ILogEventSink",
+              "level": "code",
+              "name": "ILogEventSink"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:ILoggingFailureListener",
+              "level": "code",
+              "name": "ILoggingFailureListener"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:IMessageTemplateParser",
+              "level": "code",
+              "name": "IMessageTemplateParser"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:IScalarConversionPolicy",
+              "level": "code",
+              "name": "IScalarConversionPolicy"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:ISetLoggingFailureListener",
+              "level": "code",
+              "name": "ISetLoggingFailureListener"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:LevelOverrideMap",
+              "level": "code",
+              "name": "LevelOverrideMap"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:Logger",
+              "level": "code",
+              "name": "Logger"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:LoggingFailureKind",
+              "level": "code",
+              "name": "LoggingFailureKind"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:LoggingLevelSwitch",
+              "level": "code",
+              "name": "LoggingLevelSwitch"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:LoggingLevelSwitchChangedEventArgs",
+              "level": "code",
+              "name": "LoggingLevelSwitchChangedEventArgs"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:MessageTemplateFormatMethodAttribute",
+              "level": "code",
+              "name": "MessageTemplateFormatMethodAttribute"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core/code:PropertiesInlineArray",
+              "level": "code",
+              "name": "PropertiesInlineArray"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Enrichers/code:ConditionalEnricher",
+              "level": "code",
+              "name": "ConditionalEnricher"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Enrichers/code:EmptyEnricher",
+              "level": "code",
+              "name": "EmptyEnricher"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Enrichers/code:FixedPropertyEnricher",
+              "level": "code",
+              "name": "FixedPropertyEnricher"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Enrichers/code:PropertyEnricher",
+              "level": "code",
+              "name": "PropertyEnricher"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Enrichers/code:SafeAggregateEnricher",
+              "level": "code",
+              "name": "SafeAggregateEnricher"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Filters/code:DelegateFilter",
+              "level": "code",
+              "name": "DelegateFilter"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Pipeline/code:ByReferenceStringComparer",
+              "level": "code",
+              "name": "ByReferenceStringComparer"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Pipeline/code:MessageTemplateCache",
+              "level": "code",
+              "name": "MessageTemplateCache"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Pipeline/code:SilentLogger",
+              "level": "code",
+              "name": "SilentLogger"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks/code:AggregateSink",
+              "level": "code",
+              "name": "AggregateSink"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks/code:ConditionalSink",
+              "level": "code",
+              "name": "ConditionalSink"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks/code:DelegatingLoggingFailureListener",
+              "level": "code",
+              "name": "DelegatingLoggingFailureListener"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks/code:DisposingAggregateSink",
+              "level": "code",
+              "name": "DisposingAggregateSink"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks/code:FailureListenerSink",
+              "level": "code",
+              "name": "FailureListenerSink"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks/code:FilteringSink",
+              "level": "code",
+              "name": "FilteringSink"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks/code:OptionalInterfaceForwardingSink",
+              "level": "code",
+              "name": "OptionalInterfaceForwardingSink"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks/code:RestrictedSink",
+              "level": "code",
+              "name": "RestrictedSink"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks/code:SafeAggregateSink",
+              "level": "code",
+              "name": "SafeAggregateSink"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks/code:SecondaryLoggerSink",
+              "level": "code",
+              "name": "SecondaryLoggerSink"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks.Batching/code:BatchingSink",
+              "level": "code",
+              "name": "BatchingSink"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core.Sinks.Batching/code:FailureAwareBatchScheduler",
+              "level": "code",
+              "name": "FailureAwareBatchScheduler"
+            }
+          ],
+          "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Core",
+          "key": "Serilog.Core",
+          "level": "component",
+          "name": "Serilog.Core",
+          "source": "namespace"
+        },
+        {
+          "code": [
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Data/code:LogEventPropertyValueRewriter",
+              "level": "code",
+              "name": "LogEventPropertyValueRewriter"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Data/code:LogEventPropertyValueVisitor",
+              "level": "code",
+              "name": "LogEventPropertyValueVisitor"
+            }
+          ],
+          "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Data",
+          "key": "Serilog.Data",
+          "level": "component",
+          "name": "Serilog.Data",
+          "source": "namespace"
+        },
+        {
+          "code": [
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging/code:LoggingFailedException",
+              "level": "code",
+              "name": "LoggingFailedException"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging/code:SelfLog",
+              "level": "code",
+              "name": "SelfLog"
+            }
+          ],
+          "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Debugging",
+          "key": "Serilog.Debugging",
+          "level": "component",
+          "name": "Serilog.Debugging",
+          "source": "namespace"
+        },
+        {
+          "code": [
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events/code:DictionaryValue",
+              "level": "code",
+              "name": "DictionaryValue"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events/code:EventProperty",
+              "level": "code",
+              "name": "EventProperty"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events/code:LevelAlias",
+              "level": "code",
+              "name": "LevelAlias"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events/code:LogEvent",
+              "level": "code",
+              "name": "LogEvent"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events/code:LogEventLevel",
+              "level": "code",
+              "name": "LogEventLevel"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events/code:LogEventProperty",
+              "level": "code",
+              "name": "LogEventProperty"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events/code:LogEventPropertyValue",
+              "level": "code",
+              "name": "LogEventPropertyValue"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events/code:MessageTemplate",
+              "level": "code",
+              "name": "MessageTemplate"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events/code:ScalarValue",
+              "level": "code",
+              "name": "ScalarValue"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events/code:SequenceValue",
+              "level": "code",
+              "name": "SequenceValue"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events/code:StructureValue",
+              "level": "code",
+              "name": "StructureValue"
+            }
+          ],
+          "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Events",
+          "key": "Serilog.Events",
+          "level": "component",
+          "name": "Serilog.Events",
+          "source": "namespace"
+        },
+        {
+          "code": [
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Filters/code:Matching",
+              "level": "code",
+              "name": "Matching"
+            }
+          ],
+          "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Filters",
+          "key": "Serilog.Filters",
+          "level": "component",
+          "name": "Serilog.Filters",
+          "source": "namespace"
+        },
+        {
+          "code": [
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting/code:ITextFormatter",
+              "level": "code",
+              "name": "ITextFormatter"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting.Display/code:LevelOutputFormat",
+              "level": "code",
+              "name": "LevelOutputFormat"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting.Display/code:MessageTemplateTextFormatter",
+              "level": "code",
+              "name": "MessageTemplateTextFormatter"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting.Display/code:OutputProperties",
+              "level": "code",
+              "name": "OutputProperties"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting.Display/code:PropertiesOutputFormat",
+              "level": "code",
+              "name": "PropertiesOutputFormat"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting.Json/code:JsonFormatter",
+              "level": "code",
+              "name": "JsonFormatter"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting.Json/code:JsonValueFormatter",
+              "level": "code",
+              "name": "JsonValueFormatter"
+            }
+          ],
+          "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Formatting",
+          "key": "Serilog.Formatting",
+          "level": "component",
+          "name": "Serilog.Formatting",
+          "source": "namespace"
+        },
+        {
+          "code": [
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing/code:Alignment",
+              "level": "code",
+              "name": "Alignment"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing/code:AlignmentDirection",
+              "level": "code",
+              "name": "AlignmentDirection"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing/code:Destructuring",
+              "level": "code",
+              "name": "Destructuring"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing/code:MessageTemplateParser",
+              "level": "code",
+              "name": "MessageTemplateParser"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing/code:MessageTemplateToken",
+              "level": "code",
+              "name": "MessageTemplateToken"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing/code:PropertyToken",
+              "level": "code",
+              "name": "PropertyToken"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing/code:TextToken",
+              "level": "code",
+              "name": "TextToken"
+            }
+          ],
+          "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Parsing",
+          "key": "Serilog.Parsing",
+          "level": "component",
+          "name": "Serilog.Parsing",
+          "source": "namespace"
+        },
+        {
+          "code": [
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies/code:ByteArrayScalarConversionPolicy",
+              "level": "code",
+              "name": "ByteArrayScalarConversionPolicy"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies/code:ByteMemoryScalarConversionPolicy",
+              "level": "code",
+              "name": "ByteMemoryScalarConversionPolicy"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies/code:DelegateDestructuringPolicy",
+              "level": "code",
+              "name": "DelegateDestructuringPolicy"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies/code:EnumScalarConversionPolicy",
+              "level": "code",
+              "name": "EnumScalarConversionPolicy"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies/code:PrimitiveScalarConversionPolicy",
+              "level": "code",
+              "name": "PrimitiveScalarConversionPolicy"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies/code:ProjectedDestructuringPolicy",
+              "level": "code",
+              "name": "ProjectedDestructuringPolicy"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies/code:ReflectionTypesScalarDestructuringPolicy",
+              "level": "code",
+              "name": "ReflectionTypesScalarDestructuringPolicy"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies/code:SimpleScalarConversionPolicy",
+              "level": "code",
+              "name": "SimpleScalarConversionPolicy"
+            }
+          ],
+          "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Policies",
+          "key": "Serilog.Policies",
+          "level": "component",
+          "name": "Serilog.Policies",
+          "source": "namespace"
+        },
+        {
+          "code": [
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering/code:Casing",
+              "level": "code",
+              "name": "Casing"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering/code:MessageTemplateRenderer",
+              "level": "code",
+              "name": "MessageTemplateRenderer"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering/code:Padding",
+              "level": "code",
+              "name": "Padding"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering/code:ReusableStringWriter",
+              "level": "code",
+              "name": "ReusableStringWriter"
+            }
+          ],
+          "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Rendering",
+          "key": "Serilog.Rendering",
+          "level": "component",
+          "name": "Serilog.Rendering",
+          "source": "namespace"
+        },
+        {
+          "code": [
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Settings.KeyValuePairs/code:CallableConfigurationMethodFinder",
+              "level": "code",
+              "name": "CallableConfigurationMethodFinder"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Settings.KeyValuePairs/code:KeyValuePairSettings",
+              "level": "code",
+              "name": "KeyValuePairSettings"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Settings.KeyValuePairs/code:SettingValueConversions",
+              "level": "code",
+              "name": "SettingValueConversions"
+            },
+            {
+              "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Settings.KeyValuePairs/code:SurrogateConfigurationMethods",
+              "level": "code",
+              "name": "SurrogateConfigurationMethods"
+            }
+          ],
+          "id": "csharp:csproj:src/Serilog/Serilog.csproj/component:Serilog.Settings",
+          "key": "Serilog.Settings",
+          "level": "component",
+          "name": "Serilog.Settings",
+          "source": "namespace"
+        }
+      ],
+      "container_id": "container:serilog",
+      "container_name": "Serilog",
+      "external": false,
+      "grouped_by": {
+        "container": "Serilog",
+        "rule_index": 0,
+        "signal": "members"
+      },
+      "id": "csharp:csproj:src/Serilog/Serilog.csproj",
+      "language": "csharp",
+      "metrics": {
+        "blank": 1560,
+        "by_language": [
+          {
+            "blank": 1546,
+            "code": 7020,
+            "comment": 5471,
+            "files": 112,
+            "language": "C#"
+          },
+          {
+            "blank": 14,
+            "code": 69,
+            "comment": 6,
+            "files": 2,
+            "language": "MSBuild"
+          },
+          {
+            "blank": 0,
+            "code": 8,
+            "comment": 0,
+            "files": 1,
+            "language": "XML"
+          }
+        ],
+        "code": 7097,
+        "comment": 5477,
+        "engine": "metrics/1",
+        "todo_count": 0
+      },
+      "name": "Serilog",
+      "namespaces": [
+        "JetBrains.Annotations",
+        "Serilog",
+        "Serilog.Capturing",
+        "Serilog.Configuration",
+        "Serilog.Context",
+        "Serilog.Core",
+        "Serilog.Core.Enrichers",
+        "Serilog.Core.Filters",
+        "Serilog.Core.Pipeline",
+        "Serilog.Core.Sinks",
+        "Serilog.Core.Sinks.Batching",
+        "Serilog.Data",
+        "Serilog.Debugging",
+        "Serilog.Events",
+        "Serilog.Filters",
+        "Serilog.Formatting",
+        "Serilog.Formatting.Display",
+        "Serilog.Formatting.Json",
+        "Serilog.Parsing",
+        "Serilog.Policies",
+        "Serilog.Rendering",
+        "Serilog.Settings.KeyValuePairs",
+        "System",
+        "System.Diagnostics",
+        "System.Diagnostics.CodeAnalysis",
+        "System.Runtime.CompilerServices",
+        "System.Runtime.CompilerServices2",
+        "System.Runtime.InteropServices",
+        "System.Runtime.Versioning"
+      ],
+      "package_refs": [
+        "PolySharp",
+        "System.Diagnostics.DiagnosticSource",
+        "System.Threading.Channels",
+        "System.ValueTuple"
+      ],
+      "path": "src/Serilog",
+      "tags": [
+        "build:msbuild",
+        "sdk-role:library",
+        "slnfolder:src"
+      ],
+      "technology": ".NET assembly",
+      "type": "csproj"
+    }
+  ]
+}

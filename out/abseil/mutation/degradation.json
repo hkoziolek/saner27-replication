@@ -1,0 +1,81 @@
+{
+  "language": "cpp",
+  "modes": {
+    "disable_l2": {
+      "advisory": false,
+      "coverage_l0": 1.0,
+      "erosion_visible": true,
+      "findings_off": 132,
+      "fp_suppression_rate": 1.0,
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 132,
+        "mode": "disable_l2",
+        "targets_starved": 0
+      },
+      "suppressed_on": 132,
+      "would_be_false_findings": 132
+    },
+    "lose_l0": {
+      "advisory": true,
+      "coverage_l0": 0.0,
+      "erosion_visible": true,
+      "findings_off": 1215,
+      "fp_suppression_rate": 1.0,
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 1025,
+        "mode": "lose_l0",
+        "targets_starved": 190
+      },
+      "suppressed_on": 1215,
+      "would_be_false_findings": 1215
+    },
+    "starve_l0_10": {
+      "advisory": true,
+      "coverage_l0": 0.9,
+      "erosion_visible": true,
+      "findings_off": 95,
+      "fp_suppression_rate": 1.0,
+      "gating": false,
+      "layering": {
+        "intact_rule_status": "VIOLATION",
+        "intact_still_violation": true,
+        "starved_honest": true,
+        "starved_rule_status": "UNVERIFIED (degraded)"
+      },
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 95,
+        "mode": "starve_l0_10",
+        "targets_starved": 19
+      },
+      "suppressed_on": 95,
+      "would_be_false_findings": 95
+    },
+    "starve_l0_30": {
+      "advisory": true,
+      "coverage_l0": 0.7,
+      "erosion_visible": true,
+      "findings_off": 277,
+      "fp_suppression_rate": 1.0,
+      "gating": false,
+      "layering": {
+        "intact_rule_status": "VIOLATION",
+        "intact_still_violation": true,
+        "starved_honest": true,
+        "starved_rule_status": "UNVERIFIED (degraded)"
+      },
+      "leaked_on": 0,
+      "manifest": {
+        "edges_dropped": 277,
+        "mode": "starve_l0_30",
+        "targets_starved": 57
+      },
+      "suppressed_on": 277,
+      "would_be_false_findings": 277
+    }
+  },
+  "schema": "rq6-degradation/1",
+  "system": "abseil"
+}

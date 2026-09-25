@@ -1,0 +1,27 @@
+{
+  "clusters": 14,
+  "entities_clustered": 1087,
+  "granularity": "file",
+  "graph": "graph-file.rsf",
+  "reruns": 5,
+  "system": "opencv",
+  "technique": "llm",
+  "vs_pipeline_agreement": {
+    "a2a": 89.83827493261455,
+    "entities_against": 997,
+    "entities_common": 923,
+    "entities_dropped_whitespace": 0,
+    "entities_recovered": 1087,
+    "mojofm": 98.91
+  },
+  "vs_reference": {
+    "a2a": 100.0,
+    "ari": 100.0,
+    "entities_against": 1087,
+    "entities_common": 1087,
+    "entities_dropped_whitespace": 0,
+    "entities_recovered": 1087,
+    "mojofm": 100.0,
+    "nested": 100.0
+  }
+}

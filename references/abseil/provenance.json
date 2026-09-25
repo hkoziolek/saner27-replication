@@ -1,0 +1,17 @@
+{
+  "system": "abseil",
+  "grade": "GT-exp",
+  "subject_version": "abseil-cpp 20240722.0",
+  "subject_repo": "https://github.com/abseil/abseil-cpp",
+  "granularity": "file",
+  "source": "Abseil's documented library structure: the project is organized as a set of libraries, one per directory under absl/ (base, strings, container, hash, synchronization, time, ...), each a coherent component with its own README/docs on abseil.io.",
+  "construction": "Each source file under absl/<library>/ is assigned to that <library>. Files outside absl/ (the CMake/ install-test scaffolding) are excluded. 809 files across 21 libraries.",
+  "format": "RSF `contain absl_<library> <repo-rel-file>` tuples; entities match the file-granularity graph export's node ids.",
+  "clusters": 21,
+  "entities": 809,
+  "rater_agreement": "GT-exp, single rater. The absl/<dir> = library mapping is the project's own pervasive, documented convention (each absl/ subdir is a distinct library target group), so the assignment is near-mechanical; but because it is a directory-derived expert assertion rather than a published or in-source-declared partition, it is graded GT-exp, not GT-doc. Second rater + kappa deferred (eval §5.3).",
+  "caveats": [
+    "Directory-derived: like ITK, abseil's libraries are directory-aligned, so a naive directory baseline will be competitive — report a2a and cluster count alongside MoJoFM.",
+    "Sub-library granularity: abseil splits some libraries into many fine targets (strings -> str_format, cord, cordz_*, ...) that all live under absl/strings/ and so map to one reference library here; the pipeline's target-level containers may be finer or coarser."
+  ]
+}

@@ -1,0 +1,55 @@
+# Curation rules for the fmtlib/fmt fixture (plan §7.4). Reviewed + committed.
+#
+# fmt is the C++ SMOKE fixture (§19.1): one formatting library plus a large test suite and a
+# docs target. The raw extraction yields 25 CMake targets (the lib, its header-only alias, ~20
+# *-test executables, the vendored gtest, the test-main helper, and a Doxygen `doc` target).
+# This overlay curates that into a readable two-container C4 view: the library itself (with a
+# Component drill-down over its namespaces) and the test suite that uses it.
+#
+# Run: `arch run --no-llm`. Deterministic; CMake configure-only + Doxygen L2/L3.
+version: 1
+
+# Pinned to MODEL X (D§2.3 anti-flapping): fmt's curated target count (~24, dominated by
+# *-test executables) hovers at the MODEL_Y_MAX=25 threshold, and the curated 2-box top
+# view (library vs test suite) is the point of this overlay — auto-Y would explode it
+# into ~24 single-test containers. X drills each container into its member targets.
+model_shape: x
+
+defaults:
+  min_relationship_weight: 3
+  drop_external: true
+  down_weight_private: true
+  on_unmapped: annotate
+  use_llm_names: false
+
+exclude:
+  targets:
+    - glob: "doc"                 # the Doxygen documentation target — not an architecture element
+
+group:
+  # The library: the static lib + its header-only INTERFACE alias, as one container. The
+  # D§5 deep path (`expand:`) promotes the real lib target to nest its §6.3 namespace
+  # tier (detail, formatter, …); the header-only alias stays a plain target-component.
+  - container: "Formatting Library"
+    expand:
+      - cpp:target:fmt
+    members:
+      - cpp:target:fmt
+      - cpp:target:fmt-header-only
+  # Everything test-related (the *-test executables + vendored gtest + test-main) collapses
+  # into one container via a name glob (§7.4) — it `uses` the library.
+  - container: "Test Suite"
+    members_glob:
+      - "*test*"
+
+# Tame the fmt::detail component tier to the §1.1#1 readability budget: drop the subdir-fallback
+# pseudo-component and collapse deep namespaces (detail::dragonbox::cache_accessor -> detail::dragonbox).
+components:
+  exclude_namespaces:
+    - "include"
+  aggregate_depth: 2
+
+technology:
+  static_lib: "C++ static library"
+  interface_lib: "C++ header-only library"
+  executable: "C++ test executable"

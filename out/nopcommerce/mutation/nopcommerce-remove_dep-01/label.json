@@ -1,0 +1,23 @@
+{
+  "alias": {},
+  "description": "remove declared dependency csharp:csproj:src/Libraries/Nop.Data/Nop.Data.csproj -> csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj",
+  "expected": {
+    "layering_violations": [],
+    "new_edges": [],
+    "new_targets": [],
+    "removed_edges": [
+      [
+        "csharp:csproj:src/Libraries/Nop.Data/Nop.Data.csproj",
+        "csharp:csproj:src/Libraries/Nop.Core/Nop.Core.csproj"
+      ]
+    ],
+    "removed_targets": [],
+    "suspected_renames": []
+  },
+  "files_touched": [
+    "<repo>\\out\\nopcommerce\\mutation\\_work\\nopcommerce\\repo\\src\\Libraries\\Nop.Data\\Nop.Data.csproj"
+  ],
+  "id": "nopcommerce-remove_dep-01",
+  "operator": "remove_dep",
+  "system": "nopcommerce"
+}
